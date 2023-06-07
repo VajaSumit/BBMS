@@ -1,0 +1,12 @@
+c:\users\sumit\documents\visual studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\BloodBankManagementSystem.exe.config
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\BloodBankManagementSystem.exe
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\BloodBankManagementSystem.pdb
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\WinFormAnimation.dll
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ProgressPage.resources
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.Properties.Resources.resources
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.csproj.GenerateResource.Cache
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.exe
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.pdb
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.LoginPage.resources
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.MasterPage.resources
