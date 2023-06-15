@@ -92,6 +92,11 @@ namespace BloodBankManagementSystem
                 txtpassword.Focus();
                 errorProvider2.SetError(txtpassword, "Please Enter The Password !!");
             }
+            else if (checkBox1.Checked == false)
+            {
+               
+                errorProvider3.SetError(this.checkBox1, "Please Check Terms and Condition..!");
+            }
             else
             {
                 SqlConnection con = new SqlConnection(cs);
@@ -103,7 +108,7 @@ namespace BloodBankManagementSystem
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows==true)
                 {
-                    MessageBox.Show("Data Insert Successful..","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Login Successful..","Login Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     txtusername.Clear();
                     txtpassword.Clear();
                     MasterPage m = new MasterPage();
@@ -113,7 +118,7 @@ namespace BloodBankManagementSystem
                 }
                 else
                 {
-                    MessageBox.Show("Data Not Insert..", "Information",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Login Faild ", "Login Information",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
 
                 con.Close();
@@ -122,14 +127,27 @@ namespace BloodBankManagementSystem
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked==true)
+            if (checkBox1.Checked==false)
             {
-                btnlogin.Enabled = true;
+                errorProvider3.SetError(checkBox1, "Please Check Terms and Condition..!");
             }
-            else if (checkBox1.Checked==false)
+            else if (checkBox1.Checked==true)
             {
-                btnlogin.Enabled = false;
+              
+                errorProvider3.Clear();
             }
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AdminLoginPage l = new AdminLoginPage();
+            l.Show();
+            this.Hide();
         }
     }
 }

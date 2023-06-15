@@ -61,7 +61,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gray;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-136, 35);
+            this.pictureBox2.Location = new System.Drawing.Point(-137, 35);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(729, 359);
             this.pictureBox2.TabIndex = 4;
@@ -71,7 +71,7 @@
             // 
             this.toppanal.Location = new System.Drawing.Point(31, 420);
             this.toppanal.Name = "toppanal";
-            this.toppanal.Size = new System.Drawing.Size(450, 20);
+            this.toppanal.Size = new System.Drawing.Size(492, 20);
             this.toppanal.TabIndex = 5;
             // 
             // progressbarpanal
@@ -85,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(514, 419);
+            this.label1.Location = new System.Drawing.Point(12, 454);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(11, 13);
             this.label1.TabIndex = 7;
@@ -96,7 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(556, 476);
+            this.ClientSize = new System.Drawing.Size(548, 476);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressbarpanal);
             this.Controls.Add(this.toppanal);

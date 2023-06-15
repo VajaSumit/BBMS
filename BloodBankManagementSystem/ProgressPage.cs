@@ -39,7 +39,7 @@ namespace BloodBankManagementSystem
             //   i = i + 3;
 
 
-            if (progressbarpanal.Width!=toppanal.Width)
+            if (progressbarpanal.Width != toppanal.Width)
             {
                 //   label1.Text = progressbarpanal.Width + "%";
                     progressbarpanal.Width = progressbarpanal.Width + 1;
