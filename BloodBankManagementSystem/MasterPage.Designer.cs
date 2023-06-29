@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterPage));
             this.panelDonor = new System.Windows.Forms.Panel();
-            this.btnDonorRegistration = new System.Windows.Forms.Button();
-            this.btnEditDonor = new System.Windows.Forms.Button();
             this.btnViewAllDonor = new System.Windows.Forms.Button();
+            this.btnEditDonor = new System.Windows.Forms.Button();
+            this.btnDonorRegistration = new System.Windows.Forms.Button();
             this.panelPatient = new System.Windows.Forms.Panel();
             this.btnViewAllpatient = new System.Windows.Forms.Button();
             this.btnEditpatient = new System.Windows.Forms.Button();
@@ -41,27 +41,35 @@
             this.btnDonorReport = new System.Windows.Forms.Button();
             this.panelReport = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnpatientReport = new System.Windows.Forms.Button();
-            this.btnSettingUser = new System.Windows.Forms.Button();
+            this.btnPatientReport = new System.Windows.Forms.Button();
             this.panelSettings = new System.Windows.Forms.Panel();
-            this.btnEmployee = new System.Windows.Forms.Button();
-            this.btnAttendance = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnDonor = new System.Windows.Forms.Button();
             this.btnPatient = new System.Windows.Forms.Button();
-            this.btnBloodDonor = new System.Windows.Forms.Button();
+            this.btnBloodDonetion = new System.Windows.Forms.Button();
             this.btnBloodTransfar = new System.Windows.Forms.Button();
-            this.BtnBloodStock = new System.Windows.Forms.Button();
+            this.btnBloodStock = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnAboutUs = new System.Windows.Forms.Button();
+            this.btnHomeExtra = new System.Windows.Forms.Button();
+            this.lbltime3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnHospital = new System.Windows.Forms.Button();
+            this.btnStaff = new System.Windows.Forms.Button();
+            this.lbltime2 = new System.Windows.Forms.Label();
             this.labtime = new System.Windows.Forms.Label();
             this.panelslide = new System.Windows.Forms.Panel();
-            this.btnHomeExtra = new System.Windows.Forms.Button();
+            this.btnDoctor = new System.Windows.Forms.Button();
+            this.btnBloodType = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panelDonor.SuspendLayout();
             this.panelPatient.SuspendLayout();
             this.panelReport.SuspendLayout();
@@ -72,16 +80,47 @@
             // panelDonor
             // 
             this.panelDonor.BackColor = System.Drawing.Color.White;
-            this.panelDonor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDonor.Controls.Add(this.btnDonorRegistration);
-            this.panelDonor.Controls.Add(this.btnEditDonor);
+            this.panelDonor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelDonor.Controls.Add(this.btnViewAllDonor);
-            this.panelDonor.Location = new System.Drawing.Point(641, 125);
+            this.panelDonor.Controls.Add(this.btnEditDonor);
+            this.panelDonor.Controls.Add(this.btnDonorRegistration);
+            this.panelDonor.Location = new System.Drawing.Point(120, 142);
             this.panelDonor.Name = "panelDonor";
-            this.panelDonor.Size = new System.Drawing.Size(86, 117);
+            this.panelDonor.Size = new System.Drawing.Size(96, 96);
             this.panelDonor.TabIndex = 11;
             this.panelDonor.Visible = false;
+            this.panelDonor.Leave += new System.EventHandler(this.panelDonor_Leave);
             this.panelDonor.MouseLeave += new System.EventHandler(this.panelDonor_MouseLeave);
+            // 
+            // btnViewAllDonor
+            // 
+            this.btnViewAllDonor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnViewAllDonor.FlatAppearance.BorderSize = 0;
+            this.btnViewAllDonor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAllDonor.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAllDonor.ForeColor = System.Drawing.Color.Black;
+            this.btnViewAllDonor.Location = new System.Drawing.Point(0, 24);
+            this.btnViewAllDonor.Name = "btnViewAllDonor";
+            this.btnViewAllDonor.Size = new System.Drawing.Size(96, 48);
+            this.btnViewAllDonor.TabIndex = 3;
+            this.btnViewAllDonor.Text = "View All";
+            this.btnViewAllDonor.UseVisualStyleBackColor = true;
+            this.btnViewAllDonor.Click += new System.EventHandler(this.btnViewAllDonor_Click);
+            // 
+            // btnEditDonor
+            // 
+            this.btnEditDonor.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnEditDonor.FlatAppearance.BorderSize = 0;
+            this.btnEditDonor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditDonor.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditDonor.ForeColor = System.Drawing.Color.Black;
+            this.btnEditDonor.Location = new System.Drawing.Point(0, 72);
+            this.btnEditDonor.Name = "btnEditDonor";
+            this.btnEditDonor.Size = new System.Drawing.Size(96, 24);
+            this.btnEditDonor.TabIndex = 4;
+            this.btnEditDonor.Text = "Edit";
+            this.btnEditDonor.UseVisualStyleBackColor = true;
+            this.btnEditDonor.Click += new System.EventHandler(this.btnEditDonor_Click);
             // 
             // btnDonorRegistration
             // 
@@ -92,38 +131,11 @@
             this.btnDonorRegistration.ForeColor = System.Drawing.Color.Black;
             this.btnDonorRegistration.Location = new System.Drawing.Point(0, 0);
             this.btnDonorRegistration.Name = "btnDonorRegistration";
-            this.btnDonorRegistration.Size = new System.Drawing.Size(84, 37);
+            this.btnDonorRegistration.Size = new System.Drawing.Size(96, 24);
             this.btnDonorRegistration.TabIndex = 2;
             this.btnDonorRegistration.Text = "Registration";
             this.btnDonorRegistration.UseVisualStyleBackColor = true;
-            // 
-            // btnEditDonor
-            // 
-            this.btnEditDonor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnEditDonor.FlatAppearance.BorderSize = 0;
-            this.btnEditDonor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditDonor.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditDonor.ForeColor = System.Drawing.Color.Black;
-            this.btnEditDonor.Location = new System.Drawing.Point(0, 85);
-            this.btnEditDonor.Name = "btnEditDonor";
-            this.btnEditDonor.Size = new System.Drawing.Size(84, 30);
-            this.btnEditDonor.TabIndex = 4;
-            this.btnEditDonor.Text = "Edit";
-            this.btnEditDonor.UseVisualStyleBackColor = true;
-            // 
-            // btnViewAllDonor
-            // 
-            this.btnViewAllDonor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnViewAllDonor.FlatAppearance.BorderSize = 0;
-            this.btnViewAllDonor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewAllDonor.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAllDonor.ForeColor = System.Drawing.Color.Black;
-            this.btnViewAllDonor.Location = new System.Drawing.Point(0, 0);
-            this.btnViewAllDonor.Name = "btnViewAllDonor";
-            this.btnViewAllDonor.Size = new System.Drawing.Size(84, 115);
-            this.btnViewAllDonor.TabIndex = 3;
-            this.btnViewAllDonor.Text = "View All";
-            this.btnViewAllDonor.UseVisualStyleBackColor = true;
+            this.btnDonorRegistration.Click += new System.EventHandler(this.btnDonorRegistration_Click);
             // 
             // panelPatient
             // 
@@ -132,11 +144,12 @@
             this.panelPatient.Controls.Add(this.btnViewAllpatient);
             this.panelPatient.Controls.Add(this.btnEditpatient);
             this.panelPatient.Controls.Add(this.btnPatientRegistration);
-            this.panelPatient.Location = new System.Drawing.Point(734, 125);
+            this.panelPatient.Location = new System.Drawing.Point(286, 143);
             this.panelPatient.Name = "panelPatient";
-            this.panelPatient.Size = new System.Drawing.Size(87, 116);
+            this.panelPatient.Size = new System.Drawing.Size(96, 96);
             this.panelPatient.TabIndex = 12;
             this.panelPatient.Visible = false;
+            this.panelPatient.Leave += new System.EventHandler(this.panelPatient_Leave);
             this.panelPatient.MouseLeave += new System.EventHandler(this.panelPatient_MouseLeave);
             // 
             // btnViewAllpatient
@@ -148,10 +161,11 @@
             this.btnViewAllpatient.ForeColor = System.Drawing.Color.Black;
             this.btnViewAllpatient.Location = new System.Drawing.Point(0, 34);
             this.btnViewAllpatient.Name = "btnViewAllpatient";
-            this.btnViewAllpatient.Size = new System.Drawing.Size(85, 46);
+            this.btnViewAllpatient.Size = new System.Drawing.Size(94, 26);
             this.btnViewAllpatient.TabIndex = 3;
             this.btnViewAllpatient.Text = "View All";
             this.btnViewAllpatient.UseVisualStyleBackColor = true;
+            this.btnViewAllpatient.Click += new System.EventHandler(this.btnViewAllpatient_Click);
             // 
             // btnEditpatient
             // 
@@ -160,12 +174,13 @@
             this.btnEditpatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditpatient.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditpatient.ForeColor = System.Drawing.Color.Black;
-            this.btnEditpatient.Location = new System.Drawing.Point(0, 80);
+            this.btnEditpatient.Location = new System.Drawing.Point(0, 60);
             this.btnEditpatient.Name = "btnEditpatient";
-            this.btnEditpatient.Size = new System.Drawing.Size(85, 34);
+            this.btnEditpatient.Size = new System.Drawing.Size(94, 34);
             this.btnEditpatient.TabIndex = 4;
             this.btnEditpatient.Text = "Edit";
             this.btnEditpatient.UseVisualStyleBackColor = true;
+            this.btnEditpatient.Click += new System.EventHandler(this.btnEditpatient_Click);
             // 
             // btnPatientRegistration
             // 
@@ -176,10 +191,11 @@
             this.btnPatientRegistration.ForeColor = System.Drawing.Color.Black;
             this.btnPatientRegistration.Location = new System.Drawing.Point(0, 0);
             this.btnPatientRegistration.Name = "btnPatientRegistration";
-            this.btnPatientRegistration.Size = new System.Drawing.Size(85, 34);
+            this.btnPatientRegistration.Size = new System.Drawing.Size(94, 34);
             this.btnPatientRegistration.TabIndex = 2;
             this.btnPatientRegistration.Text = "Registration";
             this.btnPatientRegistration.UseVisualStyleBackColor = true;
+            this.btnPatientRegistration.Click += new System.EventHandler(this.btnPatientRegistration_Click);
             // 
             // btnDonorReport
             // 
@@ -190,7 +206,7 @@
             this.btnDonorReport.ForeColor = System.Drawing.Color.Black;
             this.btnDonorReport.Location = new System.Drawing.Point(0, 50);
             this.btnDonorReport.Name = "btnDonorReport";
-            this.btnDonorReport.Size = new System.Drawing.Size(86, 44);
+            this.btnDonorReport.Size = new System.Drawing.Size(71, 44);
             this.btnDonorReport.TabIndex = 2;
             this.btnDonorReport.Text = "Donor Report";
             this.btnDonorReport.UseVisualStyleBackColor = true;
@@ -200,13 +216,14 @@
             this.panelReport.BackColor = System.Drawing.Color.White;
             this.panelReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelReport.Controls.Add(this.button1);
-            this.panelReport.Controls.Add(this.btnpatientReport);
+            this.panelReport.Controls.Add(this.btnPatientReport);
             this.panelReport.Controls.Add(this.btnDonorReport);
-            this.panelReport.Location = new System.Drawing.Point(1108, 126);
+            this.panelReport.Location = new System.Drawing.Point(877, 145);
             this.panelReport.Name = "panelReport";
-            this.panelReport.Size = new System.Drawing.Size(88, 96);
+            this.panelReport.Size = new System.Drawing.Size(73, 96);
             this.panelReport.TabIndex = 14;
             this.panelReport.Visible = false;
+            this.panelReport.Leave += new System.EventHandler(this.panelReport_Leave);
             this.panelReport.MouseLeave += new System.EventHandler(this.panelReport_MouseLeave);
             // 
             // button1
@@ -218,79 +235,81 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(0, 42);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 8);
+            this.button1.Size = new System.Drawing.Size(71, 8);
             this.button1.TabIndex = 17;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnpatientReport
+            // btnPatientReport
             // 
-            this.btnpatientReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnpatientReport.FlatAppearance.BorderSize = 0;
-            this.btnpatientReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnpatientReport.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpatientReport.ForeColor = System.Drawing.Color.Black;
-            this.btnpatientReport.Location = new System.Drawing.Point(0, 0);
-            this.btnpatientReport.Name = "btnpatientReport";
-            this.btnpatientReport.Size = new System.Drawing.Size(86, 42);
-            this.btnpatientReport.TabIndex = 3;
-            this.btnpatientReport.Text = "Patient  Report";
-            this.btnpatientReport.UseVisualStyleBackColor = true;
-            // 
-            // btnSettingUser
-            // 
-            this.btnSettingUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSettingUser.FlatAppearance.BorderSize = 0;
-            this.btnSettingUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettingUser.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettingUser.ForeColor = System.Drawing.Color.Black;
-            this.btnSettingUser.Location = new System.Drawing.Point(0, 0);
-            this.btnSettingUser.Name = "btnSettingUser";
-            this.btnSettingUser.Size = new System.Drawing.Size(85, 95);
-            this.btnSettingUser.TabIndex = 2;
-            this.btnSettingUser.Text = "User";
-            this.btnSettingUser.UseVisualStyleBackColor = true;
+            this.btnPatientReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPatientReport.FlatAppearance.BorderSize = 0;
+            this.btnPatientReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPatientReport.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatientReport.ForeColor = System.Drawing.Color.Black;
+            this.btnPatientReport.Location = new System.Drawing.Point(0, 0);
+            this.btnPatientReport.Name = "btnPatientReport";
+            this.btnPatientReport.Size = new System.Drawing.Size(71, 42);
+            this.btnPatientReport.TabIndex = 3;
+            this.btnPatientReport.Text = "Patient  Report";
+            this.btnPatientReport.UseVisualStyleBackColor = true;
             // 
             // panelSettings
             // 
             this.panelSettings.BackColor = System.Drawing.Color.White;
             this.panelSettings.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSettings.Controls.Add(this.btnEmployee);
-            this.panelSettings.Controls.Add(this.btnAttendance);
-            this.panelSettings.Controls.Add(this.btnSettingUser);
-            this.panelSettings.Location = new System.Drawing.Point(1204, 126);
+            this.panelSettings.Controls.Add(this.btnProfile);
+            this.panelSettings.Controls.Add(this.btnLogout);
+            this.panelSettings.Controls.Add(this.btnUser);
+            this.panelSettings.Location = new System.Drawing.Point(1043, 146);
             this.panelSettings.Name = "panelSettings";
-            this.panelSettings.Size = new System.Drawing.Size(87, 97);
+            this.panelSettings.Size = new System.Drawing.Size(73, 96);
             this.panelSettings.TabIndex = 15;
             this.panelSettings.Visible = false;
+            this.panelSettings.Leave += new System.EventHandler(this.panelSettings_Leave);
             this.panelSettings.MouseLeave += new System.EventHandler(this.panelSettings_MouseLeave);
             // 
-            // btnEmployee
+            // btnProfile
             // 
-            this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmployee.FlatAppearance.BorderSize = 0;
-            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployee.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployee.ForeColor = System.Drawing.Color.Black;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 0);
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(85, 34);
-            this.btnEmployee.TabIndex = 4;
-            this.btnEmployee.Text = "Employee";
-            this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.Color.Black;
+            this.btnProfile.Location = new System.Drawing.Point(0, 34);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(71, 26);
+            this.btnProfile.TabIndex = 3;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = true;
             // 
-            // btnAttendance
+            // btnLogout
             // 
-            this.btnAttendance.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnAttendance.FlatAppearance.BorderSize = 0;
-            this.btnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAttendance.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttendance.ForeColor = System.Drawing.Color.Black;
-            this.btnAttendance.Location = new System.Drawing.Point(0, 68);
-            this.btnAttendance.Name = "btnAttendance";
-            this.btnAttendance.Size = new System.Drawing.Size(85, 27);
-            this.btnAttendance.TabIndex = 3;
-            this.btnAttendance.Text = "Attendance";
-            this.btnAttendance.UseVisualStyleBackColor = true;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Location = new System.Drawing.Point(0, 60);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(71, 34);
+            this.btnLogout.TabIndex = 24;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
+            // 
+            // btnUser
+            // 
+            this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.Color.Black;
+            this.btnUser.Location = new System.Drawing.Point(0, 0);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(71, 34);
+            this.btnUser.TabIndex = 4;
+            this.btnUser.Text = "User";
+            this.btnUser.UseVisualStyleBackColor = true;
             // 
             // btnHome
             // 
@@ -300,11 +319,11 @@
             this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.Black;
-            this.btnHome.Location = new System.Drawing.Point(546, 83);
+            this.btnHome.Location = new System.Drawing.Point(44, 90);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(88, 40);
+            this.btnHome.Size = new System.Drawing.Size(83, 42);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "&Home ";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -320,11 +339,11 @@
             this.btnDonor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btnDonor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btnDonor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDonor.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonor.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonor.ForeColor = System.Drawing.Color.Black;
-            this.btnDonor.Location = new System.Drawing.Point(641, 83);
+            this.btnDonor.Location = new System.Drawing.Point(127, 90);
             this.btnDonor.Name = "btnDonor";
-            this.btnDonor.Size = new System.Drawing.Size(88, 41);
+            this.btnDonor.Size = new System.Drawing.Size(83, 42);
             this.btnDonor.TabIndex = 1;
             this.btnDonor.Text = "&Donor";
             this.btnDonor.UseVisualStyleBackColor = false;
@@ -339,35 +358,35 @@
             this.btnPatient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btnPatient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btnPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPatient.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatient.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPatient.ForeColor = System.Drawing.Color.Black;
-            this.btnPatient.Location = new System.Drawing.Point(735, 83);
+            this.btnPatient.Location = new System.Drawing.Point(293, 90);
             this.btnPatient.Name = "btnPatient";
-            this.btnPatient.Size = new System.Drawing.Size(88, 40);
+            this.btnPatient.Size = new System.Drawing.Size(83, 42);
             this.btnPatient.TabIndex = 2;
             this.btnPatient.Text = "&Patient";
             this.btnPatient.UseVisualStyleBackColor = false;
             this.btnPatient.MouseEnter += new System.EventHandler(this.btnPatient_MouseEnter);
             this.btnPatient.MouseLeave += new System.EventHandler(this.btnPatient_MouseLeave);
             // 
-            // btnBloodDonor
+            // btnBloodDonetion
             // 
-            this.btnBloodDonor.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnBloodDonor.BackColor = System.Drawing.Color.Transparent;
-            this.btnBloodDonor.FlatAppearance.BorderSize = 0;
-            this.btnBloodDonor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnBloodDonor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnBloodDonor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBloodDonor.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBloodDonor.ForeColor = System.Drawing.Color.Black;
-            this.btnBloodDonor.Location = new System.Drawing.Point(826, 83);
-            this.btnBloodDonor.Name = "btnBloodDonor";
-            this.btnBloodDonor.Size = new System.Drawing.Size(89, 42);
-            this.btnBloodDonor.TabIndex = 3;
-            this.btnBloodDonor.Text = "&Blood Donor";
-            this.btnBloodDonor.UseVisualStyleBackColor = false;
-            this.btnBloodDonor.MouseEnter += new System.EventHandler(this.btnBloodDonor_MouseEnter);
-            this.btnBloodDonor.MouseLeave += new System.EventHandler(this.btnBloodDonor_MouseLeave);
+            this.btnBloodDonetion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnBloodDonetion.BackColor = System.Drawing.Color.Transparent;
+            this.btnBloodDonetion.FlatAppearance.BorderSize = 0;
+            this.btnBloodDonetion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnBloodDonetion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnBloodDonetion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBloodDonetion.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBloodDonetion.ForeColor = System.Drawing.Color.Black;
+            this.btnBloodDonetion.Location = new System.Drawing.Point(210, 90);
+            this.btnBloodDonetion.Name = "btnBloodDonetion";
+            this.btnBloodDonetion.Size = new System.Drawing.Size(83, 42);
+            this.btnBloodDonetion.TabIndex = 3;
+            this.btnBloodDonetion.Text = "&Blood Donetion";
+            this.btnBloodDonetion.UseVisualStyleBackColor = false;
+            this.btnBloodDonetion.MouseEnter += new System.EventHandler(this.btnBloodDonor_MouseEnter);
+            this.btnBloodDonetion.MouseLeave += new System.EventHandler(this.btnBloodDonor_MouseLeave);
             // 
             // btnBloodTransfar
             // 
@@ -377,35 +396,35 @@
             this.btnBloodTransfar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btnBloodTransfar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btnBloodTransfar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBloodTransfar.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBloodTransfar.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodTransfar.ForeColor = System.Drawing.Color.Black;
-            this.btnBloodTransfar.Location = new System.Drawing.Point(921, 83);
+            this.btnBloodTransfar.Location = new System.Drawing.Point(376, 90);
             this.btnBloodTransfar.Name = "btnBloodTransfar";
-            this.btnBloodTransfar.Size = new System.Drawing.Size(88, 42);
+            this.btnBloodTransfar.Size = new System.Drawing.Size(83, 42);
             this.btnBloodTransfar.TabIndex = 4;
             this.btnBloodTransfar.Text = "Blood &Transfar";
             this.btnBloodTransfar.UseVisualStyleBackColor = false;
             this.btnBloodTransfar.MouseEnter += new System.EventHandler(this.btnBloodTransfar_MouseEnter);
             this.btnBloodTransfar.MouseLeave += new System.EventHandler(this.btnBloodTransfar_MouseLeave);
             // 
-            // BtnBloodStock
+            // btnBloodStock
             // 
-            this.BtnBloodStock.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.BtnBloodStock.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBloodStock.FlatAppearance.BorderSize = 0;
-            this.BtnBloodStock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.BtnBloodStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.BtnBloodStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBloodStock.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBloodStock.ForeColor = System.Drawing.Color.Black;
-            this.BtnBloodStock.Location = new System.Drawing.Point(1015, 83);
-            this.BtnBloodStock.Name = "BtnBloodStock";
-            this.BtnBloodStock.Size = new System.Drawing.Size(88, 37);
-            this.BtnBloodStock.TabIndex = 5;
-            this.BtnBloodStock.Text = "B&lood Stock";
-            this.BtnBloodStock.UseVisualStyleBackColor = false;
-            this.BtnBloodStock.MouseEnter += new System.EventHandler(this.BtnBloodStock_MouseEnter);
-            this.BtnBloodStock.MouseLeave += new System.EventHandler(this.BtnBloodStock_MouseLeave);
+            this.btnBloodStock.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnBloodStock.BackColor = System.Drawing.Color.Transparent;
+            this.btnBloodStock.FlatAppearance.BorderSize = 0;
+            this.btnBloodStock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnBloodStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnBloodStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBloodStock.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBloodStock.ForeColor = System.Drawing.Color.Black;
+            this.btnBloodStock.Location = new System.Drawing.Point(459, 90);
+            this.btnBloodStock.Name = "btnBloodStock";
+            this.btnBloodStock.Size = new System.Drawing.Size(83, 42);
+            this.btnBloodStock.TabIndex = 5;
+            this.btnBloodStock.Text = "B&lood Stock";
+            this.btnBloodStock.UseVisualStyleBackColor = false;
+            this.btnBloodStock.MouseEnter += new System.EventHandler(this.BtnBloodStock_MouseEnter);
+            this.btnBloodStock.MouseLeave += new System.EventHandler(this.BtnBloodStock_MouseLeave);
             // 
             // btnReport
             // 
@@ -415,11 +434,11 @@
             this.btnReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.Black;
-            this.btnReport.Location = new System.Drawing.Point(1108, 83);
+            this.btnReport.Location = new System.Drawing.Point(874, 90);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(88, 38);
+            this.btnReport.Size = new System.Drawing.Size(83, 42);
             this.btnReport.TabIndex = 6;
             this.btnReport.Text = "&Report";
             this.btnReport.UseVisualStyleBackColor = false;
@@ -434,136 +453,264 @@
             this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.Black;
-            this.btnSettings.Location = new System.Drawing.Point(1200, 82);
+            this.btnSettings.Location = new System.Drawing.Point(1040, 90);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(88, 42);
+            this.btnSettings.Size = new System.Drawing.Size(83, 42);
             this.btnSettings.TabIndex = 7;
             this.btnSettings.Text = "&Settings";
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.MouseEnter += new System.EventHandler(this.btnSettings_MouseEnter);
             this.btnSettings.MouseLeave += new System.EventHandler(this.btnSettings_MouseLeave);
             // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Location = new System.Drawing.Point(1297, 82);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(63, 40);
-            this.btnLogout.TabIndex = 8;
-            this.btnLogout.Text = "&Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            this.btnLogout.MouseEnter += new System.EventHandler(this.btnLogout_MouseEnter);
-            this.btnLogout.MouseLeave += new System.EventHandler(this.btnLogout_MouseLeave);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.labtime);
-            this.panel1.Controls.Add(this.panelslide);
+            this.panel1.Controls.Add(this.btnAboutUs);
             this.panel1.Controls.Add(this.btnHomeExtra);
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.btnSettings);
-            this.panel1.Controls.Add(this.btnReport);
-            this.panel1.Controls.Add(this.BtnBloodStock);
+            this.panel1.Controls.Add(this.lbltime3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnHospital);
+            this.panel1.Controls.Add(this.btnStaff);
             this.panel1.Controls.Add(this.btnBloodTransfar);
-            this.panel1.Controls.Add(this.btnBloodDonor);
+            this.panel1.Controls.Add(this.btnBloodStock);
+            this.panel1.Controls.Add(this.btnReport);
+            this.panel1.Controls.Add(this.lbltime2);
+            this.panel1.Controls.Add(this.labtime);
+            this.panel1.Controls.Add(this.btnSettings);
+            this.panel1.Controls.Add(this.panelslide);
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.btnBloodDonetion);
+            this.panel1.Controls.Add(this.btnDoctor);
+            this.panel1.Controls.Add(this.btnBloodType);
             this.panel1.Controls.Add(this.btnPatient);
             this.panel1.Controls.Add(this.btnDonor);
-            this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 192);
+            this.panel1.Size = new System.Drawing.Size(1366, 176);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label2
+            // btnAboutUs
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Papyrus", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(344, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 46);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Bank";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Papyrus", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(278, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 46);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Blood";
-            // 
-            // labtime
-            // 
-            this.labtime.AutoSize = true;
-            this.labtime.BackColor = System.Drawing.Color.Transparent;
-            this.labtime.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labtime.ForeColor = System.Drawing.Color.White;
-            this.labtime.Location = new System.Drawing.Point(1201, 163);
-            this.labtime.Name = "labtime";
-            this.labtime.Size = new System.Drawing.Size(17, 21);
-            this.labtime.TabIndex = 19;
-            this.labtime.Text = "*";
-            // 
-            // panelslide
-            // 
-            this.panelslide.BackColor = System.Drawing.Color.Red;
-            this.panelslide.Location = new System.Drawing.Point(544, 83);
-            this.panelslide.Name = "panelslide";
-            this.panelslide.Size = new System.Drawing.Size(97, 2);
-            this.panelslide.TabIndex = 17;
+            this.btnAboutUs.BackColor = System.Drawing.Color.Transparent;
+            this.btnAboutUs.FlatAppearance.BorderSize = 0;
+            this.btnAboutUs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAboutUs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAboutUs.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAboutUs.ForeColor = System.Drawing.Color.Black;
+            this.btnAboutUs.Location = new System.Drawing.Point(957, 88);
+            this.btnAboutUs.Name = "btnAboutUs";
+            this.btnAboutUs.Size = new System.Drawing.Size(83, 42);
+            this.btnAboutUs.TabIndex = 23;
+            this.btnAboutUs.Text = "AboutUs";
+            this.btnAboutUs.UseVisualStyleBackColor = false;
+            this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
+            this.btnAboutUs.MouseEnter += new System.EventHandler(this.btnAboutUs_MouseEnter);
+            this.btnAboutUs.MouseLeave += new System.EventHandler(this.btnAboutUs_MouseLeave);
             // 
             // btnHomeExtra
             // 
+            this.btnHomeExtra.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnHomeExtra.FlatAppearance.BorderSize = 0;
             this.btnHomeExtra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btnHomeExtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btnHomeExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomeExtra.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHomeExtra.ForeColor = System.Drawing.Color.Black;
-            this.btnHomeExtra.Location = new System.Drawing.Point(10, 16);
+            this.btnHomeExtra.Location = new System.Drawing.Point(1177, -19);
             this.btnHomeExtra.Name = "btnHomeExtra";
             this.btnHomeExtra.Size = new System.Drawing.Size(88, 27);
             this.btnHomeExtra.TabIndex = 10;
-            this.btnHomeExtra.UseVisualStyleBackColor = true;
+            this.btnHomeExtra.UseVisualStyleBackColor = false;
             this.btnHomeExtra.Visible = false;
+            // 
+            // lbltime3
+            // 
+            this.lbltime3.AutoSize = true;
+            this.lbltime3.BackColor = System.Drawing.Color.Transparent;
+            this.lbltime3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltime3.ForeColor = System.Drawing.Color.Black;
+            this.lbltime3.Location = new System.Drawing.Point(1205, 98);
+            this.lbltime3.Name = "lbltime3";
+            this.lbltime3.Size = new System.Drawing.Size(13, 16);
+            this.lbltime3.TabIndex = 21;
+            this.lbltime3.Text = "*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(234, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(465, 40);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Blood Bank Management System";
+            // 
+            // btnHospital
+            // 
+            this.btnHospital.BackColor = System.Drawing.Color.Transparent;
+            this.btnHospital.FlatAppearance.BorderSize = 0;
+            this.btnHospital.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnHospital.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnHospital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHospital.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHospital.ForeColor = System.Drawing.Color.Black;
+            this.btnHospital.Location = new System.Drawing.Point(791, 88);
+            this.btnHospital.Name = "btnHospital";
+            this.btnHospital.Size = new System.Drawing.Size(83, 42);
+            this.btnHospital.TabIndex = 22;
+            this.btnHospital.Text = "&Hospital";
+            this.btnHospital.UseVisualStyleBackColor = false;
+            this.btnHospital.Click += new System.EventHandler(this.button5_Click);
+            this.btnHospital.MouseEnter += new System.EventHandler(this.btnHospital_MouseEnter);
+            this.btnHospital.MouseLeave += new System.EventHandler(this.btnHospital_MouseLeave);
+            // 
+            // btnStaff
+            // 
+            this.btnStaff.BackColor = System.Drawing.Color.Transparent;
+            this.btnStaff.FlatAppearance.BorderSize = 0;
+            this.btnStaff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaff.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaff.ForeColor = System.Drawing.Color.Black;
+            this.btnStaff.Location = new System.Drawing.Point(625, 88);
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.Size = new System.Drawing.Size(83, 42);
+            this.btnStaff.TabIndex = 23;
+            this.btnStaff.Text = "&Staff";
+            this.btnStaff.UseVisualStyleBackColor = false;
+            this.btnStaff.MouseEnter += new System.EventHandler(this.btnStaff_MouseEnter);
+            this.btnStaff.MouseLeave += new System.EventHandler(this.btnStaff_MouseLeave);
+            // 
+            // lbltime2
+            // 
+            this.lbltime2.AutoSize = true;
+            this.lbltime2.BackColor = System.Drawing.Color.Transparent;
+            this.lbltime2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltime2.ForeColor = System.Drawing.Color.Black;
+            this.lbltime2.Location = new System.Drawing.Point(1205, 62);
+            this.lbltime2.Name = "lbltime2";
+            this.lbltime2.Size = new System.Drawing.Size(13, 16);
+            this.lbltime2.TabIndex = 20;
+            this.lbltime2.Text = "*";
+            // 
+            // labtime
+            // 
+            this.labtime.AutoSize = true;
+            this.labtime.BackColor = System.Drawing.Color.Transparent;
+            this.labtime.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labtime.ForeColor = System.Drawing.Color.Black;
+            this.labtime.Location = new System.Drawing.Point(1205, 26);
+            this.labtime.Name = "labtime";
+            this.labtime.Size = new System.Drawing.Size(13, 16);
+            this.labtime.TabIndex = 19;
+            this.labtime.Text = "*";
+            // 
+            // panelslide
+            // 
+            this.panelslide.BackColor = System.Drawing.Color.Red;
+            this.panelslide.Location = new System.Drawing.Point(43, 81);
+            this.panelslide.Name = "panelslide";
+            this.panelslide.Size = new System.Drawing.Size(83, 3);
+            this.panelslide.TabIndex = 17;
+            this.panelslide.Paint += new System.Windows.Forms.PaintEventHandler(this.panelslide_Paint);
+            // 
+            // btnDoctor
+            // 
+            this.btnDoctor.BackColor = System.Drawing.Color.Transparent;
+            this.btnDoctor.FlatAppearance.BorderSize = 0;
+            this.btnDoctor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDoctor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoctor.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoctor.ForeColor = System.Drawing.Color.Black;
+            this.btnDoctor.Location = new System.Drawing.Point(708, 88);
+            this.btnDoctor.Name = "btnDoctor";
+            this.btnDoctor.Size = new System.Drawing.Size(83, 42);
+            this.btnDoctor.TabIndex = 22;
+            this.btnDoctor.Text = "&Doctor";
+            this.btnDoctor.UseVisualStyleBackColor = false;
+            this.btnDoctor.MouseEnter += new System.EventHandler(this.btnDoctor_MouseEnter);
+            this.btnDoctor.MouseLeave += new System.EventHandler(this.btnDoctor_MouseLeave);
+            // 
+            // btnBloodType
+            // 
+            this.btnBloodType.BackColor = System.Drawing.Color.Transparent;
+            this.btnBloodType.FlatAppearance.BorderSize = 0;
+            this.btnBloodType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnBloodType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnBloodType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBloodType.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBloodType.ForeColor = System.Drawing.Color.Black;
+            this.btnBloodType.Location = new System.Drawing.Point(542, 88);
+            this.btnBloodType.Name = "btnBloodType";
+            this.btnBloodType.Size = new System.Drawing.Size(83, 42);
+            this.btnBloodType.TabIndex = 22;
+            this.btnBloodType.Text = "Blood Type";
+            this.btnBloodType.UseVisualStyleBackColor = false;
+            this.btnBloodType.MouseEnter += new System.EventHandler(this.btnBloodType_MouseEnter);
+            this.btnBloodType.MouseLeave += new System.EventHandler(this.btnBloodType_MouseLeave);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 3000;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 176);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(20, 569);
+            this.panel2.TabIndex = 17;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1342, 176);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(24, 569);
+            this.panel3.TabIndex = 18;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(20, 176);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1322, 20);
+            this.panel4.TabIndex = 20;
             // 
             // MasterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Linen;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1366, 745);
-            this.Controls.Add(this.panelSettings);
             this.Controls.Add(this.panelReport);
-            this.Controls.Add(this.panelPatient);
+            this.Controls.Add(this.panelSettings);
             this.Controls.Add(this.panelDonor);
+            this.Controls.Add(this.panelPatient);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
@@ -592,20 +739,18 @@
         private System.Windows.Forms.Button btnEditpatient;
         private System.Windows.Forms.Button btnDonorReport;
         private System.Windows.Forms.Panel panelReport;
-        private System.Windows.Forms.Button btnpatientReport;
-        private System.Windows.Forms.Button btnSettingUser;
+        private System.Windows.Forms.Button btnPatientReport;
         private System.Windows.Forms.Panel panelSettings;
-        private System.Windows.Forms.Button btnEmployee;
-        private System.Windows.Forms.Button btnAttendance;
+        private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnDonor;
         private System.Windows.Forms.Button btnPatient;
-        private System.Windows.Forms.Button btnBloodDonor;
+        private System.Windows.Forms.Button btnBloodDonetion;
         private System.Windows.Forms.Button btnBloodTransfar;
-        private System.Windows.Forms.Button BtnBloodStock;
+        private System.Windows.Forms.Button btnBloodStock;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnHomeExtra;
         private System.Windows.Forms.Button button1;
@@ -613,7 +758,17 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label labtime;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbltime2;
+        private System.Windows.Forms.Label lbltime3;
+        private System.Windows.Forms.Button btnHospital;
+        private System.Windows.Forms.Button btnDoctor;
+        private System.Windows.Forms.Button btnStaff;
+        private System.Windows.Forms.Button btnBloodType;
+        private System.Windows.Forms.Button btnAboutUs;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 

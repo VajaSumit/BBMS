@@ -31,7 +31,7 @@ namespace BloodBankManagementSystem
                 imgnumber = 1;
             }
             loadchecked(imgnumber);
-            pictureBox1.ImageLocation = string.Format(@"C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\images\" + imgnumber + ".jpg");
+            pictureBox1.ImageLocation = string.Format(@"C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\Images\" + imgnumber + ".jpg");
             imgnumber = imgnumber + 1;
         }
 
@@ -84,7 +84,7 @@ namespace BloodBankManagementSystem
         //    {
         //        imgnumber = 5;
         //    }
-        //    pictureBox1.ImageLocation = string.Format(@"C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\images\ " + imgnumber + ".jpg");
+        //    pictureBox1.ImageLocation = string.Format(@"C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\Images\ " + imgnumber + ".jpg");
 
         //}
 
@@ -96,7 +96,7 @@ namespace BloodBankManagementSystem
         //    {
         //        imgnumber = 1;
         //    }
-        //    pictureBox1.ImageLocation = string.Format(@"C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\images" + imgnumber + ".jpg");
+        //    pictureBox1.ImageLocation = string.Format(@"C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\Images" + imgnumber + ".jpg");
         //    loadchecked(imgnumber);
 
         //}
@@ -109,7 +109,7 @@ namespace BloodBankManagementSystem
         //    {
         //        imgnumber = 5;
         //    }
-        //    pictureBox1.ImageLocation = string.Format(@"C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\images" + imgnumber + ".jpg");
+        //    pictureBox1.ImageLocation = string.Format(@"C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\Images" + imgnumber + ".jpg");
         //    loadchecked(imgnumber);
 
         //}
@@ -127,6 +127,11 @@ namespace BloodBankManagementSystem
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

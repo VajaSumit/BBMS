@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminUserAddPage));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,15 +46,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.USERNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PASSWORD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtuserinformationuserid = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.USERNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PASSWORD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -66,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(312, 24);
+            this.label1.Location = new System.Drawing.Point(285, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 28);
             this.label1.TabIndex = 0;
@@ -77,7 +77,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(319, 51);
+            this.label2.Location = new System.Drawing.Point(292, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(183, 18);
             this.label2.TabIndex = 1;
@@ -97,13 +97,14 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(800, 1);
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(753, -8);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(27, 28);
+            this.button2.Size = new System.Drawing.Size(80, 77);
             this.button2.TabIndex = 6;
-            this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -256,40 +257,6 @@
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
-            // txtuserinformationuserid
-            // 
-            this.txtuserinformationuserid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtuserinformationuserid.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuserinformationuserid.Location = new System.Drawing.Point(563, 112);
-            this.txtuserinformationuserid.MaxLength = 32750;
-            this.txtuserinformationuserid.Name = "txtuserinformationuserid";
-            this.txtuserinformationuserid.ReadOnly = true;
-            this.txtuserinformationuserid.Size = new System.Drawing.Size(178, 28);
-            this.txtuserinformationuserid.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(450, 118);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 22);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "ID   :-";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
-            // 
-            // errorProvider3
-            // 
-            this.errorProvider3.ContainerControl = this;
-            // 
             // ID
             // 
             this.ID.DataPropertyName = "id";
@@ -325,6 +292,40 @@
             this.PASSWORD.Name = "PASSWORD";
             this.PASSWORD.ReadOnly = true;
             this.PASSWORD.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // txtuserinformationuserid
+            // 
+            this.txtuserinformationuserid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtuserinformationuserid.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuserinformationuserid.Location = new System.Drawing.Point(563, 112);
+            this.txtuserinformationuserid.MaxLength = 32750;
+            this.txtuserinformationuserid.Name = "txtuserinformationuserid";
+            this.txtuserinformationuserid.ReadOnly = true;
+            this.txtuserinformationuserid.Size = new System.Drawing.Size(178, 28);
+            this.txtuserinformationuserid.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(450, 118);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 22);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "ID   :-";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
             // 
             // AdminUserAddPage
             // 

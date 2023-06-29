@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,29 +70,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminLoginPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminLoginPage.Designer.cs">
-      <DependentUpon>AdminLoginPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminUserAddPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminUserAddPage.Designer.cs">
       <DependentUpon>AdminUserAddPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="DonorRegistrationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonorRegistrationPage.Designer.cs">
+      <DependentUpon>DonorRegistrationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDonorPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDonorPage.Designer.cs">
+      <DependentUpon>EditDonorPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPatientPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPatientPage.Designer.cs">
+      <DependentUpon>EditPatientPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ImageSliderPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ImageSliderPage.Designer.cs">
-      <DependentUpon>ImageSliderPage.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -91,6 +118,12 @@
     <Compile Include="MasterPage.Designer.cs">
       <DependentUpon>MasterPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="PatientRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientRegistration.Designer.cs">
+      <DependentUpon>PatientRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProgressPage.cs">
       <SubType>Form</SubType>
@@ -99,23 +132,44 @@
       <DependentUpon>ProgressPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminLoginPage.resx">
-      <DependentUpon>AdminLoginPage.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="ViewAllDonorsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllDonorsPage.Designer.cs">
+      <DependentUpon>ViewAllDonorsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllPatientPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllPatientPage.Designer.cs">
+      <DependentUpon>ViewAllPatientPage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminUserAddPage.resx">
       <DependentUpon>AdminUserAddPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DonorRegistrationPage.resx">
+      <DependentUpon>DonorRegistrationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDonorPage.resx">
+      <DependentUpon>EditDonorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPatientPage.resx">
+      <DependentUpon>EditPatientPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ImageSliderPage.resx">
-      <DependentUpon>ImageSliderPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MasterPage.resx">
       <DependentUpon>MasterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientRegistration.resx">
+      <DependentUpon>PatientRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressPage.resx">
       <DependentUpon>ProgressPage.cs</DependentUpon>
@@ -129,6 +183,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewAllDonorsPage.resx">
+      <DependentUpon>ViewAllDonorsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllPatientPage.resx">
+      <DependentUpon>ViewAllPatientPage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -141,16 +201,60 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
+    <None Include="Database\App.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\1.jpg" />
-    <Content Include="images\2.jpg" />
-    <Content Include="images\3.jpg" />
-    <Content Include="images\4.jpg" />
-    <Content Include="images\5.jpg" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\AdminLoginPageBackgroundImage.jpeg" />
+    <Content Include="Images\AdminUserAddBackgroundimg.jpeg" />
+    <Content Include="Images\Background.jpeg" />
+    <Content Include="Images\BackgroundImageForAllPages.jpeg" />
+    <Content Include="Images\BackgroundImageForAllPages2.jpeg" />
+    <Content Include="Images\borderImage2.png" />
+    <Content Include="Images\borderImage.png" />
+    <Content Include="Images\CommonBackGroundImage.jpeg" />
+    <Content Include="Images\HomePageContent1.png" />
+    <Content Include="Images\HomePageContent2.png" />
+    <Content Include="Images\HomePageContent3.jpeg" />
+    <Content Include="Images\HomePageContent4.png" />
+    <Content Include="Images\LoginPageImage.jpeg" />
+    <Content Include="Images\LoadingImage1.gif" />
+    <Content Include="Images\LoadingImage2.gif" />
+    <Content Include="Images\loginbutton.png" />
+    <Content Include="Images\LoginPageBackground.jpeg" />
+    <Content Include="Images\LoginPageBackgroundImage.jpeg" />
+    <Content Include="Images\LogoutImage.jpeg" />
+    <Content Include="Images\MainMenuBackgroundImage.jpeg" />
+    <Content Include="Images\PasswordShowImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminForms\" />
+    <Folder Include="Apps\" />
+    <Folder Include="Backup\" />
+    <Folder Include="ClassFiles\" />
+    <Folder Include="DLLFiles\" />
+    <Folder Include="DoctorForms\" />
+    <Folder Include="ManagerForms\" />
+    <Folder Include="Others\" />
+    <Folder Include="StaffForms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
