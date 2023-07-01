@@ -212,6 +212,8 @@ namespace BloodBankManagementSystem
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+
+            int i = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             txtPatientNo.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             txtName.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             txtAge.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
@@ -221,9 +223,7 @@ namespace BloodBankManagementSystem
             cmbCity.SelectedItem = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
             txtAddress.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
             cmbBloodGroup.SelectedItem = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
-   
-
-
+            
         }
 
         private void btnupdate_Click(object sender, EventArgs e)
@@ -275,7 +275,39 @@ namespace BloodBankManagementSystem
             }
             else
             {
-                MessageBox.Show("Data Updated");
+                //Data Update By using Procedure
+
+                string id = txtPatientNo.Text;
+                string name = txtName.Text;
+                int age = int.Parse(txtAge.Text);
+                string gender = cmbGender.SelectedItem.ToString();
+                string mobile = txtMobileNo.Text;
+                string email = txtEmailID.Text;
+                string city = cmbCity.SelectedItem.ToString();
+                string address = txtAddress.Text;
+                string bloodgroup = cmbBloodGroup.SelectedItem.ToString();
+               
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("exec UpdatePatientRecordRegistration '" + id + "','" + name + "','" + age + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "'", con);
+
+                int a = cmd.ExecuteNonQuery();
+
+                if (a > 0)
+                {
+                    MessageBox.Show("Patient Data Update Successful !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearData();
+                    DataBinding();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Patient Data Update Faild !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                con.Close();
             }
         }
 
@@ -328,7 +360,29 @@ namespace BloodBankManagementSystem
             }
             else
             {
-                MessageBox.Show("Data Deleted");
+                //Data Delete By using Procedure
+
+                string id = txtPatientNo.Text;
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("exec DeletePatientRecordRegistration '" + id + "'", con);
+
+                int a = cmd.ExecuteNonQuery();
+
+                if (a > 0)
+                {
+                    MessageBox.Show("Data Delete Successful !", "Delete Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearData();
+                    DataBinding();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Donor Data Update Faild !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                con.Close();
             }
         }
 
@@ -417,6 +471,35 @@ namespace BloodBankManagementSystem
                 e.Handled = true;
                 errorProvider1.SetError(this.txtName, "Please Enter The Only Latters , Can't Enter Numeric Value !");
             }
+        }
+
+
+        public void DataBinding()
+        {
+            // Data Fatch By using query
+
+            //SqlConnection con = new SqlConnection(cs);
+            //string query = "select *from Patient_RegistrationTbl";
+            //SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            //DataTable data = new DataTable();
+            //sda.Fill(data);
+            //dataGridView1.DataSource = data;
+
+            // Data Fatch By using procedure
+
+            SqlConnection con = new SqlConnection(cs);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("exec ListPatientRegistration", con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable data = new DataTable();
+            sda.Fill(data);
+            dataGridView1.DataSource = data;
+            con.Close();
+        }
+
+        private void EditPatientPage_Load(object sender, EventArgs e)
+        {
+            DataBinding();
         }
     }
 }

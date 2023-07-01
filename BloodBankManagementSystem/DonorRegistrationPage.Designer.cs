@@ -298,7 +298,9 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.Color.White;
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtName.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(381, 286);
             this.txtName.Name = "txtName";

@@ -13,7 +13,6 @@ C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\B
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.AdminUserAddPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.DonorRegistrationPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.AboutUs.resources
-C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.csprojResolveAssemblyReference.cache
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllDonorsPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.EditDonorPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.PatientRegistration.resources

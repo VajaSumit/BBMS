@@ -67,8 +67,8 @@
             this.btnDoctor = new System.Windows.Forms.Button();
             this.btnBloodType = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelDonor.SuspendLayout();
             this.panelPatient.SuspendLayout();
@@ -84,7 +84,7 @@
             this.panelDonor.Controls.Add(this.btnViewAllDonor);
             this.panelDonor.Controls.Add(this.btnEditDonor);
             this.panelDonor.Controls.Add(this.btnDonorRegistration);
-            this.panelDonor.Location = new System.Drawing.Point(120, 142);
+            this.panelDonor.Location = new System.Drawing.Point(127, 142);
             this.panelDonor.Name = "panelDonor";
             this.panelDonor.Size = new System.Drawing.Size(96, 96);
             this.panelDonor.TabIndex = 11;
@@ -144,7 +144,7 @@
             this.panelPatient.Controls.Add(this.btnViewAllpatient);
             this.panelPatient.Controls.Add(this.btnEditpatient);
             this.panelPatient.Controls.Add(this.btnPatientRegistration);
-            this.panelPatient.Location = new System.Drawing.Point(286, 143);
+            this.panelPatient.Location = new System.Drawing.Point(296, 143);
             this.panelPatient.Name = "panelPatient";
             this.panelPatient.Size = new System.Drawing.Size(96, 96);
             this.panelPatient.TabIndex = 12;
@@ -218,7 +218,7 @@
             this.panelReport.Controls.Add(this.button1);
             this.panelReport.Controls.Add(this.btnPatientReport);
             this.panelReport.Controls.Add(this.btnDonorReport);
-            this.panelReport.Location = new System.Drawing.Point(877, 145);
+            this.panelReport.Location = new System.Drawing.Point(899, 145);
             this.panelReport.Name = "panelReport";
             this.panelReport.Size = new System.Drawing.Size(73, 96);
             this.panelReport.TabIndex = 14;
@@ -260,7 +260,7 @@
             this.panelSettings.Controls.Add(this.btnProfile);
             this.panelSettings.Controls.Add(this.btnLogout);
             this.panelSettings.Controls.Add(this.btnUser);
-            this.panelSettings.Location = new System.Drawing.Point(1043, 146);
+            this.panelSettings.Location = new System.Drawing.Point(1073, 146);
             this.panelSettings.Name = "panelSettings";
             this.panelSettings.Size = new System.Drawing.Size(73, 96);
             this.panelSettings.TabIndex = 15;
@@ -321,9 +321,9 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.Black;
-            this.btnHome.Location = new System.Drawing.Point(44, 90);
+            this.btnHome.Location = new System.Drawing.Point(44, 88);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(83, 42);
+            this.btnHome.Size = new System.Drawing.Size(85, 45);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "&Home ";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -341,9 +341,9 @@
             this.btnDonor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDonor.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonor.ForeColor = System.Drawing.Color.Black;
-            this.btnDonor.Location = new System.Drawing.Point(127, 90);
+            this.btnDonor.Location = new System.Drawing.Point(129, 88);
             this.btnDonor.Name = "btnDonor";
-            this.btnDonor.Size = new System.Drawing.Size(83, 42);
+            this.btnDonor.Size = new System.Drawing.Size(85, 45);
             this.btnDonor.TabIndex = 1;
             this.btnDonor.Text = "&Donor";
             this.btnDonor.UseVisualStyleBackColor = false;
@@ -360,10 +360,10 @@
             this.btnPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPatient.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPatient.ForeColor = System.Drawing.Color.Black;
-            this.btnPatient.Location = new System.Drawing.Point(293, 90);
+            this.btnPatient.Location = new System.Drawing.Point(299, 88);
             this.btnPatient.Name = "btnPatient";
-            this.btnPatient.Size = new System.Drawing.Size(83, 42);
-            this.btnPatient.TabIndex = 2;
+            this.btnPatient.Size = new System.Drawing.Size(85, 45);
+            this.btnPatient.TabIndex = 3;
             this.btnPatient.Text = "&Patient";
             this.btnPatient.UseVisualStyleBackColor = false;
             this.btnPatient.MouseEnter += new System.EventHandler(this.btnPatient_MouseEnter);
@@ -379,11 +379,11 @@
             this.btnBloodDonetion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodDonetion.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodDonetion.ForeColor = System.Drawing.Color.Black;
-            this.btnBloodDonetion.Location = new System.Drawing.Point(210, 90);
+            this.btnBloodDonetion.Location = new System.Drawing.Point(214, 88);
             this.btnBloodDonetion.Name = "btnBloodDonetion";
-            this.btnBloodDonetion.Size = new System.Drawing.Size(83, 42);
-            this.btnBloodDonetion.TabIndex = 3;
-            this.btnBloodDonetion.Text = "&Blood Donetion";
+            this.btnBloodDonetion.Size = new System.Drawing.Size(85, 45);
+            this.btnBloodDonetion.TabIndex = 2;
+            this.btnBloodDonetion.Text = "Blood Donetion";
             this.btnBloodDonetion.UseVisualStyleBackColor = false;
             this.btnBloodDonetion.MouseEnter += new System.EventHandler(this.btnBloodDonor_MouseEnter);
             this.btnBloodDonetion.MouseLeave += new System.EventHandler(this.btnBloodDonor_MouseLeave);
@@ -398,11 +398,11 @@
             this.btnBloodTransfar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodTransfar.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodTransfar.ForeColor = System.Drawing.Color.Black;
-            this.btnBloodTransfar.Location = new System.Drawing.Point(376, 90);
+            this.btnBloodTransfar.Location = new System.Drawing.Point(384, 88);
             this.btnBloodTransfar.Name = "btnBloodTransfar";
-            this.btnBloodTransfar.Size = new System.Drawing.Size(83, 42);
+            this.btnBloodTransfar.Size = new System.Drawing.Size(85, 45);
             this.btnBloodTransfar.TabIndex = 4;
-            this.btnBloodTransfar.Text = "Blood &Transfar";
+            this.btnBloodTransfar.Text = "Blood Transfar";
             this.btnBloodTransfar.UseVisualStyleBackColor = false;
             this.btnBloodTransfar.MouseEnter += new System.EventHandler(this.btnBloodTransfar_MouseEnter);
             this.btnBloodTransfar.MouseLeave += new System.EventHandler(this.btnBloodTransfar_MouseLeave);
@@ -417,9 +417,9 @@
             this.btnBloodStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodStock.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodStock.ForeColor = System.Drawing.Color.Black;
-            this.btnBloodStock.Location = new System.Drawing.Point(459, 90);
+            this.btnBloodStock.Location = new System.Drawing.Point(469, 88);
             this.btnBloodStock.Name = "btnBloodStock";
-            this.btnBloodStock.Size = new System.Drawing.Size(83, 42);
+            this.btnBloodStock.Size = new System.Drawing.Size(85, 45);
             this.btnBloodStock.TabIndex = 5;
             this.btnBloodStock.Text = "B&lood Stock";
             this.btnBloodStock.UseVisualStyleBackColor = false;
@@ -436,10 +436,10 @@
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.Black;
-            this.btnReport.Location = new System.Drawing.Point(874, 90);
+            this.btnReport.Location = new System.Drawing.Point(894, 88);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(83, 42);
-            this.btnReport.TabIndex = 6;
+            this.btnReport.Size = new System.Drawing.Size(85, 45);
+            this.btnReport.TabIndex = 10;
             this.btnReport.Text = "&Report";
             this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.MouseEnter += new System.EventHandler(this.btnReport_MouseEnter);
@@ -455,10 +455,10 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.Black;
-            this.btnSettings.Location = new System.Drawing.Point(1040, 90);
+            this.btnSettings.Location = new System.Drawing.Point(1064, 88);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(83, 42);
-            this.btnSettings.TabIndex = 7;
+            this.btnSettings.Size = new System.Drawing.Size(85, 45);
+            this.btnSettings.TabIndex = 12;
             this.btnSettings.Text = "&Settings";
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.MouseEnter += new System.EventHandler(this.btnSettings_MouseEnter);
@@ -491,7 +491,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 176);
+            this.panel1.Size = new System.Drawing.Size(1366, 170);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -504,10 +504,10 @@
             this.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAboutUs.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAboutUs.ForeColor = System.Drawing.Color.Black;
-            this.btnAboutUs.Location = new System.Drawing.Point(957, 88);
+            this.btnAboutUs.Location = new System.Drawing.Point(979, 88);
             this.btnAboutUs.Name = "btnAboutUs";
-            this.btnAboutUs.Size = new System.Drawing.Size(83, 42);
-            this.btnAboutUs.TabIndex = 23;
+            this.btnAboutUs.Size = new System.Drawing.Size(85, 45);
+            this.btnAboutUs.TabIndex = 11;
             this.btnAboutUs.Text = "AboutUs";
             this.btnAboutUs.UseVisualStyleBackColor = false;
             this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
@@ -536,7 +536,7 @@
             this.lbltime3.BackColor = System.Drawing.Color.Transparent;
             this.lbltime3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltime3.ForeColor = System.Drawing.Color.Black;
-            this.lbltime3.Location = new System.Drawing.Point(1205, 98);
+            this.lbltime3.Location = new System.Drawing.Point(1208, 95);
             this.lbltime3.Name = "lbltime3";
             this.lbltime3.Size = new System.Drawing.Size(13, 16);
             this.lbltime3.TabIndex = 21;
@@ -563,10 +563,10 @@
             this.btnHospital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHospital.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHospital.ForeColor = System.Drawing.Color.Black;
-            this.btnHospital.Location = new System.Drawing.Point(791, 88);
+            this.btnHospital.Location = new System.Drawing.Point(809, 88);
             this.btnHospital.Name = "btnHospital";
-            this.btnHospital.Size = new System.Drawing.Size(83, 42);
-            this.btnHospital.TabIndex = 22;
+            this.btnHospital.Size = new System.Drawing.Size(85, 45);
+            this.btnHospital.TabIndex = 9;
             this.btnHospital.Text = "&Hospital";
             this.btnHospital.UseVisualStyleBackColor = false;
             this.btnHospital.Click += new System.EventHandler(this.button5_Click);
@@ -582,10 +582,10 @@
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaff.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaff.ForeColor = System.Drawing.Color.Black;
-            this.btnStaff.Location = new System.Drawing.Point(625, 88);
+            this.btnStaff.Location = new System.Drawing.Point(639, 88);
             this.btnStaff.Name = "btnStaff";
-            this.btnStaff.Size = new System.Drawing.Size(83, 42);
-            this.btnStaff.TabIndex = 23;
+            this.btnStaff.Size = new System.Drawing.Size(85, 45);
+            this.btnStaff.TabIndex = 7;
             this.btnStaff.Text = "&Staff";
             this.btnStaff.UseVisualStyleBackColor = false;
             this.btnStaff.MouseEnter += new System.EventHandler(this.btnStaff_MouseEnter);
@@ -597,7 +597,7 @@
             this.lbltime2.BackColor = System.Drawing.Color.Transparent;
             this.lbltime2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltime2.ForeColor = System.Drawing.Color.Black;
-            this.lbltime2.Location = new System.Drawing.Point(1205, 62);
+            this.lbltime2.Location = new System.Drawing.Point(1208, 59);
             this.lbltime2.Name = "lbltime2";
             this.lbltime2.Size = new System.Drawing.Size(13, 16);
             this.lbltime2.TabIndex = 20;
@@ -609,7 +609,7 @@
             this.labtime.BackColor = System.Drawing.Color.Transparent;
             this.labtime.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labtime.ForeColor = System.Drawing.Color.Black;
-            this.labtime.Location = new System.Drawing.Point(1205, 26);
+            this.labtime.Location = new System.Drawing.Point(1208, 23);
             this.labtime.Name = "labtime";
             this.labtime.Size = new System.Drawing.Size(13, 16);
             this.labtime.TabIndex = 19;
@@ -618,9 +618,9 @@
             // panelslide
             // 
             this.panelslide.BackColor = System.Drawing.Color.Red;
-            this.panelslide.Location = new System.Drawing.Point(43, 81);
+            this.panelslide.Location = new System.Drawing.Point(48, 81);
             this.panelslide.Name = "panelslide";
-            this.panelslide.Size = new System.Drawing.Size(83, 3);
+            this.panelslide.Size = new System.Drawing.Size(85, 3);
             this.panelslide.TabIndex = 17;
             this.panelslide.Paint += new System.Windows.Forms.PaintEventHandler(this.panelslide_Paint);
             // 
@@ -633,10 +633,10 @@
             this.btnDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoctor.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoctor.ForeColor = System.Drawing.Color.Black;
-            this.btnDoctor.Location = new System.Drawing.Point(708, 88);
+            this.btnDoctor.Location = new System.Drawing.Point(724, 88);
             this.btnDoctor.Name = "btnDoctor";
-            this.btnDoctor.Size = new System.Drawing.Size(83, 42);
-            this.btnDoctor.TabIndex = 22;
+            this.btnDoctor.Size = new System.Drawing.Size(85, 45);
+            this.btnDoctor.TabIndex = 8;
             this.btnDoctor.Text = "&Doctor";
             this.btnDoctor.UseVisualStyleBackColor = false;
             this.btnDoctor.MouseEnter += new System.EventHandler(this.btnDoctor_MouseEnter);
@@ -651,10 +651,10 @@
             this.btnBloodType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodType.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBloodType.ForeColor = System.Drawing.Color.Black;
-            this.btnBloodType.Location = new System.Drawing.Point(542, 88);
+            this.btnBloodType.Location = new System.Drawing.Point(554, 88);
             this.btnBloodType.Name = "btnBloodType";
-            this.btnBloodType.Size = new System.Drawing.Size(83, 42);
-            this.btnBloodType.TabIndex = 22;
+            this.btnBloodType.Size = new System.Drawing.Size(85, 45);
+            this.btnBloodType.TabIndex = 6;
             this.btnBloodType.Text = "Blood Type";
             this.btnBloodType.UseVisualStyleBackColor = false;
             this.btnBloodType.MouseEnter += new System.EventHandler(this.btnBloodType_MouseEnter);
@@ -666,26 +666,26 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 176);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(20, 569);
-            this.panel2.TabIndex = 17;
-            // 
             // panel3
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1342, 176);
+            this.panel3.Location = new System.Drawing.Point(1349, 170);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(24, 569);
+            this.panel3.Size = new System.Drawing.Size(17, 575);
             this.panel3.TabIndex = 18;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 170);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(14, 575);
+            this.panel2.TabIndex = 17;
             // 
             // panel4
             // 
@@ -693,9 +693,9 @@
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(20, 176);
+            this.panel4.Location = new System.Drawing.Point(14, 170);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1322, 20);
+            this.panel4.Size = new System.Drawing.Size(1335, 14);
             this.panel4.TabIndex = 20;
             // 
             // MasterPage
@@ -766,8 +766,8 @@
         private System.Windows.Forms.Button btnBloodType;
         private System.Windows.Forms.Button btnAboutUs;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
     }
 }

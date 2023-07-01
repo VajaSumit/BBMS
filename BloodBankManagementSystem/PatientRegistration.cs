@@ -270,7 +270,35 @@ namespace BloodBankManagementSystem
             }
             else
             {
-                MessageBox.Show("Patient Record Save SuccessFul","Patient Record Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                string id = txtPatientNo.Text;
+                string name = txtName.Text;
+                int age = int.Parse(txtAge.Text);
+                string gender = cmbGender.SelectedItem.ToString();
+                string mobile = txtMobileNo.Text;
+                string email = txtEmailID.Text;
+                string city = cmbCity.SelectedItem.ToString();
+                string address = txtAddress.Text;
+                string bloodgroup = cmbBloodGroup.SelectedItem.ToString();
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("exec InsertPatientRecordRegistration '" + id + "','" + name + "','" + age + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "','",con);
+                int a = cmd.ExecuteNonQuery();
+                if ( a > 0)
+                {
+                    MessageBox.Show("Patient Record Save SuccessFul", "Patient Record Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearAllData();
+                    PatientAutoIncrementID();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Patient Record Not Save", "Patient Record Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+
             }
 
         }

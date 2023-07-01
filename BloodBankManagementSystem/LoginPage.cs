@@ -214,26 +214,30 @@ namespace BloodBankManagementSystem
         private void cmdUserRole_Enter(object sender, EventArgs e)
         {
             //cmdUserRole.BackColor = Color.FromArgb(192, 255, 255);
-            cmdUserRole.BackColor = Color.DodgerBlue;
-            cmdUserRole.ForeColor = Color.White;
+            cmdUserRole.BackColor = Color.OldLace;
+            cmdUserRole.ForeColor = Color.Black;
+            //cmdUserRole.BackColor = Color.DodgerBlue;
+            //cmdUserRole.ForeColor = Color.White;
         }
 
         private void txtusername_Enter(object sender, EventArgs e)
         {
             //txtusername.BackColor = Color.FromArgb(192, 255, 255);
-            //txtusername.BackColor = Color.Maroon;
-            txtusername.ForeColor = Color.White;
-            txtusername.BackColor = Color.DodgerBlue;
+            txtusername.BackColor = Color.OldLace;
+            txtusername.ForeColor = Color.Black;
+            //txtusername.ForeColor = Color.White;
+            //txtusername.BackColor = Color.DodgerBlue;
 
         }
 
         private void txtpassword_Enter(object sender, EventArgs e)
         {
             //txtpassword.BackColor = Color.FromArgb(192, 255, 255);
-            //txtpassword.BackColor = Color.Maroon;
-            txtpassword.ForeColor = Color.White;
-            txtpassword.BackColor = Color.DodgerBlue;
-           
+            txtpassword.BackColor = Color.OldLace;
+            txtpassword.ForeColor = Color.Black;
+            //txtpassword.ForeColor = Color.White;
+            //txtpassword.BackColor = Color.DodgerBlue;
+
         }
 
         private void btnlogin_MouseEnter(object sender, EventArgs e)
@@ -245,6 +249,11 @@ namespace BloodBankManagementSystem
         private void btnlogin_MouseHover(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

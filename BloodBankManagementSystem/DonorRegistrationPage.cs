@@ -299,23 +299,41 @@ namespace BloodBankManagementSystem
             }
             else
             {
-                //MessageBox.Show("Data Inserted ...!");
+                // Data Inserting By Using Query
+
+                //SqlConnection con = new SqlConnection(cs);
+                //string query = "insert into Donor_RegistrationTbl values(@id,@name,@age,@gender,@mobile,@email,@city,@address,@bloodgroup,@height,@weight)";
+                //SqlCommand cmd = new SqlCommand(query, con);
+                //cmd.Parameters.AddWithValue("@id", txtDonorNo.Text);
+                //cmd.Parameters.AddWithValue("@name", txtName.Text);
+                //cmd.Parameters.AddWithValue("@age", txtAge.Text);
+                //cmd.Parameters.AddWithValue("@gender", cmbGender.SelectedItem.ToString());
+                //cmd.Parameters.AddWithValue("@mobile", txtMobileNo.Text);
+                //cmd.Parameters.AddWithValue("@email", txtEmailID.Text);
+                //cmd.Parameters.AddWithValue("@city", cmbCity.SelectedItem.ToString());
+                //cmd.Parameters.AddWithValue("@address", txtAddress.Text);
+                //cmd.Parameters.AddWithValue("@bloodgroup", cmbBloodGroup.SelectedItem.ToString());
+                //cmd.Parameters.AddWithValue("@height", txtHeight.Text);
+                //cmd.Parameters.AddWithValue("@weight", txtWeight.Text);
+                //con.Open();
+
+                //Data Insert By using Procedure
+
+                string id = txtDonorNo.Text;
+                string name = txtName.Text;
+                int age = int.Parse(txtAge.Text);
+                string gender = cmbGender.SelectedItem.ToString();
+                string mobile = txtMobileNo.Text;
+                string email = txtEmailID.Text;
+                string city = cmbCity.SelectedItem.ToString();
+                string address = txtAddress.Text;
+                string bloodgroup = cmbBloodGroup.SelectedItem.ToString();
+                int height = int.Parse(txtHeight.Text);
+                int weight = int.Parse(txtWeight.Text);
 
                 SqlConnection con = new SqlConnection(cs);
-                string query = "insert into Donor_RegistrationTbl values(@id,@name,@age,@gender,@mobile,@email,@city,@address,@bloodgroup,@height,@weight)";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@id", txtDonorNo.Text);
-                cmd.Parameters.AddWithValue("@name", txtName.Text);
-                cmd.Parameters.AddWithValue("@age", txtAge.Text);
-                cmd.Parameters.AddWithValue("@gender", cmbGender.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@mobile", txtMobileNo.Text);
-                cmd.Parameters.AddWithValue("@email", txtEmailID.Text);
-                cmd.Parameters.AddWithValue("@city", cmbCity.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@address", txtAddress.Text);
-                cmd.Parameters.AddWithValue("@bloodgroup", cmbBloodGroup.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@height", txtHeight.Text);
-                cmd.Parameters.AddWithValue("@weight", txtWeight.Text);
                 con.Open();
+                SqlCommand cmd = new SqlCommand("exec InsertDonorRecordRegistration '"+ id + "','" + name + "','" + age + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "','" + height + "','" + weight    + "'",con);
 
                 int a = cmd.ExecuteNonQuery();
 
@@ -565,7 +583,7 @@ namespace BloodBankManagementSystem
             else
             {
                 e.Handled = true;
-                errorProvider1.SetError(this.txtName, "Please Enter The Only Latters , Can't Enter Numeric Value !");
+                errorProvider2.SetError(this.txtName, "Please Enter The Only Latters , Can't Enter Numeric Value !");
             }
         }
     }

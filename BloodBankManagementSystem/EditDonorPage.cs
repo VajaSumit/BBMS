@@ -22,6 +22,7 @@ namespace BloodBankManagementSystem
 
         string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
         string patten = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+      
 
         private void btnclose_Click(object sender, EventArgs e)
         {
@@ -283,29 +284,42 @@ namespace BloodBankManagementSystem
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            int i = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             txtDonorNo.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             txtName.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             txtAge.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             cmbGender.SelectedItem = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
             txtMobileNo.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-            txtEmailID.Text= dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            txtEmailID.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
             cmbCity.SelectedItem = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
             txtAddress.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
             cmbBloodGroup.SelectedItem = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
             txtHeight.Text = dataGridView1.SelectedRows[0].Cells[10].Value.ToString();
             txtWeight.Text = dataGridView1.SelectedRows[0].Cells[11].Value.ToString();
 
-
         }
 
         public void DataBinding()
         {
+            // Data Fatch By using query
+
+            //SqlConnection con = new SqlConnection(cs);
+            //string query = "select *from Donor_RegistrationTbl";
+            //SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            //DataTable data = new DataTable();
+            //sda.Fill(data);
+            //dataGridView1.DataSource = data;
+
+            // Data Fatch By using procedure
+
             SqlConnection con = new SqlConnection(cs);
-            string query = "select *from Donor_RegistrationTbl";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("exec ListDonorRecordRegistration", con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable data = new DataTable();
             sda.Fill(data);
             dataGridView1.DataSource = data;
+            con.Close();
         }
 
         private void EditDonorPage_Load(object sender, EventArgs e)
@@ -372,7 +386,40 @@ namespace BloodBankManagementSystem
             }
             else
             {
-                MessageBox.Show("Data Updated !!");
+                //Data Update By using Procedure
+
+                string id = txtDonorNo.Text;
+                string name = txtName.Text;
+                int age = int.Parse(txtAge.Text);
+                string gender = cmbGender.SelectedItem.ToString();
+                string mobile = txtMobileNo.Text;
+                string email = txtEmailID.Text;
+                string city = cmbCity.SelectedItem.ToString();
+                string address = txtAddress.Text;
+                string bloodgroup = cmbBloodGroup.SelectedItem.ToString();
+                int height = int.Parse(txtHeight.Text);
+                int weight = int.Parse(txtWeight.Text);
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("exec UpdateDonorRecordRegistration '" + id + "','" + name + "','" + age + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "','" + height + "','" + weight + "'", con);
+
+                int a = cmd.ExecuteNonQuery();
+
+                if (a > 0)
+                {
+                    MessageBox.Show("Donor Data Update Successful !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearData();
+                    DataBinding();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Donor Data Update Faild !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                con.Close();
             }
         }
 
@@ -435,7 +482,29 @@ namespace BloodBankManagementSystem
             }
             else
             {
-                MessageBox.Show("Data Deleted !!");
+                //Data Delete By using Procedure
+
+                string id = txtDonorNo.Text;
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("exec DeleteDonorRecordRegistration '" + id + "'", con);
+
+                int a = cmd.ExecuteNonQuery();
+
+                if (a > 0)
+                {
+                    MessageBox.Show("Data Delete Successful !", "Delete Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearData();
+                    DataBinding();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Donor Data Update Faild !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                con.Close();
             }
         }
 
@@ -536,6 +605,28 @@ namespace BloodBankManagementSystem
                 e.Handled = true;
                 errorProvider1.SetError(this.txtName, "Please Enter The Only Latters , Can't Enter Numeric Value !");
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            int i = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            txtDonorNo.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            txtName.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            txtAge.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            cmbGender.SelectedItem = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            txtMobileNo.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            txtEmailID.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            cmbCity.SelectedItem = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+            txtAddress.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+            cmbBloodGroup.SelectedItem = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
+            txtHeight.Text = dataGridView1.SelectedRows[0].Cells[10].Value.ToString();
+            txtWeight.Text = dataGridView1.SelectedRows[0].Cells[11].Value.ToString();
+
         }
     }
 }

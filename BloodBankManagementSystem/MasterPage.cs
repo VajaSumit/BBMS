@@ -359,22 +359,29 @@ namespace BloodBankManagementSystem
 
         private void btnHome_MouseEnter(object sender, EventArgs e)
         {
+            btnHome.FlatAppearance.BorderSize = 2;
+
             dimgray(btnHome);
             panelDonor.Visible = false;
             panelPatient.Visible = false;
             panelReport.Visible = false;
             panelSettings.Visible = false;
             movepanel(btnHome);
+
         }
 
         private void btnHome_MouseLeave(object sender, EventArgs e)
         {
+            btnHome.FlatAppearance.BorderSize = 0;
+
             dimgray(btnHomeExtra);
            
         }
 
         private void btnDonor_MouseEnter(object sender, EventArgs e)
         {
+            btnDonor.FlatAppearance.BorderSize = 2;
+
             dimgray(btnDonor);
             panelDonor.Visible = true;
             panelPatient.Visible = false;
@@ -383,10 +390,13 @@ namespace BloodBankManagementSystem
             movepanel(btnDonor);
 
 
+
         }
 
         private void btnDonor_MouseLeave(object sender, EventArgs e)
         {
+            btnDonor.FlatAppearance.BorderSize = 0;
+
             dimgray(btnHomeExtra);
 
 
@@ -394,6 +404,8 @@ namespace BloodBankManagementSystem
 
         private void btnPatient_MouseEnter(object sender, EventArgs e)
         {
+            btnPatient.FlatAppearance.BorderSize = 2;
+
             dimgray(btnPatient);
             panelPatient.Visible = true;
             panelDonor.Visible = false;
@@ -406,6 +418,8 @@ namespace BloodBankManagementSystem
 
         private void btnPatient_MouseLeave(object sender, EventArgs e)
         {
+            btnPatient.FlatAppearance.BorderSize = 0;
+
             dimgray(btnHomeExtra);
 
 
@@ -413,13 +427,15 @@ namespace BloodBankManagementSystem
 
         private void btnBloodDonor_MouseEnter(object sender, EventArgs e)
         {
+            btnBloodDonetion.FlatAppearance.BorderSize = 2;
+
             dimgray(btnBloodDonetion);
             panelDonor.Visible = false;
             panelPatient.Visible = false;
             panelReport.Visible = false;
             panelSettings.Visible = false;
             movepanel(btnBloodDonetion);
-           
+
 
 
 
@@ -427,12 +443,17 @@ namespace BloodBankManagementSystem
 
         private void btnBloodDonor_MouseLeave(object sender, EventArgs e)
         {
+            btnBloodDonetion.FlatAppearance.BorderSize = 0;
+
             dimgray(btnHomeExtra);
+
 
         }
 
         private void btnBloodTransfar_MouseEnter(object sender, EventArgs e)
         {
+            btnBloodTransfar.FlatAppearance.BorderSize = 2;
+
             dimgray(btnBloodTransfar);
             panelDonor.Visible = false;
             panelPatient.Visible = false;
@@ -442,16 +463,23 @@ namespace BloodBankManagementSystem
 
 
 
+
         }
 
         private void btnBloodTransfar_MouseLeave(object sender, EventArgs e)
         {
+            btnBloodTransfar.FlatAppearance.BorderSize = 0;
+
             dimgray(btnHomeExtra);
+
+
 
         }
 
         private void BtnBloodStock_MouseEnter(object sender, EventArgs e)
         {
+            btnBloodStock.FlatAppearance.BorderSize = 2;
+
             dimgray(btnBloodStock);
             panelDonor.Visible = false;
             panelPatient.Visible = false;
@@ -459,19 +487,25 @@ namespace BloodBankManagementSystem
             panelSettings.Visible = false;
             movepanel(btnBloodStock);
 
-           
+
+
 
 
         }
 
         private void BtnBloodStock_MouseLeave(object sender, EventArgs e)
         {
+            btnBloodStock.FlatAppearance.BorderSize = 0;
+
             dimgray(btnHomeExtra);
+
 
         }
 
         private void btnReport_MouseEnter(object sender, EventArgs e)
         {
+            btnReport.FlatAppearance.BorderSize = 2;
+
             dimgray(btnReport);
             panelReport.Visible = true;
             panelDonor.Visible = false;
@@ -480,16 +514,22 @@ namespace BloodBankManagementSystem
             movepanel(btnReport);
 
 
+
         }
 
         private void btnReport_MouseLeave(object sender, EventArgs e)
         {
+            btnReport.FlatAppearance.BorderSize = 0;
+
             dimgray(btnHomeExtra);
+
 
         }
 
         private void btnSettings_MouseEnter(object sender, EventArgs e)
         {
+            btnSettings.FlatAppearance.BorderSize = 2;
+
             dimgray(btnSettings);
             panelSettings.Visible = true;
             panelDonor.Visible = false;
@@ -498,17 +538,23 @@ namespace BloodBankManagementSystem
             movepanel(btnSettings);
 
 
+
         }
 
         private void btnSettings_MouseLeave(object sender, EventArgs e)
         {
+            btnSettings.FlatAppearance.BorderSize = 0;
+
             dimgray(btnHomeExtra);
+
 
 
         }
 
         private void btnLogout_MouseEnter(object sender, EventArgs e)
         {
+            btnLogout.FlatAppearance.BorderSize = 2;
+
             dimgray(btnLogout);
             panelDonor.Visible = false;
             panelPatient.Visible = false;
@@ -517,11 +563,15 @@ namespace BloodBankManagementSystem
             movepanel(btnLogout);
 
 
+
         }
 
         private void btnLogout_MouseLeave(object sender, EventArgs e)
         {
+            btnLogout.FlatAppearance.BorderSize = 0;
+
             dimgray(btnHomeExtra);
+
 
         }
 
@@ -653,6 +703,8 @@ namespace BloodBankManagementSystem
 
         private void btnBloodType_MouseEnter(object sender, EventArgs e)
         {
+            btnBloodType.FlatAppearance.BorderSize = 2;
+
             dimgray(btnBloodType);
             panelDonor.Visible = false;
             panelPatient.Visible = false;
@@ -663,12 +715,16 @@ namespace BloodBankManagementSystem
 
         private void btnBloodType_MouseLeave(object sender, EventArgs e)
         {
+            btnBloodType.FlatAppearance.BorderSize = 0;
+
             dimgray(btnBloodType);
 
         }
 
         private void btnStaff_MouseEnter(object sender, EventArgs e)
         {
+            btnStaff.FlatAppearance.BorderSize = 2;
+
             dimgray(btnStaff);
             panelDonor.Visible = false;
             panelPatient.Visible = false;
@@ -681,11 +737,16 @@ namespace BloodBankManagementSystem
 
         private void btnStaff_MouseLeave(object sender, EventArgs e)
         {
+            btnStaff.FlatAppearance.BorderSize = 0;
+
             dimgray(btnStaff);
+
         }
 
         private void btnDoctor_MouseEnter(object sender, EventArgs e)
         {
+            btnDoctor.FlatAppearance.BorderSize = 2;
+
             dimgray(btnDoctor);
             panelDonor.Visible = false;
             panelPatient.Visible = false;
@@ -698,11 +759,15 @@ namespace BloodBankManagementSystem
 
         private void btnDoctor_MouseLeave(object sender, EventArgs e)
         {
+            btnDoctor.FlatAppearance.BorderSize = 0;
+
             dimgray(btnDoctor);
         }
 
         private void btnHospital_MouseEnter(object sender, EventArgs e)
         {
+            btnHospital.FlatAppearance.BorderSize = 2;
+
             dimgray(btnHospital);
             panelDonor.Visible = false;
             panelPatient.Visible = false;
@@ -715,11 +780,15 @@ namespace BloodBankManagementSystem
 
         private void btnHospital_MouseLeave(object sender, EventArgs e)
         {
+            btnHospital.FlatAppearance.BorderSize = 0;
+
             dimgray(btnHospital);
         }
 
         private void btnAboutUs_MouseEnter(object sender, EventArgs e)
         {
+            btnAboutUs.FlatAppearance.BorderSize = 2;
+
             dimgray(btnAboutUs);
             panelDonor.Visible = false;
             panelPatient.Visible = false;
@@ -728,11 +797,15 @@ namespace BloodBankManagementSystem
             movepanel(btnAboutUs);
 
 
+
         }
 
         private void btnAboutUs_MouseLeave(object sender, EventArgs e)
         {
+            btnAboutUs.FlatAppearance.BorderSize = 0;
+
             dimgray(btnAboutUs);
+
         }
 
         private void btnAboutUs_Click(object sender, EventArgs e)
