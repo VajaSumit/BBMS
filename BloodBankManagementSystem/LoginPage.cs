@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Threading;
+using BloodBankManagementSystem.ClassFiles;
 
 namespace BloodBankManagementSystem
 {
@@ -22,7 +23,7 @@ namespace BloodBankManagementSystem
         }
 
         string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
-
+        HashCode hc = new HashCode();
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
@@ -62,30 +63,62 @@ namespace BloodBankManagementSystem
 
             else
             {
+                // By Using Query
+
+                //SqlConnection con = new SqlConnection(cs);
+                //string query = "select *from Login_Master where UserName=@user and Password=@pass";
+                //SqlCommand cmd = new SqlCommand(query, con);
+                //con.Open();
+                //cmd.Parameters.AddWithValue("@user", txtusername.Text);
+                //cmd.Parameters.AddWithValue("@pass", txtpassword.Text);
+                //SqlDataReader dr = cmd.ExecuteReader();
+                //if (dr.HasRows == true)
+                //{
+                //    MessageBox.Show("Login Successful..", "Login Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    txtusername.Clear();
+                //    txtpassword.Clear();
+                //    MasterPage m = new MasterPage();
+                //    m.Show();
+                //    this.Hide();
+
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Login Faild ", "Login Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                //}
+
+                //con.Close();
+
+                //By Using Procedure 
+
+                string name = txtusername.Text;
+                string password = txtpassword.Text;
+
                 SqlConnection con = new SqlConnection(cs);
-                string query = "select *from Login_Master where UserName=@user and Password=@pass";
-                SqlCommand cmd = new SqlCommand(query, con);
                 con.Open();
-                cmd.Parameters.AddWithValue("@user", txtusername.Text);
-                cmd.Parameters.AddWithValue("@pass", txtpassword.Text);
+                SqlCommand cmd = new SqlCommand("exec LoginPageUserSelect '"+name+"','"+ hc.PassHash(password)+"'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows == true)
                 {
                     MessageBox.Show("Login Successful..", "Login Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtusername.Clear();
                     txtpassword.Clear();
+                    cmdUserRole.SelectedItem = null;
                     MasterPage m = new MasterPage();
                     m.Show();
                     this.Hide();
+                   
 
                 }
                 else
                 {
                     MessageBox.Show("Login Faild ", "Login Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 
+
                 }
 
                 con.Close();
+
             }
         }
 
@@ -214,29 +247,35 @@ namespace BloodBankManagementSystem
         private void cmdUserRole_Enter(object sender, EventArgs e)
         {
             //cmdUserRole.BackColor = Color.FromArgb(192, 255, 255);
-            cmdUserRole.BackColor = Color.OldLace;
+            //cmdUserRole.BackColor = Color.FromArgb(0, 64, 0);
+            //cmdUserRole.BackColor = Color.OldLace;
             cmdUserRole.ForeColor = Color.Black;
             //cmdUserRole.BackColor = Color.DodgerBlue;
+            cmdUserRole.BackColor = Color.LightCyan;
             //cmdUserRole.ForeColor = Color.White;
         }
 
         private void txtusername_Enter(object sender, EventArgs e)
         {
             //txtusername.BackColor = Color.FromArgb(192, 255, 255);
-            txtusername.BackColor = Color.OldLace;
+            //txtusername.BackColor = Color.FromArgb(0, 64, 0);
+            //txtusername.BackColor = Color.OldLace;
             txtusername.ForeColor = Color.Black;
             //txtusername.ForeColor = Color.White;
             //txtusername.BackColor = Color.DodgerBlue;
+            txtusername.BackColor = Color.LightCyan;
 
         }
 
         private void txtpassword_Enter(object sender, EventArgs e)
         {
             //txtpassword.BackColor = Color.FromArgb(192, 255, 255);
-            txtpassword.BackColor = Color.OldLace;
+            //txtpassword.BackColor = Color.FromArgb(0, 64, 0);
+            //txtpassword.BackColor = Color.OldLace;
             txtpassword.ForeColor = Color.Black;
             //txtpassword.ForeColor = Color.White;
             //txtpassword.BackColor = Color.DodgerBlue;
+            txtpassword.BackColor = Color.LightCyan;
 
         }
 
@@ -252,6 +291,11 @@ namespace BloodBankManagementSystem
         }
 
         private void exitlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

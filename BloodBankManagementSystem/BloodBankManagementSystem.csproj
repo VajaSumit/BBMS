@@ -48,13 +48,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
-      <HintPath>..\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\netcoreapp3.1\FontAwesome.Sharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,12 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminUserAddPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminUserAddPage.Designer.cs">
-      <DependentUpon>AdminUserAddPage.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ClassFiles\HashCode.cs" />
     <Compile Include="DonorRegistrationPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +113,12 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MasterPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +139,17 @@
       <DependentUpon>ProgressPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserRecordPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRecordPage.Designer.cs">
+      <DependentUpon>UserRecordPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewAllDonorsPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,9 +162,12 @@
     <Compile Include="ViewAllPatientPage.Designer.cs">
       <DependentUpon>ViewAllPatientPage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminUserAddPage.resx">
-      <DependentUpon>AdminUserAddPage.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="ViewAllUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllUser.Designer.cs">
+      <DependentUpon>ViewAllUser.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DonorRegistrationPage.resx">
       <DependentUpon>DonorRegistrationPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +186,9 @@
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MasterPage.resx">
       <DependentUpon>MasterPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,18 +200,20 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="UserRecordPage.resx">
+      <DependentUpon>UserRecordPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewAllDonorsPage.resx">
       <DependentUpon>ViewAllDonorsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllPatientPage.resx">
       <DependentUpon>ViewAllPatientPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllUser.resx">
+      <DependentUpon>ViewAllUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -209,20 +235,35 @@
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\3.jpg" />
+    <Content Include="Images\3643769 %281%29.ico" />
     <Content Include="Images\4.jpg" />
     <Content Include="Images\5.jpg" />
+    <Content Include="Images\8medical-report_102070.ico" />
+    <Content Include="Images\about_3697.ico" />
     <Content Include="Images\AdminLoginPageBackgroundImage.jpeg" />
     <Content Include="Images\AdminUserAddBackgroundimg.jpeg" />
     <Content Include="Images\Background.jpeg" />
     <Content Include="Images\BackgroundImageForAllPages.jpeg" />
     <Content Include="Images\BackgroundImageForAllPages2.jpeg" />
+    <Content Include="Images\blood_count_icon_179683.ico" />
+    <Content Include="Images\blood_donation_hand_medical_icon_233000.ico" />
+    <Content Include="Images\blood_donation_icon_133833.ico" />
+    <Content Include="Images\blood_drop_icon-icons.com_76228.ico" />
     <Content Include="Images\borderImage2.png" />
     <Content Include="Images\borderImage.png" />
     <Content Include="Images\CommonBackGroundImage.jpeg" />
+    <Content Include="Images\diabetes_measure_blood_icon_208792.ico" />
+    <Content Include="Images\doctor_icon_179693.ico" />
+    <Content Include="Images\drive_charity_collection_donation_blood_icon_251199.ico" />
+    <Content Include="Images\effective_employees_users_team_group_icon_152042.ico" />
     <Content Include="Images\HomePageContent1.png" />
     <Content Include="Images\HomePageContent2.png" />
     <Content Include="Images\HomePageContent3.jpeg" />
     <Content Include="Images\HomePageContent4.png" />
+    <Content Include="Images\hospital_icon_142631.ico" />
+    <Content Include="Images\LoadingGifImage1.gif" />
+    <Content Include="Images\LoadingGifImage2.gif" />
+    <Content Include="Images\LoginPageGifImage.gif" />
     <Content Include="Images\LoginPageImage.jpeg" />
     <Content Include="Images\LoadingImage1.gif" />
     <Content Include="Images\LoadingImage2.gif" />
@@ -230,14 +271,17 @@
     <Content Include="Images\LoginPageBackground.jpeg" />
     <Content Include="Images\LoginPageBackgroundImage.jpeg" />
     <Content Include="Images\LogoutImage.jpeg" />
+    <Content Include="Images\logout_icon_151219.ico" />
     <Content Include="Images\MainMenuBackgroundImage.jpeg" />
     <Content Include="Images\PasswordShowImage.png" />
+    <Content Include="Images\patient_disease_icon_140580.ico" />
+    <Content Include="Images\profile_circle_icon_244573.ico" />
+    <Content Include="Images\Users_40957.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminForms\" />
     <Folder Include="Apps\" />
     <Folder Include="Backup\" />
-    <Folder Include="ClassFiles\" />
     <Folder Include="DLLFiles\" />
     <Folder Include="DoctorForms\" />
     <Folder Include="ManagerForms\" />

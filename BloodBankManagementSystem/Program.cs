@@ -13,10 +13,10 @@ namespace BloodBankManagementSystem
         /// </summary>
         [STAThread]
         static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MasterPage());
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new MasterPage());
+            }
         }
     }
-}

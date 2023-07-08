@@ -489,7 +489,7 @@ namespace BloodBankManagementSystem
 
             SqlConnection con = new SqlConnection(cs);
             con.Open();
-            SqlCommand cmd = new SqlCommand("exec ListPatientRegistration", con);
+            SqlCommand cmd = new SqlCommand("exec ListPatientRecordRegistration", con);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable data = new DataTable();
             sda.Fill(data);

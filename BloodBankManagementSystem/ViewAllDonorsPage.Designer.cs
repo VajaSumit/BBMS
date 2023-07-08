@@ -85,13 +85,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.Linen;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 295);
+            this.dataGridView1.Location = new System.Drawing.Point(116, 392);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1256, 382);
+            this.dataGridView1.Size = new System.Drawing.Size(952, 382);
             this.dataGridView1.TabIndex = 0;
             // 
             // Id
@@ -100,6 +100,7 @@
             this.Id.HeaderText = "ID";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
+            this.Id.Width = 30;
             // 
             // DId
             // 
@@ -107,6 +108,7 @@
             this.DId.HeaderText = "Donor ID";
             this.DId.Name = "DId";
             this.DId.ReadOnly = true;
+            this.DId.Width = 80;
             // 
             // DName
             // 
@@ -121,6 +123,7 @@
             this.DAge.HeaderText = "Age";
             this.DAge.Name = "DAge";
             this.DAge.ReadOnly = true;
+            this.DAge.Width = 50;
             // 
             // DGender
             // 
@@ -128,6 +131,7 @@
             this.DGender.HeaderText = "Gender";
             this.DGender.Name = "DGender";
             this.DGender.ReadOnly = true;
+            this.DGender.Width = 90;
             // 
             // DMobile
             // 
@@ -163,6 +167,7 @@
             this.DBloodGroup.HeaderText = "BloodGroup";
             this.DBloodGroup.Name = "DBloodGroup";
             this.DBloodGroup.ReadOnly = true;
+            this.DBloodGroup.Width = 50;
             // 
             // DHeight
             // 
@@ -170,6 +175,7 @@
             this.DHeight.HeaderText = "Height";
             this.DHeight.Name = "DHeight";
             this.DHeight.ReadOnly = true;
+            this.DHeight.Width = 50;
             // 
             // DWeight
             // 
@@ -177,6 +183,7 @@
             this.DWeight.HeaderText = "Weight";
             this.DWeight.Name = "DWeight";
             this.DWeight.ReadOnly = true;
+            this.DWeight.Width = 50;
             // 
             // btnclose
             // 
@@ -184,7 +191,7 @@
             this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(1202, 58);
+            this.btnclose.Location = new System.Drawing.Point(1043, 75);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(39, 32);
             this.btnclose.TabIndex = 24;
@@ -195,10 +202,10 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Snow;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(79, 58);
+            this.label27.Location = new System.Drawing.Point(85, 75);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(353, 49);
             this.label27.TabIndex = 64;
@@ -209,7 +216,7 @@
             this.txtSearchName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearchName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtSearchName.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchName.Location = new System.Drawing.Point(888, 151);
+            this.txtSearchName.Location = new System.Drawing.Point(781, 247);
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.Size = new System.Drawing.Size(189, 25);
             this.txtSearchName.TabIndex = 0;
@@ -221,7 +228,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(746, 153);
+            this.label2.Location = new System.Drawing.Point(639, 249);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 18);
             this.label2.TabIndex = 81;
@@ -232,7 +239,7 @@
             this.btnSearrch.BackColor = System.Drawing.Color.DarkRed;
             this.btnSearrch.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearrch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSearrch.Location = new System.Drawing.Point(939, 205);
+            this.btnSearrch.Location = new System.Drawing.Point(832, 301);
             this.btnSearrch.Name = "btnSearrch";
             this.btnSearrch.Size = new System.Drawing.Size(118, 31);
             this.btnSearrch.TabIndex = 2;
@@ -249,7 +256,7 @@
             this.btnviewall.BackColor = System.Drawing.Color.DarkRed;
             this.btnviewall.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnviewall.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnviewall.Location = new System.Drawing.Point(777, 205);
+            this.btnviewall.Location = new System.Drawing.Point(670, 301);
             this.btnviewall.Name = "btnviewall";
             this.btnviewall.Size = new System.Drawing.Size(118, 31);
             this.btnviewall.TabIndex = 1;
@@ -262,10 +269,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnclose;
-            this.ClientSize = new System.Drawing.Size(1348, 749);
+            this.ClientSize = new System.Drawing.Size(1238, 749);
             this.Controls.Add(this.btnviewall);
             this.Controls.Add(this.btnSearrch);
             this.Controls.Add(this.txtSearchName);
@@ -274,9 +281,10 @@
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewAllDonorsPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "ViewAllDonorsPage";
+            this.Text = "View All DonorsPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ViewAllDonorsPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -290,6 +298,12 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnclose;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtSearchName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSearrch;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnviewall;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn DId;
         private System.Windows.Forms.DataGridViewTextBoxColumn DName;
@@ -302,11 +316,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DBloodGroup;
         private System.Windows.Forms.DataGridViewTextBoxColumn DHeight;
         private System.Windows.Forms.DataGridViewTextBoxColumn DWeight;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtSearchName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSearrch;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Button btnviewall;
     }
 }

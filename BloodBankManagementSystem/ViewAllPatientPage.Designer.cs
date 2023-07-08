@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllPatientPage));
             this.label27 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,10 +55,10 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Snow;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(108, 63);
+            this.label27.Location = new System.Drawing.Point(71, 63);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(368, 49);
             this.label27.TabIndex = 65;
@@ -92,7 +91,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.Linen;
-            this.dataGridView1.Location = new System.Drawing.Point(177, 262);
+            this.dataGridView1.Location = new System.Drawing.Point(68, 403);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -178,7 +177,7 @@
             this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(1255, 63);
+            this.btnclose.Location = new System.Drawing.Point(1031, 81);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(39, 32);
             this.btnclose.TabIndex = 67;
@@ -191,7 +190,7 @@
             this.btnviewall.BackColor = System.Drawing.Color.DarkRed;
             this.btnviewall.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnviewall.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnviewall.Location = new System.Drawing.Point(829, 189);
+            this.btnviewall.Location = new System.Drawing.Point(711, 308);
             this.btnviewall.Name = "btnviewall";
             this.btnviewall.Size = new System.Drawing.Size(118, 31);
             this.btnviewall.TabIndex = 1;
@@ -204,7 +203,7 @@
             this.btnSearrch.BackColor = System.Drawing.Color.DarkRed;
             this.btnSearrch.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearrch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSearrch.Location = new System.Drawing.Point(991, 189);
+            this.btnSearrch.Location = new System.Drawing.Point(873, 308);
             this.btnSearrch.Name = "btnSearrch";
             this.btnSearrch.Size = new System.Drawing.Size(118, 31);
             this.btnSearrch.TabIndex = 2;
@@ -217,7 +216,7 @@
             this.txtSearchName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearchName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtSearchName.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchName.Location = new System.Drawing.Point(940, 135);
+            this.txtSearchName.Location = new System.Drawing.Point(822, 254);
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.Size = new System.Drawing.Size(189, 25);
             this.txtSearchName.TabIndex = 0;
@@ -229,7 +228,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(798, 137);
+            this.label2.Location = new System.Drawing.Point(680, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 18);
             this.label2.TabIndex = 85;
@@ -244,10 +243,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnclose;
-            this.ClientSize = new System.Drawing.Size(1364, 788);
+            this.ClientSize = new System.Drawing.Size(1238, 788);
             this.Controls.Add(this.btnviewall);
             this.Controls.Add(this.btnSearrch);
             this.Controls.Add(this.txtSearchName);

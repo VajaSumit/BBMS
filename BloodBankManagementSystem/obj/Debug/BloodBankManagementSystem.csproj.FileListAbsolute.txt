@@ -10,7 +10,6 @@ C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\B
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.LoginPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.MasterPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.HomePage.resources
-C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.AdminUserAddPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.DonorRegistrationPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.AboutUs.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllDonorsPage.resources
@@ -18,3 +17,35 @@ C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\B
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.PatientRegistration.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllPatientPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.EditPatientPage.resources
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.UserRecordPage.resources
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllUser.resources
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.MainForm.resources
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\MaterialSkin.dll
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\BloodBankManagementSystem.exe.config
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.exe
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.pdb
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\BloodBankManagementSystem.exe
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\BloodBankManagementSystem.pdb
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\FontAwesome.Sharp.dll
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\MaterialSkin.dll
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\WinFormAnimation.dll
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.csprojResolveAssemblyReference.cache
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.AdminUserAddPage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.DonorRegistrationPage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.AboutUs.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.EditDonorPage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.EditPatientPage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.HomePage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.LoginPage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.MainForm.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.MasterPage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.PatientRegistration.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ProgressPage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.Properties.Resources.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.UserRecordPage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllDonorsPage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllPatientPage.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllUser.resources
+E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.csproj.GenerateResource.Cache
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.csprojResolveAssemblyReference.cache

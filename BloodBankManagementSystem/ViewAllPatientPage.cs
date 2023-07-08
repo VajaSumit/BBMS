@@ -17,6 +17,7 @@ namespace BloodBankManagementSystem
         public ViewAllPatientPage()
         {
             InitializeComponent();
+            DataBinding();
         }
 
         string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
@@ -35,12 +36,12 @@ namespace BloodBankManagementSystem
         {
             SqlConnection con = new SqlConnection(cs);
             con.Open();
-            SqlCommand cmd = new SqlCommand("exec ListPatientRegistration", con);
+            SqlCommand cmd = new SqlCommand("exec ListPatientRecordRegistration", con);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable data = new DataTable();
             sda.Fill(data);
             dataGridView1.DataSource = data;
-            con.Close();
+          
         }
 
         private void txtSearchName_Enter(object sender, EventArgs e)

@@ -282,7 +282,7 @@ namespace BloodBankManagementSystem
 
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("exec InsertPatientRecordRegistration '" + id + "','" + name + "','" + age + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "','",con);
+                SqlCommand cmd = new SqlCommand("exec InsertPatientRecordRegistration '" + id + "','" + name + "','" + age + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "'",con);
                 int a = cmd.ExecuteNonQuery();
                 if ( a > 0)
                 {

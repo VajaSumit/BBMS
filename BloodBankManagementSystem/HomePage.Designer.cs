@@ -47,9 +47,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(52, 109);
+            this.pictureBox1.Location = new System.Drawing.Point(115, 240);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1262, 410);
+            this.pictureBox1.Size = new System.Drawing.Size(1004, 366);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
@@ -62,7 +62,7 @@
             this.panel2.Controls.Add(this.radioButton3);
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Location = new System.Drawing.Point(607, 525);
+            this.panel2.Location = new System.Drawing.Point(576, 612);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(115, 18);
             this.panel2.TabIndex = 18;
@@ -164,7 +164,7 @@
             this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(1257, 67);
+            this.btnclose.Location = new System.Drawing.Point(1080, 85);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(39, 32);
             this.btnclose.TabIndex = 22;
@@ -178,7 +178,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(81, 51);
+            this.label5.Location = new System.Drawing.Point(118, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(236, 49);
             this.label5.TabIndex = 23;
@@ -192,22 +192,22 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(3, 4);
             this.AutoScrollMinSize = new System.Drawing.Size(3, 4);
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnclose;
-            this.ClientSize = new System.Drawing.Size(1366, 749);
+            this.ClientSize = new System.Drawing.Size(1238, 749);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "HomePage";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "HomePage";
+            this.Text = "Home   :-";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.HomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

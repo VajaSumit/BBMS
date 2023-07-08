@@ -46,7 +46,7 @@ namespace BloodBankManagementSystem
             DataTable data = new DataTable();
             sda.Fill(data);
             dataGridView1.DataSource = data;
-            con.Close();
+            
         }
 
         private void btnclose_Click(object sender, EventArgs e)
