@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserRecordPage));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnclose = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.cmbUserRole = new System.Windows.Forms.ComboBox();
@@ -409,6 +409,7 @@
             this.dtpDateOfBrith.Name = "dtpDateOfBrith";
             this.dtpDateOfBrith.Size = new System.Drawing.Size(189, 25);
             this.dtpDateOfBrith.TabIndex = 3;
+            this.dtpDateOfBrith.Value = new System.DateTime(2023, 8, 7, 15, 53, 0, 0);
             this.dtpDateOfBrith.Enter += new System.EventHandler(this.dtpDateOfBrith_Enter);
             this.dtpDateOfBrith.Leave += new System.EventHandler(this.dtpDateOfBrith_Leave);
             // 
@@ -642,22 +643,22 @@
             this.Picture,
             this.Mobile,
             this.Address});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.UserDataList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.UserDataList.DefaultCellStyle = dataGridViewCellStyle3;
             this.UserDataList.GridColor = System.Drawing.Color.Linen;
-            this.UserDataList.Location = new System.Drawing.Point(32, 723);
+            this.UserDataList.Location = new System.Drawing.Point(32, 735);
             this.UserDataList.MultiSelect = false;
             this.UserDataList.Name = "UserDataList";
             this.UserDataList.ReadOnly = true;
             this.UserDataList.RowTemplate.ReadOnly = true;
             this.UserDataList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.UserDataList.Size = new System.Drawing.Size(1145, 224);
+            this.UserDataList.Size = new System.Drawing.Size(1145, 276);
             this.UserDataList.TabIndex = 126;
             this.UserDataList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.UserDataList_MouseDoubleClick);
             // 

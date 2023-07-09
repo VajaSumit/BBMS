@@ -13,6 +13,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
 using BloodBankManagementSystem.ClassFiles;
+using System.Security.Cryptography;
 
 namespace BloodBankManagementSystem
 {
@@ -25,6 +26,8 @@ namespace BloodBankManagementSystem
 
         string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
         string patten = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+        string hash = "f0xle@rn";
+
 
         HashCode hc = new HashCode();
 
@@ -297,8 +300,15 @@ namespace BloodBankManagementSystem
 
                 //imgurl = open.FileName;
                 //pictureBox1.Image = Image.FromFile(open.FileName);
-             
-                pictureBox1.Image = Image.FromFile(open.FileName);
+
+                try
+                {
+                    pictureBox1.Image = Image.FromFile(open.FileName);
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Please Select The Valid Image !");
+                }
             }
 
         }
@@ -426,38 +436,59 @@ namespace BloodBankManagementSystem
                 //con.Close();
 
 
-                SqlConnection con = new SqlConnection(cs);
-                string query = "insert into Login_Master values(@id,@name,@password,@dob,@email,@userrole,@status,@picture,@mobile,@address)";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@id", txtUserid.Text);
-                cmd.Parameters.AddWithValue("@name", txtName.Text);
-                cmd.Parameters.AddWithValue("@password", hc.PassHash(txtPassword.Text));
-                cmd.Parameters.AddWithValue("@dob", dtpDateOfBrith.Value.ToString("dd/MM/yyyy"));
-                cmd.Parameters.AddWithValue("@email", txtEmailID.Text);
-                cmd.Parameters.AddWithValue("@userrole", cmbUserRole.SelectedItem);
-                cmd.Parameters.AddWithValue("@status", cmbStatus.SelectedItem);
+                // ***************************
 
-                MemoryStream mem = new MemoryStream();
-                pictureBox1.Image.Save(mem, pictureBox1.Image.RawFormat);
-                cmd.Parameters.AddWithValue("@picture", mem.ToArray());
 
-                cmd.Parameters.AddWithValue("@mobile", txtMobileNo.Text);
-                cmd.Parameters.AddWithValue("@address", txtAddress.Text);
-                con.Open();
-                int a = cmd.ExecuteNonQuery();
-                if (a > 0)
+                byte[] data = UTF8Encoding.UTF8.GetBytes(txtPassword.Text);
+                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
                 {
-                    MessageBox.Show("User Record Save Successful !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearData();
-                    UserIdAutoGenerate();
-                    DataBinding();
-                }
-                else
-                {
-                    MessageBox.Show("User Record Not Saved  !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                    using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                    {
+                        ICryptoTransform transform = tripDes.CreateEncryptor();
+                        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                        string UserPassword = Convert.ToBase64String(results, 0, results.Length);
 
+
+                        SqlConnection con = new SqlConnection(cs);
+                        string query = "insert into Login_Master values(@id,@name,@password,@dob,@email,@userrole,@status,@picture,@mobile,@address)";
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@id", txtUserid.Text);
+                        cmd.Parameters.AddWithValue("@name", txtName.Text);
+                        //cmd.Parameters.AddWithValue("@password", hc.PassHash(txtPassword.Text));
+
+                        cmd.Parameters.AddWithValue("@password",UserPassword);
+
+                        cmd.Parameters.AddWithValue("@dob", dtpDateOfBrith.Value.ToString("dd/MM/yyyy"));
+                        cmd.Parameters.AddWithValue("@email", txtEmailID.Text);
+                        cmd.Parameters.AddWithValue("@userrole", cmbUserRole.SelectedItem);
+                        cmd.Parameters.AddWithValue("@status", cmbStatus.SelectedItem);
+
+                        MemoryStream mem = new MemoryStream();
+                        pictureBox1.Image.Save(mem, pictureBox1.Image.RawFormat);
+                        cmd.Parameters.AddWithValue("@picture", mem.ToArray());
+
+                        cmd.Parameters.AddWithValue("@mobile", txtMobileNo.Text);
+                        cmd.Parameters.AddWithValue("@address", txtAddress.Text);
+                        con.Open();
+                        int a = cmd.ExecuteNonQuery();
+
+                        if (a > 0)
+                        {
+                            MessageBox.Show("User Record Save Successful !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ClearData();
+                            UserIdAutoGenerate();
+                            DataBinding();
+                        }
+                        else
+                        {
+                            MessageBox.Show("User Record Not Saved  !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+
+                        con.Close();
+                    }
                 }
-                con.Close();
             }
         }
 
@@ -586,39 +617,53 @@ namespace BloodBankManagementSystem
                 //}
                 //con.Close();
 
+                //****************************
 
-                SqlConnection con = new SqlConnection(cs);
-                string query = "update Login_Master set UserName=@name,Password=@password,Dob=@dob,Email=@email,UserRole=@userrole,Status=@status,Picture=@picture,Mobile=@mobile,Address=@address where UserId=@id";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@id", txtUserid.Text);
-                cmd.Parameters.AddWithValue("@name", txtName.Text);
-                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-                cmd.Parameters.AddWithValue("@dob", dtpDateOfBrith.Value.ToString("dd/MM/yyyy"));
-                cmd.Parameters.AddWithValue("@email", txtEmailID.Text);
-                cmd.Parameters.AddWithValue("@userrole", cmbUserRole.SelectedItem);
-                cmd.Parameters.AddWithValue("@status", cmbStatus.SelectedItem);
 
-                MemoryStream mem = new MemoryStream();
-                pictureBox1.Image.Save(mem, pictureBox1.Image.RawFormat);
-                cmd.Parameters.AddWithValue("@picture", mem.ToArray());
-
-                cmd.Parameters.AddWithValue("@mobile", txtMobileNo.Text);
-                cmd.Parameters.AddWithValue("@address", txtAddress.Text);
-                con.Open();
-                int a = cmd.ExecuteNonQuery();
-                if (a > 0)
+                byte[] data = UTF8Encoding.UTF8.GetBytes(txtPassword.Text);
+                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
                 {
-                    MessageBox.Show("User Record Update Successful !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearData();
-                    UserIdAutoGenerate();
-                    DataBinding();
-                }
-                else
-                {
-                    MessageBox.Show("User Record Not Updated  !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                    using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                    {
+                        ICryptoTransform transform = tripDes.CreateEncryptor();
+                        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                        string UserPassword = Convert.ToBase64String(results, 0, results.Length);
 
+                        SqlConnection con = new SqlConnection(cs);
+                        string query = "update Login_Master set UserName=@name,Password=@password,Dob=@dob,Email=@email,UserRole=@userrole,Status=@status,Picture=@picture,Mobile=@mobile,Address=@address where UserId=@id";
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@id", txtUserid.Text);
+                        cmd.Parameters.AddWithValue("@name", txtName.Text);
+                        cmd.Parameters.AddWithValue("@password", UserPassword);
+                        cmd.Parameters.AddWithValue("@dob", dtpDateOfBrith.Value.ToString("dd/MM/yyyy"));
+                        cmd.Parameters.AddWithValue("@email", txtEmailID.Text);
+                        cmd.Parameters.AddWithValue("@userrole", cmbUserRole.SelectedItem);
+                        cmd.Parameters.AddWithValue("@status", cmbStatus.SelectedItem);
+
+                        MemoryStream mem = new MemoryStream();
+                        pictureBox1.Image.Save(mem, pictureBox1.Image.RawFormat);
+                        cmd.Parameters.AddWithValue("@picture", mem.ToArray());
+
+                        cmd.Parameters.AddWithValue("@mobile", txtMobileNo.Text);
+                        cmd.Parameters.AddWithValue("@address", txtAddress.Text);
+                        con.Open();
+                        int a = cmd.ExecuteNonQuery();
+                        if (a > 0)
+                        {
+                            MessageBox.Show("User Record Update Successful !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ClearData();
+                            UserIdAutoGenerate();
+                            DataBinding();
+                        }
+                        else
+                        {
+                            MessageBox.Show("User Record Not Updated  !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                        con.Close();
+                    }
                 }
-                con.Close();
             }
         }
 
@@ -752,12 +797,29 @@ namespace BloodBankManagementSystem
 
         private void UserDataList_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            //HashCode hc = new HashCode();
+
             int i = int.Parse(UserDataList.SelectedRows[0].Cells[0].Value.ToString());
             txtUserid.Text = UserDataList.SelectedRows[0].Cells[1].Value.ToString();
             txtName.Text = UserDataList.SelectedRows[0].Cells[2].Value.ToString();
-            txtPassword.Text = UserDataList.SelectedRows[0].Cells[3].Value.ToString();
 
-            dtpDateOfBrith.Value = Convert.ToDateTime(UserDataList.SelectedRows[0].Cells[4].Value);
+            //int code = UserDataList.SelectedRows[0].Cells[3].Value.GetHashCode();
+            //txtPassword.Text = code.ToString();
+
+            string encrypt = UserDataList.SelectedRows[0].Cells[3].Value.ToString();
+            byte[] data = Convert.FromBase64String(encrypt);
+            using (MD5CryptoServiceProvider md5=new MD5CryptoServiceProvider())
+            {
+                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                using (TripleDESCryptoServiceProvider tripDes=new TripleDESCryptoServiceProvider() { Key=keys,Mode=CipherMode.ECB,Padding=PaddingMode.PKCS7 } )
+                {
+                    ICryptoTransform transform = tripDes.CreateDecryptor();
+                    byte[] results = transform.TransformFinalBlock(data,0,data.Length);
+                    txtPassword.Text = UTF8Encoding.UTF8.GetString(results);
+                }
+            }
+
+            dtpDateOfBrith.Value = Convert.ToDateTime(UserDataList.SelectedRows[0].Cells[4].Value.ToString());
 
             txtEmailID.Text = UserDataList.SelectedRows[0].Cells[5].Value.ToString();
             cmbUserRole.SelectedItem = UserDataList.SelectedRows[0].Cells[6].Value.ToString();
@@ -765,6 +827,7 @@ namespace BloodBankManagementSystem
 
             MemoryStream ms = new MemoryStream((byte[])UserDataList.SelectedRows[0].Cells[8].Value);
             pictureBox1.Image = Image.FromStream(ms);
+
             txtMobileNo.Text = UserDataList.SelectedRows[0].Cells[9].Value.ToString();
             txtAddress.Text = UserDataList.SelectedRows[0].Cells[10].Value.ToString();
         }

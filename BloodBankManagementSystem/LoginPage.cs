@@ -11,6 +11,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Threading;
 using BloodBankManagementSystem.ClassFiles;
+using System.Security.Cryptography;
 
 namespace BloodBankManagementSystem
 {
@@ -23,7 +24,8 @@ namespace BloodBankManagementSystem
         }
 
         string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
-        HashCode hc = new HashCode();
+        //HashCode hc = new HashCode();
+        string hash = "f0xle@rn";
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
@@ -92,32 +94,47 @@ namespace BloodBankManagementSystem
 
                 //By Using Procedure 
 
-                string name = txtusername.Text;
-                string password = txtpassword.Text;
 
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("exec LoginPageUserSelect '"+name+"','"+ hc.PassHash(password)+"'", con);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows == true)
+
+                byte[] data = UTF8Encoding.UTF8.GetBytes(txtpassword.Text);
+                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
                 {
-                    MessageBox.Show("Login Successful..", "Login Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtusername.Clear();
-                    txtpassword.Clear();
-                    cmdUserRole.SelectedItem = null;
-                    MasterPage m = new MasterPage();
-                    m.Show();
-                    this.Hide();
-                   
+                    byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                    using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                    {
+                        ICryptoTransform transform = tripDes.CreateEncryptor();
+                        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                        string UserPassword = Convert.ToBase64String(results, 0, results.Length);
 
+                        string name = txtusername.Text;
+                        //string password = txtpassword.Text;
+
+                        SqlConnection con = new SqlConnection(cs);
+                        con.Open();
+                        //SqlCommand cmd = new SqlCommand("exec LoginPageUserSelect '"+name+"','"+ hc.PassHash(password)+"'", con);
+                        SqlCommand cmd = new SqlCommand("exec LoginPageUserSelect '" + name + "','" + UserPassword + "'", con);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        if (dr.HasRows == true)
+                        {
+                            MessageBox.Show("Login Successful..", "Login Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtusername.Clear();
+                            txtpassword.Clear();
+                            cmdUserRole.SelectedItem = null;
+                            MasterPage m = new MasterPage();
+                            m.Show();
+                            this.Hide();
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Login Faild ", "Login Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+
+                        con.Close();
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Login Faild ", "Login Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-
-                con.Close();
 
             }
         }
