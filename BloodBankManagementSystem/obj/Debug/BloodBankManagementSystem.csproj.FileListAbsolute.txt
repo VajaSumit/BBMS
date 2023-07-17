@@ -19,8 +19,6 @@ C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\B
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.EditPatientPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.UserRecordPage.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllUser.resources
-C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.MainForm.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\MaterialSkin.dll
 E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\BloodBankManagementSystem.exe.config
 E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.exe
@@ -48,4 +46,13 @@ E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\Blood
 E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllPatientPage.resources
 E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllUser.resources
 E:\2nd Style\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.csproj.GenerateResource.Cache
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\Guna.UI2.dll
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.BloodDonationPage.resources
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\Siticone.UI.dll
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\Tiger.Clock.dll
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\Tiger.Clock.xml
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.StaffPage.resources
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.ViewAllStaffRecords.resources
 C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\Sumit\Documents\Visual Studio 2015\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\DateTimeVisualizer.UI.dll

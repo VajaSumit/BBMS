@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllUser));
             this.label27 = new System.Windows.Forms.Label();
-            this.btnclose = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +44,8 @@
             this.Picture = new System.Windows.Forms.DataGridViewImageColumn();
             this.DMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,26 +53,13 @@
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(93, 86);
+            this.label27.Font = new System.Drawing.Font("Colonna MT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.label27.Location = new System.Drawing.Point(50, 100);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(331, 49);
+            this.label27.Size = new System.Drawing.Size(327, 37);
             this.label27.TabIndex = 66;
             this.label27.Text = "~ All User Records ";
-            // 
-            // btnclose
-            // 
-            this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnclose.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
-            this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(1111, 100);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(40, 35);
-            this.btnclose.TabIndex = 65;
-            this.btnclose.Text = "X";
-            this.btnclose.UseVisualStyleBackColor = false;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // dataGridView1
             // 
@@ -188,6 +177,31 @@
             this.Address.Name = "Address";
             this.Address.ReadOnly = true;
             // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_HOR_POSITIVE;
+            this.guna2AnimateWindow1.Interval = 800;
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // btnclose
+            // 
+            this.btnclose.Animated = true;
+            this.btnclose.AnimatedGIF = true;
+            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclose.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.Location = new System.Drawing.Point(1112, 113);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnclose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnclose.Size = new System.Drawing.Size(36, 35);
+            this.btnclose.TabIndex = 130;
+            this.btnclose.Text = "X";
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click_1);
+            // 
             // ViewAllUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,9 +210,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1238, 788);
+            this.Controls.Add(this.btnclose);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.btnclose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -217,7 +231,6 @@
         #endregion
 
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserId;
@@ -230,5 +243,7 @@
         private System.Windows.Forms.DataGridViewImageColumn Picture;
         private System.Windows.Forms.DataGridViewTextBoxColumn DMobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnclose;
     }
 }

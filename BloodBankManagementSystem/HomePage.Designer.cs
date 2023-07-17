@@ -38,8 +38,9 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnclose = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -47,9 +48,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(115, 240);
+            this.pictureBox1.Location = new System.Drawing.Point(161, 163);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1004, 366);
+            this.pictureBox1.Size = new System.Drawing.Size(948, 366);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
@@ -62,7 +63,7 @@
             this.panel2.Controls.Add(this.radioButton3);
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Location = new System.Drawing.Point(576, 612);
+            this.panel2.Location = new System.Drawing.Point(613, 544);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(115, 18);
             this.panel2.TabIndex = 18;
@@ -158,32 +159,43 @@
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnclose
-            // 
-            this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(1080, 85);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(39, 32);
-            this.btnclose.TabIndex = 22;
-            this.btnclose.Text = "X";
-            this.btnclose.UseVisualStyleBackColor = false;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(118, 67);
+            this.label5.Font = new System.Drawing.Font("Colonna MT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(154, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(236, 49);
+            this.label5.Size = new System.Drawing.Size(141, 37);
             this.label5.TabIndex = 23;
-            this.label5.Text = "~ Home Page";
+            this.label5.Text = "~ Home";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_HOR_POSITIVE;
+            this.guna2AnimateWindow1.Interval = 800;
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // btnclose
+            // 
+            this.btnclose.Animated = true;
+            this.btnclose.AnimatedGIF = true;
+            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclose.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.Location = new System.Drawing.Point(1073, 101);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnclose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnclose.Size = new System.Drawing.Size(36, 35);
+            this.btnclose.TabIndex = 130;
+            this.btnclose.Text = "X";
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click_1);
             // 
             // HomePage
             // 
@@ -192,12 +204,11 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(3, 4);
             this.AutoScrollMinSize = new System.Drawing.Size(3, 4);
-            this.BackColor = System.Drawing.Color.Azure;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CancelButton = this.btnclose;
             this.ClientSize = new System.Drawing.Size(1238, 749);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnclose);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -228,7 +239,8 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnclose;
     }
 }

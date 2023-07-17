@@ -54,28 +54,17 @@ namespace BloodBankManagementSystem
             this.Close();
         }
 
-        private void txtName_Leave(object sender, EventArgs e)
-        {
-            txtSearchName.BackColor = Color.White;
 
-            if (string.IsNullOrEmpty(txtSearchName.Text)==true)
-            {
-                errorProvider1.SetError(this.txtSearchName, "Please Enter Name");
-                txtSearchName.Focus();
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+
+
+        private void btnclose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
-        private void txtName_Enter(object sender, EventArgs e)
-        {
-            txtSearchName.BackColor = Color.LightCyan;
+  
 
-        }
-
-        private void btnSearrch_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtSearchName.Text) == true)
             {
@@ -97,7 +86,7 @@ namespace BloodBankManagementSystem
                 if (data.Rows.Count > 0)
                 {
                     dataGridView1.DataSource = data;
-                    txtSearchName.Clear();                  
+                    txtSearchName.Clear();
                 }
                 else
                 {
@@ -107,13 +96,26 @@ namespace BloodBankManagementSystem
                 }
                 con.Close();
             }
-
         }
 
         private void btnviewall_Click(object sender, EventArgs e)
         {
             DataBinding();
+        }
 
+        private void txtSearchName_Leave(object sender, EventArgs e)
+        {
+            txtSearchName.BackColor = Color.White;
+
+            if (string.IsNullOrEmpty(txtSearchName.Text) == true)
+            {
+                errorProvider1.SetError(this.txtSearchName, "Please Enter Name");
+                txtSearchName.Focus();
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
         }
     }
 }

@@ -44,26 +44,16 @@ namespace BloodBankManagementSystem
           
         }
 
-        private void txtSearchName_Enter(object sender, EventArgs e)
+      
+    
+    
+
+        private void btnclose_Click_1(object sender, EventArgs e)
         {
-            txtSearchName.BackColor = Color.LightCyan;
+            this.Close();
         }
 
-        private void txtSearchName_Leave(object sender, EventArgs e)
-        {
-            txtSearchName.BackColor = Color.White;
-            if (string.IsNullOrEmpty(txtSearchName.Text)==true)
-            {
-                errorProvider1.SetError(this.txtSearchName, "Please Enter Name");
-                txtSearchName.Focus();
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-        }
-
-        private void btnSearrch_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtSearchName.Text) == true)
             {
@@ -77,7 +67,7 @@ namespace BloodBankManagementSystem
                 string name = txtSearchName.Text;
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("exec SearchPatientRecordRegistration '"+ name +"'", con);
+                SqlCommand cmd = new SqlCommand("exec SearchPatientRecordRegistration '" + name + "'", con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable data = new DataTable();
                 sda.Fill(data);
@@ -94,14 +84,27 @@ namespace BloodBankManagementSystem
                     DataBinding();
                 }
 
-            
+
                 con.Close();
             }
         }
 
-        private void btnviewall_Click(object sender, EventArgs e)
+        private void btnupdate_Click(object sender, EventArgs e)
         {
             DataBinding();
+        }
+
+        private void txtSearchName_Leave_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearchName.Text) == true)
+            {
+                errorProvider1.SetError(this.txtSearchName, "Please Enter Name");
+                txtSearchName.Focus();
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
         }
     }
 }

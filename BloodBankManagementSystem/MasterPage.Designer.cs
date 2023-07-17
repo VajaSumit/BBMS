@@ -30,22 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterPage));
-            this.btnLogout = new System.Windows.Forms.Button();
             this.lbltime3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lable = new System.Windows.Forms.Label();
             this.lbltime2 = new System.Windows.Forms.Label();
             this.labtime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnAboutusMenu = new System.Windows.Forms.Button();
+            this.btnReportsMenu = new System.Windows.Forms.Button();
             this.panelUserMenu = new System.Windows.Forms.Panel();
             this.btnViewAllUserMenu = new System.Windows.Forms.Button();
             this.btnAddUserMenu = new System.Windows.Forms.Button();
-            this.panelMove = new System.Windows.Forms.Panel();
             this.btnUserMenu = new System.Windows.Forms.Button();
-            this.btnReportsMenu = new System.Windows.Forms.Button();
+            this.panelHospitalMenu = new System.Windows.Forms.Panel();
+            this.btnViewAllHospital = new System.Windows.Forms.Button();
+            this.btnHospitalRegistration = new System.Windows.Forms.Button();
             this.btnHospitalMenu = new System.Windows.Forms.Button();
+            this.panelDoctorMenu = new System.Windows.Forms.Panel();
+            this.btnViewAllDoctor = new System.Windows.Forms.Button();
+            this.btnAddDoctorMenu = new System.Windows.Forms.Button();
+            this.panelMove = new System.Windows.Forms.Panel();
             this.btnDoctorMenu = new System.Windows.Forms.Button();
+            this.panelStaffMenu = new System.Windows.Forms.Panel();
+            this.btnViewAllStaffMenu = new System.Windows.Forms.Button();
+            this.btnAddStaffMenu = new System.Windows.Forms.Button();
             this.btnStaffMenu = new System.Windows.Forms.Button();
             this.btnBloodTypeMenu = new System.Windows.Forms.Button();
             this.btnBloodStockMenu = new System.Windows.Forms.Button();
@@ -62,87 +70,72 @@
             this.btnDonorsRegistration = new System.Windows.Forms.Button();
             this.btnDonorMenu = new System.Windows.Forms.Button();
             this.btnHomeMenu = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnSetting = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnProfie = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panelSliderMenu = new System.Windows.Forms.Panel();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnSetting = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnProfile = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnDateTime = new Guna.UI2.WinForms.Guna2CircleButton();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.silderTransition = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.panelDataTime = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.panelSliderMenu = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panelMenu.SuspendLayout();
             this.panelUserMenu.SuspendLayout();
+            this.panelHospitalMenu.SuspendLayout();
+            this.panelDoctorMenu.SuspendLayout();
+            this.panelStaffMenu.SuspendLayout();
             this.panelPatientMenu.SuspendLayout();
             this.panelDonorMenu.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panelSliderMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelDataTime.SuspendLayout();
+            this.guna2GradientPanel1.SuspendLayout();
+            this.panelSliderMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
-            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogout.Location = new System.Drawing.Point(1265, 0);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(0, 0, 16, 0);
-            this.btnLogout.Size = new System.Drawing.Size(103, 57);
-            this.btnLogout.TabIndex = 24;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // lbltime3
             // 
             this.lbltime3.AutoSize = true;
             this.lbltime3.BackColor = System.Drawing.Color.Transparent;
-            this.lbltime3.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltime3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbltime3.Location = new System.Drawing.Point(1227, 11);
+            this.lbltime3.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltime3.ForeColor = System.Drawing.Color.DimGray;
+            this.lbltime3.Location = new System.Drawing.Point(24, 73);
             this.lbltime3.Name = "lbltime3";
-            this.lbltime3.Size = new System.Drawing.Size(14, 13);
+            this.lbltime3.Size = new System.Drawing.Size(14, 14);
             this.lbltime3.TabIndex = 21;
             this.lbltime3.Text = "*";
             // 
-            // label1
+            // lable
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(83, 7);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-            this.label1.Size = new System.Drawing.Size(482, 40);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Blood Bank Management System";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lable.AutoSize = true;
+            this.lable.BackColor = System.Drawing.Color.Transparent;
+            this.lable.Font = new System.Drawing.Font("Colonna MT", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lable.ForeColor = System.Drawing.Color.Black;
+            this.lable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lable.Location = new System.Drawing.Point(94, 16);
+            this.lable.Name = "lable";
+            this.lable.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.lable.Size = new System.Drawing.Size(560, 41);
+            this.lable.TabIndex = 16;
+            this.lable.Text = "Blood Bank Management System";
+            this.lable.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbltime2
             // 
             this.lbltime2.AutoSize = true;
             this.lbltime2.BackColor = System.Drawing.Color.Transparent;
-            this.lbltime2.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltime2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbltime2.Location = new System.Drawing.Point(1061, 12);
+            this.lbltime2.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltime2.ForeColor = System.Drawing.Color.DimGray;
+            this.lbltime2.Location = new System.Drawing.Point(24, 45);
             this.lbltime2.Name = "lbltime2";
-            this.lbltime2.Size = new System.Drawing.Size(14, 13);
+            this.lbltime2.Size = new System.Drawing.Size(14, 14);
             this.lbltime2.TabIndex = 20;
             this.lbltime2.Text = "*";
             // 
@@ -150,11 +143,11 @@
             // 
             this.labtime.AutoSize = true;
             this.labtime.BackColor = System.Drawing.Color.Transparent;
-            this.labtime.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labtime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labtime.Location = new System.Drawing.Point(892, 13);
+            this.labtime.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labtime.ForeColor = System.Drawing.Color.DimGray;
+            this.labtime.Location = new System.Drawing.Point(24, 16);
             this.labtime.Name = "labtime";
-            this.labtime.Size = new System.Drawing.Size(14, 13);
+            this.labtime.Size = new System.Drawing.Size(14, 14);
             this.labtime.TabIndex = 19;
             this.labtime.Text = "*";
             // 
@@ -166,14 +159,17 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panelMenu.BackColor = System.Drawing.Color.Transparent;
             this.panelMenu.Controls.Add(this.btnAboutusMenu);
-            this.panelMenu.Controls.Add(this.panelUserMenu);
-            this.panelMenu.Controls.Add(this.panelMove);
-            this.panelMenu.Controls.Add(this.btnUserMenu);
             this.panelMenu.Controls.Add(this.btnReportsMenu);
+            this.panelMenu.Controls.Add(this.panelUserMenu);
+            this.panelMenu.Controls.Add(this.btnUserMenu);
+            this.panelMenu.Controls.Add(this.panelHospitalMenu);
             this.panelMenu.Controls.Add(this.btnHospitalMenu);
+            this.panelMenu.Controls.Add(this.panelDoctorMenu);
+            this.panelMenu.Controls.Add(this.panelMove);
             this.panelMenu.Controls.Add(this.btnDoctorMenu);
+            this.panelMenu.Controls.Add(this.panelStaffMenu);
             this.panelMenu.Controls.Add(this.btnStaffMenu);
             this.panelMenu.Controls.Add(this.btnBloodTypeMenu);
             this.panelMenu.Controls.Add(this.btnBloodStockMenu);
@@ -184,10 +180,9 @@
             this.panelMenu.Controls.Add(this.panelDonorMenu);
             this.panelMenu.Controls.Add(this.btnDonorMenu);
             this.panelMenu.Controls.Add(this.btnHomeMenu);
-            this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Location = new System.Drawing.Point(2, 3);
+            this.panelMenu.Location = new System.Drawing.Point(2, 14);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(225, 731);
+            this.panelMenu.Size = new System.Drawing.Size(225, 640);
             this.panelMenu.TabIndex = 25;
             // 
             // btnAboutusMenu
@@ -199,10 +194,10 @@
             this.btnAboutusMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnAboutusMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAboutusMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAboutusMenu.ForeColor = System.Drawing.Color.White;
+            this.btnAboutusMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnAboutusMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnAboutusMenu.Image")));
             this.btnAboutusMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAboutusMenu.Location = new System.Drawing.Point(0, 712);
+            this.btnAboutusMenu.Location = new System.Drawing.Point(0, 830);
             this.btnAboutusMenu.Name = "btnAboutusMenu";
             this.btnAboutusMenu.Padding = new System.Windows.Forms.Padding(17, 0, 10, 0);
             this.btnAboutusMenu.Size = new System.Drawing.Size(225, 41);
@@ -211,7 +206,29 @@
             this.btnAboutusMenu.UseVisualStyleBackColor = false;
             this.btnAboutusMenu.Click += new System.EventHandler(this.btnAboutusMenu_Click);
             this.btnAboutusMenu.MouseEnter += new System.EventHandler(this.btnAboutusMenu_MouseEnter);
-            this.btnAboutusMenu.MouseHover += new System.EventHandler(this.btnAboutusMenu_MouseHover);
+            // 
+            // btnReportsMenu
+            // 
+            this.btnReportsMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnReportsMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportsMenu.FlatAppearance.BorderSize = 0;
+            this.btnReportsMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnReportsMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnReportsMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportsMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportsMenu.ForeColor = System.Drawing.Color.DimGray;
+            this.btnReportsMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnReportsMenu.Image")));
+            this.btnReportsMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportsMenu.Location = new System.Drawing.Point(0, 789);
+            this.btnReportsMenu.Name = "btnReportsMenu";
+            this.btnReportsMenu.Padding = new System.Windows.Forms.Padding(17, 0, 80, 0);
+            this.btnReportsMenu.Size = new System.Drawing.Size(225, 41);
+            this.btnReportsMenu.TabIndex = 84;
+            this.btnReportsMenu.Text = "Reports";
+            this.btnReportsMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReportsMenu.UseVisualStyleBackColor = false;
+            this.btnReportsMenu.Click += new System.EventHandler(this.btnReportsMenu_Click_1);
+            this.btnReportsMenu.MouseEnter += new System.EventHandler(this.btnReportsMenu_MouseEnter_1);
             // 
             // panelUserMenu
             // 
@@ -219,10 +236,10 @@
             this.panelUserMenu.Controls.Add(this.btnViewAllUserMenu);
             this.panelUserMenu.Controls.Add(this.btnAddUserMenu);
             this.panelUserMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUserMenu.Location = new System.Drawing.Point(0, 663);
+            this.panelUserMenu.Location = new System.Drawing.Point(0, 740);
             this.panelUserMenu.Name = "panelUserMenu";
             this.panelUserMenu.Size = new System.Drawing.Size(225, 49);
-            this.panelUserMenu.TabIndex = 27;
+            this.panelUserMenu.TabIndex = 85;
             this.panelUserMenu.Visible = false;
             // 
             // btnViewAllUserMenu
@@ -259,14 +276,6 @@
             this.btnAddUserMenu.UseVisualStyleBackColor = true;
             this.btnAddUserMenu.Click += new System.EventHandler(this.btnAddUserMenu_Click);
             // 
-            // panelMove
-            // 
-            this.panelMove.BackColor = System.Drawing.Color.Crimson;
-            this.panelMove.Location = new System.Drawing.Point(0, 29);
-            this.panelMove.Name = "panelMove";
-            this.panelMove.Size = new System.Drawing.Size(6, 41);
-            this.panelMove.TabIndex = 27;
-            // 
             // btnUserMenu
             // 
             this.btnUserMenu.BackColor = System.Drawing.Color.Transparent;
@@ -276,10 +285,10 @@
             this.btnUserMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnUserMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserMenu.ForeColor = System.Drawing.Color.White;
+            this.btnUserMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnUserMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnUserMenu.Image")));
             this.btnUserMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserMenu.Location = new System.Drawing.Point(0, 622);
+            this.btnUserMenu.Location = new System.Drawing.Point(0, 699);
             this.btnUserMenu.Name = "btnUserMenu";
             this.btnUserMenu.Padding = new System.Windows.Forms.Padding(17, 0, 92, 0);
             this.btnUserMenu.Size = new System.Drawing.Size(225, 41);
@@ -288,30 +297,54 @@
             this.btnUserMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUserMenu.UseVisualStyleBackColor = false;
             this.btnUserMenu.Click += new System.EventHandler(this.btnUserMenu_Click);
-            this.btnUserMenu.MouseEnter += new System.EventHandler(this.btnUserMenu_MouseEnter);
+            this.btnUserMenu.Enter += new System.EventHandler(this.btnUserMenu_Enter);
             // 
-            // btnReportsMenu
+            // panelHospitalMenu
             // 
-            this.btnReportsMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnReportsMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportsMenu.FlatAppearance.BorderSize = 0;
-            this.btnReportsMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnReportsMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnReportsMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportsMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportsMenu.ForeColor = System.Drawing.Color.White;
-            this.btnReportsMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnReportsMenu.Image")));
-            this.btnReportsMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportsMenu.Location = new System.Drawing.Point(0, 581);
-            this.btnReportsMenu.Name = "btnReportsMenu";
-            this.btnReportsMenu.Padding = new System.Windows.Forms.Padding(17, 0, 80, 0);
-            this.btnReportsMenu.Size = new System.Drawing.Size(225, 41);
-            this.btnReportsMenu.TabIndex = 32;
-            this.btnReportsMenu.Text = "Reports";
-            this.btnReportsMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReportsMenu.UseVisualStyleBackColor = false;
-            this.btnReportsMenu.Click += new System.EventHandler(this.btnReportsMenu_Click);
-            this.btnReportsMenu.MouseEnter += new System.EventHandler(this.btnReportsMenu_MouseEnter);
+            this.panelHospitalMenu.BackColor = System.Drawing.Color.Transparent;
+            this.panelHospitalMenu.Controls.Add(this.btnViewAllHospital);
+            this.panelHospitalMenu.Controls.Add(this.btnHospitalRegistration);
+            this.panelHospitalMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHospitalMenu.Location = new System.Drawing.Point(0, 650);
+            this.panelHospitalMenu.Name = "panelHospitalMenu";
+            this.panelHospitalMenu.Size = new System.Drawing.Size(225, 49);
+            this.panelHospitalMenu.TabIndex = 81;
+            this.panelHospitalMenu.Visible = false;
+            // 
+            // btnViewAllHospital
+            // 
+            this.btnViewAllHospital.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewAllHospital.FlatAppearance.BorderSize = 0;
+            this.btnViewAllHospital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAllHospital.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAllHospital.ForeColor = System.Drawing.Color.Black;
+            this.btnViewAllHospital.Location = new System.Drawing.Point(0, 24);
+            this.btnViewAllHospital.Name = "btnViewAllHospital";
+            this.btnViewAllHospital.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btnViewAllHospital.Size = new System.Drawing.Size(225, 24);
+            this.btnViewAllHospital.TabIndex = 7;
+            this.btnViewAllHospital.Text = "2.  View All Hospitals";
+            this.btnViewAllHospital.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewAllHospital.UseVisualStyleBackColor = true;
+            this.btnViewAllHospital.Click += new System.EventHandler(this.btnViewAllHospital_Click);
+            // 
+            // btnHospitalRegistration
+            // 
+            this.btnHospitalRegistration.BackColor = System.Drawing.Color.Transparent;
+            this.btnHospitalRegistration.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHospitalRegistration.FlatAppearance.BorderSize = 0;
+            this.btnHospitalRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHospitalRegistration.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHospitalRegistration.ForeColor = System.Drawing.Color.Black;
+            this.btnHospitalRegistration.Location = new System.Drawing.Point(0, 0);
+            this.btnHospitalRegistration.Name = "btnHospitalRegistration";
+            this.btnHospitalRegistration.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btnHospitalRegistration.Size = new System.Drawing.Size(225, 24);
+            this.btnHospitalRegistration.TabIndex = 6;
+            this.btnHospitalRegistration.Text = "1.  Registration && Edit";
+            this.btnHospitalRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHospitalRegistration.UseVisualStyleBackColor = false;
+            this.btnHospitalRegistration.Click += new System.EventHandler(this.btnHospitalRegistration_Click);
             // 
             // btnHospitalMenu
             // 
@@ -322,18 +355,73 @@
             this.btnHospitalMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnHospitalMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHospitalMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHospitalMenu.ForeColor = System.Drawing.Color.White;
+            this.btnHospitalMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnHospitalMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnHospitalMenu.Image")));
             this.btnHospitalMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHospitalMenu.Location = new System.Drawing.Point(0, 540);
+            this.btnHospitalMenu.Location = new System.Drawing.Point(0, 609);
             this.btnHospitalMenu.Name = "btnHospitalMenu";
             this.btnHospitalMenu.Padding = new System.Windows.Forms.Padding(17, 0, 50, 0);
             this.btnHospitalMenu.Size = new System.Drawing.Size(225, 41);
-            this.btnHospitalMenu.TabIndex = 31;
+            this.btnHospitalMenu.TabIndex = 83;
             this.btnHospitalMenu.Text = "              Hospitals";
             this.btnHospitalMenu.UseVisualStyleBackColor = false;
-            this.btnHospitalMenu.Click += new System.EventHandler(this.btnHospitalMenu_Click);
-            this.btnHospitalMenu.MouseEnter += new System.EventHandler(this.btnHospitalMenu_MouseEnter);
+            this.btnHospitalMenu.Click += new System.EventHandler(this.btnHospitalMenu_Click_1);
+            this.btnHospitalMenu.MouseEnter += new System.EventHandler(this.btnHospitalMenu_MouseEnter_1);
+            // 
+            // panelDoctorMenu
+            // 
+            this.panelDoctorMenu.BackColor = System.Drawing.Color.Transparent;
+            this.panelDoctorMenu.Controls.Add(this.btnViewAllDoctor);
+            this.panelDoctorMenu.Controls.Add(this.btnAddDoctorMenu);
+            this.panelDoctorMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDoctorMenu.Location = new System.Drawing.Point(0, 560);
+            this.panelDoctorMenu.Name = "panelDoctorMenu";
+            this.panelDoctorMenu.Size = new System.Drawing.Size(225, 49);
+            this.panelDoctorMenu.TabIndex = 81;
+            this.panelDoctorMenu.Visible = false;
+            // 
+            // btnViewAllDoctor
+            // 
+            this.btnViewAllDoctor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewAllDoctor.FlatAppearance.BorderSize = 0;
+            this.btnViewAllDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAllDoctor.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAllDoctor.ForeColor = System.Drawing.Color.Black;
+            this.btnViewAllDoctor.Location = new System.Drawing.Point(0, 24);
+            this.btnViewAllDoctor.Name = "btnViewAllDoctor";
+            this.btnViewAllDoctor.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btnViewAllDoctor.Size = new System.Drawing.Size(225, 24);
+            this.btnViewAllDoctor.TabIndex = 6;
+            this.btnViewAllDoctor.Text = "2.  View All Doctors";
+            this.btnViewAllDoctor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewAllDoctor.UseVisualStyleBackColor = true;
+            this.btnViewAllDoctor.Click += new System.EventHandler(this.btnViewAllDoctor_Click);
+            // 
+            // btnAddDoctorMenu
+            // 
+            this.btnAddDoctorMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddDoctorMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddDoctorMenu.FlatAppearance.BorderSize = 0;
+            this.btnAddDoctorMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddDoctorMenu.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDoctorMenu.ForeColor = System.Drawing.Color.Black;
+            this.btnAddDoctorMenu.Location = new System.Drawing.Point(0, 0);
+            this.btnAddDoctorMenu.Name = "btnAddDoctorMenu";
+            this.btnAddDoctorMenu.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btnAddDoctorMenu.Size = new System.Drawing.Size(225, 24);
+            this.btnAddDoctorMenu.TabIndex = 5;
+            this.btnAddDoctorMenu.Text = "1.  Add && Edit Doctor";
+            this.btnAddDoctorMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddDoctorMenu.UseVisualStyleBackColor = false;
+            this.btnAddDoctorMenu.Click += new System.EventHandler(this.btnAddDoctorMenu_Click);
+            // 
+            // panelMove
+            // 
+            this.panelMove.BackColor = System.Drawing.Color.Red;
+            this.panelMove.Location = new System.Drawing.Point(-1, 0);
+            this.panelMove.Name = "panelMove";
+            this.panelMove.Size = new System.Drawing.Size(6, 41);
+            this.panelMove.TabIndex = 27;
             // 
             // btnDoctorMenu
             // 
@@ -344,10 +432,10 @@
             this.btnDoctorMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnDoctorMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoctorMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoctorMenu.ForeColor = System.Drawing.Color.White;
+            this.btnDoctorMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnDoctorMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnDoctorMenu.Image")));
             this.btnDoctorMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoctorMenu.Location = new System.Drawing.Point(0, 499);
+            this.btnDoctorMenu.Location = new System.Drawing.Point(0, 519);
             this.btnDoctorMenu.Name = "btnDoctorMenu";
             this.btnDoctorMenu.Padding = new System.Windows.Forms.Padding(17, 0, 56, 0);
             this.btnDoctorMenu.Size = new System.Drawing.Size(225, 41);
@@ -356,6 +444,53 @@
             this.btnDoctorMenu.UseVisualStyleBackColor = false;
             this.btnDoctorMenu.Click += new System.EventHandler(this.btnDoctorMenu_Click);
             this.btnDoctorMenu.MouseEnter += new System.EventHandler(this.btnDoctorMenu_MouseEnter);
+            // 
+            // panelStaffMenu
+            // 
+            this.panelStaffMenu.BackColor = System.Drawing.Color.Transparent;
+            this.panelStaffMenu.Controls.Add(this.btnViewAllStaffMenu);
+            this.panelStaffMenu.Controls.Add(this.btnAddStaffMenu);
+            this.panelStaffMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelStaffMenu.Location = new System.Drawing.Point(0, 470);
+            this.panelStaffMenu.Name = "panelStaffMenu";
+            this.panelStaffMenu.Size = new System.Drawing.Size(225, 49);
+            this.panelStaffMenu.TabIndex = 82;
+            this.panelStaffMenu.Visible = false;
+            // 
+            // btnViewAllStaffMenu
+            // 
+            this.btnViewAllStaffMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewAllStaffMenu.FlatAppearance.BorderSize = 0;
+            this.btnViewAllStaffMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAllStaffMenu.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAllStaffMenu.ForeColor = System.Drawing.Color.Black;
+            this.btnViewAllStaffMenu.Location = new System.Drawing.Point(0, 24);
+            this.btnViewAllStaffMenu.Name = "btnViewAllStaffMenu";
+            this.btnViewAllStaffMenu.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btnViewAllStaffMenu.Size = new System.Drawing.Size(225, 24);
+            this.btnViewAllStaffMenu.TabIndex = 5;
+            this.btnViewAllStaffMenu.Text = "2.  View All Staff Member";
+            this.btnViewAllStaffMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewAllStaffMenu.UseVisualStyleBackColor = true;
+            this.btnViewAllStaffMenu.Click += new System.EventHandler(this.btnViewAllStaffMenu_Click);
+            // 
+            // btnAddStaffMenu
+            // 
+            this.btnAddStaffMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddStaffMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddStaffMenu.FlatAppearance.BorderSize = 0;
+            this.btnAddStaffMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStaffMenu.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStaffMenu.ForeColor = System.Drawing.Color.Black;
+            this.btnAddStaffMenu.Location = new System.Drawing.Point(0, 0);
+            this.btnAddStaffMenu.Name = "btnAddStaffMenu";
+            this.btnAddStaffMenu.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btnAddStaffMenu.Size = new System.Drawing.Size(225, 24);
+            this.btnAddStaffMenu.TabIndex = 4;
+            this.btnAddStaffMenu.Text = "1.  Add && Edit Staff";
+            this.btnAddStaffMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStaffMenu.UseVisualStyleBackColor = false;
+            this.btnAddStaffMenu.Click += new System.EventHandler(this.btnAddStaffMenu_Click);
             // 
             // btnStaffMenu
             // 
@@ -366,10 +501,10 @@
             this.btnStaffMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnStaffMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaffMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaffMenu.ForeColor = System.Drawing.Color.White;
+            this.btnStaffMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnStaffMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnStaffMenu.Image")));
             this.btnStaffMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStaffMenu.Location = new System.Drawing.Point(0, 458);
+            this.btnStaffMenu.Location = new System.Drawing.Point(0, 429);
             this.btnStaffMenu.Name = "btnStaffMenu";
             this.btnStaffMenu.Padding = new System.Windows.Forms.Padding(17, 0, 16, 0);
             this.btnStaffMenu.Size = new System.Drawing.Size(225, 41);
@@ -388,10 +523,10 @@
             this.btnBloodTypeMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnBloodTypeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodTypeMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBloodTypeMenu.ForeColor = System.Drawing.Color.White;
+            this.btnBloodTypeMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnBloodTypeMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnBloodTypeMenu.Image")));
             this.btnBloodTypeMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBloodTypeMenu.Location = new System.Drawing.Point(0, 417);
+            this.btnBloodTypeMenu.Location = new System.Drawing.Point(0, 388);
             this.btnBloodTypeMenu.Name = "btnBloodTypeMenu";
             this.btnBloodTypeMenu.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
             this.btnBloodTypeMenu.Size = new System.Drawing.Size(225, 41);
@@ -410,10 +545,10 @@
             this.btnBloodStockMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnBloodStockMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodStockMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBloodStockMenu.ForeColor = System.Drawing.Color.White;
+            this.btnBloodStockMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnBloodStockMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnBloodStockMenu.Image")));
             this.btnBloodStockMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBloodStockMenu.Location = new System.Drawing.Point(0, 376);
+            this.btnBloodStockMenu.Location = new System.Drawing.Point(0, 347);
             this.btnBloodStockMenu.Name = "btnBloodStockMenu";
             this.btnBloodStockMenu.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
             this.btnBloodStockMenu.Size = new System.Drawing.Size(225, 41);
@@ -432,10 +567,10 @@
             this.btnBloodTransferMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnBloodTransferMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodTransferMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBloodTransferMenu.ForeColor = System.Drawing.Color.White;
+            this.btnBloodTransferMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnBloodTransferMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnBloodTransferMenu.Image")));
             this.btnBloodTransferMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBloodTransferMenu.Location = new System.Drawing.Point(0, 335);
+            this.btnBloodTransferMenu.Location = new System.Drawing.Point(0, 306);
             this.btnBloodTransferMenu.Name = "btnBloodTransferMenu";
             this.btnBloodTransferMenu.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
             this.btnBloodTransferMenu.Size = new System.Drawing.Size(225, 41);
@@ -452,7 +587,7 @@
             this.panelPatientMenu.Controls.Add(this.btnEditPatients);
             this.panelPatientMenu.Controls.Add(this.btnPatientsRegistration);
             this.panelPatientMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPatientMenu.Location = new System.Drawing.Point(0, 266);
+            this.panelPatientMenu.Location = new System.Drawing.Point(0, 237);
             this.panelPatientMenu.Name = "panelPatientMenu";
             this.panelPatientMenu.Size = new System.Drawing.Size(225, 69);
             this.panelPatientMenu.TabIndex = 27;
@@ -518,10 +653,10 @@
             this.btnPatientMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnPatientMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPatientMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPatientMenu.ForeColor = System.Drawing.Color.White;
+            this.btnPatientMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnPatientMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnPatientMenu.Image")));
             this.btnPatientMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPatientMenu.Location = new System.Drawing.Point(0, 225);
+            this.btnPatientMenu.Location = new System.Drawing.Point(0, 196);
             this.btnPatientMenu.Name = "btnPatientMenu";
             this.btnPatientMenu.Padding = new System.Windows.Forms.Padding(17, 0, 10, 0);
             this.btnPatientMenu.Size = new System.Drawing.Size(225, 41);
@@ -542,10 +677,10 @@
             this.btnBloodDonationMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnBloodDonationMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBloodDonationMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBloodDonationMenu.ForeColor = System.Drawing.Color.White;
+            this.btnBloodDonationMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnBloodDonationMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnBloodDonationMenu.Image")));
             this.btnBloodDonationMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBloodDonationMenu.Location = new System.Drawing.Point(0, 184);
+            this.btnBloodDonationMenu.Location = new System.Drawing.Point(0, 155);
             this.btnBloodDonationMenu.Name = "btnBloodDonationMenu";
             this.btnBloodDonationMenu.Padding = new System.Windows.Forms.Padding(17, 0, 15, 0);
             this.btnBloodDonationMenu.Size = new System.Drawing.Size(225, 41);
@@ -564,7 +699,7 @@
             this.panelDonorMenu.Controls.Add(this.btnEditDonors);
             this.panelDonorMenu.Controls.Add(this.btnDonorsRegistration);
             this.panelDonorMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDonorMenu.Location = new System.Drawing.Point(0, 111);
+            this.panelDonorMenu.Location = new System.Drawing.Point(0, 82);
             this.panelDonorMenu.Name = "panelDonorMenu";
             this.panelDonorMenu.Size = new System.Drawing.Size(225, 73);
             this.panelDonorMenu.TabIndex = 29;
@@ -630,10 +765,10 @@
             this.btnDonorMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnDonorMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDonorMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDonorMenu.ForeColor = System.Drawing.Color.White;
+            this.btnDonorMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnDonorMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnDonorMenu.Image")));
             this.btnDonorMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonorMenu.Location = new System.Drawing.Point(0, 70);
+            this.btnDonorMenu.Location = new System.Drawing.Point(0, 41);
             this.btnDonorMenu.Name = "btnDonorMenu";
             this.btnDonorMenu.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
             this.btnDonorMenu.Size = new System.Drawing.Size(225, 41);
@@ -641,7 +776,6 @@
             this.btnDonorMenu.Text = "Donor";
             this.btnDonorMenu.UseVisualStyleBackColor = false;
             this.btnDonorMenu.Click += new System.EventHandler(this.btnDonorMenu_Click);
-            this.btnDonorMenu.Leave += new System.EventHandler(this.btnDonorMenu_Leave);
             this.btnDonorMenu.MouseEnter += new System.EventHandler(this.btnDonorMenu_MouseEnter);
             // 
             // btnHomeMenu
@@ -654,10 +788,10 @@
             this.btnHomeMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.btnHomeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomeMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomeMenu.ForeColor = System.Drawing.Color.White;
+            this.btnHomeMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnHomeMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnHomeMenu.Image")));
             this.btnHomeMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHomeMenu.Location = new System.Drawing.Point(0, 29);
+            this.btnHomeMenu.Location = new System.Drawing.Point(0, 0);
             this.btnHomeMenu.Name = "btnHomeMenu";
             this.btnHomeMenu.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
             this.btnHomeMenu.Size = new System.Drawing.Size(225, 41);
@@ -665,120 +799,119 @@
             this.btnHomeMenu.Text = "Home";
             this.btnHomeMenu.UseVisualStyleBackColor = false;
             this.btnHomeMenu.Click += new System.EventHandler(this.btnHomeMenu_Click);
-            this.btnHomeMenu.Leave += new System.EventHandler(this.btnHomeMenu_Leave);
             this.btnHomeMenu.MouseEnter += new System.EventHandler(this.btnHomeMenu_MouseEnter);
             this.btnHomeMenu.MouseHover += new System.EventHandler(this.btnHomeMenu_MouseHover);
             // 
-            // panelLogo
+            // btnMinimize
             // 
-            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(225, 29);
-            this.panelLogo.TabIndex = 24;
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.Animated = true;
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.BorderColor = System.Drawing.SystemColors.Window;
+            this.btnMinimize.BorderRadius = 10;
+            this.btnMinimize.BorderThickness = 1;
+            this.btnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.btnMinimize.FillColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.ForeColor = System.Drawing.Color.Black;
+            this.btnMinimize.IconColor = System.Drawing.Color.Black;
+            this.btnMinimize.Location = new System.Drawing.Point(1301, 2);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(27, 27);
+            this.btnMinimize.TabIndex = 81;
+            this.btnMinimize.UseTransparentBackground = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Animated = true;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BorderRadius = 10;
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.IconColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(1338, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(27, 27);
+            this.btnClose.TabIndex = 82;
+            this.btnClose.UseTransparentBackground = true;
             // 
             // btnSetting
             // 
+            this.btnSetting.Animated = true;
+            this.btnSetting.AnimatedGIF = true;
             this.btnSetting.BackColor = System.Drawing.Color.Transparent;
-            this.btnSetting.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
-            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSetting.BackgroundImage")));
+            this.btnSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSetting.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSetting.FillColor = System.Drawing.Color.Transparent;
+            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSetting.ForeColor = System.Drawing.Color.Black;
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(1157, 1);
+            this.btnSetting.Location = new System.Drawing.Point(1268, 37);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnSetting.Size = new System.Drawing.Size(103, 57);
-            this.btnSetting.TabIndex = 31;
-            this.btnSetting.Text = "           Setting    ";
-            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnSetting.Size = new System.Drawing.Size(32, 32);
+            this.btnSetting.TabIndex = 84;
             // 
-            // panel4
+            // btnProfile
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 782);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1374, 6);
-            this.panel4.TabIndex = 70;
+            this.btnProfile.Animated = true;
+            this.btnProfile.AnimatedGIF = true;
+            this.btnProfile.BackColor = System.Drawing.Color.Transparent;
+            this.btnProfile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProfile.BackgroundImage")));
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnProfile.BorderColor = System.Drawing.Color.Transparent;
+            this.btnProfile.BorderThickness = 10;
+            this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProfile.FillColor = System.Drawing.Color.Transparent;
+            this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnProfile.ForeColor = System.Drawing.Color.Black;
+            this.btnProfile.Location = new System.Drawing.Point(1218, 35);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnProfile.Size = new System.Drawing.Size(34, 34);
+            this.btnProfile.TabIndex = 83;
             // 
-            // panel1
+            // pictureBox2
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1368, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(6, 782);
-            this.panel1.TabIndex = 71;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(20, 13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 39);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 77;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // panel5
+            // btnDateTime
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.labtime);
-            this.panel5.Controls.Add(this.lbltime2);
-            this.panel5.Controls.Add(this.lbltime3);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1368, 41);
-            this.panel5.TabIndex = 73;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.Controls.Add(this.btnProfie);
-            this.panel6.Controls.Add(this.btnLogout);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.btnSetting);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 41);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1368, 57);
-            this.panel6.TabIndex = 74;
-            // 
-            // btnProfie
-            // 
-            this.btnProfie.BackColor = System.Drawing.Color.Transparent;
-            this.btnProfie.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnProfie.FlatAppearance.BorderSize = 0;
-            this.btnProfie.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
-            this.btnProfie.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
-            this.btnProfie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfie.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfie.ForeColor = System.Drawing.Color.Black;
-            this.btnProfie.Image = ((System.Drawing.Image)(resources.GetObject("btnProfie.Image")));
-            this.btnProfie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfie.Location = new System.Drawing.Point(1048, 2);
-            this.btnProfie.Name = "btnProfie";
-            this.btnProfie.Size = new System.Drawing.Size(103, 57);
-            this.btnProfie.TabIndex = 77;
-            this.btnProfie.Text = "Profile";
-            this.btnProfie.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProfie.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 98);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1368, 6);
-            this.panel3.TabIndex = 75;
-            // 
-            // panelSliderMenu
-            // 
-            this.panelSliderMenu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panelSliderMenu.Controls.Add(this.panelMenu);
-            this.panelSliderMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSliderMenu.Location = new System.Drawing.Point(0, 104);
-            this.panelSliderMenu.Name = "panelSliderMenu";
-            this.panelSliderMenu.Size = new System.Drawing.Size(225, 678);
-            this.panelSliderMenu.TabIndex = 77;
+            this.btnDateTime.Animated = true;
+            this.btnDateTime.AnimatedGIF = true;
+            this.btnDateTime.BackColor = System.Drawing.Color.Transparent;
+            this.btnDateTime.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDateTime.BackgroundImage")));
+            this.btnDateTime.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDateTime.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnDateTime.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDateTime.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDateTime.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDateTime.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDateTime.FillColor = System.Drawing.Color.Transparent;
+            this.btnDateTime.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDateTime.ForeColor = System.Drawing.Color.Black;
+            this.btnDateTime.Location = new System.Drawing.Point(1164, 36);
+            this.btnDateTime.Name = "btnDateTime";
+            this.btnDateTime.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnDateTime.Size = new System.Drawing.Size(32, 32);
+            this.btnDateTime.TabIndex = 82;
+            this.btnDateTime.Click += new System.EventHandler(this.btnDateTime_Click);
             // 
             // menuTransition
             // 
@@ -790,18 +923,128 @@
             this.silderTransition.Interval = 10;
             this.silderTransition.Tick += new System.EventHandler(this.silderTransition_Tick);
             // 
-            // pictureBox2
+            // guna2BorderlessForm1
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 77;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationType = Guna.UI2.WinForms.Guna2BorderlessForm.AnimateWindowType.AW_CENTER;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // panelDataTime
+            // 
+            this.panelDataTime.AutoRoundedCorners = true;
+            this.panelDataTime.BackColor = System.Drawing.Color.White;
+            this.panelDataTime.BorderColor = System.Drawing.Color.SteelBlue;
+            this.panelDataTime.BorderRadius = 40;
+            this.panelDataTime.BorderThickness = 2;
+            this.panelDataTime.Controls.Add(this.labtime);
+            this.panelDataTime.Controls.Add(this.lbltime3);
+            this.panelDataTime.Controls.Add(this.lbltime2);
+            this.panelDataTime.FillColor = System.Drawing.Color.White;
+            this.panelDataTime.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.panelDataTime.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.panelDataTime.Location = new System.Drawing.Point(1068, 87);
+            this.panelDataTime.Name = "panelDataTime";
+            this.panelDataTime.Size = new System.Drawing.Size(200, 100);
+            this.panelDataTime.TabIndex = 81;
+            this.panelDataTime.Visible = false;
+            this.panelDataTime.MouseEnter += new System.EventHandler(this.panelDataTime_MouseEnter);
+            this.panelDataTime.MouseLeave += new System.EventHandler(this.panelDataTime_MouseLeave);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Animated = true;
+            this.btnLogout.AnimatedGIF = true;
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLogout.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Location = new System.Drawing.Point(1323, 37);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnLogout.Size = new System.Drawing.Size(32, 32);
+            this.btnLogout.TabIndex = 85;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.Controls.Add(this.pictureBox2);
+            this.guna2GradientPanel1.Controls.Add(this.lable);
+            this.guna2GradientPanel1.Controls.Add(this.btnClose);
+            this.guna2GradientPanel1.Controls.Add(this.btnMinimize);
+            this.guna2GradientPanel1.Controls.Add(this.btnLogout);
+            this.guna2GradientPanel1.Controls.Add(this.btnDateTime);
+            this.guna2GradientPanel1.Controls.Add(this.btnProfile);
+            this.guna2GradientPanel1.Controls.Add(this.btnSetting);
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1370, 70);
+            this.guna2GradientPanel1.TabIndex = 86;
+            // 
+            // guna2GradientPanel3
+            // 
+            this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel3.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(0, 70);
+            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(1370, 5);
+            this.guna2GradientPanel3.TabIndex = 88;
+            // 
+            // guna2GradientPanel2
+            // 
+            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 75);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(1370, 14);
+            this.guna2GradientPanel2.TabIndex = 89;
+            // 
+            // panelSliderMenu
+            // 
+            this.panelSliderMenu.Controls.Add(this.panelMenu);
+            this.panelSliderMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSliderMenu.FillColor = System.Drawing.Color.White;
+            this.panelSliderMenu.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.panelSliderMenu.Location = new System.Drawing.Point(0, 89);
+            this.panelSliderMenu.Name = "panelSliderMenu";
+            this.panelSliderMenu.Size = new System.Drawing.Size(225, 660);
+            this.panelSliderMenu.TabIndex = 90;
+            // 
+            // guna2GradientPanel4
+            // 
+            this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2GradientPanel4.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.guna2GradientPanel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(225, 735);
+            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(1145, 14);
+            this.guna2GradientPanel4.TabIndex = 91;
+            // 
+            // guna2GradientPanel5
+            // 
+            this.guna2GradientPanel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2GradientPanel5.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(1355, 89);
+            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(15, 646);
+            this.guna2GradientPanel5.TabIndex = 92;
             // 
             // MasterPage
             // 
@@ -809,13 +1052,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1374, 788);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.guna2GradientPanel5);
+            this.Controls.Add(this.guna2GradientPanel4);
             this.Controls.Add(this.panelSliderMenu);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.guna2GradientPanel2);
+            this.Controls.Add(this.guna2GradientPanel3);
+            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.panelDataTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -824,26 +1068,29 @@
             this.Text = "MasterPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MasterPage_Load);
+            this.Leave += new System.EventHandler(this.MasterPage_Leave);
             this.panelMenu.ResumeLayout(false);
             this.panelUserMenu.ResumeLayout(false);
+            this.panelHospitalMenu.ResumeLayout(false);
+            this.panelDoctorMenu.ResumeLayout(false);
+            this.panelStaffMenu.ResumeLayout(false);
             this.panelPatientMenu.ResumeLayout(false);
             this.panelDonorMenu.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panelSliderMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelDataTime.ResumeLayout(false);
+            this.panelDataTime.PerformLayout();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
+            this.panelSliderMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
         #endregion
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label labtime;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lable;
         private System.Windows.Forms.Label lbltime2;
         private System.Windows.Forms.Label lbltime3;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnViewAllDonors;
         private System.Windows.Forms.Button btnEditDonors;
@@ -855,10 +1102,7 @@
         private System.Windows.Forms.Button btnPatientsRegistration;
         private System.Windows.Forms.Panel panelMove;
         private System.Windows.Forms.Button btnAboutusMenu;
-        private System.Windows.Forms.Panel panelUserMenu;
         private System.Windows.Forms.Button btnUserMenu;
-        private System.Windows.Forms.Button btnReportsMenu;
-        private System.Windows.Forms.Button btnHospitalMenu;
         private System.Windows.Forms.Button btnDoctorMenu;
         private System.Windows.Forms.Button btnStaffMenu;
         private System.Windows.Forms.Button btnBloodTypeMenu;
@@ -870,18 +1114,35 @@
         private System.Windows.Forms.Panel panelDonorMenu;
         private System.Windows.Forms.Button btnDonorMenu;
         private System.Windows.Forms.Button btnHomeMenu;
-        private System.Windows.Forms.Button btnSetting;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnProfie;
-        private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Panel panelSliderMenu;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.Timer silderTransition;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private System.Windows.Forms.Panel panelStaffMenu;
+        private System.Windows.Forms.Button btnViewAllStaffMenu;
+        private System.Windows.Forms.Button btnAddStaffMenu;
+        private System.Windows.Forms.Button btnReportsMenu;
+        private System.Windows.Forms.Panel panelHospitalMenu;
+        private System.Windows.Forms.Button btnViewAllHospital;
+        private System.Windows.Forms.Button btnHospitalRegistration;
+        private System.Windows.Forms.Button btnHospitalMenu;
+        private System.Windows.Forms.Panel panelDoctorMenu;
+        private System.Windows.Forms.Button btnViewAllDoctor;
+        private System.Windows.Forms.Button btnAddDoctorMenu;
+        private System.Windows.Forms.Panel panelUserMenu;
+        private Guna.UI2.WinForms.Guna2CircleButton btnDateTime;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelDataTime;
+        private Guna.UI2.WinForms.Guna2ControlBox btnMinimize;
+        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
+        private Guna.UI2.WinForms.Guna2CircleButton btnSetting;
+        private Guna.UI2.WinForms.Guna2CircleButton btnProfile;
+        private Guna.UI2.WinForms.Guna2CircleButton btnLogout;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelSliderMenu;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
     }
 }
 

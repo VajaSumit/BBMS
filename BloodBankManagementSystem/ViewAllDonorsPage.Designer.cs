@@ -32,10 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllDonorsPage));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnviewall = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtSearchName = new Guna.UI2.WinForms.Guna2TextBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DDob = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,13 +52,6 @@
             this.DBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DHeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnclose = new System.Windows.Forms.Button();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtSearchName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnSearrch = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnviewall = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,6 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -67,7 +67,7 @@
             this.Id,
             this.DId,
             this.DName,
-            this.DAge,
+            this.DDob,
             this.DGender,
             this.DMobile,
             this.DEmail,
@@ -91,8 +91,137 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(952, 382);
+            this.dataGridView1.Size = new System.Drawing.Size(999, 382);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Colonna MT", 26.25F, System.Drawing.FontStyle.Bold);
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.label27.Location = new System.Drawing.Point(109, 85);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(342, 37);
+            this.label27.TabIndex = 64;
+            this.label27.Text = "~ All Donor Records";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(639, 249);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 18);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "Search By Name  :-";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_HOR_POSITIVE;
+            this.guna2AnimateWindow1.Interval = 800;
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // btnclose
+            // 
+            this.btnclose.Animated = true;
+            this.btnclose.AnimatedGIF = true;
+            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclose.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.Location = new System.Drawing.Point(1041, 87);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnclose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnclose.Size = new System.Drawing.Size(36, 35);
+            this.btnclose.TabIndex = 130;
+            this.btnclose.Text = "X";
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click_1);
+            // 
+            // btnviewall
+            // 
+            this.btnviewall.Animated = true;
+            this.btnviewall.AnimatedGIF = true;
+            this.btnviewall.AutoRoundedCorners = true;
+            this.btnviewall.BackColor = System.Drawing.Color.Transparent;
+            this.btnviewall.BorderColor = System.Drawing.Color.Navy;
+            this.btnviewall.BorderRadius = 16;
+            this.btnviewall.BorderThickness = 2;
+            this.btnviewall.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnviewall.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnviewall.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnviewall.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnviewall.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnviewall.FillColor2 = System.Drawing.Color.White;
+            this.btnviewall.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnviewall.ForeColor = System.Drawing.Color.Black;
+            this.btnviewall.Location = new System.Drawing.Point(677, 301);
+            this.btnviewall.Name = "btnviewall";
+            this.btnviewall.Size = new System.Drawing.Size(131, 35);
+            this.btnviewall.TabIndex = 132;
+            this.btnviewall.Text = "View All";
+            this.btnviewall.Click += new System.EventHandler(this.btnviewall_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Animated = true;
+            this.btnSearch.AnimatedGIF = true;
+            this.btnSearch.AutoRoundedCorners = true;
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BorderColor = System.Drawing.Color.Navy;
+            this.btnSearch.BorderRadius = 16;
+            this.btnSearch.BorderThickness = 2;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor2 = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Location = new System.Drawing.Point(839, 301);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(131, 35);
+            this.btnSearch.TabIndex = 133;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearchName
+            // 
+            this.txtSearchName.Animated = true;
+            this.txtSearchName.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearchName.BorderColor = System.Drawing.Color.DimGray;
+            this.txtSearchName.BorderRadius = 10;
+            this.txtSearchName.BorderThickness = 2;
+            this.txtSearchName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtSearchName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchName.DefaultText = "";
+            this.txtSearchName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchName.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtSearchName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchName.Location = new System.Drawing.Point(788, 248);
+            this.txtSearchName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchName.Name = "txtSearchName";
+            this.txtSearchName.PasswordChar = '\0';
+            this.txtSearchName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtSearchName.PlaceholderText = "";
+            this.txtSearchName.SelectedText = "";
+            this.txtSearchName.Size = new System.Drawing.Size(199, 24);
+            this.txtSearchName.TabIndex = 0;
+            this.txtSearchName.Leave += new System.EventHandler(this.txtSearchName_Leave);
             // 
             // Id
             // 
@@ -117,13 +246,12 @@
             this.DName.Name = "DName";
             this.DName.ReadOnly = true;
             // 
-            // DAge
+            // DDob
             // 
-            this.DAge.DataPropertyName = "DAge";
-            this.DAge.HeaderText = "Age";
-            this.DAge.Name = "DAge";
-            this.DAge.ReadOnly = true;
-            this.DAge.Width = 50;
+            this.DDob.DataPropertyName = "DDob";
+            this.DDob.HeaderText = "DateOfBrith";
+            this.DDob.Name = "DDob";
+            this.DDob.ReadOnly = true;
             // 
             // DGender
             // 
@@ -185,85 +313,6 @@
             this.DWeight.ReadOnly = true;
             this.DWeight.Width = 50;
             // 
-            // btnclose
-            // 
-            this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(1043, 75);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(39, 32);
-            this.btnclose.TabIndex = 24;
-            this.btnclose.Text = "X";
-            this.btnclose.UseVisualStyleBackColor = false;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(85, 75);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(353, 49);
-            this.label27.TabIndex = 64;
-            this.label27.Text = "~ All Donor Records";
-            // 
-            // txtSearchName
-            // 
-            this.txtSearchName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtSearchName.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchName.Location = new System.Drawing.Point(781, 247);
-            this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(189, 25);
-            this.txtSearchName.TabIndex = 0;
-            this.txtSearchName.Enter += new System.EventHandler(this.txtName_Enter);
-            this.txtSearchName.Leave += new System.EventHandler(this.txtName_Leave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(639, 249);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 18);
-            this.label2.TabIndex = 81;
-            this.label2.Text = "Search By Name  :-";
-            // 
-            // btnSearrch
-            // 
-            this.btnSearrch.BackColor = System.Drawing.Color.DarkRed;
-            this.btnSearrch.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearrch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSearrch.Location = new System.Drawing.Point(832, 301);
-            this.btnSearrch.Name = "btnSearrch";
-            this.btnSearrch.Size = new System.Drawing.Size(118, 31);
-            this.btnSearrch.TabIndex = 2;
-            this.btnSearrch.Text = "SEARCH";
-            this.btnSearrch.UseVisualStyleBackColor = false;
-            this.btnSearrch.Click += new System.EventHandler(this.btnSearrch_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // btnviewall
-            // 
-            this.btnviewall.BackColor = System.Drawing.Color.DarkRed;
-            this.btnviewall.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnviewall.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnviewall.Location = new System.Drawing.Point(670, 301);
-            this.btnviewall.Name = "btnviewall";
-            this.btnviewall.Size = new System.Drawing.Size(118, 31);
-            this.btnviewall.TabIndex = 1;
-            this.btnviewall.Text = "VIEW ALL";
-            this.btnviewall.UseVisualStyleBackColor = false;
-            this.btnviewall.Click += new System.EventHandler(this.btnviewall_Click);
-            // 
             // ViewAllDonorsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,14 +320,13 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CancelButton = this.btnclose;
-            this.ClientSize = new System.Drawing.Size(1238, 749);
-            this.Controls.Add(this.btnviewall);
-            this.Controls.Add(this.btnSearrch);
+            this.ClientSize = new System.Drawing.Size(1255, 749);
             this.Controls.Add(this.txtSearchName);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnviewall);
+            this.Controls.Add(this.btnclose);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.btnclose);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -297,17 +345,18 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtSearchName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSearrch;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Button btnviewall;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnclose;
+        private Guna.UI2.WinForms.Guna2GradientButton btnviewall;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn DId;
         private System.Windows.Forms.DataGridViewTextBoxColumn DName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DAge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DDob;
         private System.Windows.Forms.DataGridViewTextBoxColumn DGender;
         private System.Windows.Forms.DataGridViewTextBoxColumn DMobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn DEmail;

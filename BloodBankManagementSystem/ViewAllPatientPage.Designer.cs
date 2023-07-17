@@ -32,22 +32,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label27 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnclose = new System.Windows.Forms.Button();
-            this.btnviewall = new System.Windows.Forms.Button();
-            this.btnSearrch = new System.Windows.Forms.Button();
-            this.txtSearchName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnupdate = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtSearchName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DDob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -56,11 +57,11 @@
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(71, 63);
+            this.label27.Font = new System.Drawing.Font("Colonna MT", 26.25F, System.Drawing.FontStyle.Bold);
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.label27.Location = new System.Drawing.Point(109, 105);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(368, 49);
+            this.label27.Size = new System.Drawing.Size(358, 37);
             this.label27.TabIndex = 65;
             this.label27.Text = "~ All Patient Records";
             // 
@@ -73,15 +74,15 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.DId,
-            this.DName,
-            this.DAge,
-            this.DGender,
-            this.DMobile,
-            this.DEmail,
-            this.DCity,
-            this.DAddress,
-            this.DBloodGroup});
+            this.PId,
+            this.PName,
+            this.DDob,
+            this.PGender,
+            this.PMobile,
+            this.PEmail,
+            this.PCity,
+            this.PAddress,
+            this.PBloodGroup});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -101,133 +102,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(1047, 382);
             this.dataGridView1.TabIndex = 66;
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // DId
-            // 
-            this.DId.DataPropertyName = "PId";
-            this.DId.HeaderText = "Patient ID";
-            this.DId.Name = "DId";
-            this.DId.ReadOnly = true;
-            // 
-            // DName
-            // 
-            this.DName.DataPropertyName = "PName";
-            this.DName.HeaderText = "Name";
-            this.DName.Name = "DName";
-            this.DName.ReadOnly = true;
-            // 
-            // DAge
-            // 
-            this.DAge.DataPropertyName = "PAge";
-            this.DAge.HeaderText = "Age";
-            this.DAge.Name = "DAge";
-            this.DAge.ReadOnly = true;
-            // 
-            // DGender
-            // 
-            this.DGender.DataPropertyName = "PGender";
-            this.DGender.HeaderText = "Gender";
-            this.DGender.Name = "DGender";
-            this.DGender.ReadOnly = true;
-            // 
-            // DMobile
-            // 
-            this.DMobile.DataPropertyName = "PMobile";
-            this.DMobile.HeaderText = "Mobile";
-            this.DMobile.Name = "DMobile";
-            this.DMobile.ReadOnly = true;
-            // 
-            // DEmail
-            // 
-            this.DEmail.DataPropertyName = "PEmail";
-            this.DEmail.HeaderText = "Email";
-            this.DEmail.Name = "DEmail";
-            this.DEmail.ReadOnly = true;
-            // 
-            // DCity
-            // 
-            this.DCity.DataPropertyName = "PCity";
-            this.DCity.HeaderText = "City";
-            this.DCity.Name = "DCity";
-            this.DCity.ReadOnly = true;
-            // 
-            // DAddress
-            // 
-            this.DAddress.DataPropertyName = "PAddress";
-            this.DAddress.HeaderText = "Address";
-            this.DAddress.Name = "DAddress";
-            this.DAddress.ReadOnly = true;
-            // 
-            // DBloodGroup
-            // 
-            this.DBloodGroup.DataPropertyName = "PBloodGroup";
-            this.DBloodGroup.HeaderText = "BloodGroup";
-            this.DBloodGroup.Name = "DBloodGroup";
-            this.DBloodGroup.ReadOnly = true;
-            // 
-            // btnclose
-            // 
-            this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(1031, 81);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(39, 32);
-            this.btnclose.TabIndex = 67;
-            this.btnclose.Text = "X";
-            this.btnclose.UseVisualStyleBackColor = false;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
-            // 
-            // btnviewall
-            // 
-            this.btnviewall.BackColor = System.Drawing.Color.DarkRed;
-            this.btnviewall.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnviewall.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnviewall.Location = new System.Drawing.Point(711, 308);
-            this.btnviewall.Name = "btnviewall";
-            this.btnviewall.Size = new System.Drawing.Size(118, 31);
-            this.btnviewall.TabIndex = 1;
-            this.btnviewall.Text = "VIEW ALL";
-            this.btnviewall.UseVisualStyleBackColor = false;
-            this.btnviewall.Click += new System.EventHandler(this.btnviewall_Click);
-            // 
-            // btnSearrch
-            // 
-            this.btnSearrch.BackColor = System.Drawing.Color.DarkRed;
-            this.btnSearrch.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearrch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSearrch.Location = new System.Drawing.Point(873, 308);
-            this.btnSearrch.Name = "btnSearrch";
-            this.btnSearrch.Size = new System.Drawing.Size(118, 31);
-            this.btnSearrch.TabIndex = 2;
-            this.btnSearrch.Text = "SEARCH";
-            this.btnSearrch.UseVisualStyleBackColor = false;
-            this.btnSearrch.Click += new System.EventHandler(this.btnSearrch_Click);
-            // 
-            // txtSearchName
-            // 
-            this.txtSearchName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtSearchName.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchName.Location = new System.Drawing.Point(822, 254);
-            this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(189, 25);
-            this.txtSearchName.TabIndex = 0;
-            this.txtSearchName.Enter += new System.EventHandler(this.txtSearchName_Enter);
-            this.txtSearchName.Leave += new System.EventHandler(this.txtSearchName_Leave);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
             this.label2.Location = new System.Drawing.Point(680, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 18);
@@ -238,6 +118,178 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_HOR_POSITIVE;
+            this.guna2AnimateWindow1.Interval = 800;
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // btnclose
+            // 
+            this.btnclose.Animated = true;
+            this.btnclose.AnimatedGIF = true;
+            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclose.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.Location = new System.Drawing.Point(1065, 107);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnclose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnclose.Size = new System.Drawing.Size(36, 35);
+            this.btnclose.TabIndex = 130;
+            this.btnclose.Text = "X";
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click_1);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Animated = true;
+            this.btnSearch.AnimatedGIF = true;
+            this.btnSearch.AutoRoundedCorners = true;
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BorderColor = System.Drawing.Color.Navy;
+            this.btnSearch.BorderRadius = 16;
+            this.btnSearch.BorderThickness = 2;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor2 = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Location = new System.Drawing.Point(880, 308);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(131, 35);
+            this.btnSearch.TabIndex = 135;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnupdate
+            // 
+            this.btnupdate.Animated = true;
+            this.btnupdate.AnimatedGIF = true;
+            this.btnupdate.AutoRoundedCorners = true;
+            this.btnupdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnupdate.BorderColor = System.Drawing.Color.Navy;
+            this.btnupdate.BorderRadius = 16;
+            this.btnupdate.BorderThickness = 2;
+            this.btnupdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnupdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnupdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnupdate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnupdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnupdate.FillColor2 = System.Drawing.Color.White;
+            this.btnupdate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdate.ForeColor = System.Drawing.Color.Black;
+            this.btnupdate.Location = new System.Drawing.Point(714, 308);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(131, 35);
+            this.btnupdate.TabIndex = 134;
+            this.btnupdate.Text = "View All";
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+            // 
+            // txtSearchName
+            // 
+            this.txtSearchName.Animated = true;
+            this.txtSearchName.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearchName.BorderColor = System.Drawing.Color.DimGray;
+            this.txtSearchName.BorderRadius = 10;
+            this.txtSearchName.BorderThickness = 2;
+            this.txtSearchName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtSearchName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchName.DefaultText = "";
+            this.txtSearchName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchName.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtSearchName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchName.Location = new System.Drawing.Point(828, 256);
+            this.txtSearchName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchName.Name = "txtSearchName";
+            this.txtSearchName.PasswordChar = '\0';
+            this.txtSearchName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtSearchName.PlaceholderText = "";
+            this.txtSearchName.SelectedText = "";
+            this.txtSearchName.Size = new System.Drawing.Size(199, 24);
+            this.txtSearchName.TabIndex = 0;
+            this.txtSearchName.Leave += new System.EventHandler(this.txtSearchName_Leave_1);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // PId
+            // 
+            this.PId.DataPropertyName = "PId";
+            this.PId.HeaderText = "Patient ID";
+            this.PId.Name = "PId";
+            this.PId.ReadOnly = true;
+            // 
+            // PName
+            // 
+            this.PName.DataPropertyName = "PName";
+            this.PName.HeaderText = "Name";
+            this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
+            // 
+            // DDob
+            // 
+            this.DDob.DataPropertyName = "PDob";
+            this.DDob.HeaderText = "Date Of Brith";
+            this.DDob.Name = "DDob";
+            this.DDob.ReadOnly = true;
+            // 
+            // PGender
+            // 
+            this.PGender.DataPropertyName = "PGender";
+            this.PGender.HeaderText = "Gender";
+            this.PGender.Name = "PGender";
+            this.PGender.ReadOnly = true;
+            // 
+            // PMobile
+            // 
+            this.PMobile.DataPropertyName = "PMobile";
+            this.PMobile.HeaderText = "Mobile";
+            this.PMobile.Name = "PMobile";
+            this.PMobile.ReadOnly = true;
+            // 
+            // PEmail
+            // 
+            this.PEmail.DataPropertyName = "PEmail";
+            this.PEmail.HeaderText = "Email";
+            this.PEmail.Name = "PEmail";
+            this.PEmail.ReadOnly = true;
+            // 
+            // PCity
+            // 
+            this.PCity.DataPropertyName = "PCity";
+            this.PCity.HeaderText = "City";
+            this.PCity.Name = "PCity";
+            this.PCity.ReadOnly = true;
+            // 
+            // PAddress
+            // 
+            this.PAddress.DataPropertyName = "PAddress";
+            this.PAddress.HeaderText = "Address";
+            this.PAddress.Name = "PAddress";
+            this.PAddress.ReadOnly = true;
+            // 
+            // PBloodGroup
+            // 
+            this.PBloodGroup.DataPropertyName = "PBloodGroup";
+            this.PBloodGroup.HeaderText = "BloodGroup";
+            this.PBloodGroup.Name = "PBloodGroup";
+            this.PBloodGroup.ReadOnly = true;
+            // 
             // ViewAllPatientPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,13 +297,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CancelButton = this.btnclose;
             this.ClientSize = new System.Drawing.Size(1238, 788);
-            this.Controls.Add(this.btnviewall);
-            this.Controls.Add(this.btnSearrch);
             this.Controls.Add(this.txtSearchName);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnclose);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label27);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -271,21 +322,22 @@
 
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DAge;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DGender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DMobile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DCity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DBloodGroup;
-        private System.Windows.Forms.Button btnclose;
-        private System.Windows.Forms.Button btnviewall;
-        private System.Windows.Forms.Button btnSearrch;
-        private System.Windows.Forms.TextBox txtSearchName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnclose;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSearch;
+        private Guna.UI2.WinForms.Guna2GradientButton btnupdate;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DDob;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PGender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PMobile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PCity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PBloodGroup;
     }
 }

@@ -28,20 +28,7 @@ namespace BloodBankManagementSystem
             this.Close();
         }
 
-        private void cmbBloodGroup_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         public void PatientAutoIncrementID()
         {
@@ -53,185 +40,39 @@ namespace BloodBankManagementSystem
             PatientAutoIncrementID();
         }
 
-        private void txtName_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtName.Text)==true)
-            {
-                errorProvider1.SetError(this.txtName, "Please Enter Name !");
-                txtName.Focus();
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-            txtName.BackColor = Color.White;
 
+        public void ClearAllData()
+        {
+            txtName.Clear();
+            dtpDateOfBrith.Value = DateTime.Now;
+            cmbGender.SelectedItem = null;
+            txtMobileNo.Clear();
+            txtEmailID.Clear();
+            cmbCity.SelectedItem = null;
+            txtAddress.Clear();
+            cmbBloodGroup.SelectedItem = null;
         }
 
-        private void txtAge_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtAge.Text) == true)
-            {
-                errorProvider2.SetError(this.txtAge, "Please Enter Age !");
-                txtAge.Focus();
-            }
-            else
-            {
-                errorProvider2.Clear();
-            }
-            txtAge.BackColor = Color.White;
+     
 
+
+        private void btnclose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
-        private void cmbGender_Leave(object sender, EventArgs e)
+        private void btnsave_Click_1(object sender, EventArgs e)
         {
-            if (cmbGender.SelectedItem==null)
-            {
-                errorProvider3.SetError(this.cmbGender, "Please Select Gender");
-                cmbGender.Focus();
-            }
-            else
-            {
-                errorProvider3.Clear();
-            }
-            cmbGender.BackColor = Color.White;
 
-        }
-
-        private void txtMobileNo_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtMobileNo.Text) == true)
-            {
-                errorProvider4.SetError(this.txtMobileNo, "Please Enter Mobile Number !");
-                txtMobileNo.Focus();
-            }
-            else
-            {
-                errorProvider4.Clear();
-            }
-            txtMobileNo.BackColor = Color.White;
-
-        }
-
-        private void txtEmailID_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtEmailID.Text) == true)
-            {
-                errorProvider5.SetError(this.txtEmailID, "Please Enter Email ID !");
-                txtEmailID.Focus();
-            }
-            else if (Regex.IsMatch(txtEmailID.Text, patten) == false)
-            {
-                txtEmailID.Focus();
-                errorProvider6.SetError(this.txtEmailID, "Invalid Email");
-            }
-            else
-            {
-                errorProvider5.Clear();
-            }
-            txtEmailID.BackColor = Color.White;
-
-        }
-
-        private void cmbCity_Leave(object sender, EventArgs e)
-        {
-            if (cmbCity.SelectedItem==null)
-            {
-                errorProvider6.SetError(this.cmbCity, "Please Select A City");
-                cmbCity.Focus();
-            }
-            else
-            {
-                errorProvider6.Clear();
-            }
-            cmbCity.BackColor = Color.White;
-
-        }
-
-        private void txtAddress_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtAddress.Text) == true)
-            {
-                errorProvider7.SetError(this.txtAddress, "Please Enter Address !");
-                txtAddress.Focus();
-            }
-            else
-            {
-                errorProvider7.Clear();
-            }
-            txtAddress.BackColor = Color.White;
-
-        }
-
-        private void cmbBloodGroup_Leave(object sender, EventArgs e)
-        {
-            if (cmbBloodGroup.SelectedItem==null)
-            {
-                errorProvider8.SetError(this.cmbBloodGroup, "Please Select Blood Group");
-                cmbBloodGroup.Focus();
-            }
-            else
-            {
-                errorProvider8.Clear();
-            }
-            cmbBloodGroup.BackColor = Color.White;
-
-        }
-
-        private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (char.IsDigit(ch))
-            {
-                e.Handled = false;
-            }
-            else if (ch == 8)
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-                errorProvider2.SetError(this.txtAge, "Please Enter Only Numeric Value !");
-            }
-        }
-
-        private void txtMobileNo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (char.IsDigit(ch))
-            {
-                e.Handled = false;
-            }
-            else if (ch == 8)
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-                errorProvider4.SetError(this.txtAge, "Please Enter Only Numeric Value !");
-            }
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            ClearAllData();
-            PatientAutoIncrementID();
-         
-        }
-
-        private void btnsave_Click(object sender, EventArgs e)
-        {
             if (string.IsNullOrEmpty(txtName.Text) == true)
             {
                 errorProvider1.SetError(this.txtName, "Please Enter Name !");
                 txtName.Focus();
             }
-            else if (string.IsNullOrEmpty(txtAge.Text) == true)
+             else if(dtpDateOfBrith.Value == DateTime.Now)
             {
-                errorProvider2.SetError(this.txtAge, "Please Enter Age !");
-                txtAge.Focus();
+                errorProvider2.SetError(this.dtpDateOfBrith, "Please Select Date OF Brith");
+                dtpDateOfBrith.Focus();
             }
             else if (cmbGender.SelectedItem == null)
             {
@@ -270,112 +111,74 @@ namespace BloodBankManagementSystem
             }
             else
             {
-                string id = txtPatientNo.Text;
-                string name = txtName.Text;
-                int age = int.Parse(txtAge.Text);
-                string gender = cmbGender.SelectedItem.ToString();
-                string mobile = txtMobileNo.Text;
-                string email = txtEmailID.Text;
-                string city = cmbCity.SelectedItem.ToString();
-                string address = txtAddress.Text;
-                string bloodgroup = cmbBloodGroup.SelectedItem.ToString();
 
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("exec InsertPatientRecordRegistration '" + id + "','" + name + "','" + age + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "'",con);
-                int a = cmd.ExecuteNonQuery();
-                if ( a > 0)
+                SqlConnection con1 = new SqlConnection(cs);
+                string query = "select *from Patient_RegistrationTbl where PId=@id";
+                SqlCommand cmd1 = new SqlCommand(query, con1);
+                cmd1.Parameters.AddWithValue("@id", txtPatientNo.Text);
+                con1.Open();
+                SqlDataReader dr = cmd1.ExecuteReader();
+                if (dr.HasRows)
                 {
-                    MessageBox.Show("Patient Record Save SuccessFul", "Patient Record Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearAllData();
-                    PatientAutoIncrementID();
-
-
+                    MessageBox.Show("Alreay Exist the record ID !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    con1.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Patient Record Not Save", "Patient Record Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
+                    string id = txtPatientNo.Text;
+                    string name = txtName.Text;
+                    string gender = cmbGender.SelectedItem.ToString();
+                    string mobile = txtMobileNo.Text;
+                    string email = txtEmailID.Text;
+                    string city = cmbCity.SelectedItem.ToString();
+                    string address = txtAddress.Text;
+                    string bloodgroup = cmbBloodGroup.SelectedItem.ToString();
+
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("exec InsertPatientRecordRegistration '" + id + "','" + name + "','" + dtpDateOfBrith.Value + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "'", con);
+                    int a = cmd.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        MessageBox.Show("Patient Record Save SuccessFul", "Patient Record Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearAllData();
+                        PatientAutoIncrementID();
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Patient Record Not Save", "Patient Record Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
                 }
 
 
             }
-
         }
 
-        public void ClearAllData()
+        private void btnreset_Click_1(object sender, EventArgs e)
         {
-            txtName.Clear();
-            txtAge.Clear();
-            cmbGender.SelectedItem = null;
-            txtMobileNo.Clear();
-            txtEmailID.Clear();
-            cmbCity.SelectedItem = null;
-            txtAddress.Clear();
-            cmbBloodGroup.SelectedItem = null;
+            ClearAllData();
+            PatientAutoIncrementID();
         }
 
-        private void txtPatientNo_Enter(object sender, EventArgs e)
+        private void txtName_Leave_1(object sender, EventArgs e)
         {
-            txtPatientNo.BackColor = Color.LightCyan;
-
+            if (string.IsNullOrEmpty(txtName.Text) == true)
+            {
+                errorProvider1.SetError(this.txtName, "Please Enter Name !");
+                txtName.Focus();
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
         }
 
-        private void txtPatientNo_Leave(object sender, EventArgs e)
-        {
-            txtPatientNo.BackColor = Color.White;
-
-        }
-
-        private void txtName_Enter(object sender, EventArgs e)
-        {
-            txtName.BackColor = Color.LightCyan;
-
-        }
-
-        private void txtAge_Enter(object sender, EventArgs e)
-        {
-            txtAge.BackColor = Color.LightCyan;
-
-        }
-
-        private void cmbGender_Enter(object sender, EventArgs e)
-        {
-            cmbGender.BackColor = Color.LightCyan;
-
-        }
-
-        private void txtMobileNo_Enter(object sender, EventArgs e)
-        {
-            txtMobileNo.BackColor = Color.LightCyan;
-
-        }
-
-        private void txtEmailID_Enter(object sender, EventArgs e)
-        {
-            txtEmailID.BackColor = Color.LightCyan;
-
-        }
-
-        private void cmbCity_Enter(object sender, EventArgs e)
-        {
-            cmbCity.BackColor = Color.LightCyan;
-
-        }
-
-        private void txtAddress_Enter(object sender, EventArgs e)
-        {
-            txtAddress.BackColor = Color.LightCyan;
-
-        }
-
-        private void cmbBloodGroup_Enter(object sender, EventArgs e)
-        {
-            cmbBloodGroup.BackColor = Color.LightCyan;
-
-        }
-
-        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtName_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
             if (char.IsLetter(ch))
@@ -394,6 +197,135 @@ namespace BloodBankManagementSystem
             {
                 e.Handled = true;
                 errorProvider1.SetError(this.txtName, "Please Enter The Only Latters , Can't Enter Numeric Value !");
+            }
+        }
+
+
+        private void cmbGender_Leave_1(object sender, EventArgs e)
+        {
+            if (cmbGender.SelectedItem == null)
+            {
+                errorProvider3.SetError(this.cmbGender, "Please Select Gender");
+                cmbGender.Focus();
+            }
+            else
+            {
+                errorProvider3.Clear();
+            }
+        }
+
+        private void txtMobileNo_Leave_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMobileNo.Text) == true)
+            {
+                errorProvider4.SetError(this.txtMobileNo, "Please Enter Mobile Number !");
+                txtMobileNo.Focus();
+            }
+            else
+            {
+                errorProvider4.Clear();
+            }
+        }
+
+        private void txtMobileNo_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (char.IsDigit(ch))
+            {
+                e.Handled = false;
+            }
+            else if (ch == 8)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                errorProvider4.SetError(this.txtMobileNo, "Please Enter Only Numeric Value !");
+            }
+        }
+
+        private void txtEmailID_Leave_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtEmailID.Text) == true)
+            {
+                errorProvider5.SetError(this.txtEmailID, "Please Enter Email ID !");
+                txtEmailID.Focus();
+            }
+            else if (Regex.IsMatch(txtEmailID.Text, patten) == false)
+            {
+                txtEmailID.Focus();
+                errorProvider6.SetError(this.txtEmailID, "Invalid Email");
+            }
+            else
+            {
+                errorProvider5.Clear();
+            }
+        }
+
+        private void cmbCity_Leave_1(object sender, EventArgs e)
+        {
+            if (cmbCity.SelectedItem == null)
+            {
+                errorProvider6.SetError(this.cmbCity, "Please Select A City");
+                cmbCity.Focus();
+            }
+            else
+            {
+                errorProvider6.Clear();
+            }
+        }
+
+        private void txtAddress_Leave_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtAddress.Text) == true)
+            {
+                errorProvider7.SetError(this.txtAddress, "Please Enter Address !");
+                txtAddress.Focus();
+            }
+            else
+            {
+                errorProvider7.Clear();
+            }
+        }
+
+        private void cmbBloodGroup_Leave_1(object sender, EventArgs e)
+        {
+            if (cmbBloodGroup.SelectedItem == null)
+            {
+                errorProvider8.SetError(this.cmbBloodGroup, "Please Select Blood Group");
+                cmbBloodGroup.Focus();
+            }
+            else
+            {
+                errorProvider8.Clear();
+            }
+        }
+
+        private void dtpDateOfBrith_Leave(object sender, EventArgs e)
+        {
+            if (dtpDateOfBrith.Value == DateTime.Now)
+            {
+                errorProvider2.SetError(this.dtpDateOfBrith, "Please Select Date OF Brith");
+                dtpDateOfBrith.Focus();
+            }
+            else
+            {
+                errorProvider2.Clear();
+            }
+        }
+
+        private void dtpDateOfBrith_ValueChanged(object sender, EventArgs e)
+        {
+            
+            if (dtpDateOfBrith.Value == DateTime.Now)
+            {
+                errorProvider2.SetError(this.dtpDateOfBrith, "Please Select Date OF Brith");
+                dtpDateOfBrith.Focus();
+            }
+            else
+            {
+                errorProvider2.Clear();
             }
         }
     }

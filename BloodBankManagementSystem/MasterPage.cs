@@ -15,15 +15,22 @@ namespace BloodBankManagementSystem
     {
 
         HomePage homepage;
+
         DonorRegistrationPage donorregistration;
         ViewAllDonorsPage viewalldonor;
         EditDonorPage editdonor;
+
         PatientRegistration patientregistration;
         ViewAllPatientPage viewallpatient;
         EditPatientPage editpatient;
-        AboutUs aboutus;
+
+        StaffPage staffpage;
+        ViewAllStaffRecords viewallstaffrecords;
+
         UserRecordPage userrecord;
         ViewAllUser viewalluser;
+
+        AboutUs aboutus;
 
         private int childFormNumber = 0;
 
@@ -32,98 +39,16 @@ namespace BloodBankManagementSystem
             InitializeComponent();
         }
 
-        private void ShowNewForm(object sender, EventArgs e)
-        {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Window " + childFormNumber++;
-            childForm.Show();
-        }
-
-        private void OpenFile(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
-        }
-
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = saveFileDialog.FileName;
-            }
-        }
-
-        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
-
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //statusStrip.Visible = statusBarToolStripMenuItem.Checked;
-        }
-
-        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.Cascade);
-        }
-
-        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileVertical);
-        }
-
-        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileHorizontal);
-        }
-
-        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.ArrangeIcons);
-        }
-
-        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
-            {
-                childForm.Close();
-            }
-        }
-
-    
+     
 
         private void customizeDailog()
         {
             panelDonorMenu.Visible = false;
             panelPatientMenu.Visible = false;
             panelUserMenu.Visible = false;
+            panelStaffMenu.Visible = false;
+            panelDoctorMenu.Visible = false;
+            panelHospitalMenu.Visible = false;
         }
 
         private void hideSubMenu()
@@ -136,10 +61,24 @@ namespace BloodBankManagementSystem
             {
                 panelPatientMenu.Visible = false;
             }
+            if (panelStaffMenu.Visible == true)
+            {
+                panelStaffMenu.Visible = false;
+            }
             if (panelUserMenu.Visible==true)
             {
                 panelUserMenu.Visible = false;
             }
+            if (panelDoctorMenu.Visible == true)
+            {
+                panelDoctorMenu.Visible = false;
+            }
+            if (panelHospitalMenu.Visible == true)
+            {
+                panelHospitalMenu.Visible = false;
+            }
+
+
         }
 
         private void showSubMenu(Panel subMenu)
@@ -447,40 +386,25 @@ namespace BloodBankManagementSystem
 
         private void btnStaffMenu_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
             Movepanel(btnStaffMenu);
-
+            showSubMenu(panelStaffMenu);
 
         }
 
         private void btnDoctorMenu_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
             Movepanel(btnDoctorMenu);
+            showSubMenu(panelDoctorMenu);
 
 
         }
 
-        private void btnHospitalMenu_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-            Movepanel(btnHospitalMenu);
-
-
-        }
-
-        private void btnReportsMenu_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-            Movepanel(btnReportsMenu);
-
-
-        }
+ 
 
         private void btnAboutusMenu_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
             Movepanel(btnAboutusMenu);
+            hideSubMenu();
 
             if (aboutus == null)
             {
@@ -512,45 +436,17 @@ namespace BloodBankManagementSystem
           
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHomeMenu_Leave(object sender, EventArgs e)
-        {
-            //btnHomeMenu.BackColor = Color.FromArgb(24, 30, 54);
-        }
-
-        private void btnDonorMenu_Leave(object sender, EventArgs e)
-        {
-            //btnDonorMenu.BackColor = Color.FromArgb(24, 30, 54);
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-            labtime.Text = "Time  :-   " + DateTime.Now.ToString("hh : mm : ss - tt");
-            lbltime2.Text = "Date  :-   " + DateTime.Now.ToString("dd -- MMMM -- yyyy") + " ,";
-            lbltime3.Text = "Day  :-   " + DateTime.Now.DayOfWeek.ToString();
+            labtime.Text  ="Time  :-   "+DateTime.Now.ToString("hh : mm : ss - tt");
+            lbltime2.Text ="Date  :-   "+DateTime.Now.ToString("dd -- MMMM -- yyyy") + " ,";
+            lbltime3.Text ="Day   :-   "+DateTime.Now.DayOfWeek.ToString();
 
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult dr=MessageBox.Show("Are You Sure ! You Wan't To Logout ","Logout Information !",MessageBoxButtons.OKCancel,MessageBoxIcon.Information);
-            if (dr==DialogResult.OK)
-            {
-                this.Close();
-            }
-            else if (dr==DialogResult.Cancel)
-            {
-                
-            }
-            else
-            {
-                
-            }
+            
         }
 
         private void btnHomeMenu_MouseHover(object sender, EventArgs e)
@@ -624,17 +520,6 @@ namespace BloodBankManagementSystem
 
         }
 
-        private void btnUserMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnUserMenu);
-
-        }
-
-        private void btnAboutusMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnAboutusMenu);
-
-        }
 
         private void MasterPage_Load(object sender, EventArgs e)
         {
@@ -656,7 +541,7 @@ namespace BloodBankManagementSystem
             else
             {
                 panelMenu.Height -= 15;
-                if (panelMenu.Height <= 70)
+                if (panelMenu.Height <= 73)
                 {
                     menuTransition.Stop();
                     menuExpand = false;
@@ -681,18 +566,18 @@ namespace BloodBankManagementSystem
                     sidebarExpand = false;
                     silderTransition.Stop();
 
-                    btnHomeMenu.Width = panelSliderMenu.Width;
-                    btnDonorMenu.Width = panelSliderMenu.Width;
-                    btnBloodDonationMenu.Width = panelSliderMenu.Width;
-                    btnPatientMenu.Width = panelSliderMenu.Width;
-                    btnBloodTransferMenu.Width = panelSliderMenu.Width;
-                    btnBloodStockMenu.Width = panelSliderMenu.Width;
-                    btnStaffMenu.Width = panelSliderMenu.Width;
-                    btnDonorMenu.Width = panelSliderMenu.Width;
-                    btnHospitalMenu.Width = panelSliderMenu.Width;
-                    btnReportsMenu.Width = panelSliderMenu.Width;
-                    btnAboutusMenu.Width = panelSliderMenu.Width;
-                    btnUserMenu.Width = panelSliderMenu.Width;
+                    //btnHomeMenu.Width = panelSliderMenu.Width;
+                    //btnDonorMenu.Width = panelSliderMenu.Width;
+                    //btnBloodDonationMenu.Width = panelSliderMenu.Width;
+                    //btnPatientMenu.Width = panelSliderMenu.Width;
+                    //btnBloodTransferMenu.Width = panelSliderMenu.Width;
+                    //btnBloodStockMenu.Width = panelSliderMenu.Width;
+                    //btnStaffMenu.Width = panelSliderMenu.Width;
+                    //btnDonorMenu.Width = panelSliderMenu.Width;
+                    //btnHospitalMenu.Width = panelSliderMenu.Width;
+                    //btnReportsMenu.Width = panelSliderMenu.Width;
+                    //btnAboutusMenu.Width = panelSliderMenu.Width;
+                    //btnUserMenu.Width = panelSliderMenu.Width;
                 }
             }
             else
@@ -703,33 +588,236 @@ namespace BloodBankManagementSystem
                     sidebarExpand = true;
                     silderTransition.Stop();
 
-                    btnHomeMenu.Width = panelSliderMenu.Width;
-                    btnDonorMenu.Width = panelSliderMenu.Width;
-                    btnBloodDonationMenu.Width = panelSliderMenu.Width;
-                    btnPatientMenu.Width = panelSliderMenu.Width;
-                    btnBloodTransferMenu.Width = panelSliderMenu.Width;
-                    btnBloodStockMenu.Width = panelSliderMenu.Width;
-                    btnStaffMenu.Width = panelSliderMenu.Width;
-                    btnDonorMenu.Width = panelSliderMenu.Width;
-                    btnHospitalMenu.Width = panelSliderMenu.Width;
-                    btnReportsMenu.Width = panelSliderMenu.Width;
-                    btnAboutusMenu.Width = panelSliderMenu.Width;
-                    btnUserMenu.Width = panelSliderMenu.Width;
+                    //btnHomeMenu.Width = panelSliderMenu.Width;
+                    //btnDonorMenu.Width = panelSliderMenu.Width;
+                    //btnBloodDonationMenu.Width = panelSliderMenu.Width;
+                    //btnPatientMenu.Width = panelSliderMenu.Width;
+                    //btnBloodTransferMenu.Width = panelSliderMenu.Width;
+                    //btnBloodStockMenu.Width = panelSliderMenu.Width;
+                    //btnStaffMenu.Width = panelSliderMenu.Width;
+                    //btnDonorMenu.Width = panelSliderMenu.Width;
+                    //btnHospitalMenu.Width = panelSliderMenu.Width;
+                    //btnReportsMenu.Width = panelSliderMenu.Width;
+                    //btnAboutusMenu.Width = panelSliderMenu.Width;
+                    //btnUserMenu.Width = panelSliderMenu.Width;
 
 
                 }
             }
         }
 
-        private void btnAboutusMenu_MouseHover(object sender, EventArgs e)
-        {
-            Movepanel(btnAboutusMenu);
-        }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
             silderTransition.Start();
         }
+
+     
+        private void btnAddStaffMenu_Click(object sender, EventArgs e)
+        {
+            //StaffPage p = new StaffPage();
+            //p.MdiParent = this;
+            //p.Show();
+            hideSubMenu();
+            if (staffpage == null)
+            {
+                staffpage = new StaffPage();
+                staffpage.FormClosed += Staffpage_FormClosed;
+                staffpage.MdiParent = this;
+                staffpage.Show();
+            }
+            else
+            {
+                staffpage.Activate();
+            }
+        }
+
+        private void Staffpage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            staffpage = null;
+        }
+
+        private void btnViewAllStaffMenu_Click(object sender, EventArgs e)
+        {
+            //ViewAllStaffRecords v = new ViewAllStaffRecords();
+            //v.MdiParent = this;
+            //v.Show();
+
+            hideSubMenu();
+            if (viewallstaffrecords == null)
+            {
+                viewallstaffrecords = new ViewAllStaffRecords();
+                viewallstaffrecords.FormClosed += Viewallstaffrecords_FormClosed;
+                viewallstaffrecords.MdiParent = this;
+                viewallstaffrecords.Show();
+            }
+            else
+            {
+                viewallstaffrecords.Activate();
+            }
+        }
+
+        private void Viewallstaffrecords_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            viewallstaffrecords = null;
+        }
+
+        private void btnAddDoctorMenu_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            //if (viewallstaffrecords == null)
+            //{
+            //    viewallstaffrecords = new ViewAllStaffRecords();
+            //    viewallstaffrecords.FormClosed += Viewallstaffrecords_FormClosed;
+            //    viewallstaffrecords.MdiParent = this;
+            //    viewallstaffrecords.Show();
+            //}
+            //else
+            //{
+            //    viewallstaffrecords.Activate();
+            //}
+        }
+
+        private void btnHospitalMenu_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(panelHospitalMenu);
+            Movepanel(btnHospitalMenu);
+        }
+
+        private void btnReportsMenu_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            Movepanel(btnReportsMenu);
+
+        }
+
+        private void btnViewAllDoctor_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            //if (editpatient == null)
+            //{
+            //    editpatient = new EditPatientPage();
+            //    editpatient.FormClosed += Editpatient_FormClosed;
+            //    editpatient.MdiParent = this;
+            //    editpatient.Show();
+            //}
+            //else
+            //{
+            //    editpatient.Activate();
+            //}
+        }
+
+        private void btnHospitalRegistration_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            //if (editpatient == null)
+            //{
+            //    editpatient = new EditPatientPage();
+            //    editpatient.FormClosed += Editpatient_FormClosed;
+            //    editpatient.MdiParent = this;
+            //    editpatient.Show();
+            //}
+            //else
+            //{
+            //    editpatient.Activate();
+            //}
+        }
+
+        private void btnViewAllHospital_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            //if (editpatient == null)
+            //{
+            //    editpatient = new EditPatientPage();
+            //    editpatient.FormClosed += Editpatient_FormClosed;
+            //    editpatient.MdiParent = this;
+            //    editpatient.Show();
+            //}
+            //else
+            //{
+            //    editpatient.Activate();
+            //}
+        }
+
+        private void btnHospitalMenu_MouseEnter_1(object sender, EventArgs e)
+        {
+            Movepanel(btnHospitalMenu);
+        }
+
+        private void btnUserMenu_Enter(object sender, EventArgs e)
+        {
+            Movepanel(btnUserMenu);
+        }
+
+        private void btnReportsMenu_MouseEnter_1(object sender, EventArgs e)
+        {
+            Movepanel(btnReportsMenu);
+        }
+
+        private void btnAboutusMenu_MouseEnter(object sender, EventArgs e)
+        {
+            Movepanel(btnAboutusMenu);
+        }
+
+        private void btnDateTime_Click(object sender, EventArgs e)
+        {
+            if (btnDateTime.Checked==true)
+            {
+                panelDataTime.Visible = true;
+                panelDataTime.BackColor = Color.Transparent;
+            }
+            else if (btnDateTime.Checked==false)
+            {
+                panelDataTime.Visible = false;
+                panelDataTime.BackColor = Color.White;
+            }
+            else
+            {
+                panelDataTime.Visible = false;
+            }
+
+
+     
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are You Sure ! You Wan't To Logout ", "Logout Information !", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (dr == DialogResult.OK)
+            {
+                this.Close();
+                LoginPage l = new LoginPage();
+                l.Show();
+            }
+            else if (dr == DialogResult.Cancel)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private void panelDataTime_MouseEnter(object sender, EventArgs e)
+        {
+            panelDataTime.Visible = true;
+
+        }
+
+        private void panelDataTime_MouseLeave(object sender, EventArgs e)
+        {
+            panelDataTime.Visible = false;
+        }
+
+        private void MasterPage_Leave(object sender, EventArgs e)
+        {
+            panelDataTime.Visible = false;
+        }
+
 
         //private Form activeForm = null;
         //private void openChildForm(Form childform)

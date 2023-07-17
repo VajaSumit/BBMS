@@ -48,19 +48,43 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms">
+      <HintPath>..\packages\Bunifu.UI.WinForms.6.1.0\lib\net40\Bunifu.UI.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\packages\Bunifu.UI.WinForms.1.5.3.1.0.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DateTimeVisualizer.UI, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DateTimeVisualizer.UI.1.0.11\lib\netcoreapp3.1\DateTimeVisualizer.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\netcoreapp3.1\FontAwesome.Sharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Siticone.Desktop.UI">
+      <HintPath>..\packages\Siticone.Desktop.UI.2.1.1\lib\net40\Siticone.Desktop.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Siticone.UI">
+      <HintPath>..\packages\Siticone.UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,12 +94,23 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tiger.Clock, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tiger.Clock.2.0.0\lib\netstandard2.1\Tiger.Clock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
     <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloodDonationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodDonationPage.Designer.cs">
+      <DependentUpon>BloodDonationPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClassFiles\HashCode.cs" />
     <Compile Include="DonorRegistrationPage.cs">
       <SubType>Form</SubType>
@@ -113,12 +148,6 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MasterPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +173,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="StaffPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffPage.Designer.cs">
+      <DependentUpon>StaffPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserRecordPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,12 +197,21 @@
     <Compile Include="ViewAllPatientPage.Designer.cs">
       <DependentUpon>ViewAllPatientPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllStaffRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllStaffRecords.Designer.cs">
+      <DependentUpon>ViewAllStaffRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewAllUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewAllUser.Designer.cs">
       <DependentUpon>ViewAllUser.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BloodDonationPage.resx">
+      <DependentUpon>BloodDonationPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DonorRegistrationPage.resx">
       <DependentUpon>DonorRegistrationPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,9 +230,6 @@
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MasterPage.resx">
       <DependentUpon>MasterPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +244,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="StaffPage.resx">
+      <DependentUpon>StaffPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserRecordPage.resx">
       <DependentUpon>UserRecordPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllPatientPage.resx">
       <DependentUpon>ViewAllPatientPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllStaffRecords.resx">
+      <DependentUpon>ViewAllStaffRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllUser.resx">
       <DependentUpon>ViewAllUser.cs</DependentUpon>
@@ -233,6 +280,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\1.jpg" />
+    <Content Include="Images\calendar-with-a-clock-time-tools_icon-icons.com_56831.ico" />
+    <Content Include="Images\calendar-with-time.ico" />
+    <Content Include="Images\d.jpg" />
+    <Content Include="Images\e.jpg" />
+    <Content Include="Images\LoginPageBackground.gif" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\3.jpg" />
     <Content Include="Images\3643769 %281%29.ico" />
