@@ -120,7 +120,7 @@ namespace BloodBankManagementSystem
                 SqlDataReader dr = cmd1.ExecuteReader();
                 if (dr.HasRows)
                 {
-                    MessageBox.Show("Alreay Exist the record ID !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SaveRecordDialogBox3.Show();
                     con1.Close();
                 }
                 else
@@ -142,7 +142,7 @@ namespace BloodBankManagementSystem
                     int a = cmd.ExecuteNonQuery();
                     if (a > 0)
                     {
-                        MessageBox.Show("Patient Record Save SuccessFul", "Patient Record Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SaveRecordDialogBox1.Show();
                         ClearAllData();
                         PatientAutoIncrementID();
 
@@ -150,8 +150,7 @@ namespace BloodBankManagementSystem
                     }
                     else
                     {
-                        MessageBox.Show("Patient Record Not Save", "Patient Record Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        SaveRecordDialogBox2.Show();
                     }
                 }
 
@@ -161,8 +160,13 @@ namespace BloodBankManagementSystem
 
         private void btnreset_Click_1(object sender, EventArgs e)
         {
-            ClearAllData();
-            PatientAutoIncrementID();
+               DialogResult d=ResetDataDialogBox.Show();
+            if (d==DialogResult.Yes)
+            {
+                ClearAllData();
+                PatientAutoIncrementID();
+
+            }
         }
 
         private void txtName_Leave_1(object sender, EventArgs e)

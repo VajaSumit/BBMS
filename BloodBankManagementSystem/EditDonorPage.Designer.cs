@@ -57,6 +57,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DDob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DHeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -85,18 +97,12 @@
             this.dtpDateOfBrith = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DDob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DHeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UpdateRecordDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.UpdateRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.ResetDialogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteDialogBox3 = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -445,6 +451,95 @@
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 30;
+            // 
+            // DId
+            // 
+            this.DId.DataPropertyName = "DId";
+            this.DId.HeaderText = "Donor ID";
+            this.DId.Name = "DId";
+            this.DId.ReadOnly = true;
+            this.DId.Width = 80;
+            // 
+            // DName
+            // 
+            this.DName.DataPropertyName = "DName";
+            this.DName.HeaderText = "Name";
+            this.DName.Name = "DName";
+            this.DName.ReadOnly = true;
+            // 
+            // DDob
+            // 
+            this.DDob.DataPropertyName = "DDob";
+            this.DDob.HeaderText = "DateOfBrith";
+            this.DDob.Name = "DDob";
+            this.DDob.ReadOnly = true;
+            // 
+            // DGender
+            // 
+            this.DGender.DataPropertyName = "DGender";
+            this.DGender.HeaderText = "Gender";
+            this.DGender.Name = "DGender";
+            this.DGender.ReadOnly = true;
+            this.DGender.Width = 90;
+            // 
+            // DMobile
+            // 
+            this.DMobile.DataPropertyName = "DMobile";
+            this.DMobile.HeaderText = "Mobile";
+            this.DMobile.Name = "DMobile";
+            this.DMobile.ReadOnly = true;
+            // 
+            // DEmail
+            // 
+            this.DEmail.DataPropertyName = "DEmail";
+            this.DEmail.HeaderText = "Email";
+            this.DEmail.Name = "DEmail";
+            this.DEmail.ReadOnly = true;
+            // 
+            // DCity
+            // 
+            this.DCity.DataPropertyName = "DCity";
+            this.DCity.HeaderText = "City";
+            this.DCity.Name = "DCity";
+            this.DCity.ReadOnly = true;
+            // 
+            // DAddress
+            // 
+            this.DAddress.DataPropertyName = "DAddress";
+            this.DAddress.HeaderText = "Address";
+            this.DAddress.Name = "DAddress";
+            this.DAddress.ReadOnly = true;
+            // 
+            // DBloodGroup
+            // 
+            this.DBloodGroup.DataPropertyName = "DBloodGroup";
+            this.DBloodGroup.HeaderText = "BloodGroup";
+            this.DBloodGroup.Name = "DBloodGroup";
+            this.DBloodGroup.ReadOnly = true;
+            // 
+            // DHeight
+            // 
+            this.DHeight.DataPropertyName = "DHeight";
+            this.DHeight.HeaderText = "Height";
+            this.DHeight.Name = "DHeight";
+            this.DHeight.ReadOnly = true;
+            this.DHeight.Width = 50;
+            // 
+            // DWeight
+            // 
+            this.DWeight.DataPropertyName = "DWeight";
+            this.DWeight.HeaderText = "Weight";
+            this.DWeight.Name = "DWeight";
+            this.DWeight.ReadOnly = true;
+            this.DWeight.Width = 50;
             // 
             // errorProvider1
             // 
@@ -919,94 +1014,59 @@
             this.label29.TabIndex = 135;
             this.label29.Text = "Date Of Brith";
             // 
-            // Id
+            // UpdateRecordDialogBox1
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 30;
+            this.UpdateRecordDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.UpdateRecordDialogBox1.Caption = "Donor Information";
+            this.UpdateRecordDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.UpdateRecordDialogBox1.Parent = null;
+            this.UpdateRecordDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.UpdateRecordDialogBox1.Text = "Donor Record Update Successfuly !";
             // 
-            // DId
+            // UpdateRecordDialogBox2
             // 
-            this.DId.DataPropertyName = "DId";
-            this.DId.HeaderText = "Donor ID";
-            this.DId.Name = "DId";
-            this.DId.ReadOnly = true;
-            this.DId.Width = 80;
+            this.UpdateRecordDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.UpdateRecordDialogBox2.Caption = "Donor Information";
+            this.UpdateRecordDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.UpdateRecordDialogBox2.Parent = null;
+            this.UpdateRecordDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.UpdateRecordDialogBox2.Text = "Donor Record Not Update !";
             // 
-            // DName
+            // DeleteDialogBox1
             // 
-            this.DName.DataPropertyName = "DName";
-            this.DName.HeaderText = "Name";
-            this.DName.Name = "DName";
-            this.DName.ReadOnly = true;
+            this.DeleteDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.DeleteDialogBox1.Caption = "Record Information";
+            this.DeleteDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.DeleteDialogBox1.Parent = null;
+            this.DeleteDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteDialogBox1.Text = "Donor Record Delete Successfuly !";
             // 
-            // DDob
+            // DeleteDialogBox2
             // 
-            this.DDob.DataPropertyName = "DDob";
-            this.DDob.HeaderText = "DateOfBrith";
-            this.DDob.Name = "DDob";
-            this.DDob.ReadOnly = true;
+            this.DeleteDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.DeleteDialogBox2.Caption = "Record Information";
+            this.DeleteDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.DeleteDialogBox2.Parent = null;
+            this.DeleteDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteDialogBox2.Text = "Donor Record Not  Deleted !";
             // 
-            // DGender
+            // ResetDialogBox
             // 
-            this.DGender.DataPropertyName = "DGender";
-            this.DGender.HeaderText = "Gender";
-            this.DGender.Name = "DGender";
-            this.DGender.ReadOnly = true;
-            this.DGender.Width = 90;
+            this.ResetDialogBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.ResetDialogBox.Caption = "Reset Data";
+            this.ResetDialogBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.ResetDialogBox.Parent = null;
+            this.ResetDialogBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.ResetDialogBox.Text = "Are You Sure ! You  Want To Reset The Data ?";
             // 
-            // DMobile
+            // DeleteDialogBox3
             // 
-            this.DMobile.DataPropertyName = "DMobile";
-            this.DMobile.HeaderText = "Mobile";
-            this.DMobile.Name = "DMobile";
-            this.DMobile.ReadOnly = true;
-            // 
-            // DEmail
-            // 
-            this.DEmail.DataPropertyName = "DEmail";
-            this.DEmail.HeaderText = "Email";
-            this.DEmail.Name = "DEmail";
-            this.DEmail.ReadOnly = true;
-            // 
-            // DCity
-            // 
-            this.DCity.DataPropertyName = "DCity";
-            this.DCity.HeaderText = "City";
-            this.DCity.Name = "DCity";
-            this.DCity.ReadOnly = true;
-            // 
-            // DAddress
-            // 
-            this.DAddress.DataPropertyName = "DAddress";
-            this.DAddress.HeaderText = "Address";
-            this.DAddress.Name = "DAddress";
-            this.DAddress.ReadOnly = true;
-            // 
-            // DBloodGroup
-            // 
-            this.DBloodGroup.DataPropertyName = "DBloodGroup";
-            this.DBloodGroup.HeaderText = "BloodGroup";
-            this.DBloodGroup.Name = "DBloodGroup";
-            this.DBloodGroup.ReadOnly = true;
-            // 
-            // DHeight
-            // 
-            this.DHeight.DataPropertyName = "DHeight";
-            this.DHeight.HeaderText = "Height";
-            this.DHeight.Name = "DHeight";
-            this.DHeight.ReadOnly = true;
-            this.DHeight.Width = 50;
-            // 
-            // DWeight
-            // 
-            this.DWeight.DataPropertyName = "DWeight";
-            this.DWeight.HeaderText = "Weight";
-            this.DWeight.Name = "DWeight";
-            this.DWeight.ReadOnly = true;
-            this.DWeight.Width = 50;
+            this.DeleteDialogBox3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.DeleteDialogBox3.Caption = "Record Information";
+            this.DeleteDialogBox3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.DeleteDialogBox3.Parent = null;
+            this.DeleteDialogBox3.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteDialogBox3.Text = "Are You Sure ! You Want To Delete The Record ?";
             // 
             // EditDonorPage
             // 
@@ -1149,5 +1209,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DBloodGroup;
         private System.Windows.Forms.DataGridViewTextBoxColumn DHeight;
         private System.Windows.Forms.DataGridViewTextBoxColumn DWeight;
+        private Guna.UI2.WinForms.Guna2MessageDialog UpdateRecordDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog UpdateRecordDialogBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteDialogBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog ResetDialogBox;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteDialogBox3;
     }
 }

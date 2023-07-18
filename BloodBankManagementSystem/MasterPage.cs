@@ -27,12 +27,14 @@ namespace BloodBankManagementSystem
         StaffPage staffpage;
         ViewAllStaffRecords viewallstaffrecords;
 
+        DoctorRecordPage doctorrecordpage;
+        ViewAllDoctorsRecordcs viewalldoctor;
+
         UserRecordPage userrecord;
         ViewAllUser viewalluser;
 
         AboutUs aboutus;
 
-        private int childFormNumber = 0;
 
         public MasterPage()
         {
@@ -440,85 +442,11 @@ namespace BloodBankManagementSystem
         {
             labtime.Text  ="Time  :-   "+DateTime.Now.ToString("hh : mm : ss - tt");
             lbltime2.Text ="Date  :-   "+DateTime.Now.ToString("dd -- MMMM -- yyyy") + " ,";
-            lbltime3.Text ="Day   :-   "+DateTime.Now.DayOfWeek.ToString();
+            //lbltime3.Text ="Day   :-   "+DateTime.Now.DayOfWeek.ToString();
 
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnHomeMenu_MouseHover(object sender, EventArgs e)
-        {
-            Movepanel(btnHomeMenu);
-        }
-
-        private void btnDonorMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnDonorMenu);
-
-        }
-
-        private void btnHomeMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnHomeMenu);
-
-        }
-
-        private void btnBloodDonationMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnBloodDonationMenu);
-
-        }
-
-        private void btnPatientMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnPatientMenu);
-
-        }
-
-        private void btnBloodTransferMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnBloodTransferMenu);
-
-        }
-
-        private void btnBloodStockMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnBloodStockMenu);
-
-        }
-
-        private void btnBloodTypeMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnBloodTypeMenu);
-
-        }
-
-        private void btnStaffMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnStaffMenu);
-
-        }
-
-        private void btnDoctorMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnDoctorMenu);
-
-        }
-
-        private void btnHospitalMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnHospitalMenu);
-
-        }
-
-        private void btnReportsMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnReportsMenu);
-
-        }
+   
 
 
         private void MasterPage_Load(object sender, EventArgs e)
@@ -615,21 +543,33 @@ namespace BloodBankManagementSystem
      
         private void btnAddStaffMenu_Click(object sender, EventArgs e)
         {
-            //StaffPage p = new StaffPage();
+            hideSubMenu();
+
+            //staffpage p = new staffpage();
             //p.MdiParent = this;
             //p.Show();
-            hideSubMenu();
+
             if (staffpage == null)
             {
                 staffpage = new StaffPage();
-                staffpage.FormClosed += Staffpage_FormClosed;
+                staffpage.FormClosed += Staffpage_FormClosed1;
                 staffpage.MdiParent = this;
                 staffpage.Show();
             }
             else
             {
-                staffpage.Activate();
+                doctorrecordpage.Activate();
             }
+        }
+
+        private void Staffpage_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            staffpage = null;
+        }
+
+        private void Doctorrecordpage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            doctorrecordpage = null;
         }
 
         private void Staffpage_FormClosed(object sender, FormClosedEventArgs e)
@@ -665,17 +605,22 @@ namespace BloodBankManagementSystem
         private void btnAddDoctorMenu_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            //if (viewallstaffrecords == null)
-            //{
-            //    viewallstaffrecords = new ViewAllStaffRecords();
-            //    viewallstaffrecords.FormClosed += Viewallstaffrecords_FormClosed;
-            //    viewallstaffrecords.MdiParent = this;
-            //    viewallstaffrecords.Show();
-            //}
-            //else
-            //{
-            //    viewallstaffrecords.Activate();
-            //}
+            if (doctorrecordpage == null)
+            {
+                doctorrecordpage = new DoctorRecordPage();
+                doctorrecordpage.FormClosed += Doctorrecordpage_FormClosed1;
+                doctorrecordpage.MdiParent = this;
+                doctorrecordpage.Show();
+            }
+            else
+            {
+                doctorrecordpage.Activate();
+            }
+        }
+
+        private void Doctorrecordpage_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            doctorrecordpage = null;
         }
 
         private void btnHospitalMenu_Click_1(object sender, EventArgs e)
@@ -695,17 +640,22 @@ namespace BloodBankManagementSystem
         {
             hideSubMenu();
 
-            //if (editpatient == null)
-            //{
-            //    editpatient = new EditPatientPage();
-            //    editpatient.FormClosed += Editpatient_FormClosed;
-            //    editpatient.MdiParent = this;
-            //    editpatient.Show();
-            //}
-            //else
-            //{
-            //    editpatient.Activate();
-            //}
+            if (viewalldoctor == null)
+            {
+                viewalldoctor = new ViewAllDoctorsRecordcs();
+                viewalldoctor.FormClosed += Viewalldoctor_FormClosed;
+                viewalldoctor.MdiParent = this;
+                viewalldoctor.Show();
+            }
+            else
+            {
+                viewalldoctor.Activate();
+            }
+        }
+
+        private void Viewalldoctor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            viewalldoctor = null;
         }
 
         private void btnHospitalRegistration_Click(object sender, EventArgs e)
@@ -742,25 +692,7 @@ namespace BloodBankManagementSystem
             //}
         }
 
-        private void btnHospitalMenu_MouseEnter_1(object sender, EventArgs e)
-        {
-            Movepanel(btnHospitalMenu);
-        }
-
-        private void btnUserMenu_Enter(object sender, EventArgs e)
-        {
-            Movepanel(btnUserMenu);
-        }
-
-        private void btnReportsMenu_MouseEnter_1(object sender, EventArgs e)
-        {
-            Movepanel(btnReportsMenu);
-        }
-
-        private void btnAboutusMenu_MouseEnter(object sender, EventArgs e)
-        {
-            Movepanel(btnAboutusMenu);
-        }
+     
 
         private void btnDateTime_Click(object sender, EventArgs e)
         {
@@ -785,38 +717,164 @@ namespace BloodBankManagementSystem
 
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are You Sure ! You Wan't To Logout ", "Logout Information !", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if (dr == DialogResult.OK)
+            //DialogResult dr = MessageBox.Show("Are You Sure ! You Wan't To Logout ", "Logout Information !", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult dr = LogoutDialogBox.Show();
+            if (dr == DialogResult.Yes)
             {
                 this.Close();
                 LoginPage l = new LoginPage();
                 l.Show();
             }
-            else if (dr == DialogResult.Cancel)
-            {
-
-            }
-            else
-            {
-
-            }
+     
         }
 
-        private void panelDataTime_MouseEnter(object sender, EventArgs e)
+        private void btnHomeMenu_MouseEnter(object sender, EventArgs e)
         {
-            panelDataTime.Visible = true;
-
+            btnHomeMenu.ForeColor = Color.White;
+            Movepanel(btnHomeMenu);
         }
 
-        private void panelDataTime_MouseLeave(object sender, EventArgs e)
+        private void btnHomeMenu_MouseLeave(object sender, EventArgs e)
         {
-            panelDataTime.Visible = false;
+            btnHomeMenu.ForeColor = Color.DimGray;
         }
 
-        private void MasterPage_Leave(object sender, EventArgs e)
+        private void btnDonorMenu_MouseEnter(object sender, EventArgs e)
         {
-            panelDataTime.Visible = false;
+            btnDonorMenu.ForeColor = Color.White;
+            Movepanel(btnDonorMenu);   
         }
+
+        private void btnDonorMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnDonorMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnBloodDonationMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnBloodDonationMenu.ForeColor = Color.White;
+            Movepanel(btnBloodDonationMenu);
+        }
+
+        private void btnBloodDonationMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnBloodDonationMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnPatientMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnPatientMenu.ForeColor = Color.White;
+            Movepanel(btnPatientMenu);
+        }
+
+        private void btnPatientMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnPatientMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnBloodTransferMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnBloodTransferMenu.ForeColor = Color.White;
+            Movepanel(btnBloodTransferMenu);
+        }
+
+        private void btnBloodTransferMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnBloodTransferMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnBloodStockMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnBloodStockMenu.ForeColor = Color.White;
+            Movepanel(btnBloodStockMenu);
+        }
+
+        private void btnBloodStockMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnBloodStockMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnBloodTypeMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnBloodTypeMenu.ForeColor = Color.White;
+            Movepanel(btnBloodTypeMenu);
+        }
+
+        private void btnBloodTypeMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnBloodTypeMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnStaffMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnStaffMenu.ForeColor = Color.White;
+            Movepanel(btnStaffMenu);
+        }
+
+        private void btnStaffMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnStaffMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnDoctorMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnDoctorMenu.ForeColor = Color.White;
+            Movepanel(btnDoctorMenu);
+        }
+
+        private void btnHospitalMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnHospitalMenu.ForeColor = Color.White;
+            Movepanel(btnHospitalMenu);
+        }
+
+        private void btnHospitalMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnHospitalMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnReportsMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnReportsMenu.ForeColor = Color.White;
+            Movepanel(btnReportsMenu);
+        }
+
+        private void btnReportsMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnReportsMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnAboutusMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnAboutusMenu.ForeColor = Color.White;
+            Movepanel(btnAboutusMenu);
+        }
+
+        private void btnAboutusMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnAboutusMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnUserMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btnUserMenu.ForeColor = Color.White;
+            Movepanel(btnUserMenu);
+        }
+
+        private void btnUserMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnUserMenu.ForeColor = Color.DimGray;
+        }
+
+        private void btnDoctorMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btnDoctorMenu.ForeColor = Color.DimGray;
+        }
+
+
+
+
+
 
 
         //private Form activeForm = null;

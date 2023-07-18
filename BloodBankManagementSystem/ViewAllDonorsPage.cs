@@ -49,10 +49,6 @@ namespace BloodBankManagementSystem
             
         }
 
-        private void btnclose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
 
 
@@ -85,13 +81,13 @@ namespace BloodBankManagementSystem
 
                 if (data.Rows.Count > 0)
                 {
+                    SearchDataDialogBox.Show();
                     dataGridView1.DataSource = data;
                     txtSearchName.Clear();
                 }
                 else
                 {
-
-                    MessageBox.Show("Data Not Found !!");
+                    SearchDailogBox2.Show();
                     DataBinding();
                 }
                 con.Close();

@@ -488,20 +488,6 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>41</value>
   </metadata>
-  <data name="btnLogout.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAcxJREFUWEfVlztOxDAURYefKJD4VTRsAFgBSDSUlIjPDqBjAayEHiEoaBB7oIOG
-        FVAgoICGiv894Is8kFgOEybDlY7ssfPsG/vFybR6WX0VqFUDouqgxPR/VjuTB6EcE5NiIgH9IwJhuiMT
-        Dl4X5+JG3GZwJY7FjEC/MsESom3xJl5CmcNrKO/FnECVTPjiKXEnGOxBcFf74lAcFED7njgVz4K4I4Eq
-        GRgM5bLwXe3QILmvSHGiYoK4SxHnRJY8yaqwAepoWLA9ZdCPWBHiyBuSE2HA1yVlA2vCBkhElFoB5MFt
-        4FrYQLwNyS0pMkAd5RogV4hjBcZpCFoIoNKVqMPAingUux+/PjUvPN4mDdJQKNuUMsAE7CXXpOCa0VD3
-        JIuCsfxIbwn0wwRBqGwFsrM5kvd8QzyJ7ybatiNlAE0LBuLJAPqKIHHj38QsiRPBmGwRpbfjKzFTBnjM
-        LgRtVU7HGJ+UlD6w2hKzpw2gRreAvjqT0JNnJ2Gdj2HpWUAQKluBlHwnf3YQ5Rqo/Shu5GVEhtsAddTV
-        13FjHyRensY+yZCXqdOP0lmBKhtADiIBz0RXP8stB1N2/Y+JxXZkJ1AQMbVMHgsTufxXtVrvIfXuf2p3
-        PLIAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAgCUAAAAAAAAAAAAAAAAAAAAA
@@ -668,4 +654,21 @@
         AAA=
 </value>
   </data>
+  <data name="btnLogout.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAcxJREFUWEfVlztOxDAURYefKJD4VTRsAFgBSDSUlIjPDqBjAayEHiEoaBB7oIOG
+        FVAgoICGiv894Is8kFgOEybDlY7ssfPsG/vFybR6WX0VqFUDouqgxPR/VjuTB6EcE5NiIgH9IwJhuiMT
+        Dl4X5+JG3GZwJY7FjEC/MsESom3xJl5CmcNrKO/FnECVTPjiKXEnGOxBcFf74lAcFED7njgVz4K4I4Eq
+        GRgM5bLwXe3QILmvSHGiYoK4SxHnRJY8yaqwAepoWLA9ZdCPWBHiyBuSE2HA1yVlA2vCBkhElFoB5MFt
+        4FrYQLwNyS0pMkAd5RogV4hjBcZpCFoIoNKVqMPAingUux+/PjUvPN4mDdJQKNuUMsAE7CXXpOCa0VD3
+        JIuCsfxIbwn0wwRBqGwFsrM5kvd8QzyJ7ybatiNlAE0LBuLJAPqKIHHj38QsiRPBmGwRpbfjKzFTBnjM
+        LgRtVU7HGJ+UlD6w2hKzpw2gRreAvjqT0JNnJ2Gdj2HpWUAQKluBlHwnf3YQ5Rqo/Shu5GVEhtsAddTV
+        13FjHyRensY+yZCXqdOP0lmBKhtADiIBz0RXP8stB1N2/Y+JxXZkJ1AQMbVMHgsTufxXtVrvIfXuf2p3
+        PLIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="LogoutDialogBox.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>543, 14</value>
+  </metadata>
 </root>

@@ -91,6 +91,15 @@
             this.txtMobileNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpDateOfBrith = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.chkshowpassword = new System.Windows.Forms.CheckBox();
+            this.SaveRecordDailogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.SaveRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.SaveRecordDialogBox3 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.UpdateRecordDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.UpdateRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteRecordDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteRecordDialogBox3 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.ResetDataDialogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -927,6 +936,87 @@
             this.chkshowpassword.UseVisualStyleBackColor = true;
             this.chkshowpassword.CheckedChanged += new System.EventHandler(this.chkshowpassword_CheckedChanged);
             // 
+            // SaveRecordDailogBox1
+            // 
+            this.SaveRecordDailogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveRecordDailogBox1.Caption = "User Record Information";
+            this.SaveRecordDailogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
+            this.SaveRecordDailogBox1.Parent = null;
+            this.SaveRecordDailogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveRecordDailogBox1.Text = "Already Exist The User Record ID..";
+            // 
+            // SaveRecordDialogBox2
+            // 
+            this.SaveRecordDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveRecordDialogBox2.Caption = "User Record Information";
+            this.SaveRecordDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.SaveRecordDialogBox2.Parent = null;
+            this.SaveRecordDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveRecordDialogBox2.Text = "User Record Save Successfuly...";
+            // 
+            // SaveRecordDialogBox3
+            // 
+            this.SaveRecordDialogBox3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveRecordDialogBox3.Caption = "User Recoord Information";
+            this.SaveRecordDialogBox3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.SaveRecordDialogBox3.Parent = null;
+            this.SaveRecordDialogBox3.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveRecordDialogBox3.Text = "User Record Not Save !";
+            // 
+            // UpdateRecordDialogBox1
+            // 
+            this.UpdateRecordDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.UpdateRecordDialogBox1.Caption = "User Record Update Information ";
+            this.UpdateRecordDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.UpdateRecordDialogBox1.Parent = null;
+            this.UpdateRecordDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.UpdateRecordDialogBox1.Text = "User Record Update Successfuly..";
+            // 
+            // UpdateRecordDialogBox2
+            // 
+            this.UpdateRecordDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.UpdateRecordDialogBox2.Caption = "User Record Update Information";
+            this.UpdateRecordDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.UpdateRecordDialogBox2.Parent = null;
+            this.UpdateRecordDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.UpdateRecordDialogBox2.Text = "User Record Not Update";
+            // 
+            // DeleteRecordDialogBox1
+            // 
+            this.DeleteRecordDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.DeleteRecordDialogBox1.Caption = "User Record Delete information";
+            this.DeleteRecordDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.DeleteRecordDialogBox1.Parent = null;
+            this.DeleteRecordDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteRecordDialogBox1.Text = "User Record Delete Successfuly";
+            // 
+            // DeleteRecordDialogBox2
+            // 
+            this.DeleteRecordDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.DeleteRecordDialogBox2.Caption = "User Record Delete Information";
+            this.DeleteRecordDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.DeleteRecordDialogBox2.Parent = null;
+            this.DeleteRecordDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteRecordDialogBox2.Text = "User Record Not Deleted !";
+            // 
+            // DeleteRecordDialogBox3
+            // 
+            this.DeleteRecordDialogBox3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.DeleteRecordDialogBox3.Caption = "User Delete Information !";
+            this.DeleteRecordDialogBox3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.DeleteRecordDialogBox3.Parent = null;
+            this.DeleteRecordDialogBox3.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteRecordDialogBox3.Text = "Are You Sure ! you Want To Delete The User Record ?";
+            // 
+            // ResetDataDialogBox
+            // 
+            this.ResetDataDialogBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.ResetDataDialogBox.Caption = "Reset Data";
+            this.ResetDataDialogBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.ResetDataDialogBox.Parent = null;
+            this.ResetDataDialogBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.ResetDataDialogBox.Text = "Are You Sure ! You Want To Reset The Data ?";
+            // 
             // UserRecordPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1061,5 +1151,14 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMobileNo;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDateOfBrith;
         private System.Windows.Forms.CheckBox chkshowpassword;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveRecordDailogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveRecordDialogBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveRecordDialogBox3;
+        private Guna.UI2.WinForms.Guna2MessageDialog UpdateRecordDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog UpdateRecordDialogBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox3;
+        private Guna.UI2.WinForms.Guna2MessageDialog ResetDataDialogBox;
     }
 }

@@ -75,7 +75,6 @@
             this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
             this.StaffDataList = new System.Windows.Forms.DataGridView();
-            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,6 +85,16 @@
             this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.SaveRecordDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.SaveRecordDialogbox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.SaveRecordDialogBox3 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.UpdateRecordDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.UpdateRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteRecordDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteRecordDialogBox3 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.ResetDataDailogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -750,26 +759,6 @@
             this.StaffDataList.TabIndex = 151;
             this.StaffDataList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.StaffDataList_MouseDoubleClick);
             // 
-            // btnclose
-            // 
-            this.btnclose.Animated = true;
-            this.btnclose.AnimatedGIF = true;
-            this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnclose.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(1034, 63);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnclose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnclose.Size = new System.Drawing.Size(36, 35);
-            this.btnclose.TabIndex = 155;
-            this.btnclose.Text = "X";
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
@@ -846,6 +835,107 @@
             this.Address.Name = "Address";
             this.Address.ReadOnly = true;
             this.Address.Width = 140;
+            // 
+            // btnclose
+            // 
+            this.btnclose.Animated = true;
+            this.btnclose.AnimatedGIF = true;
+            this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclose.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.Location = new System.Drawing.Point(1034, 63);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnclose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnclose.Size = new System.Drawing.Size(36, 35);
+            this.btnclose.TabIndex = 155;
+            this.btnclose.Text = "X";
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            // 
+            // SaveRecordDialogBox1
+            // 
+            this.SaveRecordDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveRecordDialogBox1.Caption = "Staff Record Information";
+            this.SaveRecordDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
+            this.SaveRecordDialogBox1.Parent = null;
+            this.SaveRecordDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveRecordDialogBox1.Text = "Already Exist The Staff ID Record !";
+            // 
+            // SaveRecordDialogbox2
+            // 
+            this.SaveRecordDialogbox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveRecordDialogbox2.Caption = "Satff Record Information";
+            this.SaveRecordDialogbox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.SaveRecordDialogbox2.Parent = null;
+            this.SaveRecordDialogbox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveRecordDialogbox2.Text = "Staff Member Record Save Successfuly..";
+            // 
+            // SaveRecordDialogBox3
+            // 
+            this.SaveRecordDialogBox3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveRecordDialogBox3.Caption = "Staff Record Information";
+            this.SaveRecordDialogBox3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.SaveRecordDialogBox3.Parent = null;
+            this.SaveRecordDialogBox3.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveRecordDialogBox3.Text = "Staff Member Record Not Save !";
+            // 
+            // UpdateRecordDialogBox1
+            // 
+            this.UpdateRecordDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.UpdateRecordDialogBox1.Caption = "Update Record Information";
+            this.UpdateRecordDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.UpdateRecordDialogBox1.Parent = null;
+            this.UpdateRecordDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.UpdateRecordDialogBox1.Text = "Staff Member Record Update Successfuly..";
+            // 
+            // UpdateRecordDialogBox2
+            // 
+            this.UpdateRecordDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.UpdateRecordDialogBox2.Caption = "Update Staff Record Information";
+            this.UpdateRecordDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.UpdateRecordDialogBox2.Parent = null;
+            this.UpdateRecordDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.UpdateRecordDialogBox2.Text = "Staff Member Record Not Updated !";
+            // 
+            // DeleteRecordDialogBox1
+            // 
+            this.DeleteRecordDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.DeleteRecordDialogBox1.Caption = "Delete Record Information";
+            this.DeleteRecordDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.DeleteRecordDialogBox1.Parent = null;
+            this.DeleteRecordDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteRecordDialogBox1.Text = "Are You Sure ! You Want To Delete The Staff Member Record ?";
+            // 
+            // DeleteRecordDialogBox2
+            // 
+            this.DeleteRecordDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.DeleteRecordDialogBox2.Caption = "Delete Record Information";
+            this.DeleteRecordDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.DeleteRecordDialogBox2.Parent = null;
+            this.DeleteRecordDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteRecordDialogBox2.Text = "Staff Member Record Delete Successfuly..";
+            // 
+            // DeleteRecordDialogBox3
+            // 
+            this.DeleteRecordDialogBox3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.DeleteRecordDialogBox3.Caption = "Delete Record Information";
+            this.DeleteRecordDialogBox3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.DeleteRecordDialogBox3.Parent = null;
+            this.DeleteRecordDialogBox3.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteRecordDialogBox3.Text = "Staff Member Record Not Deleted ..!";
+            // 
+            // ResetDataDailogBox
+            // 
+            this.ResetDataDailogBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.ResetDataDailogBox.Caption = "Reset Record Information";
+            this.ResetDataDailogBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.ResetDataDailogBox.Parent = null;
+            this.ResetDataDailogBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.ResetDataDailogBox.Text = "Are You Sure ! You Want To Reset The Data ?";
             // 
             // StaffPage
             // 
@@ -969,5 +1059,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn City;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveRecordDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveRecordDialogbox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveRecordDialogBox3;
+        private Guna.UI2.WinForms.Guna2MessageDialog UpdateRecordDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog UpdateRecordDialogBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox3;
+        private Guna.UI2.WinForms.Guna2MessageDialog ResetDataDailogBox;
     }
 }

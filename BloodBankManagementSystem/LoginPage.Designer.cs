@@ -48,6 +48,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.chkshowpassword = new MaterialSkin.Controls.MaterialCheckBox();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmdUserRole = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -60,7 +61,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.chkshowpassword = new MaterialSkin.Controls.MaterialCheckBox();
+            this.LoginDialogbox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.LoginDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -268,6 +270,25 @@
             this.panel6.Size = new System.Drawing.Size(312, 380);
             this.panel6.TabIndex = 78;
             // 
+            // chkshowpassword
+            // 
+            this.chkshowpassword.AutoSize = true;
+            this.chkshowpassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkshowpassword.BackgroundImage")));
+            this.chkshowpassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.chkshowpassword.Depth = 0;
+            this.chkshowpassword.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkshowpassword.Location = new System.Drawing.Point(259, 274);
+            this.chkshowpassword.Margin = new System.Windows.Forms.Padding(0);
+            this.chkshowpassword.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkshowpassword.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkshowpassword.Name = "chkshowpassword";
+            this.chkshowpassword.Ripple = true;
+            this.chkshowpassword.Size = new System.Drawing.Size(30, 30);
+            this.chkshowpassword.TabIndex = 147;
+            this.chkshowpassword.Text = "               ";
+            this.chkshowpassword.UseVisualStyleBackColor = true;
+            this.chkshowpassword.CheckedChanged += new System.EventHandler(this.chkshowpassword_CheckedChanged);
+            // 
             // txtpassword
             // 
             this.txtpassword.Animated = true;
@@ -445,24 +466,23 @@
             this.panel3.Size = new System.Drawing.Size(1095, 7);
             this.panel3.TabIndex = 67;
             // 
-            // chkshowpassword
+            // LoginDialogbox1
             // 
-            this.chkshowpassword.AutoSize = true;
-            this.chkshowpassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkshowpassword.BackgroundImage")));
-            this.chkshowpassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.chkshowpassword.Depth = 0;
-            this.chkshowpassword.Font = new System.Drawing.Font("Roboto", 10F);
-            this.chkshowpassword.Location = new System.Drawing.Point(259, 274);
-            this.chkshowpassword.Margin = new System.Windows.Forms.Padding(0);
-            this.chkshowpassword.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkshowpassword.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chkshowpassword.Name = "chkshowpassword";
-            this.chkshowpassword.Ripple = true;
-            this.chkshowpassword.Size = new System.Drawing.Size(30, 30);
-            this.chkshowpassword.TabIndex = 147;
-            this.chkshowpassword.Text = "               ";
-            this.chkshowpassword.UseVisualStyleBackColor = true;
-            this.chkshowpassword.CheckedChanged += new System.EventHandler(this.chkshowpassword_CheckedChanged);
+            this.LoginDialogbox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.LoginDialogbox1.Caption = "User-Login Information";
+            this.LoginDialogbox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.LoginDialogbox1.Parent = null;
+            this.LoginDialogbox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.LoginDialogbox1.Text = "Login Successfuly..";
+            // 
+            // LoginDialog2
+            // 
+            this.LoginDialog2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.LoginDialog2.Caption = "Login Information";
+            this.LoginDialog2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.LoginDialog2.Parent = null;
+            this.LoginDialog2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.LoginDialog2.Text = "Login Faild !";
             // 
             // LoginPage
             // 
@@ -537,5 +557,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private MaterialSkin.Controls.MaterialCheckBox chkshowpassword;
+        private Guna.UI2.WinForms.Guna2MessageDialog LoginDialogbox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog LoginDialog2;
     }
 }

@@ -32,14 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllDonorsPage));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnviewall = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txtSearchName = new Guna.UI2.WinForms.Guna2TextBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +44,16 @@
             this.DBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DHeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnviewall = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtSearchName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.SearchDataDialogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.SearchDailogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +95,96 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(999, 382);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 30;
+            // 
+            // DId
+            // 
+            this.DId.DataPropertyName = "DId";
+            this.DId.HeaderText = "Donor ID";
+            this.DId.Name = "DId";
+            this.DId.ReadOnly = true;
+            this.DId.Width = 80;
+            // 
+            // DName
+            // 
+            this.DName.DataPropertyName = "DName";
+            this.DName.HeaderText = "Name";
+            this.DName.Name = "DName";
+            this.DName.ReadOnly = true;
+            // 
+            // DDob
+            // 
+            this.DDob.DataPropertyName = "DDob";
+            this.DDob.HeaderText = "DateOfBrith";
+            this.DDob.Name = "DDob";
+            this.DDob.ReadOnly = true;
+            // 
+            // DGender
+            // 
+            this.DGender.DataPropertyName = "DGender";
+            this.DGender.HeaderText = "Gender";
+            this.DGender.Name = "DGender";
+            this.DGender.ReadOnly = true;
+            this.DGender.Width = 90;
+            // 
+            // DMobile
+            // 
+            this.DMobile.DataPropertyName = "DMobile";
+            this.DMobile.HeaderText = "Mobile";
+            this.DMobile.Name = "DMobile";
+            this.DMobile.ReadOnly = true;
+            // 
+            // DEmail
+            // 
+            this.DEmail.DataPropertyName = "DEmail";
+            this.DEmail.HeaderText = "Email";
+            this.DEmail.Name = "DEmail";
+            this.DEmail.ReadOnly = true;
+            // 
+            // DCity
+            // 
+            this.DCity.DataPropertyName = "DCity";
+            this.DCity.HeaderText = "City";
+            this.DCity.Name = "DCity";
+            this.DCity.ReadOnly = true;
+            // 
+            // DAddress
+            // 
+            this.DAddress.DataPropertyName = "DAddress";
+            this.DAddress.HeaderText = "Address";
+            this.DAddress.Name = "DAddress";
+            this.DAddress.ReadOnly = true;
+            // 
+            // DBloodGroup
+            // 
+            this.DBloodGroup.DataPropertyName = "DBloodGroup";
+            this.DBloodGroup.HeaderText = "BloodGroup";
+            this.DBloodGroup.Name = "DBloodGroup";
+            this.DBloodGroup.ReadOnly = true;
+            this.DBloodGroup.Width = 50;
+            // 
+            // DHeight
+            // 
+            this.DHeight.DataPropertyName = "DHeight";
+            this.DHeight.HeaderText = "Height";
+            this.DHeight.Name = "DHeight";
+            this.DHeight.ReadOnly = true;
+            this.DHeight.Width = 50;
+            // 
+            // DWeight
+            // 
+            this.DWeight.DataPropertyName = "DWeight";
+            this.DWeight.HeaderText = "Weight";
+            this.DWeight.Name = "DWeight";
+            this.DWeight.ReadOnly = true;
+            this.DWeight.Width = 50;
             // 
             // label27
             // 
@@ -223,95 +315,23 @@
             this.txtSearchName.TabIndex = 0;
             this.txtSearchName.Leave += new System.EventHandler(this.txtSearchName_Leave);
             // 
-            // Id
+            // SearchDataDialogBox
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 30;
+            this.SearchDataDialogBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SearchDataDialogBox.Caption = "Record Search Information";
+            this.SearchDataDialogBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.SearchDataDialogBox.Parent = null;
+            this.SearchDataDialogBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SearchDataDialogBox.Text = "Donor Record Found...";
             // 
-            // DId
+            // SearchDailogBox2
             // 
-            this.DId.DataPropertyName = "DId";
-            this.DId.HeaderText = "Donor ID";
-            this.DId.Name = "DId";
-            this.DId.ReadOnly = true;
-            this.DId.Width = 80;
-            // 
-            // DName
-            // 
-            this.DName.DataPropertyName = "DName";
-            this.DName.HeaderText = "Name";
-            this.DName.Name = "DName";
-            this.DName.ReadOnly = true;
-            // 
-            // DDob
-            // 
-            this.DDob.DataPropertyName = "DDob";
-            this.DDob.HeaderText = "DateOfBrith";
-            this.DDob.Name = "DDob";
-            this.DDob.ReadOnly = true;
-            // 
-            // DGender
-            // 
-            this.DGender.DataPropertyName = "DGender";
-            this.DGender.HeaderText = "Gender";
-            this.DGender.Name = "DGender";
-            this.DGender.ReadOnly = true;
-            this.DGender.Width = 90;
-            // 
-            // DMobile
-            // 
-            this.DMobile.DataPropertyName = "DMobile";
-            this.DMobile.HeaderText = "Mobile";
-            this.DMobile.Name = "DMobile";
-            this.DMobile.ReadOnly = true;
-            // 
-            // DEmail
-            // 
-            this.DEmail.DataPropertyName = "DEmail";
-            this.DEmail.HeaderText = "Email";
-            this.DEmail.Name = "DEmail";
-            this.DEmail.ReadOnly = true;
-            // 
-            // DCity
-            // 
-            this.DCity.DataPropertyName = "DCity";
-            this.DCity.HeaderText = "City";
-            this.DCity.Name = "DCity";
-            this.DCity.ReadOnly = true;
-            // 
-            // DAddress
-            // 
-            this.DAddress.DataPropertyName = "DAddress";
-            this.DAddress.HeaderText = "Address";
-            this.DAddress.Name = "DAddress";
-            this.DAddress.ReadOnly = true;
-            // 
-            // DBloodGroup
-            // 
-            this.DBloodGroup.DataPropertyName = "DBloodGroup";
-            this.DBloodGroup.HeaderText = "BloodGroup";
-            this.DBloodGroup.Name = "DBloodGroup";
-            this.DBloodGroup.ReadOnly = true;
-            this.DBloodGroup.Width = 50;
-            // 
-            // DHeight
-            // 
-            this.DHeight.DataPropertyName = "DHeight";
-            this.DHeight.HeaderText = "Height";
-            this.DHeight.Name = "DHeight";
-            this.DHeight.ReadOnly = true;
-            this.DHeight.Width = 50;
-            // 
-            // DWeight
-            // 
-            this.DWeight.DataPropertyName = "DWeight";
-            this.DWeight.HeaderText = "Weight";
-            this.DWeight.Name = "DWeight";
-            this.DWeight.ReadOnly = true;
-            this.DWeight.Width = 50;
+            this.SearchDailogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SearchDailogBox2.Caption = "Record Search Information";
+            this.SearchDailogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.SearchDailogBox2.Parent = null;
+            this.SearchDailogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SearchDailogBox2.Text = "Donor Record Not Found  !";
             // 
             // ViewAllDonorsPage
             // 
@@ -365,5 +385,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DBloodGroup;
         private System.Windows.Forms.DataGridViewTextBoxColumn DHeight;
         private System.Windows.Forms.DataGridViewTextBoxColumn DWeight;
+        private Guna.UI2.WinForms.Guna2MessageDialog SearchDataDialogBox;
+        private Guna.UI2.WinForms.Guna2MessageDialog SearchDailogBox2;
     }
 }

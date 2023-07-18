@@ -74,13 +74,13 @@ namespace BloodBankManagementSystem
 
                 if (data.Rows.Count > 0)
                 {
+                    SearchDataDialogBox1.Show();
                     dataGridView1.DataSource = data;
                     txtSearchName.Clear();
                 }
                 else
                 {
-
-                    MessageBox.Show("Data Not Found !!");
+                    SearchDataDialogBox2.Show();
                     DataBinding();
                 }
 

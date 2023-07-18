@@ -53,6 +53,16 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PDob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -77,16 +87,12 @@
             this.dtpDateOfBrith = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PDob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UpdateRecordDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.UpdateRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteRecordDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.DeleteRecordDialogBox3 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.ResetDataDialogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -383,6 +389,76 @@
             this.dataGridView1.Size = new System.Drawing.Size(1047, 396);
             this.dataGridView1.TabIndex = 134;
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // PId
+            // 
+            this.PId.DataPropertyName = "PId";
+            this.PId.HeaderText = "Patient ID";
+            this.PId.Name = "PId";
+            this.PId.ReadOnly = true;
+            // 
+            // PName
+            // 
+            this.PName.DataPropertyName = "PName";
+            this.PName.HeaderText = "Name";
+            this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
+            // 
+            // PDob
+            // 
+            this.PDob.DataPropertyName = "PDob";
+            this.PDob.HeaderText = "Date Of Brith";
+            this.PDob.Name = "PDob";
+            this.PDob.ReadOnly = true;
+            // 
+            // PGender
+            // 
+            this.PGender.DataPropertyName = "PGender";
+            this.PGender.HeaderText = "Gender";
+            this.PGender.Name = "PGender";
+            this.PGender.ReadOnly = true;
+            // 
+            // PMobile
+            // 
+            this.PMobile.DataPropertyName = "PMobile";
+            this.PMobile.HeaderText = "Mobile";
+            this.PMobile.Name = "PMobile";
+            this.PMobile.ReadOnly = true;
+            // 
+            // PEmail
+            // 
+            this.PEmail.DataPropertyName = "PEmail";
+            this.PEmail.HeaderText = "Email";
+            this.PEmail.Name = "PEmail";
+            this.PEmail.ReadOnly = true;
+            // 
+            // PCity
+            // 
+            this.PCity.DataPropertyName = "PCity";
+            this.PCity.HeaderText = "City";
+            this.PCity.Name = "PCity";
+            this.PCity.ReadOnly = true;
+            // 
+            // PAddress
+            // 
+            this.PAddress.DataPropertyName = "PAddress";
+            this.PAddress.HeaderText = "Address";
+            this.PAddress.Name = "PAddress";
+            this.PAddress.ReadOnly = true;
+            // 
+            // PBloodGroup
+            // 
+            this.PBloodGroup.DataPropertyName = "PBloodGroup";
+            this.PBloodGroup.HeaderText = "BloodGroup";
+            this.PBloodGroup.Name = "PBloodGroup";
+            this.PBloodGroup.ReadOnly = true;
             // 
             // errorProvider1
             // 
@@ -788,75 +864,59 @@
             this.label24.TabIndex = 144;
             this.label24.Text = "Date Of Brith";
             // 
-            // Id
+            // UpdateRecordDialogBox1
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
+            this.UpdateRecordDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.UpdateRecordDialogBox1.Caption = "Update Record Information";
+            this.UpdateRecordDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.UpdateRecordDialogBox1.Parent = null;
+            this.UpdateRecordDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.UpdateRecordDialogBox1.Text = "Patient Record Update Successfuly !";
             // 
-            // PId
+            // UpdateRecordDialogBox2
             // 
-            this.PId.DataPropertyName = "PId";
-            this.PId.HeaderText = "Patient ID";
-            this.PId.Name = "PId";
-            this.PId.ReadOnly = true;
+            this.UpdateRecordDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.UpdateRecordDialogBox2.Caption = "Update Record Information";
+            this.UpdateRecordDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.UpdateRecordDialogBox2.Parent = null;
+            this.UpdateRecordDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.UpdateRecordDialogBox2.Text = "Patient Record Not Updated !";
             // 
-            // PName
+            // DeleteRecordDialogBox1
             // 
-            this.PName.DataPropertyName = "PName";
-            this.PName.HeaderText = "Name";
-            this.PName.Name = "PName";
-            this.PName.ReadOnly = true;
+            this.DeleteRecordDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.DeleteRecordDialogBox1.Caption = "Delete Record Information";
+            this.DeleteRecordDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.DeleteRecordDialogBox1.Parent = null;
+            this.DeleteRecordDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteRecordDialogBox1.Text = "Are You Sure ! You Want To Delete The  Record ?";
             // 
-            // PDob
+            // DeleteRecordDialogBox2
             // 
-            this.PDob.DataPropertyName = "PDob";
-            this.PDob.HeaderText = "Date Of Brith";
-            this.PDob.Name = "PDob";
-            this.PDob.ReadOnly = true;
+            this.DeleteRecordDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.DeleteRecordDialogBox2.Caption = "Delete Record Information";
+            this.DeleteRecordDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.DeleteRecordDialogBox2.Parent = null;
+            this.DeleteRecordDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteRecordDialogBox2.Text = "Patient Record Delete Successfuly ..";
             // 
-            // PGender
+            // DeleteRecordDialogBox3
             // 
-            this.PGender.DataPropertyName = "PGender";
-            this.PGender.HeaderText = "Gender";
-            this.PGender.Name = "PGender";
-            this.PGender.ReadOnly = true;
+            this.DeleteRecordDialogBox3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.DeleteRecordDialogBox3.Caption = "Delete Record Information";
+            this.DeleteRecordDialogBox3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.DeleteRecordDialogBox3.Parent = null;
+            this.DeleteRecordDialogBox3.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.DeleteRecordDialogBox3.Text = "Patient Record Not Delete";
             // 
-            // PMobile
+            // ResetDataDialogBox
             // 
-            this.PMobile.DataPropertyName = "PMobile";
-            this.PMobile.HeaderText = "Mobile";
-            this.PMobile.Name = "PMobile";
-            this.PMobile.ReadOnly = true;
-            // 
-            // PEmail
-            // 
-            this.PEmail.DataPropertyName = "PEmail";
-            this.PEmail.HeaderText = "Email";
-            this.PEmail.Name = "PEmail";
-            this.PEmail.ReadOnly = true;
-            // 
-            // PCity
-            // 
-            this.PCity.DataPropertyName = "PCity";
-            this.PCity.HeaderText = "City";
-            this.PCity.Name = "PCity";
-            this.PCity.ReadOnly = true;
-            // 
-            // PAddress
-            // 
-            this.PAddress.DataPropertyName = "PAddress";
-            this.PAddress.HeaderText = "Address";
-            this.PAddress.Name = "PAddress";
-            this.PAddress.ReadOnly = true;
-            // 
-            // PBloodGroup
-            // 
-            this.PBloodGroup.DataPropertyName = "PBloodGroup";
-            this.PBloodGroup.HeaderText = "BloodGroup";
-            this.PBloodGroup.Name = "PBloodGroup";
-            this.PBloodGroup.ReadOnly = true;
+            this.ResetDataDialogBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.ResetDataDialogBox.Caption = "Reset Data";
+            this.ResetDataDialogBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.ResetDataDialogBox.Parent = null;
+            this.ResetDataDialogBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.ResetDataDialogBox.Text = "Are You Sure ! You Want To Reset Records ?";
             // 
             // EditPatientPage
             // 
@@ -983,5 +1043,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PCity;
         private System.Windows.Forms.DataGridViewTextBoxColumn PAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn PBloodGroup;
+        private Guna.UI2.WinForms.Guna2MessageDialog UpdateRecordDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog UpdateRecordDialogBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox3;
+        private Guna.UI2.WinForms.Guna2MessageDialog ResetDataDialogBox;
     }
 }

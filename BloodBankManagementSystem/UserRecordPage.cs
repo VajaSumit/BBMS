@@ -189,8 +189,13 @@ namespace BloodBankManagementSystem
 
         private void btnreset_Click_1(object sender, EventArgs e)
         {
-            ClearData();
-            UserIdAutoGenerate();
+            DialogResult d=ResetDataDialogBox.Show();
+            if (d == DialogResult.Yes)
+            {
+                ClearData();
+                UserIdAutoGenerate();
+            }
+   
         }
 
         private void btndelete_Click_1(object sender, EventArgs e)
@@ -266,7 +271,11 @@ namespace BloodBankManagementSystem
                 //}
                 //con.Close();
 
+                DialogResult d=DeleteRecordDialogBox3.Show();
+                if (d ==  DialogResult.Yes)
+                {
 
+                }
                 SqlConnection con = new SqlConnection(cs);
                 string query = "delete from Login_Master where UserId=@id";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -275,15 +284,14 @@ namespace BloodBankManagementSystem
                 int a = cmd.ExecuteNonQuery();
                 if (a > 0)
                 {
-                    MessageBox.Show("User Record Delete Successful !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DeleteRecordDialogBox1.Show();
                     ClearData();
                     UserIdAutoGenerate();
                     DataBinding();
                 }
                 else
                 {
-                    MessageBox.Show("User Record Not Delete  !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    DeleteRecordDialogBox2.Show();
                 }
                 con.Close();
 
@@ -410,15 +418,14 @@ namespace BloodBankManagementSystem
                         int a = cmd.ExecuteNonQuery();
                         if (a > 0)
                         {
-                            MessageBox.Show("User Record Update Successful !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            UpdateRecordDialogBox1.Show();
                             ClearData();
                             UserIdAutoGenerate();
                             DataBinding();
                         }
                         else
                         {
-                            MessageBox.Show("User Record Not Updated  !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                            UpdateRecordDialogBox2.Show();
                         }
                         con.Close();
                     }
@@ -526,7 +533,7 @@ namespace BloodBankManagementSystem
                 SqlDataReader dr = cmd1.ExecuteReader();
                 if (dr.HasRows)
                 {
-                    MessageBox.Show("Alreay Exist the record ID !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SaveRecordDailogBox1.Show();
                     con1.Close();
                 }
                 else
@@ -567,15 +574,14 @@ namespace BloodBankManagementSystem
 
                             if (a > 0)
                             {
-                                MessageBox.Show("User Record Save Successful !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                SaveRecordDialogBox2.Show();
                                 ClearData();
                                 UserIdAutoGenerate();
                                 DataBinding();
                             }
                             else
                             {
-                                MessageBox.Show("User Record Not Saved  !", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                                SaveRecordDialogBox3.Show();
                             }
 
                             con.Close();

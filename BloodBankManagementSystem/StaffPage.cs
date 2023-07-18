@@ -283,7 +283,7 @@ namespace BloodBankManagementSystem
                 SqlDataReader dr = cmd1.ExecuteReader();
                 if (dr.HasRows)
                 {
-                    MessageBox.Show("Alreay Exist the record ID !","Information",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    SaveRecordDialogBox1.Show();
                     con1.Close();
                 }
                 else
@@ -305,15 +305,14 @@ namespace BloodBankManagementSystem
                     int a = cmd.ExecuteNonQuery();
                     if (a > 0)
                     {
-                        MessageBox.Show("Satff Record Save Successfuly", "Record Infromation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SaveRecordDialogbox2.Show();
                         SatffIDAutoGenerate();
                         ClearData();
                         DataBinding();
                     }
                     else
                     {
-                        MessageBox.Show("Satff Record Not Save ", "Record Infromation", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        SaveRecordDialogBox3.Show();
                     }
                     con.Close();
                 }
@@ -323,8 +322,13 @@ namespace BloodBankManagementSystem
 
         private void btnreset_Click(object sender, EventArgs e)
         {
-            ClearData();
-            SatffIDAutoGenerate();
+            DialogResult d=ResetDataDailogBox.Show();
+            if (d == DialogResult.Yes)
+            {
+                ClearData();
+                SatffIDAutoGenerate();
+            }
+          
         }
 
 
@@ -402,15 +406,14 @@ namespace BloodBankManagementSystem
                 int a = cmd.ExecuteNonQuery();
                 if (a > 0)
                 {
-                    MessageBox.Show("Satff Record update Successfuly", "Record Infromation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateRecordDialogBox1.Show();
                     SatffIDAutoGenerate();
                     ClearData();
                     DataBinding();
                 }
                 else
                 {
-                    MessageBox.Show("Satff Record Not update ", "Record Infromation", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    UpdateRecordDialogBox2.Show();
                 }
                 con.Close();
 
@@ -462,26 +465,29 @@ namespace BloodBankManagementSystem
             }
             else
             {
-
-                string id = txtStaffID.Text;
-        
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("exec DeleteStaffRecord '" + id + "' ", con);
-                int a = cmd.ExecuteNonQuery();
-                if (a > 0)
+                DialogResult d=DeleteRecordDialogBox1.Show();
+                if (d == DialogResult.Yes)
                 {
-                    MessageBox.Show("Satff Record delete Successfuly", "Record Infromation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    SatffIDAutoGenerate();
-                    ClearData();
-                    DataBinding();
-                }
-                else
-                {
-                    MessageBox.Show("Satff Record Not delete ", "Record Infromation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string id = txtStaffID.Text;
 
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("exec DeleteStaffRecord '" + id + "' ", con);
+                    int a = cmd.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        DeleteRecordDialogBox2.Show();
+                        SatffIDAutoGenerate();
+                        ClearData();
+                        DataBinding();
+                    }
+                    else
+                    {
+                        DeleteRecordDialogBox3.Show();
+                    }
+                    con.Close();
                 }
-                con.Close();
+           
 
             }
         }

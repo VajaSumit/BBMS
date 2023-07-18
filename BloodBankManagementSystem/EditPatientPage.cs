@@ -148,27 +148,33 @@ namespace BloodBankManagementSystem
             {
                 //Data Delete By using Procedure
 
-                string id = txtPatientNo.Text;
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("exec DeletePatientRecordRegistration '" + id + "'", con);
-
-                int a = cmd.ExecuteNonQuery();
-
-                if (a > 0)
+                DialogResult d=DeleteRecordDialogBox1.Show();
+                if (d == DialogResult.Yes)
                 {
-                    MessageBox.Show("Data Delete Successful !", "Delete Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearData();
-                    DataBinding();
+                    string id = txtPatientNo.Text;
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("exec DeletePatientRecordRegistration '" + id + "'", con);
+
+                    int a = cmd.ExecuteNonQuery();
+
+                    if (a > 0)
+                    {
+                        DeleteRecordDialogBox2.Show();
+                        ClearData();
+                        DataBinding();
 
 
+                    }
+                    else
+                    {
+                        DeleteRecordDialogBox3.Show();
+
+                    }
+                    con.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Donor Data Update Faild !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
-                con.Close();
+               
             }
         }
 
@@ -241,7 +247,7 @@ namespace BloodBankManagementSystem
 
                 if (a > 0)
                 {
-                    MessageBox.Show("Patient Data Update Successful !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateRecordDialogBox1.Show();
                     ClearData();
                     DataBinding();
 
@@ -249,8 +255,7 @@ namespace BloodBankManagementSystem
                 }
                 else
                 {
-                    MessageBox.Show("Patient Data Update Faild !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    UpdateRecordDialogBox2.Show();
                 }
                 con.Close();
             }
@@ -259,7 +264,11 @@ namespace BloodBankManagementSystem
 
         private void btnreset_Click_1(object sender, EventArgs e)
         {
-            ClearData();
+            DialogResult d=ResetDataDialogBox.Show();
+            if (d == DialogResult.Yes)
+            {
+                ClearData();
+            }
         }
 
         private void txtName_Leave_1(object sender, EventArgs e)

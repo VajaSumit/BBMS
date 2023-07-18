@@ -112,6 +112,12 @@
       <DependentUpon>BloodDonationPage.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassFiles\HashCode.cs" />
+    <Compile Include="DoctorRecordPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorRecordPage.Designer.cs">
+      <DependentUpon>DoctorRecordPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="DonorRegistrationPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,12 @@
     <Compile Include="UserRecordPage.Designer.cs">
       <DependentUpon>UserRecordPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllDoctorsRecordcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllDoctorsRecordcs.Designer.cs">
+      <DependentUpon>ViewAllDoctorsRecordcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewAllDonorsPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +223,9 @@
     </Compile>
     <EmbeddedResource Include="BloodDonationPage.resx">
       <DependentUpon>BloodDonationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorRecordPage.resx">
+      <DependentUpon>DoctorRecordPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DonorRegistrationPage.resx">
       <DependentUpon>DonorRegistrationPage.cs</DependentUpon>
@@ -249,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserRecordPage.resx">
       <DependentUpon>UserRecordPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllDoctorsRecordcs.resx">
+      <DependentUpon>ViewAllDoctorsRecordcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllDonorsPage.resx">
       <DependentUpon>ViewAllDonorsPage.cs</DependentUpon>

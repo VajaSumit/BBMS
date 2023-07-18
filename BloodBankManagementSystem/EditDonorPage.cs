@@ -208,7 +208,7 @@ namespace BloodBankManagementSystem
 
                 if (a > 0)
                 {
-                    MessageBox.Show("Donor Data Update Successful !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateRecordDialogBox1.Show();
                     ClearData();
                     DataBinding();
 
@@ -216,17 +216,14 @@ namespace BloodBankManagementSystem
                 }
                 else
                 {
-                    MessageBox.Show("Donor Data Update Faild !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    UpdateRecordDialogBox2.Show();
 
                 }
                 con.Close();
             }
         }
 
-        private void btndelete_Click(object sender, EventArgs e)
-        {
-          
-        }
+
 
         private void btndelete_Click_1(object sender, EventArgs e)
         {
@@ -290,33 +287,42 @@ namespace BloodBankManagementSystem
             {
                 //Data Delete By using Procedure
 
-                string id = txtDonorNo.Text;
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("exec DeleteDonorRecordRegistration '" + id + "'", con);
-
-                int a = cmd.ExecuteNonQuery();
-
-                if (a > 0)
+                DialogResult d=DeleteDialogBox3.Show();
+                if (d == DialogResult.Yes)
                 {
-                    MessageBox.Show("Data Delete Successful !", "Delete Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearData();
-                    DataBinding();
+                    string id = txtDonorNo.Text;
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("exec DeleteDonorRecordRegistration '" + id + "'", con);
+
+                    int a = cmd.ExecuteNonQuery();
+
+                    if (a > 0)
+                    {
+                        DeleteDialogBox1.Show();
+                        ClearData();
+                        DataBinding();
 
 
+                    }
+                    else
+                    {
+                        DeleteDialogBox2.Show();
+                    }
+                    con.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Donor Data Update Faild !", "Update Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
-                con.Close();
+                
             }
         }
 
         private void btnreset_Click_1(object sender, EventArgs e)
         {
-            ClearData();
+          DialogResult d=ResetDialogBox.Show();
+            if (d==DialogResult.Yes)
+            {
+                ClearData();
+            }
         }
 
         private void txtDonorNo_Leave_1(object sender, EventArgs e)

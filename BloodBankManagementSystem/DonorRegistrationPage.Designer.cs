@@ -83,6 +83,10 @@
             this.txtHeight = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtWeight = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpDateOfBrith = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.SaveButtonMessageDialog = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.ResetButtonDailogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.SaveButtonMessageBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.SaveDailogBox3 = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -848,6 +852,42 @@
             this.dtpDateOfBrith.ValueChanged += new System.EventHandler(this.dtpDateOfBrith_ValueChanged);
             this.dtpDateOfBrith.Leave += new System.EventHandler(this.dtpDateOfBrith_Leave);
             // 
+            // SaveButtonMessageDialog
+            // 
+            this.SaveButtonMessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveButtonMessageDialog.Caption = "Record Information";
+            this.SaveButtonMessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.SaveButtonMessageDialog.Parent = null;
+            this.SaveButtonMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveButtonMessageDialog.Text = "Donor Record Save Successfuly !";
+            // 
+            // ResetButtonDailogBox
+            // 
+            this.ResetButtonDailogBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.ResetButtonDailogBox.Caption = "Reset Data";
+            this.ResetButtonDailogBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.ResetButtonDailogBox.Parent = null;
+            this.ResetButtonDailogBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.ResetButtonDailogBox.Text = "Are You Sure ! You Want To Reset Data";
+            // 
+            // SaveButtonMessageBox2
+            // 
+            this.SaveButtonMessageBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveButtonMessageBox2.Caption = "Record Information";
+            this.SaveButtonMessageBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.SaveButtonMessageBox2.Parent = null;
+            this.SaveButtonMessageBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveButtonMessageBox2.Text = "Donor Record Not Save !";
+            // 
+            // SaveDailogBox3
+            // 
+            this.SaveDailogBox3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveDailogBox3.Caption = "Record Information";
+            this.SaveDailogBox3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
+            this.SaveDailogBox3.Parent = null;
+            this.SaveDailogBox3.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveDailogBox3.Text = "Already Exist The Donor Record ID !";
+            // 
             // DonorRegistrationPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -979,5 +1019,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtHeight;
         private Guna.UI2.WinForms.Guna2TextBox txtWeight;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDateOfBrith;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveButtonMessageDialog;
+        private Guna.UI2.WinForms.Guna2MessageDialog ResetButtonDailogBox;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveButtonMessageBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveDailogBox3;
     }
 }

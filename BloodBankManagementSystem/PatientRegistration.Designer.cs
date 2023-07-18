@@ -74,6 +74,10 @@
             this.dtpDateOfBrith = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.SaveRecordDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.SaveRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.ResetDataDialogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.SaveRecordDialogBox3 = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -712,6 +716,42 @@
             this.label24.TabIndex = 136;
             this.label24.Text = "Date Of Brith";
             // 
+            // SaveRecordDialogBox1
+            // 
+            this.SaveRecordDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveRecordDialogBox1.Caption = "Save Record Information";
+            this.SaveRecordDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.SaveRecordDialogBox1.Parent = null;
+            this.SaveRecordDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveRecordDialogBox1.Text = "Patient Record SaveSuccessfuly !";
+            // 
+            // SaveRecordDialogBox2
+            // 
+            this.SaveRecordDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveRecordDialogBox2.Caption = "Save Record Information";
+            this.SaveRecordDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.SaveRecordDialogBox2.Parent = null;
+            this.SaveRecordDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveRecordDialogBox2.Text = "Patient Record Not Save ...";
+            // 
+            // ResetDataDialogBox
+            // 
+            this.ResetDataDialogBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.ResetDataDialogBox.Caption = "Reset Data";
+            this.ResetDataDialogBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.ResetDataDialogBox.Parent = null;
+            this.ResetDataDialogBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.ResetDataDialogBox.Text = "Are You Sure !You Want To Reset Data..?";
+            // 
+            // SaveRecordDialogBox3
+            // 
+            this.SaveRecordDialogBox3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SaveRecordDialogBox3.Caption = "Record Information";
+            this.SaveRecordDialogBox3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
+            this.SaveRecordDialogBox3.Parent = null;
+            this.SaveRecordDialogBox3.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SaveRecordDialogBox3.Text = "Already Exist The Patient Record ID !";
+            // 
             // PatientRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -822,5 +862,9 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDateOfBrith;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveRecordDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveRecordDialogBox2;
+        private Guna.UI2.WinForms.Guna2MessageDialog ResetDataDialogBox;
+        private Guna.UI2.WinForms.Guna2MessageDialog SaveRecordDialogBox3;
     }
 }

@@ -87,6 +87,7 @@
             this.panelSliderMenu = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.LogoutDialogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.panelMenu.SuspendLayout();
             this.panelUserMenu.SuspendLayout();
             this.panelHospitalMenu.SuspendLayout();
@@ -206,6 +207,7 @@
             this.btnAboutusMenu.UseVisualStyleBackColor = false;
             this.btnAboutusMenu.Click += new System.EventHandler(this.btnAboutusMenu_Click);
             this.btnAboutusMenu.MouseEnter += new System.EventHandler(this.btnAboutusMenu_MouseEnter);
+            this.btnAboutusMenu.MouseLeave += new System.EventHandler(this.btnAboutusMenu_MouseLeave);
             // 
             // btnReportsMenu
             // 
@@ -228,7 +230,8 @@
             this.btnReportsMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReportsMenu.UseVisualStyleBackColor = false;
             this.btnReportsMenu.Click += new System.EventHandler(this.btnReportsMenu_Click_1);
-            this.btnReportsMenu.MouseEnter += new System.EventHandler(this.btnReportsMenu_MouseEnter_1);
+            this.btnReportsMenu.MouseEnter += new System.EventHandler(this.btnReportsMenu_MouseEnter);
+            this.btnReportsMenu.MouseLeave += new System.EventHandler(this.btnReportsMenu_MouseLeave);
             // 
             // panelUserMenu
             // 
@@ -297,7 +300,8 @@
             this.btnUserMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUserMenu.UseVisualStyleBackColor = false;
             this.btnUserMenu.Click += new System.EventHandler(this.btnUserMenu_Click);
-            this.btnUserMenu.Enter += new System.EventHandler(this.btnUserMenu_Enter);
+            this.btnUserMenu.MouseEnter += new System.EventHandler(this.btnUserMenu_MouseEnter);
+            this.btnUserMenu.MouseLeave += new System.EventHandler(this.btnUserMenu_MouseLeave);
             // 
             // panelHospitalMenu
             // 
@@ -366,7 +370,8 @@
             this.btnHospitalMenu.Text = "              Hospitals";
             this.btnHospitalMenu.UseVisualStyleBackColor = false;
             this.btnHospitalMenu.Click += new System.EventHandler(this.btnHospitalMenu_Click_1);
-            this.btnHospitalMenu.MouseEnter += new System.EventHandler(this.btnHospitalMenu_MouseEnter_1);
+            this.btnHospitalMenu.MouseEnter += new System.EventHandler(this.btnHospitalMenu_MouseEnter);
+            this.btnHospitalMenu.MouseLeave += new System.EventHandler(this.btnHospitalMenu_MouseLeave);
             // 
             // panelDoctorMenu
             // 
@@ -418,7 +423,7 @@
             // panelMove
             // 
             this.panelMove.BackColor = System.Drawing.Color.Red;
-            this.panelMove.Location = new System.Drawing.Point(-1, 0);
+            this.panelMove.Location = new System.Drawing.Point(0, 0);
             this.panelMove.Name = "panelMove";
             this.panelMove.Size = new System.Drawing.Size(6, 41);
             this.panelMove.TabIndex = 27;
@@ -444,6 +449,7 @@
             this.btnDoctorMenu.UseVisualStyleBackColor = false;
             this.btnDoctorMenu.Click += new System.EventHandler(this.btnDoctorMenu_Click);
             this.btnDoctorMenu.MouseEnter += new System.EventHandler(this.btnDoctorMenu_MouseEnter);
+            this.btnDoctorMenu.MouseLeave += new System.EventHandler(this.btnDoctorMenu_MouseLeave);
             // 
             // panelStaffMenu
             // 
@@ -513,6 +519,7 @@
             this.btnStaffMenu.UseVisualStyleBackColor = false;
             this.btnStaffMenu.Click += new System.EventHandler(this.btnStaffMenu_Click);
             this.btnStaffMenu.MouseEnter += new System.EventHandler(this.btnStaffMenu_MouseEnter);
+            this.btnStaffMenu.MouseLeave += new System.EventHandler(this.btnStaffMenu_MouseLeave);
             // 
             // btnBloodTypeMenu
             // 
@@ -535,6 +542,7 @@
             this.btnBloodTypeMenu.UseVisualStyleBackColor = false;
             this.btnBloodTypeMenu.Click += new System.EventHandler(this.btnBloodTypeMenu_Click);
             this.btnBloodTypeMenu.MouseEnter += new System.EventHandler(this.btnBloodTypeMenu_MouseEnter);
+            this.btnBloodTypeMenu.MouseLeave += new System.EventHandler(this.btnBloodTypeMenu_MouseLeave);
             // 
             // btnBloodStockMenu
             // 
@@ -557,6 +565,7 @@
             this.btnBloodStockMenu.UseVisualStyleBackColor = false;
             this.btnBloodStockMenu.Click += new System.EventHandler(this.btnBloodStockMenu_Click);
             this.btnBloodStockMenu.MouseEnter += new System.EventHandler(this.btnBloodStockMenu_MouseEnter);
+            this.btnBloodStockMenu.MouseLeave += new System.EventHandler(this.btnBloodStockMenu_MouseLeave);
             // 
             // btnBloodTransferMenu
             // 
@@ -579,6 +588,7 @@
             this.btnBloodTransferMenu.UseVisualStyleBackColor = false;
             this.btnBloodTransferMenu.Click += new System.EventHandler(this.btnBloodTransferMenu_Click);
             this.btnBloodTransferMenu.MouseEnter += new System.EventHandler(this.btnBloodTransferMenu_MouseEnter);
+            this.btnBloodTransferMenu.MouseLeave += new System.EventHandler(this.btnBloodTransferMenu_MouseLeave);
             // 
             // panelPatientMenu
             // 
@@ -666,6 +676,7 @@
             this.btnPatientMenu.UseVisualStyleBackColor = false;
             this.btnPatientMenu.Click += new System.EventHandler(this.btnPatientMenu_Click_1);
             this.btnPatientMenu.MouseEnter += new System.EventHandler(this.btnPatientMenu_MouseEnter);
+            this.btnPatientMenu.MouseLeave += new System.EventHandler(this.btnPatientMenu_MouseLeave);
             // 
             // btnBloodDonationMenu
             // 
@@ -690,6 +701,7 @@
             this.btnBloodDonationMenu.UseVisualStyleBackColor = false;
             this.btnBloodDonationMenu.Click += new System.EventHandler(this.btnBloodDonationMenu_Click);
             this.btnBloodDonationMenu.MouseEnter += new System.EventHandler(this.btnBloodDonationMenu_MouseEnter);
+            this.btnBloodDonationMenu.MouseLeave += new System.EventHandler(this.btnBloodDonationMenu_MouseLeave);
             // 
             // panelDonorMenu
             // 
@@ -777,6 +789,7 @@
             this.btnDonorMenu.UseVisualStyleBackColor = false;
             this.btnDonorMenu.Click += new System.EventHandler(this.btnDonorMenu_Click);
             this.btnDonorMenu.MouseEnter += new System.EventHandler(this.btnDonorMenu_MouseEnter);
+            this.btnDonorMenu.MouseLeave += new System.EventHandler(this.btnDonorMenu_MouseLeave);
             // 
             // btnHomeMenu
             // 
@@ -800,7 +813,7 @@
             this.btnHomeMenu.UseVisualStyleBackColor = false;
             this.btnHomeMenu.Click += new System.EventHandler(this.btnHomeMenu_Click);
             this.btnHomeMenu.MouseEnter += new System.EventHandler(this.btnHomeMenu_MouseEnter);
-            this.btnHomeMenu.MouseHover += new System.EventHandler(this.btnHomeMenu_MouseHover);
+            this.btnHomeMenu.MouseLeave += new System.EventHandler(this.btnHomeMenu_MouseLeave);
             // 
             // btnMinimize
             // 
@@ -949,8 +962,6 @@
             this.panelDataTime.Size = new System.Drawing.Size(200, 100);
             this.panelDataTime.TabIndex = 81;
             this.panelDataTime.Visible = false;
-            this.panelDataTime.MouseEnter += new System.EventHandler(this.panelDataTime_MouseEnter);
-            this.panelDataTime.MouseLeave += new System.EventHandler(this.panelDataTime_MouseLeave);
             // 
             // btnLogout
             // 
@@ -1046,6 +1057,15 @@
             this.guna2GradientPanel5.Size = new System.Drawing.Size(15, 646);
             this.guna2GradientPanel5.TabIndex = 92;
             // 
+            // LogoutDialogBox
+            // 
+            this.LogoutDialogBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.LogoutDialogBox.Caption = "Logout Information";
+            this.LogoutDialogBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.LogoutDialogBox.Parent = null;
+            this.LogoutDialogBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.LogoutDialogBox.Text = "Are You Sure ! You Wan\'t To Logout";
+            // 
             // MasterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1068,7 +1088,6 @@
             this.Text = "MasterPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MasterPage_Load);
-            this.Leave += new System.EventHandler(this.MasterPage_Leave);
             this.panelMenu.ResumeLayout(false);
             this.panelUserMenu.ResumeLayout(false);
             this.panelHospitalMenu.ResumeLayout(false);
@@ -1143,6 +1162,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel panelSliderMenu;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
+        private Guna.UI2.WinForms.Guna2MessageDialog LogoutDialogBox;
     }
 }
 

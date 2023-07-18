@@ -29,16 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label27 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnupdate = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txtSearchName = new Guna.UI2.WinForms.Guna2TextBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +42,15 @@
             this.PCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnupdate = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtSearchName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.SearchDataDialogBox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.SearchDataDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -83,14 +85,14 @@
             this.PCity,
             this.PAddress,
             this.PBloodGroup});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.Linen;
             this.dataGridView1.Location = new System.Drawing.Point(68, 403);
             this.dataGridView1.MultiSelect = false;
@@ -101,6 +103,76 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1047, 382);
             this.dataGridView1.TabIndex = 66;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // PId
+            // 
+            this.PId.DataPropertyName = "PId";
+            this.PId.HeaderText = "Patient ID";
+            this.PId.Name = "PId";
+            this.PId.ReadOnly = true;
+            // 
+            // PName
+            // 
+            this.PName.DataPropertyName = "PName";
+            this.PName.HeaderText = "Name";
+            this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
+            // 
+            // DDob
+            // 
+            this.DDob.DataPropertyName = "PDob";
+            this.DDob.HeaderText = "Date Of Brith";
+            this.DDob.Name = "DDob";
+            this.DDob.ReadOnly = true;
+            // 
+            // PGender
+            // 
+            this.PGender.DataPropertyName = "PGender";
+            this.PGender.HeaderText = "Gender";
+            this.PGender.Name = "PGender";
+            this.PGender.ReadOnly = true;
+            // 
+            // PMobile
+            // 
+            this.PMobile.DataPropertyName = "PMobile";
+            this.PMobile.HeaderText = "Mobile";
+            this.PMobile.Name = "PMobile";
+            this.PMobile.ReadOnly = true;
+            // 
+            // PEmail
+            // 
+            this.PEmail.DataPropertyName = "PEmail";
+            this.PEmail.HeaderText = "Email";
+            this.PEmail.Name = "PEmail";
+            this.PEmail.ReadOnly = true;
+            // 
+            // PCity
+            // 
+            this.PCity.DataPropertyName = "PCity";
+            this.PCity.HeaderText = "City";
+            this.PCity.Name = "PCity";
+            this.PCity.ReadOnly = true;
+            // 
+            // PAddress
+            // 
+            this.PAddress.DataPropertyName = "PAddress";
+            this.PAddress.HeaderText = "Address";
+            this.PAddress.Name = "PAddress";
+            this.PAddress.ReadOnly = true;
+            // 
+            // PBloodGroup
+            // 
+            this.PBloodGroup.DataPropertyName = "PBloodGroup";
+            this.PBloodGroup.HeaderText = "BloodGroup";
+            this.PBloodGroup.Name = "PBloodGroup";
+            this.PBloodGroup.ReadOnly = true;
             // 
             // label2
             // 
@@ -220,75 +292,23 @@
             this.txtSearchName.TabIndex = 0;
             this.txtSearchName.Leave += new System.EventHandler(this.txtSearchName_Leave_1);
             // 
-            // Id
+            // SearchDataDialogBox1
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
+            this.SearchDataDialogBox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SearchDataDialogBox1.Caption = "Patient Record Information";
+            this.SearchDataDialogBox1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.SearchDataDialogBox1.Parent = null;
+            this.SearchDataDialogBox1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SearchDataDialogBox1.Text = "Patient Record Found...";
             // 
-            // PId
+            // SearchDataDialogBox2
             // 
-            this.PId.DataPropertyName = "PId";
-            this.PId.HeaderText = "Patient ID";
-            this.PId.Name = "PId";
-            this.PId.ReadOnly = true;
-            // 
-            // PName
-            // 
-            this.PName.DataPropertyName = "PName";
-            this.PName.HeaderText = "Name";
-            this.PName.Name = "PName";
-            this.PName.ReadOnly = true;
-            // 
-            // DDob
-            // 
-            this.DDob.DataPropertyName = "PDob";
-            this.DDob.HeaderText = "Date Of Brith";
-            this.DDob.Name = "DDob";
-            this.DDob.ReadOnly = true;
-            // 
-            // PGender
-            // 
-            this.PGender.DataPropertyName = "PGender";
-            this.PGender.HeaderText = "Gender";
-            this.PGender.Name = "PGender";
-            this.PGender.ReadOnly = true;
-            // 
-            // PMobile
-            // 
-            this.PMobile.DataPropertyName = "PMobile";
-            this.PMobile.HeaderText = "Mobile";
-            this.PMobile.Name = "PMobile";
-            this.PMobile.ReadOnly = true;
-            // 
-            // PEmail
-            // 
-            this.PEmail.DataPropertyName = "PEmail";
-            this.PEmail.HeaderText = "Email";
-            this.PEmail.Name = "PEmail";
-            this.PEmail.ReadOnly = true;
-            // 
-            // PCity
-            // 
-            this.PCity.DataPropertyName = "PCity";
-            this.PCity.HeaderText = "City";
-            this.PCity.Name = "PCity";
-            this.PCity.ReadOnly = true;
-            // 
-            // PAddress
-            // 
-            this.PAddress.DataPropertyName = "PAddress";
-            this.PAddress.HeaderText = "Address";
-            this.PAddress.Name = "PAddress";
-            this.PAddress.ReadOnly = true;
-            // 
-            // PBloodGroup
-            // 
-            this.PBloodGroup.DataPropertyName = "PBloodGroup";
-            this.PBloodGroup.HeaderText = "BloodGroup";
-            this.PBloodGroup.Name = "PBloodGroup";
-            this.PBloodGroup.ReadOnly = true;
+            this.SearchDataDialogBox2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.SearchDataDialogBox2.Caption = "Patient Record Information";
+            this.SearchDataDialogBox2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.SearchDataDialogBox2.Parent = null;
+            this.SearchDataDialogBox2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.SearchDataDialogBox2.Text = "Patient Record Not Found !";
             // 
             // ViewAllPatientPage
             // 
@@ -339,5 +359,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PCity;
         private System.Windows.Forms.DataGridViewTextBoxColumn PAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn PBloodGroup;
+        private Guna.UI2.WinForms.Guna2MessageDialog SearchDataDialogBox1;
+        private Guna.UI2.WinForms.Guna2MessageDialog SearchDataDialogBox2;
     }
 }

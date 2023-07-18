@@ -159,7 +159,7 @@ namespace BloodBankManagementSystem
                 SqlDataReader dr = cmd1.ExecuteReader();
                 if (dr.HasRows)
                 {
-                    MessageBox.Show("Alreay Exist the record ID !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SaveDailogBox3.Show();
                     con1.Close();
                 }
                 else
@@ -186,14 +186,16 @@ namespace BloodBankManagementSystem
 
                     if (a > 0)
                     {
-                        MessageBox.Show("Donor Registration Successful !", "Registration Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Donor Registration Successful !", "Registration Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SaveButtonMessageDialog.Show();
                         ClearData();
                         DonorIdAutoGenerate();
 
                     }
                     else
                     {
-                        MessageBox.Show("Donor Registration Faild !", "Registration Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //MessageBox.Show("Donor Registration Faild !", "Registration Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        SaveButtonMessageBox2.Show();
 
                     }
                     con.Close();
@@ -206,8 +208,14 @@ namespace BloodBankManagementSystem
 
         private void btnreset_Click_1(object sender, EventArgs e)
         {
-            ClearData();
-            txtDonorNo.Text = "D-" + DateTime.Now.ToString("hhmmss");
+           DialogResult d=ResetButtonDailogBox.Show();
+            if (d==DialogResult.Yes)
+            {
+                ClearData();
+                txtDonorNo.Text = "D-" + DateTime.Now.ToString("hhmmss");
+            }
+
+           
         }
 
         private void txtName_Leave_1(object sender, EventArgs e)

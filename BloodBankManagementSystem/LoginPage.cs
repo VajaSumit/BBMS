@@ -116,7 +116,7 @@ namespace BloodBankManagementSystem
                         SqlDataReader dr = cmd.ExecuteReader();
                         if (dr.HasRows == true)
                         {
-                            MessageBox.Show("Login Successful..", "Login Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoginDialogbox1.Show();
                             txtusername.Clear();
                             txtpassword.Clear();
                             cmdUserRole.SelectedItem = null;
@@ -129,8 +129,7 @@ namespace BloodBankManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("Login Faild ", "Login Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                            LoginDialog2.Show();
                         }
 
                         con.Close();
