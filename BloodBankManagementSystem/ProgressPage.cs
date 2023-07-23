@@ -21,37 +21,37 @@ namespace BloodBankManagementSystem
             InitializeComponent();
         }
 
-      
 
-        //int i = 1;
+
+        int i = 1;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //   label2.Text = i.ToString() + " % ";
-            ////   this.Text = "Progress (" + i.ToString() + "%)";
-            //   progressBar1.Value = i;
-            //   if (i == 100)
-            //   {
-            //       timer1.Enabled = false;
-            //       LoginPage l = new LoginPage();
-            //       l.Show();
-            //       this.Hide();
-            //   }
-            //   i = i + 3;
-
-
-            if (progressbarpanal.Width != toppanal.Width)
+            label2.Text = i.ToString() + "%";
+            //   this.Text = "Progress (" + i.ToString() + "%)";
+            guna2ProgressBar1.Value = i;
+            if (i == 100)
             {
-                //   label1.Text = progressbarpanal.Width + "%";
-                    progressbarpanal.Width = progressbarpanal.Width + 1;
-            }
-            else
-            {
-
-                 timer1.Enabled = false;
+                timer1.Enabled = false;
                 LoginPage l = new LoginPage();
                 l.Show();
                 this.Hide();
             }
+            i = i + 1;
+
+
+            //if (progressbarpanal.Width != toppanal.Width)
+            //{
+            //    //   label1.Text = progressbarpanal.Width + "%";
+            //        progressbarpanal.Width = progressbarpanal.Width + 1;
+            //}
+            //else
+            //{
+
+            //     timer1.Enabled = false;
+            //    LoginPage l = new LoginPage();
+            //    l.Show();
+            //    this.Hide();
+            //}
         }
 
    

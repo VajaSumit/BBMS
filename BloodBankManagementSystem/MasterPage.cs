@@ -96,6 +96,7 @@ namespace BloodBankManagementSystem
             }
         }
 
+        Form1 form1;
         private void btnHomeMenu_Click(object sender, EventArgs e)
         {
             Movepanel(btnHomeMenu);
@@ -118,6 +119,23 @@ namespace BloodBankManagementSystem
             }
 
 
+            //if (form1 == null)
+            //{
+            //    form1 = new Form1();
+            //    form1.FormClosed += Form1_FormClosed;
+            //    form1.MdiParent = this;
+            //    form1.Show();
+            //}
+            //else
+            //{
+            //    form1.Activate();
+            //}
+
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form1 = null;
         }
 
         private void Homepage_FormClosed(object sender, FormClosedEventArgs e)
@@ -441,8 +459,8 @@ namespace BloodBankManagementSystem
         private void timer1_Tick(object sender, EventArgs e)
         {
             labtime.Text  ="Time  :-   "+DateTime.Now.ToString("hh : mm : ss - tt");
-            lbltime2.Text ="Date  :-   "+DateTime.Now.ToString("dd -- MMMM -- yyyy") + " ,";
-            //lbltime3.Text ="Day   :-   "+DateTime.Now.DayOfWeek.ToString();
+            //lbltime2.Text ="Date  :-   "+DateTime.Now.ToString("dd -- MMMM -- yyyy") + " ,";
+            //lbltime3.Text = "Day   :-   " + DateTime.Now.DayOfWeek.ToString();
 
         }
 
@@ -460,7 +478,7 @@ namespace BloodBankManagementSystem
             if (menuExpand == false)
             {
                 panelMenu.Height += 15;
-                if (panelMenu.Height>=225)
+                if (panelMenu.Height>=195)
                 {
                     menuTransition.Stop();
                     menuExpand = true;
@@ -511,7 +529,7 @@ namespace BloodBankManagementSystem
             else
             {
                 panelSliderMenu.Width += 5;
-                if (panelSliderMenu.Width >= 225)
+                if (panelSliderMenu.Width >= 195)
                 {
                     sidebarExpand = true;
                     silderTransition.Stop();
@@ -699,12 +717,10 @@ namespace BloodBankManagementSystem
             if (btnDateTime.Checked==true)
             {
                 panelDataTime.Visible = true;
-                panelDataTime.BackColor = Color.Transparent;
             }
             else if (btnDateTime.Checked==false)
             {
                 panelDataTime.Visible = false;
-                panelDataTime.BackColor = Color.White;
             }
             else
             {

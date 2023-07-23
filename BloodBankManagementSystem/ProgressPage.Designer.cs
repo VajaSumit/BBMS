@@ -33,10 +33,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.toppanal = new System.Windows.Forms.Panel();
-            this.progressbarpanal = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +44,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 20;
+            this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1
@@ -64,36 +64,19 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Gray;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 37);
+            this.pictureBox2.Location = new System.Drawing.Point(-18, 37);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(645, 426);
+            this.pictureBox2.Size = new System.Drawing.Size(653, 426);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            // 
-            // toppanal
-            // 
-            this.toppanal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.toppanal.Location = new System.Drawing.Point(48, 452);
-            this.toppanal.Name = "toppanal";
-            this.toppanal.Size = new System.Drawing.Size(532, 20);
-            this.toppanal.TabIndex = 5;
-            // 
-            // progressbarpanal
-            // 
-            this.progressbarpanal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.progressbarpanal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.progressbarpanal.Location = new System.Drawing.Point(46, 451);
-            this.progressbarpanal.Name = "progressbarpanal";
-            this.progressbarpanal.Size = new System.Drawing.Size(10, 20);
-            this.progressbarpanal.TabIndex = 6;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Cyan;
-            this.button1.Location = new System.Drawing.Point(592, 6);
+            this.button1.Location = new System.Drawing.Point(550, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 30);
             this.button1.TabIndex = 8;
@@ -104,20 +87,50 @@
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 800;
             this.guna2BorderlessForm1.AnimationType = Guna.UI2.WinForms.Guna2BorderlessForm.AnimateWindowType.AW_CENTER;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // guna2ProgressBar1
+            // 
+            this.guna2ProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ProgressBar1.BorderColor = System.Drawing.Color.White;
+            this.guna2ProgressBar1.BorderRadius = 8;
+            this.guna2ProgressBar1.BorderThickness = 1;
+            this.guna2ProgressBar1.FillColor = System.Drawing.Color.Black;
+            this.guna2ProgressBar1.ForeColor = System.Drawing.Color.Black;
+            this.guna2ProgressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(19, 459);
+            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
+            this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.Aqua;
+            this.guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(523, 19);
+            this.guna2ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.guna2ProgressBar1.TabIndex = 9;
+            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ProgressBar1.UseTransparentBackground = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(548, 461);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 18);
+            this.label2.TabIndex = 10;
             // 
             // ProgressPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(634, 502);
+            this.ClientSize = new System.Drawing.Size(588, 502);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.guna2ProgressBar1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.progressbarpanal);
-            this.Controls.Add(this.toppanal);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.AppStarting;
@@ -131,6 +144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -138,9 +152,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel toppanal;
-        private System.Windows.Forms.Panel progressbarpanal;
         private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
+        private System.Windows.Forms.Label label2;
     }
 }

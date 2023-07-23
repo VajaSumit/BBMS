@@ -77,7 +77,7 @@ namespace BloodBankManagementSystem
             txtEmailID.Clear();
             cmbUserRole.SelectedItem = null;
             cmbStatus.SelectedItem = null;
-            pictureBox1.Image = null;
+            bunifuPictureBox1.Image = null;
             txtMobileNo.Clear();
             txtAddress.Clear();
         }
@@ -175,7 +175,7 @@ namespace BloodBankManagementSystem
             cmbStatus.SelectedItem = UserDataList.SelectedRows[0].Cells[7].Value.ToString();
 
             MemoryStream ms = new MemoryStream((byte[])UserDataList.SelectedRows[0].Cells[8].Value);
-            pictureBox1.Image = Image.FromStream(ms);
+            bunifuPictureBox1.Image = Image.FromStream(ms);
 
             txtMobileNo.Text = UserDataList.SelectedRows[0].Cells[9].Value.ToString();
             txtAddress.Text = UserDataList.SelectedRows[0].Cells[10].Value.ToString();
@@ -189,13 +189,14 @@ namespace BloodBankManagementSystem
 
         private void btnreset_Click_1(object sender, EventArgs e)
         {
-            DialogResult d=ResetDataDialogBox.Show();
+           
+            DialogResult d = ResetDataDialogBox.Show();
             if (d == DialogResult.Yes)
             {
                 ClearData();
                 UserIdAutoGenerate();
             }
-   
+
         }
 
         private void btndelete_Click_1(object sender, EventArgs e)
@@ -236,9 +237,9 @@ namespace BloodBankManagementSystem
                 errorProvider6.SetError(this.cmbStatus, "Please Select Status !");
                 cmbStatus.Focus();
             }
-            else if (pictureBox1.Image == null)
+            else if (bunifuPictureBox1.Image == null)
             {
-                errorProvider7.SetError(this.pictureBox1, "please select image !");
+                errorProvider7.SetError(this.bunifuPictureBox1, "please select image !");
             }
             else if (string.IsNullOrEmpty(txtMobileNo.Text) == true)
             {
@@ -336,9 +337,9 @@ namespace BloodBankManagementSystem
                 errorProvider6.SetError(this.cmbStatus, "Please Select Status !");
                 cmbStatus.Focus();
             }
-            else if (pictureBox1.Image == null)
+            else if (bunifuPictureBox1.Image == null)
             {
-                errorProvider7.SetError(this.pictureBox1, "please select image !");
+                errorProvider7.SetError(this.bunifuPictureBox1, "please select image !");
             }
             else if (string.IsNullOrEmpty(txtMobileNo.Text) == true)
             {
@@ -409,7 +410,7 @@ namespace BloodBankManagementSystem
                         cmd.Parameters.AddWithValue("@status", cmbStatus.SelectedItem);
 
                         MemoryStream mem = new MemoryStream();
-                        pictureBox1.Image.Save(mem, pictureBox1.Image.RawFormat);
+                        bunifuPictureBox1.Image.Save(mem, bunifuPictureBox1.Image.RawFormat);
                         cmd.Parameters.AddWithValue("@picture", mem.ToArray());
 
                         cmd.Parameters.AddWithValue("@mobile", txtMobileNo.Text);
@@ -471,9 +472,9 @@ namespace BloodBankManagementSystem
                 errorProvider6.SetError(this.cmbStatus, "Please Select Status !");
                 cmbStatus.Focus();
             }
-            else if (pictureBox1.Image == null)
+            else if (bunifuPictureBox1.Image == null)
             {
-                errorProvider7.SetError(this.pictureBox1, "please select image !");
+                errorProvider7.SetError(this.bunifuPictureBox1, "please select image !");
             }
             else if (string.IsNullOrEmpty(txtMobileNo.Text) == true)
             {
@@ -564,7 +565,7 @@ namespace BloodBankManagementSystem
                             cmd.Parameters.AddWithValue("@status", cmbStatus.SelectedItem);
 
                             MemoryStream mem = new MemoryStream();
-                            pictureBox1.Image.Save(mem, pictureBox1.Image.RawFormat);
+                            bunifuPictureBox1.Image.Save(mem, bunifuPictureBox1.Image.RawFormat);
                             cmd.Parameters.AddWithValue("@picture", mem.ToArray());
 
                             cmd.Parameters.AddWithValue("@mobile", txtMobileNo.Text);
@@ -607,7 +608,7 @@ namespace BloodBankManagementSystem
 
                 try
                 {
-                    pictureBox1.Image = Image.FromFile(open.FileName);
+                    bunifuPictureBox1.Image = Image.FromFile(open.FileName);
                 }
                 catch (Exception)
                 {

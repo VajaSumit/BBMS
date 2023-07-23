@@ -15,11 +15,9 @@ namespace BloodBankManagementSystem
         public HomePage()
         {
             InitializeComponent();
+            //bind panel
+            
         }
-
-
-
-
 
 
         int imgnumber = 1;
@@ -138,5 +136,12 @@ namespace BloodBankManagementSystem
         {
             this.Close();
         }
+
+        private void guna2CirclePictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

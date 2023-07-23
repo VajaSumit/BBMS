@@ -30,6 +30,9 @@ namespace BloodBankManagementSystem
         private void LoginPage_Load(object sender, EventArgs e)
         {
             //timer1.Enabled = true;
+            cmdUserRole.SelectedItem = "Select UserRole";
+            cmdUserRole.ForeColor = Color.Silver;
+
         }
 
 
@@ -42,7 +45,153 @@ namespace BloodBankManagementSystem
 
         private void btnlogin_Click_1(object sender, EventArgs e)
         {
-            if (cmdUserRole.SelectedItem == null)
+          
+        }
+
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //string title = lblMarquee.Text;
+            // r:    // goto statment lable 
+
+            //for (int i = 0; i <= 20; i++)
+            //{
+            //    lblMarquee.Text = title.PadLeft(i);
+            //    Thread.Sleep(4);
+            //}
+
+            //for (int j = 20 ; j >= 1; j--)
+            //{
+            //    lblMarquee.Text = title.PadLeft(j);
+            //    Thread.Sleep(4);
+            //}
+            //goto r;
+
+            //string title = this.Text;
+            //  r:    // goto statment lable 
+
+            //for (int i = 0; i <= 273; i++)
+            //{
+            //    this.Text = title.PadLeft(i);
+            //    Thread.Sleep(40);
+            //}
+
+            //for (int j = 273; j >= 1; j--)
+            //{
+            //    this.Text = title.PadLeft(j);
+            //    Thread.Sleep(40);
+            //}
+            //goto r;
+
+
+        }
+
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CheckBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (CheckBox1.Checked == false)
+            {
+                errorProvider4.SetError(CheckBox1, "Please Check Terms and Condition..!");
+            }
+            else if (CheckBox1.Checked == true)
+            {
+
+                errorProvider4.Clear();
+            }
+        }
+
+
+
+        private void btnClose_Click_2(object sender, EventArgs e)
+        {
+        }
+
+
+        private void cmdUserRole_Leave_1(object sender, EventArgs e)
+        {
+            cmdUserRole.ForeColor = Color.FromArgb(68, 88, 112);
+            if (cmdUserRole.SelectedItem.ToString() == "Select UserRole")
+            {
+                cmdUserRole.Focus();
+                errorProvider1.SetError(cmdUserRole, "Please select User-Role !!");
+            }
+            else
+            {
+                errorProvider1.Clear();
+                txtusername.Focus();
+            }
+        }
+
+        private void txtusername_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtusername.Text) == true)
+            {
+                txtusername.Focus();
+                errorProvider2.SetError(this.txtusername, "Please Enter The UserName !!");
+            }
+            else
+            {
+                errorProvider2.Clear();
+            }
+        }
+
+        private void txtpassword_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtpassword.Text) == true)
+            {
+                txtpassword.Focus();
+                errorProvider3.SetError(this.txtpassword, "Please Enter The Password !!");
+            }
+            else
+            {
+                errorProvider3.Clear();
+            }
+        }
+
+  
+
+        private void exitlink_LinkClicked_2(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void chkshowpassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkshowpassword.CheckState == CheckState.Checked)
+            {
+                txtpassword.UseSystemPasswordChar = false;
+            }
+            else if (chkshowpassword.CheckState == CheckState.Unchecked)
+            {
+                txtpassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdUserRole_Enter(object sender, EventArgs e)
+        {
+            cmdUserRole.ForeColor = Color.FromArgb(68, 88, 112);
+        }
+
+        private void bunifuCheckBox1_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+          
+        }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            if (cmdUserRole.SelectedItem.ToString() == "Select UserRole")
             {
                 cmdUserRole.Focus();
                 errorProvider1.SetError(cmdUserRole, "Please select User-Role !!");
@@ -120,7 +269,7 @@ namespace BloodBankManagementSystem
                             txtusername.Clear();
                             txtpassword.Clear();
                             cmdUserRole.SelectedItem = null;
-                         
+
                             MasterPage m = new MasterPage();
                             m.Show();
                             this.Hide();
@@ -139,145 +288,10 @@ namespace BloodBankManagementSystem
             }
         }
 
-
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            //string title = lblMarquee.Text;
-            // r:    // goto statment lable 
-
-            //for (int i = 0; i <= 20; i++)
-            //{
-            //    lblMarquee.Text = title.PadLeft(i);
-            //    Thread.Sleep(4);
-            //}
-
-            //for (int j = 20 ; j >= 1; j--)
-            //{
-            //    lblMarquee.Text = title.PadLeft(j);
-            //    Thread.Sleep(4);
-            //}
-            //goto r;
-
-            //string title = this.Text;
-            //  r:    // goto statment lable 
-
-            //for (int i = 0; i <= 273; i++)
-            //{
-            //    this.Text = title.PadLeft(i);
-            //    Thread.Sleep(40);
-            //}
-
-            //for (int j = 273; j >= 1; j--)
-            //{
-            //    this.Text = title.PadLeft(j);
-            //    Thread.Sleep(40);
-            //}
-            //goto r;
-
-
-        }
-
-
-        private void btnclose_Click(object sender, EventArgs e)
+        private void btnClose_Click_3(object sender, EventArgs e)
         {
             this.Close();
-        }
 
-        private void CheckBox1_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (CheckBox1.Checked == false)
-            {
-                errorProvider4.SetError(CheckBox1, "Please Check Terms and Condition..!");
-            }
-            else if (CheckBox1.Checked == true)
-            {
-
-                errorProvider4.Clear();
-            }
-        }
-
-
-
-        private void btnClose_Click_2(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-        private void cmdUserRole_Leave_1(object sender, EventArgs e)
-        {
-            if (cmdUserRole.SelectedItem == null)
-            {
-                cmdUserRole.Focus();
-                errorProvider1.SetError(cmdUserRole, "Please select User-Role !!");
-            }
-            else
-            {
-                errorProvider1.Clear();
-                txtusername.Focus();
-            }
-        }
-
-        private void txtusername_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtusername.Text) == true)
-            {
-                txtusername.Focus();
-                errorProvider2.SetError(this.txtusername, "Please Enter The UserName !!");
-            }
-            else
-            {
-                errorProvider2.Clear();
-            }
-        }
-
-        private void txtpassword_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtpassword.Text) == true)
-            {
-                txtpassword.Focus();
-                errorProvider3.SetError(this.txtpassword, "Please Enter The Password !!");
-            }
-            else
-            {
-                errorProvider3.Clear();
-            }
-        }
-
-        private void cmdUserRole_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            if (cmdUserRole.SelectedItem == null)
-            {
-                errorProvider1.SetError(this.cmdUserRole, "Select Gender !");
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-        }
-
-        private void exitlink_LinkClicked_2(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Close();
-        }
-
-
-        private void chkshowpassword_CheckedChanged(object sender, EventArgs e)
-        {
-
-            if (chkshowpassword.Checked == true)
-            {
-                txtpassword.UseSystemPasswordChar = false;
-             
-
-            }
-            else if (chkshowpassword.Checked == false)
-            {
-                txtpassword.UseSystemPasswordChar = true;
-                
-
-            }
         }
     }
 }
