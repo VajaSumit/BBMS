@@ -32,12 +32,18 @@ namespace BloodBankManagementSystem
 
         public void PatientAutoIncrementID()
         {
-            txtPatientNo.Text = "P-" + DateTime.Now.ToString("hhmmss");
+            txtPatientNo.Text = "P-" + DateTime.Now.ToString("hhmmssdd");
         }
 
         private void PatientRegistration_Load(object sender, EventArgs e)
         {
             PatientAutoIncrementID();
+            cmbGender.SelectedItem = "Select Gender";
+            cmbGender.ForeColor = Color.Silver;
+            cmbCity.SelectedItem = "Select City";
+            cmbCity.ForeColor = Color.Silver;
+            cmbBloodGroup.SelectedItem = "Select Blood Group";
+            cmbBloodGroup.ForeColor = Color.Silver;
         }
 
 
@@ -45,12 +51,15 @@ namespace BloodBankManagementSystem
         {
             txtName.Clear();
             dtpDateOfBrith.Value = DateTime.Now;
-            cmbGender.SelectedItem = null;
+            cmbGender.SelectedItem = "Select Gender";
+            cmbGender.ForeColor = Color.Silver;
             txtMobileNo.Clear();
             txtEmailID.Clear();
-            cmbCity.SelectedItem = null;
+            cmbCity.SelectedItem = "Select City";
+            cmbCity.ForeColor = Color.Silver;
             txtAddress.Clear();
-            cmbBloodGroup.SelectedItem = null;
+            cmbBloodGroup.SelectedItem = "Select Blood Group";
+            cmbBloodGroup.ForeColor = Color.Silver;
         }
 
      
@@ -74,7 +83,7 @@ namespace BloodBankManagementSystem
                 errorProvider2.SetError(this.dtpDateOfBrith, "Please Select Date OF Brith");
                 dtpDateOfBrith.Focus();
             }
-            else if (cmbGender.SelectedItem == null)
+            else if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 errorProvider3.SetError(this.cmbGender, "Please Select Gender");
                 cmbGender.Focus();
@@ -94,7 +103,7 @@ namespace BloodBankManagementSystem
                 txtEmailID.Focus();
                 errorProvider6.SetError(this.txtEmailID, "Invalid Email");
             }
-            else if (cmbCity.SelectedItem == null)
+            else if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 errorProvider6.SetError(this.cmbCity, "Please Select A City");
                 cmbCity.Focus();
@@ -104,7 +113,7 @@ namespace BloodBankManagementSystem
                 errorProvider7.SetError(this.txtAddress, "Please Enter Address !");
                 txtAddress.Focus();
             }
-            else if (cmbBloodGroup.SelectedItem == null)
+            else if (cmbBloodGroup.SelectedItem.ToString() == "Select Blood Group")
             {
                 errorProvider8.SetError(this.cmbBloodGroup, "Please Select Blood Group");
                 cmbBloodGroup.Focus();
@@ -207,7 +216,7 @@ namespace BloodBankManagementSystem
 
         private void cmbGender_Leave_1(object sender, EventArgs e)
         {
-            if (cmbGender.SelectedItem == null)
+            if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 errorProvider3.SetError(this.cmbGender, "Please Select Gender");
                 cmbGender.Focus();
@@ -269,7 +278,7 @@ namespace BloodBankManagementSystem
 
         private void cmbCity_Leave_1(object sender, EventArgs e)
         {
-            if (cmbCity.SelectedItem == null)
+            if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 errorProvider6.SetError(this.cmbCity, "Please Select A City");
                 cmbCity.Focus();
@@ -295,7 +304,7 @@ namespace BloodBankManagementSystem
 
         private void cmbBloodGroup_Leave_1(object sender, EventArgs e)
         {
-            if (cmbBloodGroup.SelectedItem == null)
+            if (cmbBloodGroup.SelectedItem.ToString() == "Select Blood Group")
             {
                 errorProvider8.SetError(this.cmbBloodGroup, "Please Select Blood Group");
                 cmbBloodGroup.Focus();
@@ -331,6 +340,28 @@ namespace BloodBankManagementSystem
             {
                 errorProvider2.Clear();
             }
+        }
+
+        private void btnClose_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmbGender_Enter(object sender, EventArgs e)
+        {
+            cmbGender.ForeColor = Color.FromArgb(68, 88, 112);
+        }
+
+        private void cmbCity_Enter(object sender, EventArgs e)
+        {
+            cmbCity.ForeColor = Color.FromArgb(68, 88, 112);
+
+        }
+
+        private void cmbBloodGroup_Enter(object sender, EventArgs e)
+        {
+            cmbBloodGroup.ForeColor = Color.FromArgb(68, 88, 112);
+
         }
     }
 }

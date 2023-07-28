@@ -293,5 +293,9 @@ namespace BloodBankManagementSystem
             this.Close();
 
         }
+
+        private void cmdUserRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

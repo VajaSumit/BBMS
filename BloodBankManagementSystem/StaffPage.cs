@@ -25,7 +25,7 @@ namespace BloodBankManagementSystem
 
         public void SatffIDAutoGenerate()
         {
-            txtStaffID.Text = "U-" + DateTime.Now.ToString("hhmmss");
+            txtStaffID.Text = "U-" + DateTime.Now.ToString("hhmmssdd");
 
         }
 
@@ -33,6 +33,14 @@ namespace BloodBankManagementSystem
         {
             SatffIDAutoGenerate();
             DataBinding();
+            cmbGender.SelectedItem = "Select Gender";
+            cmbGender.ForeColor = Color.Silver;
+            cmbCity.SelectedItem = "Select City";
+            cmbCity.ForeColor = Color.Silver;
+            cmbStatus.SelectedItem = "Select Status";
+            cmbStatus.ForeColor = Color.Silver;
+            cmbJobRole.SelectedItem = "Select Role";
+            cmbJobRole.ForeColor = Color.Silver;
         }
 
         private void txtName_Leave(object sender, EventArgs e)
@@ -72,7 +80,7 @@ namespace BloodBankManagementSystem
 
         private void cmbGender_Leave(object sender, EventArgs e)
         {
-            if (cmbGender.SelectedItem == null)
+            if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 errorProvider2.SetError(this.cmbGender, "Please select Gender");
                 cmbGender.Focus();
@@ -106,7 +114,7 @@ namespace BloodBankManagementSystem
 
         private void cmbJobRole_Leave(object sender, EventArgs e)
         {
-            if (cmbJobRole.SelectedItem==null)
+            if (cmbJobRole.SelectedItem.ToString() == "Select Role")
             {
                 errorProvider4.SetError(this.cmbJobRole,"Please Select The Work Role !!");
                 cmbJobRole.Focus();
@@ -119,7 +127,7 @@ namespace BloodBankManagementSystem
 
         private void cmbStatus_Leave(object sender, EventArgs e)
         {
-            if (cmbStatus.SelectedItem==null)
+            if (cmbStatus.SelectedItem.ToString() == "Select Status")
             {
                 errorProvider5.SetError(this.cmbStatus,"Please Select Status (true/false) ! ");
                 cmbStatus.Focus();
@@ -163,7 +171,7 @@ namespace BloodBankManagementSystem
 
         private void cmbCity_Leave(object sender, EventArgs e)
         {
-            if (cmbCity.SelectedItem==null)
+            if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 errorProvider7.SetError(this.cmbCity,"Please Select City !");
                 cmbCity.Focus();
@@ -218,14 +226,18 @@ namespace BloodBankManagementSystem
         {
             SatffIDAutoGenerate();
             txtName.Clear();
-            cmbGender.SelectedItem = null;
             dtpDateOfBrith.Value = DateTime.Now;
-            cmbJobRole.SelectedItem = null;
-            cmbStatus.SelectedItem = null;
             txtMobileNo.Clear();
-            cmbCity.SelectedItem = null;
             txtAddress.Clear();
 
+            cmbGender.SelectedItem = "Select Gender";
+            cmbGender.ForeColor = Color.Silver;
+            cmbCity.SelectedItem = "Select City";
+            cmbCity.ForeColor = Color.Silver;
+            cmbStatus.SelectedItem = "Select Status";
+            cmbStatus.ForeColor = Color.Silver;
+            cmbJobRole.SelectedItem = "Select Role";
+            cmbJobRole.ForeColor = Color.Silver;
 
         }
 
@@ -237,7 +249,7 @@ namespace BloodBankManagementSystem
                 errorProvider1.SetError(this.txtName, "Please Enter Name !");
                 txtName.Focus();
             }
-           else if(cmbGender.SelectedItem == null)
+           else if(cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 errorProvider2.SetError(this.cmbGender, "Please select Gender");
                 cmbGender.Focus();
@@ -247,12 +259,12 @@ namespace BloodBankManagementSystem
                 errorProvider3.SetError(this.dtpDateOfBrith, "Please Select Date OF Brith");
                 dtpDateOfBrith.Focus();
             }
-            else if(cmbJobRole.SelectedItem == null)
+            else if(cmbJobRole.SelectedItem.ToString() == "Select Role")
             {
                 errorProvider4.SetError(this.cmbJobRole, "Please Select The Work Role !!");
                 cmbJobRole.Focus();
             }
-            else if (cmbStatus.SelectedItem == null)
+            else if (cmbStatus.SelectedItem.ToString() == "Select Status")
             {
                 errorProvider5.SetError(this.cmbStatus, "Please Select Status (true/false) ! ");
                 cmbStatus.Focus();
@@ -262,7 +274,7 @@ namespace BloodBankManagementSystem
                 errorProvider6.SetError(this.txtMobileNo, "Please Enter Mobile Number !");
                 txtMobileNo.Focus();
             }
-           else if(cmbCity.SelectedItem == null)
+           else if(cmbCity.SelectedItem.ToString() == "Select City")
             {
                 errorProvider7.SetError(this.cmbCity, "Please Select City !");
                 cmbCity.Focus();
@@ -351,7 +363,7 @@ namespace BloodBankManagementSystem
                 errorProvider1.SetError(this.txtName, "Please Enter Name !");
                 txtName.Focus();
             }
-            else if (cmbGender.SelectedItem == null)
+            else if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 errorProvider2.SetError(this.cmbGender, "Please select Gender");
                 cmbGender.Focus();
@@ -361,12 +373,12 @@ namespace BloodBankManagementSystem
                 errorProvider3.SetError(this.dtpDateOfBrith, "Please Select Date OF Brith");
                 dtpDateOfBrith.Focus();
             }
-            else if (cmbJobRole.SelectedItem == null)
+            else if (cmbJobRole.SelectedItem.ToString() == "Select Role")
             {
                 errorProvider4.SetError(this.cmbJobRole, "Please Select The Work Role !!");
                 cmbJobRole.Focus();
             }
-            else if (cmbStatus.SelectedItem == null)
+            else if (cmbStatus.SelectedItem.ToString() == "Select Status")
             {
                 errorProvider5.SetError(this.cmbStatus, "Please Select Status (true/false) ! ");
                 cmbStatus.Focus();
@@ -376,7 +388,7 @@ namespace BloodBankManagementSystem
                 errorProvider6.SetError(this.txtMobileNo, "Please Enter Mobile Number !");
                 txtMobileNo.Focus();
             }
-            else if (cmbCity.SelectedItem == null)
+            else if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 errorProvider7.SetError(this.cmbCity, "Please Select City !");
                 cmbCity.Focus();
@@ -428,7 +440,7 @@ namespace BloodBankManagementSystem
                 errorProvider1.SetError(this.txtName, "Please Enter Name !");
                 txtName.Focus();
             }
-            else if (cmbGender.SelectedItem == null)
+            else if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 errorProvider2.SetError(this.cmbGender, "Please select Gender");
                 cmbGender.Focus();
@@ -438,12 +450,12 @@ namespace BloodBankManagementSystem
                 errorProvider3.SetError(this.dtpDateOfBrith, "Please Select Date OF Brith");
                 dtpDateOfBrith.Focus();
             }
-            else if (cmbJobRole.SelectedItem == null)
+            else if (cmbJobRole.SelectedItem.ToString() == "Select Role")
             {
                 errorProvider4.SetError(this.cmbJobRole, "Please Select The Work Role !!");
                 cmbJobRole.Focus();
             }
-            else if (cmbStatus.SelectedItem == null)
+            else if (cmbStatus.SelectedItem.ToString() == "Select Status")
             {
                 errorProvider5.SetError(this.cmbStatus, "Please Select Status (true/false) ! ");
                 cmbStatus.Focus();
@@ -453,7 +465,7 @@ namespace BloodBankManagementSystem
                 errorProvider6.SetError(this.txtMobileNo, "Please Enter Mobile Number !");
                 txtMobileNo.Focus();
             }
-            else if (cmbCity.SelectedItem == null)
+            else if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 errorProvider7.SetError(this.cmbCity, "Please Select City !");
                 cmbCity.Focus();
@@ -516,6 +528,34 @@ namespace BloodBankManagementSystem
             //    age -= 1;
             //}
             //txtAge.Text = age.ToString();
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmbGender_Enter(object sender, EventArgs e)
+        {
+            cmbGender.ForeColor = Color.FromArgb(68, 88, 112);
+        }
+
+        private void cmbJobRole_Enter(object sender, EventArgs e)
+        {
+            cmbJobRole.ForeColor = Color.FromArgb(68, 88, 112);
+
+        }
+
+        private void cmbStatus_Enter(object sender, EventArgs e)
+        {
+            cmbStatus.ForeColor = Color.FromArgb(68, 88, 112);
+
+        }
+
+        private void cmbCity_Enter(object sender, EventArgs e)
+        {
+            cmbCity.ForeColor = Color.FromArgb(68, 88, 112);
+
         }
     }
 }

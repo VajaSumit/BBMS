@@ -56,10 +56,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.exitlink = new System.Windows.Forms.LinkLabel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.LoginDialogbox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.LoginDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.btnClose = new System.Windows.Forms.Button();
@@ -84,7 +80,7 @@
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
             this.errorProvider1.SetIconAlignment(this.label6, System.Windows.Forms.ErrorIconAlignment.TopLeft);
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(46, 97);
+            this.label6.Location = new System.Drawing.Point(21, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 18);
             this.label6.TabIndex = 54;
@@ -113,10 +109,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(15, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(231, 15);
+            this.label3.Size = new System.Drawing.Size(203, 13);
             this.label3.TabIndex = 48;
             this.label3.Text = "Accept our Terms and Condition to Login ";
             // 
@@ -127,7 +123,7 @@
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(46, 171);
+            this.label1.Location = new System.Drawing.Point(21, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 18);
             this.label1.TabIndex = 41;
@@ -140,7 +136,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(46, 245);
+            this.label2.Location = new System.Drawing.Point(21, 244);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 18);
             this.label2.TabIndex = 43;
@@ -150,10 +146,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(100, 6);
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(79, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 38);
+            this.label5.Size = new System.Drawing.Size(84, 29);
             this.label5.TabIndex = 63;
             this.label5.Text = "LOGIN";
             // 
@@ -161,11 +157,11 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Perpetua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.ForeColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(90, 51);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(57, 14);
             this.linkLabel1.TabIndex = 69;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Read T/C";
@@ -190,10 +186,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1046, 669);
+            this.pictureBox1.Size = new System.Drawing.Size(821, 695);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 74;
             this.pictureBox1.TabStop = false;
@@ -203,21 +200,20 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(10, 22);
+            this.label8.Location = new System.Drawing.Point(2, 5);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1040, 34);
+            this.label8.Size = new System.Drawing.Size(447, 27);
             this.label8.TabIndex = 76;
-            this.label8.Text = "Welcome To  Blood Bank  Management System                                        " +
-    "        ";
+            this.label8.Text = "Welcome To  Blood Bank  Management System";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(185, 183);
+            this.label9.Location = new System.Drawing.Point(142, 167);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 20);
             this.label9.TabIndex = 77;
@@ -237,9 +233,9 @@
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(571, 177);
+            this.panel6.Location = new System.Drawing.Point(436, 175);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(312, 380);
+            this.panel6.Size = new System.Drawing.Size(265, 371);
             this.panel6.TabIndex = 78;
             // 
             // btnlogin
@@ -261,10 +257,10 @@
             this.btnlogin.FillColor2 = System.Drawing.Color.Transparent;
             this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.Color.Black;
-            this.btnlogin.Location = new System.Drawing.Point(104, 335);
+            this.btnlogin.Location = new System.Drawing.Point(76, 328);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(108, 25);
-            this.btnlogin.TabIndex = 82;
+            this.btnlogin.TabIndex = 0;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // chkshowpassword
@@ -275,7 +271,7 @@
             this.chkshowpassword.Depth = 0;
             this.chkshowpassword.Font = new System.Drawing.Font("Roboto", 10F);
             this.chkshowpassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chkshowpassword.Location = new System.Drawing.Point(259, 272);
+            this.chkshowpassword.Location = new System.Drawing.Point(232, 271);
             this.chkshowpassword.Margin = new System.Windows.Forms.Padding(0);
             this.chkshowpassword.MouseLocation = new System.Drawing.Point(-1, -1);
             this.chkshowpassword.MouseState = MaterialSkin.MouseState.HOVER;
@@ -305,7 +301,7 @@
             this.txtpassword.Font = new System.Drawing.Font("Palatino Linotype", 9.75F);
             this.txtpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(57, 276);
+            this.txtpassword.Location = new System.Drawing.Point(32, 275);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtpassword.MaxLength = 32756;
             this.txtpassword.Name = "txtpassword";
@@ -313,8 +309,8 @@
             this.txtpassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtpassword.PlaceholderText = "Enter Password";
             this.txtpassword.SelectedText = "";
-            this.txtpassword.Size = new System.Drawing.Size(199, 23);
-            this.txtpassword.TabIndex = 2;
+            this.txtpassword.Size = new System.Drawing.Size(199, 22);
+            this.txtpassword.TabIndex = 3;
             this.txtpassword.UseSystemPasswordChar = true;
             this.txtpassword.Leave += new System.EventHandler(this.txtpassword_Leave);
             // 
@@ -336,15 +332,15 @@
             this.txtusername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.IconLeftOffset = new System.Drawing.Point(1, 1);
-            this.txtusername.Location = new System.Drawing.Point(55, 198);
+            this.txtusername.Location = new System.Drawing.Point(30, 197);
             this.txtusername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
             this.txtusername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtusername.PlaceholderText = "Enter User Name";
             this.txtusername.SelectedText = "";
-            this.txtusername.Size = new System.Drawing.Size(199, 23);
-            this.txtusername.TabIndex = 1;
+            this.txtusername.Size = new System.Drawing.Size(199, 22);
+            this.txtusername.TabIndex = 2;
             this.txtusername.Leave += new System.EventHandler(this.txtusername_Leave);
             // 
             // cmdUserRole
@@ -368,10 +364,11 @@
             "Manager",
             "Doctor",
             "Staff"});
-            this.cmdUserRole.Location = new System.Drawing.Point(55, 125);
+            this.cmdUserRole.Location = new System.Drawing.Point(30, 124);
             this.cmdUserRole.Name = "cmdUserRole";
             this.cmdUserRole.Size = new System.Drawing.Size(199, 23);
-            this.cmdUserRole.TabIndex = 0;
+            this.cmdUserRole.TabIndex = 1;
+            this.cmdUserRole.SelectedIndexChanged += new System.EventHandler(this.cmdUserRole_SelectedIndexChanged);
             this.cmdUserRole.Enter += new System.EventHandler(this.cmdUserRole_Enter);
             this.cmdUserRole.Leave += new System.EventHandler(this.cmdUserRole_Leave_1);
             // 
@@ -380,23 +377,23 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(103, 37);
+            this.label7.Location = new System.Drawing.Point(81, 44);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 14);
+            this.label7.Size = new System.Drawing.Size(77, 14);
             this.label7.TabIndex = 64;
-            this.label7.Text = "_______________";
+            this.label7.Text = "__________";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(13, 627);
+            this.label10.Location = new System.Drawing.Point(15, 662);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 54);
+            this.label10.Size = new System.Drawing.Size(235, 21);
             this.label10.TabIndex = 79;
-            this.label10.Text = "~ Donate Blood,\r\n    Save  Life";
+            this.label10.Text = "~ Developed By Mr.Vaja Sumit";
             // 
             // panel5
             // 
@@ -404,7 +401,7 @@
             this.panel5.Controls.Add(this.CheckBox1);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.linkLabel1);
-            this.panel5.Location = new System.Drawing.Point(610, 600);
+            this.panel5.Location = new System.Drawing.Point(424, 613);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(258, 73);
             this.panel5.TabIndex = 80;
@@ -413,11 +410,11 @@
             // 
             this.exitlink.AutoSize = true;
             this.exitlink.BackColor = System.Drawing.Color.White;
-            this.exitlink.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitlink.Font = new System.Drawing.Font("Perpetua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitlink.ForeColor = System.Drawing.Color.White;
-            this.exitlink.Location = new System.Drawing.Point(1009, 666);
+            this.exitlink.Location = new System.Drawing.Point(776, 665);
             this.exitlink.Name = "exitlink";
-            this.exitlink.Size = new System.Drawing.Size(33, 17);
+            this.exitlink.Size = new System.Drawing.Size(28, 14);
             this.exitlink.TabIndex = 81;
             this.exitlink.TabStop = true;
             this.exitlink.Text = "Exit";
@@ -430,42 +427,6 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.5D;
             this.guna2BorderlessForm1.DragStartTransparencyValue = 0.8D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(9, 695);
-            this.panel2.TabIndex = 66;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(9, 685);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1042, 10);
-            this.panel4.TabIndex = 68;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1051, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(9, 695);
-            this.panel1.TabIndex = 65;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(9, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1042, 9);
-            this.panel3.TabIndex = 67;
             // 
             // LoginDialogbox1
             // 
@@ -492,11 +453,11 @@
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1013, 22);
+            this.btnClose.Location = new System.Drawing.Point(786, 6);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.Size = new System.Drawing.Size(30, 25);
             this.btnClose.TabIndex = 82;
             this.btnClose.Text = "x";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -508,7 +469,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1060, 695);
+            this.ClientSize = new System.Drawing.Size(821, 695);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.exitlink);
@@ -517,13 +478,10 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginPage";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -564,10 +522,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.LinkLabel exitlink;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ComboBox cmdUserRole;
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;

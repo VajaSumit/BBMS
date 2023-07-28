@@ -71,5 +71,10 @@ namespace BloodBankManagementSystem
         {
             this.Close();
         }
+
+        private void btnclose_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

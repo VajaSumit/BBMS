@@ -23,7 +23,8 @@ namespace BloodBankManagementSystem
         string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
         string patten = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
 
-        private void btnclose_Click(object sender, EventArgs e)
+
+    private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
 
@@ -32,12 +33,17 @@ namespace BloodBankManagementSystem
         private void DonorRegistrationPage_Load(object sender, EventArgs e)
         {
             DonorIdAutoGenerate();
-
+            cmbGender.SelectedItem = "Select Gender";
+            cmbGender.ForeColor = Color.Silver;
+            cmbCity.SelectedItem = "Select City";
+            cmbCity.ForeColor = Color.Silver;
+            cmbBloodGroup.SelectedItem = "Select Blood Group";
+            cmbBloodGroup.ForeColor = Color.Silver;
         }
 
         public void DonorIdAutoGenerate()
         {
-            txtDonorNo.Text = "D-" + DateTime.Now.ToString("hhmmss");
+            txtDonorNo.Text = "D-" + DateTime.Now.ToString("hhmmssdd");
 
         }
 
@@ -47,20 +53,24 @@ namespace BloodBankManagementSystem
            
             txtName.Clear();
             dtpDateOfBrith.Value = DateTime.Now;
-            cmbGender.SelectedItem = null;
+            cmbGender.SelectedItem = "Select Gender";
+            cmbGender.ForeColor = Color.Silver;
             txtMobileNo.Clear();
             txtEmailID.Clear();
-            cmbCity.SelectedItem = null;
+            cmbCity.SelectedItem = "Select City";
+            cmbCity.ForeColor = Color.Silver;
             txtAddress.Clear();
-            cmbBloodGroup.SelectedItem = null;
+            cmbBloodGroup.SelectedItem = "Select Blood Group";
+            cmbBloodGroup.ForeColor = Color.Silver;
             txtHeight.Clear();
             txtWeight.Clear();
+            ToDayDate.Value = DateTime.Now;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             ClearData();
-            txtDonorNo.Text = "D-" + DateTime.Now.ToString("hhmmss");
+            txtDonorNo.Text = "D-" + DateTime.Now.ToString("hhmmssdd");
 
         }
 
@@ -84,7 +94,7 @@ namespace BloodBankManagementSystem
                 errorProvider3.SetError(this.dtpDateOfBrith, "Please Select Date OF Brith");
                 dtpDateOfBrith.Focus();
             }
-            else if (cmbGender.SelectedItem == null)
+            else if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 cmbGender.Focus();
                 errorProvider4.SetError(this.cmbGender, "Please select gender !!");
@@ -104,7 +114,7 @@ namespace BloodBankManagementSystem
                 txtEmailID.Focus();
                 errorProvider6.SetError(this.txtEmailID, "Invalid Email");
             }
-            else if (cmbCity.SelectedItem == null)
+            else if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 cmbCity.Focus();
                 errorProvider7.SetError(this.cmbCity, "Please select city !!");
@@ -115,7 +125,7 @@ namespace BloodBankManagementSystem
                 errorProvider8.SetError(this.txtAddress, "Please Enter The Address ..");
                 txtAddress.Focus();
             }
-            else if (cmbBloodGroup.SelectedItem == null)
+            else if (cmbBloodGroup.SelectedItem.ToString() == "Select Blood Group")
             {
                 cmbBloodGroup.Focus();
                 errorProvider9.SetError(this.cmbBloodGroup, "Please select blood group !!");
@@ -180,7 +190,7 @@ namespace BloodBankManagementSystem
 
                     SqlConnection con = new SqlConnection(cs);
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("exec InsertDonorRecordRegistration '" + id + "','" + name + "','" + dtpDateOfBrith.Value + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "','" + height + "','" + weight + "'", con);
+                    SqlCommand cmd = new SqlCommand("exec InsertDonorRecordRegistration '" + id + "','" + name + "','" + dtpDateOfBrith.Value + "','" + gender + "','" + ToDayDate.Value  + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "','" + height + "','" + weight + "'", con);
 
                     int a = cmd.ExecuteNonQuery();
 
@@ -212,7 +222,7 @@ namespace BloodBankManagementSystem
             if (d==DialogResult.Yes)
             {
                 ClearData();
-                txtDonorNo.Text = "D-" + DateTime.Now.ToString("hhmmss");
+                txtDonorNo.Text = "D-" + DateTime.Now.ToString("hhmmssdd");
             }
 
            
@@ -256,7 +266,7 @@ namespace BloodBankManagementSystem
 
         private void cmbGender_Leave_1(object sender, EventArgs e)
         {
-            if (cmbGender.SelectedItem == null)
+            if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 cmbGender.Focus();
                 errorProvider4.SetError(this.cmbGender, "Please select gender !!");
@@ -323,7 +333,7 @@ namespace BloodBankManagementSystem
 
         private void cmbCity_Leave_1(object sender, EventArgs e)
         {
-            if (cmbCity.SelectedItem == null)
+            if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 cmbCity.Focus();
                 errorProvider7.SetError(this.cmbCity, "Please select city !!");
@@ -350,7 +360,7 @@ namespace BloodBankManagementSystem
 
         private void cmbBloodGroup_Leave_1(object sender, EventArgs e)
         {
-            if (cmbBloodGroup.SelectedItem == null)
+            if (cmbBloodGroup.SelectedItem.ToString() == "Select Blood Group")
             {
                 cmbBloodGroup.Focus();
                 errorProvider9.SetError(this.cmbBloodGroup, "Please select blood group !!");
@@ -452,6 +462,21 @@ namespace BloodBankManagementSystem
             {
                 errorProvider3.Clear();
             }
+        }
+
+        private void cmbGender_Enter(object sender, EventArgs e)
+        {
+            cmbGender.ForeColor = Color.FromArgb(68, 88, 112);
+        }
+
+        private void cmbCity_Enter(object sender, EventArgs e)
+        {
+            cmbCity.ForeColor = Color.FromArgb(68, 88, 112);
+        }
+
+        private void cmbBloodGroup_Enter(object sender, EventArgs e)
+        {
+            cmbBloodGroup.ForeColor = Color.FromArgb(68, 88, 112);
         }
     }
 }

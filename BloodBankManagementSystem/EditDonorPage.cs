@@ -44,14 +44,18 @@ namespace BloodBankManagementSystem
             txtDonorNo.Clear();
             txtName.Clear();
             dtpDateOfBrith.Value = DateTime.Now;
-            cmbGender.SelectedItem = null;
+            cmbGender.SelectedItem = "Select Gender";
+            cmbGender.ForeColor = Color.Silver;
             txtMobileNo.Clear();
             txtEmailID.Clear();
-            cmbCity.SelectedItem = null;
+            cmbCity.SelectedItem = "Select City";
+            cmbCity.ForeColor = Color.Silver;
             txtAddress.Clear();
-            cmbBloodGroup.SelectedItem = null;
+            cmbBloodGroup.SelectedItem = "Select Blood Group";
+            cmbBloodGroup.ForeColor = Color.Silver;
             txtHeight.Clear();
             txtWeight.Clear();
+            ToDayDate.Value = DateTime.Now;
         }
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -61,13 +65,14 @@ namespace BloodBankManagementSystem
             txtName.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             dtpDateOfBrith.Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[3].Value);
             cmbGender.SelectedItem = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            txtMobileNo.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-            txtEmailID.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
-            cmbCity.SelectedItem = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
-            txtAddress.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
-            cmbBloodGroup.SelectedItem = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
-            txtHeight.Text = dataGridView1.SelectedRows[0].Cells[10].Value.ToString();
-            txtWeight.Text = dataGridView1.SelectedRows[0].Cells[11].Value.ToString();
+            ToDayDate.Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[5].Value);
+            txtMobileNo.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            txtEmailID.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+            cmbCity.SelectedItem = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+            txtAddress.Text = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
+            cmbBloodGroup.SelectedItem = dataGridView1.SelectedRows[0].Cells[10].Value.ToString();
+            txtHeight.Text = dataGridView1.SelectedRows[0].Cells[11].Value.ToString();
+            txtWeight.Text = dataGridView1.SelectedRows[0].Cells[12].Value.ToString();
 
         }
 
@@ -97,6 +102,12 @@ namespace BloodBankManagementSystem
         private void EditDonorPage_Load(object sender, EventArgs e)
         {
             DataBinding();
+            cmbGender.SelectedItem = "Select Gender";
+            cmbGender.ForeColor = Color.Silver;
+            cmbCity.SelectedItem = "Select Ciy";
+            cmbCity.ForeColor = Color.Silver;
+            cmbBloodGroup.SelectedItem = "Select Blood Group";
+            cmbBloodGroup.ForeColor = Color.Silver;
         }
 
  
@@ -111,13 +122,14 @@ namespace BloodBankManagementSystem
             txtName.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             dtpDateOfBrith.Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[3].Value);
             cmbGender.SelectedItem = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            txtMobileNo.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-            txtEmailID.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
-            cmbCity.SelectedItem = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
-            txtAddress.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
-            cmbBloodGroup.SelectedItem = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
-            txtHeight.Text = dataGridView1.SelectedRows[0].Cells[10].Value.ToString();
-            txtWeight.Text = dataGridView1.SelectedRows[0].Cells[11].Value.ToString();
+            ToDayDate.Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[5].Value);
+            txtMobileNo.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            txtEmailID.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+            cmbCity.SelectedItem = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+            txtAddress.Text = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
+            cmbBloodGroup.SelectedItem = dataGridView1.SelectedRows[0].Cells[10].Value.ToString();
+            txtHeight.Text = dataGridView1.SelectedRows[0].Cells[11].Value.ToString();
+            txtWeight.Text = dataGridView1.SelectedRows[0].Cells[12].Value.ToString();
 
         }
 
@@ -139,8 +151,7 @@ namespace BloodBankManagementSystem
                 errorProvider2.SetError(this.dtpDateOfBrith, "Please Select Date OF Brith");
                 dtpDateOfBrith.Focus();
             }
-
-            else if (cmbGender.SelectedItem == null)
+            else if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 errorProvider3.SetError(cmbGender, "Please Select Gender");
                 cmbGender.Focus();
@@ -160,7 +171,7 @@ namespace BloodBankManagementSystem
                 txtEmailID.Focus();
                 errorProvider5.SetError(this.txtEmailID, "Invalid Email");
             }
-            else if (cmbCity.SelectedItem == null)
+            else if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 errorProvider6.SetError(cmbCity, "Please Select City");
                 cmbCity.Focus();
@@ -170,7 +181,7 @@ namespace BloodBankManagementSystem
                 errorProvider7.SetError(this.txtAddress, "Please Enter Address !");
                 txtAddress.Focus();
             }
-            else if (cmbBloodGroup.SelectedItem == null)
+            else if (cmbBloodGroup.SelectedItem.ToString() == "Select Blood Group")
             {
                 errorProvider8.SetError(cmbBloodGroup, "Please Select Blood Group");
                 cmbBloodGroup.Focus();
@@ -202,7 +213,7 @@ namespace BloodBankManagementSystem
 
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("exec UpdateDonorRecordRegistration '" + id + "','" + name + "','" + dtpDateOfBrith.Value.ToString("dd/MM/yyyy") + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "','" + height + "','" + weight + "'", con);
+                SqlCommand cmd = new SqlCommand("exec UpdateDonorRecordRegistration '" + id + "','" + name + "','" + dtpDateOfBrith.Value.ToString("dd/MM/yyyy") + "','" + gender + "','" + ToDayDate.Value.ToString("dd/MM/yyyy") + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "','" + height + "','" + weight + "'", con);
 
                 int a = cmd.ExecuteNonQuery();
 
@@ -238,7 +249,7 @@ namespace BloodBankManagementSystem
                 errorProvider2.SetError(this.dtpDateOfBrith, "Please Select Date OF Brith");
                 dtpDateOfBrith.Focus();
             }
-            else if (cmbGender.SelectedItem == null)
+            else if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 errorProvider3.SetError(cmbGender, "Please Select Gender");
                 cmbGender.Focus();
@@ -258,7 +269,7 @@ namespace BloodBankManagementSystem
                 txtEmailID.Focus();
                 errorProvider5.SetError(this.txtEmailID, "Invalid Email");
             }
-            else if (cmbCity.SelectedItem == null)
+            else if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 errorProvider6.SetError(cmbCity, "Please Select City");
                 cmbCity.Focus();
@@ -268,7 +279,7 @@ namespace BloodBankManagementSystem
                 errorProvider7.SetError(this.txtAddress, "Please Enter Address !");
                 txtAddress.Focus();
             }
-            else if (cmbBloodGroup.SelectedItem == null)
+            else if (cmbBloodGroup.SelectedItem.ToString() == "Select Blood Group")
             {
                 errorProvider8.SetError(cmbBloodGroup, "Please Select Blood Group");
                 cmbBloodGroup.Focus();
@@ -368,7 +379,7 @@ namespace BloodBankManagementSystem
 
         private void cmbGender_Leave_1(object sender, EventArgs e)
         {
-            if (cmbGender.SelectedItem == null)
+            if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 errorProvider3.SetError(cmbGender, "Please Select Gender");
                 cmbGender.Focus();
@@ -431,7 +442,7 @@ namespace BloodBankManagementSystem
 
         private void cmbCity_Leave_1(object sender, EventArgs e)
         {
-            if (cmbCity.SelectedItem == null)
+            if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 errorProvider6.SetError(cmbCity, "Please Select City");
                 cmbCity.Focus();
@@ -457,7 +468,7 @@ namespace BloodBankManagementSystem
 
         private void cmbBloodGroup_Leave_1(object sender, EventArgs e)
         {
-            if (cmbBloodGroup.SelectedItem == null)
+            if (cmbBloodGroup.SelectedItem.ToString() == "Select Blood Group")
             {
                 errorProvider8.SetError(cmbBloodGroup, "Please Select Blood Group");
                 cmbBloodGroup.Focus();
@@ -559,6 +570,26 @@ namespace BloodBankManagementSystem
             {
                 errorProvider2.Clear();
             }
+        }
+
+        private void btnclose_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmbGender_Enter(object sender, EventArgs e)
+        {
+            cmbGender.ForeColor = Color.FromArgb(68, 88, 112);
+        }
+
+        private void cmbCity_Enter(object sender, EventArgs e)
+        {
+            cmbCity.ForeColor = Color.FromArgb(68, 88, 112);
+        }
+
+        private void cmbBloodGroup_Enter(object sender, EventArgs e)
+        {
+            cmbBloodGroup.ForeColor = Color.FromArgb(68, 88, 112);
         }
     }
 }

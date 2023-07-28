@@ -35,6 +35,8 @@ namespace BloodBankManagementSystem
 
         AboutUs aboutus;
 
+        HospitalRegistrationPage hospitalregistrationpage;
+        ViewAllHospitals viewallhospitals;
 
         public MasterPage()
         {
@@ -96,7 +98,7 @@ namespace BloodBankManagementSystem
             }
         }
 
-        Form1 form1;
+        //Form1 form1;
         private void btnHomeMenu_Click(object sender, EventArgs e)
         {
             Movepanel(btnHomeMenu);
@@ -135,7 +137,7 @@ namespace BloodBankManagementSystem
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            form1 = null;
+            //form1 = null;
         }
 
         private void Homepage_FormClosed(object sender, FormClosedEventArgs e)
@@ -469,7 +471,24 @@ namespace BloodBankManagementSystem
 
         private void MasterPage_Load(object sender, EventArgs e)
         {
+            Movepanel(btnHomeMenu);
 
+            hideSubMenu();
+            //HomePage h = new HomePage();
+            //h.MdiParent = this;
+            //h.Show();
+
+            if (homepage == null)
+            {
+                homepage = new HomePage();
+                homepage.FormClosed += Homepage_FormClosed;
+                homepage.MdiParent = this;
+                homepage.Show();
+            }
+            else
+            {
+                homepage.Activate();
+            }
         }
 
         bool menuExpand = false;
@@ -680,37 +699,46 @@ namespace BloodBankManagementSystem
         {
             hideSubMenu();
 
-            //if (editpatient == null)
-            //{
-            //    editpatient = new EditPatientPage();
-            //    editpatient.FormClosed += Editpatient_FormClosed;
-            //    editpatient.MdiParent = this;
-            //    editpatient.Show();
-            //}
-            //else
-            //{
-            //    editpatient.Activate();
-            //}
+            if (hospitalregistrationpage == null)
+            {
+                hospitalregistrationpage = new HospitalRegistrationPage();
+                hospitalregistrationpage.FormClosed += Hospitalregistrationpage_FormClosed;
+                hospitalregistrationpage.MdiParent = this;
+                hospitalregistrationpage.Show();
+            }
+            else
+            {
+                hospitalregistrationpage.Activate();
+            }
+
+        }
+
+        private void Hospitalregistrationpage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            hospitalregistrationpage = null;
         }
 
         private void btnViewAllHospital_Click(object sender, EventArgs e)
         {
             hideSubMenu();
 
-            //if (editpatient == null)
-            //{
-            //    editpatient = new EditPatientPage();
-            //    editpatient.FormClosed += Editpatient_FormClosed;
-            //    editpatient.MdiParent = this;
-            //    editpatient.Show();
-            //}
-            //else
-            //{
-            //    editpatient.Activate();
-            //}
+            if (viewallhospitals == null)
+            {
+                viewallhospitals = new ViewAllHospitals();
+                viewallhospitals.FormClosed += Viewallhospitals_FormClosed;
+                viewallhospitals.MdiParent = this;
+                viewallhospitals.Show();
+            }
+            else
+            {
+                viewallhospitals.Activate();
+            }
         }
 
-     
+        private void Viewallhospitals_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            viewallhospitals = null;
+        }
 
         private void btnDateTime_Click(object sender, EventArgs e)
         {

@@ -16,7 +16,7 @@ namespace BloodBankManagementSystem
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MasterPage());
+            Application.Run(new LoginPage());
         }
         }
     }

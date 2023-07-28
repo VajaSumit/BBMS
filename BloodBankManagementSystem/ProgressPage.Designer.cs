@@ -52,7 +52,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-11, -4);
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(126, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -64,9 +64,9 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Gray;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-18, 37);
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 37);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(653, 426);
+            this.pictureBox2.Size = new System.Drawing.Size(548, 394);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -76,7 +76,7 @@
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Cyan;
-            this.button1.Location = new System.Drawing.Point(550, 6);
+            this.button1.Location = new System.Drawing.Point(478, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 30);
             this.button1.TabIndex = 8;
@@ -102,11 +102,11 @@
             this.guna2ProgressBar1.FillColor = System.Drawing.Color.Black;
             this.guna2ProgressBar1.ForeColor = System.Drawing.Color.Black;
             this.guna2ProgressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(19, 459);
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(14, 426);
             this.guna2ProgressBar1.Name = "guna2ProgressBar1";
             this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.Aqua;
             this.guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(523, 19);
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(472, 19);
             this.guna2ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.guna2ProgressBar1.TabIndex = 9;
             this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -116,10 +116,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(548, 461);
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(493, 428);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 18);
+            this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 10;
             // 
             // ProgressPage
@@ -127,7 +127,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(588, 502);
+            this.ClientSize = new System.Drawing.Size(522, 467);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2ProgressBar1);
             this.Controls.Add(this.button1);

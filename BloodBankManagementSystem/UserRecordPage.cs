@@ -35,7 +35,7 @@ namespace BloodBankManagementSystem
 
         public void UserIdAutoGenerate()
         {
-            txtUserid.Text = "U-" + DateTime.Now.ToString("hhmmss");
+            txtUserid.Text = "U-" + DateTime.Now.ToString("hhmmssdd");
 
         }
 
@@ -43,7 +43,10 @@ namespace BloodBankManagementSystem
         {
             DataBinding();
             UserIdAutoGenerate();
-           
+            cmbUserRole.SelectedItem = "Select Role";
+            cmbUserRole.ForeColor = Color.Silver;
+            cmbStatus.SelectedItem = "Select Status";
+            cmbStatus.ForeColor = Color.Silver;
 
         }
 
@@ -75,11 +78,13 @@ namespace BloodBankManagementSystem
             txtPassword.Clear();
             dtpDateOfBrith.Value = DateTime.Now;
             txtEmailID.Clear();
-            cmbUserRole.SelectedItem = null;
-            cmbStatus.SelectedItem = null;
             bunifuPictureBox1.Image = null;
             txtMobileNo.Clear();
             txtAddress.Clear();
+            cmbUserRole.SelectedItem = "Select Role";
+            cmbUserRole.ForeColor = Color.Silver;
+            cmbStatus.SelectedItem = "Select Status";
+            cmbStatus.ForeColor = Color.Silver;
         }
 
 
@@ -227,12 +232,12 @@ namespace BloodBankManagementSystem
                 txtEmailID.Focus();
                 errorProvider4.SetError(this.txtEmailID, "Invalid Email");
             }
-            else if (cmbUserRole.SelectedItem == null)
+            else if (cmbUserRole.SelectedItem.ToString() == "Select Role")
             {
                 errorProvider5.SetError(this.cmbUserRole, "Please Select User Role !");
                 cmbUserRole.Focus();
             }
-            else if (cmbStatus.SelectedItem == null)
+            else if (cmbStatus.SelectedItem.ToString() == "Select Status")
             {
                 errorProvider6.SetError(this.cmbStatus, "Please Select Status !");
                 cmbStatus.Focus();
@@ -327,12 +332,12 @@ namespace BloodBankManagementSystem
                 txtEmailID.Focus();
                 errorProvider4.SetError(this.txtEmailID, "Invalid Email");
             }
-            else if (cmbUserRole.SelectedItem == null)
+            else if (cmbUserRole.SelectedItem.ToString() == "Select Role")
             {
                 errorProvider5.SetError(this.cmbUserRole, "Please Select User Role !");
                 cmbUserRole.Focus();
             }
-            else if (cmbStatus.SelectedItem == null)
+            else if (cmbStatus.SelectedItem.ToString() == "Select Status" )
             {
                 errorProvider6.SetError(this.cmbStatus, "Please Select Status !");
                 cmbStatus.Focus();
@@ -462,12 +467,12 @@ namespace BloodBankManagementSystem
                 txtEmailID.Focus();
                 errorProvider4.SetError(this.txtEmailID, "Invalid Email");
             }
-            else if (cmbUserRole.SelectedItem == null)
+            else if (cmbUserRole.SelectedItem.ToString() == "Select Role")
             {
                 errorProvider5.SetError(this.cmbUserRole, "Please Select User Role !");
                 cmbUserRole.Focus();
             }
-            else if (cmbStatus.SelectedItem == null)
+            else if (cmbStatus.SelectedItem.ToString() == "Select Status")
             {
                 errorProvider6.SetError(this.cmbStatus, "Please Select Status !");
                 cmbStatus.Focus();
@@ -689,7 +694,7 @@ namespace BloodBankManagementSystem
 
         private void cmbUserRole_Leave_1(object sender, EventArgs e)
         {
-            if (cmbUserRole.SelectedItem == null)
+            if (cmbUserRole.SelectedItem.ToString() == "Select Role")
             {
                 errorProvider5.SetError(this.cmbUserRole, "Please Select User Role !");
                 cmbUserRole.Focus();
@@ -704,7 +709,7 @@ namespace BloodBankManagementSystem
 
         private void cmbStatus_Leave_1(object sender, EventArgs e)
         {
-            if (cmbStatus.SelectedItem == null)
+            if (cmbStatus.SelectedItem.ToString() == "Select Status")
             {
                 errorProvider6.SetError(this.cmbStatus, "Please Select Status !");
                 cmbStatus.Focus();
@@ -782,7 +787,13 @@ namespace BloodBankManagementSystem
             }
         }
 
-        private void chkshowpassword_CheckedChanged(object sender, EventArgs e)
+ 
+        private void guna2CircleButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void chkshowpassword_CheckedChanged_2(object sender, EventArgs e)
         {
             if (chkshowpassword.Checked == true)
             {
@@ -792,6 +803,23 @@ namespace BloodBankManagementSystem
             {
                 txtPassword.UseSystemPasswordChar = true;
             }
+        }
+
+        private void cmbUserRole_Enter(object sender, EventArgs e)
+        {
+            cmbUserRole.ForeColor = Color.FromArgb(68, 88, 112);
+
+        }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbStatus_Enter(object sender, EventArgs e)
+        {
+            cmbStatus.ForeColor = Color.FromArgb(68, 88, 112);
+
         }
     }
 }

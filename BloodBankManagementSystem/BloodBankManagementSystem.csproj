@@ -180,14 +180,6 @@
       <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DateTimeVisualizer.UI, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DateTimeVisualizer.UI.1.0.11\lib\netcoreapp3.1\DateTimeVisualizer.UI.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\netcoreapp3.1\FontAwesome.Sharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
@@ -230,10 +222,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tiger.Clock, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Tiger.Clock.2.0.0\lib\netstandard2.1\Tiger.Clock.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
@@ -241,13 +229,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BloodDonationPage.cs">
+    <Compile Include="HospitalRegistrationPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BloodDonationPage.Designer.cs">
-      <DependentUpon>BloodDonationPage.cs</DependentUpon>
+    <Compile Include="HospitalRegistrationPage.Designer.cs">
+      <DependentUpon>HospitalRegistrationPage.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassFiles\HashCode.cs" />
+    <Compile Include="CustomeScrollBar\CustomScrollBarHandle.cs" />
     <Compile Include="DoctorRecordPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,10 +267,10 @@
     <Compile Include="EditPatientPage.Designer.cs">
       <DependentUpon>EditPatientPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="CustomeScrollBar\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="CustomeScrollBar\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="HomePage.cs">
@@ -327,7 +316,7 @@
     <Compile Include="StaffPage.Designer.cs">
       <DependentUpon>StaffPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="TouchScroll.cs" />
+    <Compile Include="CustomeScrollBar\TouchScroll.cs" />
     <Compile Include="UserRecordPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,6 +334,12 @@
     </Compile>
     <Compile Include="ViewAllDonorsPage.Designer.cs">
       <DependentUpon>ViewAllDonorsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllHospitals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllHospitals.Designer.cs">
+      <DependentUpon>ViewAllHospitals.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewAllPatientPage.cs">
       <SubType>Form</SubType>
@@ -364,8 +359,11 @@
     <Compile Include="ViewAllUser.Designer.cs">
       <DependentUpon>ViewAllUser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BloodDonationPage.resx">
-      <DependentUpon>BloodDonationPage.cs</DependentUpon>
+    <EmbeddedResource Include="HospitalRegistrationPage.aa-DJ.resx">
+      <DependentUpon>HospitalRegistrationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalRegistrationPage.resx">
+      <DependentUpon>HospitalRegistrationPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorRecordPage.resx">
       <DependentUpon>DoctorRecordPage.cs</DependentUpon>
@@ -382,7 +380,7 @@
     <EmbeddedResource Include="EditPatientPage.resx">
       <DependentUpon>EditPatientPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="CustomeScrollBar\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
@@ -418,6 +416,9 @@
     <EmbeddedResource Include="ViewAllDonorsPage.resx">
       <DependentUpon>ViewAllDonorsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllHospitals.resx">
+      <DependentUpon>ViewAllHospitals.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewAllPatientPage.resx">
       <DependentUpon>ViewAllPatientPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -452,8 +453,20 @@
     <Content Include="Images\CardForDoctorInHomePage.jpeg" />
     <Content Include="Images\CardForStaffInHomePage.jpeg" />
     <Content Include="Images\CardForStockInHomePage.jpeg" />
+    <Content Include="Images\DoctorImage1.jpeg" />
+    <Content Include="Images\DoctorImage2.jpeg" />
+    <Content Include="Images\DoctorImage3.jpeg" />
+    <Content Include="Images\DonorRegistrationImage1.jpg" />
+    <Content Include="Images\HeartImage1.jpeg" />
+    <Content Include="Images\HospitalImage1.jpeg" />
+    <Content Include="Images\PatientRegistrationImage1.jpeg" />
+    <Content Include="Images\PatientRegistrationimage2.jpeg" />
+    <Content Include="Images\PatientRegistrationImage3.jpeg" />
+    <Content Include="Images\PatientRegistrationImage4.jpg" />
+    <Content Include="Images\PatientRegistrationImage5.jpeg" />
+    <Content Include="Images\PatientRegistrationimage6.jpeg" />
     <Content Include="Images\ReceivedBloodCardInHomePage.jpeg" />
-    <Content Include="Images\images %2848%29.jpeg" />
+    <Content Include="Images\BloodCollectionByDonorImage.jpeg" />
     <Content Include="Images\login.jpeg" />
     <Content Include="Images\LoginPageBackground.gif" />
     <Content Include="Images\2.jpg" />
@@ -491,6 +504,9 @@
     <Content Include="Images\patient_disease_icon_140580.ico" />
     <Content Include="Images\profile_circle_icon_244573.ico" />
     <Content Include="Images\HomePageImageForPersone.png" />
+    <Content Include="Images\StaffMemberImage1.jpeg" />
+    <Content Include="Images\StaffMemberImage2.jpeg" />
+    <Content Include="Images\UserImage.jpeg" />
     <Content Include="Images\Users_40957.ico" />
   </ItemGroup>
   <ItemGroup>

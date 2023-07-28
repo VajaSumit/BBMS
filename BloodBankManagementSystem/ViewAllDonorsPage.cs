@@ -55,7 +55,6 @@ namespace BloodBankManagementSystem
 
         private void btnclose_Click_1(object sender, EventArgs e)
         {
-            this.Close();
         }
 
   
@@ -112,6 +111,12 @@ namespace BloodBankManagementSystem
             {
                 errorProvider1.Clear();
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }
