@@ -52,16 +52,16 @@
             this.MedicalLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HospitalName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HospitalAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label41 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DoctorList)).BeginInit();
-            this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,13 +107,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DoctorList.DefaultCellStyle = dataGridViewCellStyle1;
             this.DoctorList.GridColor = System.Drawing.Color.Linen;
-            this.DoctorList.Location = new System.Drawing.Point(58, 215);
+            this.DoctorList.Location = new System.Drawing.Point(58, 266);
             this.DoctorList.MultiSelect = false;
             this.DoctorList.Name = "DoctorList";
             this.DoctorList.ReadOnly = true;
             this.DoctorList.RowTemplate.ReadOnly = true;
             this.DoctorList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DoctorList.Size = new System.Drawing.Size(1071, 543);
+            this.DoctorList.Size = new System.Drawing.Size(1071, 525);
             this.DoctorList.TabIndex = 254;
             // 
             // Id
@@ -260,114 +260,108 @@
             this.HospitalAddress.Name = "HospitalAddress";
             this.HospitalAddress.ReadOnly = true;
             // 
-            // guna2GradientPanel2
-            // 
-            this.guna2GradientPanel2.AutoRoundedCorners = true;
-            this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Black;
-            this.guna2GradientPanel2.BorderRadius = 12;
-            this.guna2GradientPanel2.Controls.Add(this.label6);
-            this.guna2GradientPanel2.Controls.Add(this.btnClose);
-            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.LightCyan;
-            this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(1323, 27);
-            this.guna2GradientPanel2.TabIndex = 255;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Colonna MT", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(54, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(220, 22);
-            this.label6.TabIndex = 62;
-            this.label6.Text = "~All Doctors Records";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Animated = true;
-            this.btnClose.AnimatedGIF = true;
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Black;
-            this.btnClose.Font = new System.Drawing.Font("Segoe Fluent Icons", 9F, System.Drawing.FontStyle.Bold);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1075, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(26, 22);
-            this.btnClose.TabIndex = 129;
-            this.btnClose.Text = "X";
-            this.btnClose.UseTransparentBackground = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.AutoRoundedCorners = true;
-            this.guna2PictureBox1.BorderRadius = 39;
+            this.guna2PictureBox1.BorderRadius = 45;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(844, 86);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(878, 167);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(224, 80);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(209, 92);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 259;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.AutoRoundedCorners = true;
-            this.guna2PictureBox2.BorderRadius = 28;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(107, 86);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(129, 58);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 258;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label18.Location = new System.Drawing.Point(129, 170);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(88, 16);
-            this.label18.TabIndex = 257;
-            this.label18.Text = "__________";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(121, 152);
+            this.label17.Location = new System.Drawing.Point(146, 153);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(99, 23);
+            this.label17.Size = new System.Drawing.Size(93, 23);
             this.label17.TabIndex = 256;
             this.label17.Text = "* Records :";
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.AutoRoundedCorners = true;
+            this.guna2GradientPanel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2GradientPanel1.BorderRadius = 23;
+            this.guna2GradientPanel1.BorderThickness = 1;
+            this.guna2GradientPanel1.Controls.Add(this.guna2CircleButton1);
+            this.guna2GradientPanel1.Controls.Add(this.label41);
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.LightCyan;
+            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 22);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1306, 49);
+            this.guna2GradientPanel1.TabIndex = 261;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.Animated = true;
+            this.guna2CircleButton1.AnimatedGIF = true;
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Black;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe Fluent Icons", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(1098, 8);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(31, 28);
+            this.guna2CircleButton1.TabIndex = 130;
+            this.guna2CircleButton1.Text = "X";
+            this.guna2CircleButton1.UseTransparentBackground = true;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.Font = new System.Drawing.Font("Colonna MT", 20.25F, System.Drawing.FontStyle.Underline);
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Location = new System.Drawing.Point(406, 15);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(243, 28);
+            this.label41.TabIndex = 62;
+            this.label41.Text = "All Doctors Records";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1306, 22);
+            this.panel1.TabIndex = 260;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.AutoRoundedCorners = true;
+            this.guna2PictureBox2.BorderRadius = 32;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(123, 179);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(141, 66);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 262;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // ViewAllDoctorsRecordcs
             // 
@@ -375,13 +369,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1323, 788);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.label18);
+            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.DoctorList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewAllDoctorsRecordcs";
@@ -389,9 +382,9 @@
             this.Text = "ViewAllDoctorsRecordcs";
             this.Load += new System.EventHandler(this.ViewAllDoctorsRecordcs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DoctorList)).EndInit();
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -421,12 +414,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MedicalLicenseNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn HospitalName;
         private System.Windows.Forms.DataGridViewTextBoxColumn HospitalAddress;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

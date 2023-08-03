@@ -557,5 +557,15 @@ namespace BloodBankManagementSystem
             cmbCity.ForeColor = Color.FromArgb(68, 88, 112);
 
         }
+
+        private void btnclose_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

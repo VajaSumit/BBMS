@@ -48,5 +48,10 @@ namespace BloodBankManagementSystem
         {
             this.Close();
         }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

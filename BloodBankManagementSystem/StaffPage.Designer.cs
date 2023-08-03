@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffPage));
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.label22 = new System.Windows.Forms.Label();
@@ -93,13 +93,13 @@
             this.DeleteRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.DeleteRecordDialogBox3 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.ResetDataDailogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -111,9 +111,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StaffDataList)).BeginInit();
-            this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2AnimateWindow1
@@ -126,11 +126,11 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label22.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label22.Location = new System.Drawing.Point(632, 298);
+            this.label22.Location = new System.Drawing.Point(697, 202);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(40, 16);
+            this.label22.Size = new System.Drawing.Size(37, 16);
             this.label22.TabIndex = 127;
             this.label22.Text = "Status";
             // 
@@ -138,11 +138,11 @@
             // 
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label20.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label20.Location = new System.Drawing.Point(205, 519);
+            this.label20.Location = new System.Drawing.Point(270, 423);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(87, 16);
+            this.label20.Size = new System.Drawing.Size(88, 16);
             this.label20.TabIndex = 126;
             this.label20.Text = "Work / Job Role";
             // 
@@ -150,11 +150,11 @@
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label18.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label18.Location = new System.Drawing.Point(215, 462);
+            this.label18.Location = new System.Drawing.Point(280, 366);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(77, 16);
+            this.label18.Size = new System.Drawing.Size(72, 16);
             this.label18.TabIndex = 125;
             this.label18.Text = "Date Of Brith";
             // 
@@ -162,9 +162,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(623, 469);
+            this.label7.Location = new System.Drawing.Point(688, 373);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 16);
             this.label7.TabIndex = 124;
@@ -174,11 +174,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(611, 356);
+            this.label5.Location = new System.Drawing.Point(676, 260);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 16);
+            this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 123;
             this.label5.Text = "Mobile No";
             // 
@@ -186,11 +186,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(254, 345);
+            this.label2.Location = new System.Drawing.Point(319, 249);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 16);
+            this.label2.Size = new System.Drawing.Size(37, 16);
             this.label2.TabIndex = 122;
             this.label2.Text = "Name";
             // 
@@ -198,11 +198,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(244, 295);
+            this.label1.Location = new System.Drawing.Point(309, 199);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 16);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 121;
             this.label1.Text = "Staff ID";
             // 
@@ -210,9 +210,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(247, 405);
+            this.label3.Location = new System.Drawing.Point(312, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 128;
@@ -222,11 +222,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(644, 414);
+            this.label4.Location = new System.Drawing.Point(709, 318);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 16);
+            this.label4.Size = new System.Drawing.Size(29, 16);
             this.label4.TabIndex = 129;
             this.label4.Text = "City";
             // 
@@ -235,8 +235,7 @@
             this.txtName.Animated = true;
             this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.BorderColor = System.Drawing.Color.DimGray;
-            this.txtName.BorderRadius = 10;
-            this.txtName.BorderThickness = 2;
+            this.txtName.BorderRadius = 12;
             this.txtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtName.DefaultText = "";
@@ -248,14 +247,14 @@
             this.txtName.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(353, 346);
+            this.txtName.Location = new System.Drawing.Point(418, 250);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtName.PlaceholderText = "Enter Staff Name";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(199, 22);
+            this.txtName.Size = new System.Drawing.Size(197, 22);
             this.txtName.TabIndex = 1;
             this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
@@ -265,8 +264,7 @@
             this.txtStaffID.Animated = true;
             this.txtStaffID.BackColor = System.Drawing.Color.Transparent;
             this.txtStaffID.BorderColor = System.Drawing.Color.DimGray;
-            this.txtStaffID.BorderRadius = 10;
-            this.txtStaffID.BorderThickness = 2;
+            this.txtStaffID.BorderRadius = 12;
             this.txtStaffID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtStaffID.DefaultText = "";
             this.txtStaffID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -277,7 +275,7 @@
             this.txtStaffID.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStaffID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtStaffID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStaffID.Location = new System.Drawing.Point(354, 292);
+            this.txtStaffID.Location = new System.Drawing.Point(419, 196);
             this.txtStaffID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStaffID.Name = "txtStaffID";
             this.txtStaffID.PasswordChar = '\0';
@@ -285,7 +283,7 @@
             this.txtStaffID.PlaceholderText = "";
             this.txtStaffID.ReadOnly = true;
             this.txtStaffID.SelectedText = "";
-            this.txtStaffID.Size = new System.Drawing.Size(199, 22);
+            this.txtStaffID.Size = new System.Drawing.Size(197, 22);
             this.txtStaffID.TabIndex = 0;
             // 
             // cmbJobRole
@@ -295,7 +293,6 @@
             this.cmbJobRole.BackColor = System.Drawing.Color.Transparent;
             this.cmbJobRole.BorderColor = System.Drawing.Color.DimGray;
             this.cmbJobRole.BorderRadius = 10;
-            this.cmbJobRole.BorderThickness = 2;
             this.cmbJobRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbJobRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbJobRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -310,9 +307,9 @@
             "Nurse",
             "Compounder",
             "Medical Technologist"});
-            this.cmbJobRole.Location = new System.Drawing.Point(353, 519);
+            this.cmbJobRole.Location = new System.Drawing.Point(418, 423);
             this.cmbJobRole.Name = "cmbJobRole";
-            this.cmbJobRole.Size = new System.Drawing.Size(199, 23);
+            this.cmbJobRole.Size = new System.Drawing.Size(197, 23);
             this.cmbJobRole.TabIndex = 4;
             this.cmbJobRole.Enter += new System.EventHandler(this.cmbJobRole_Enter);
             this.cmbJobRole.Leave += new System.EventHandler(this.cmbJobRole_Leave);
@@ -324,7 +321,6 @@
             this.cmbGender.BackColor = System.Drawing.Color.Transparent;
             this.cmbGender.BorderColor = System.Drawing.Color.DimGray;
             this.cmbGender.BorderRadius = 10;
-            this.cmbGender.BorderThickness = 2;
             this.cmbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -336,9 +332,9 @@
             "Select Gender",
             "Male",
             "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(353, 406);
+            this.cmbGender.Location = new System.Drawing.Point(418, 310);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(199, 23);
+            this.cmbGender.Size = new System.Drawing.Size(197, 23);
             this.cmbGender.TabIndex = 2;
             this.cmbGender.Enter += new System.EventHandler(this.cmbGender_Enter);
             this.cmbGender.Leave += new System.EventHandler(this.cmbGender_Leave);
@@ -348,7 +344,7 @@
             this.dtpDateOfBrith.Animated = true;
             this.dtpDateOfBrith.AutoRoundedCorners = true;
             this.dtpDateOfBrith.BorderRadius = 10;
-            this.dtpDateOfBrith.BorderThickness = 2;
+            this.dtpDateOfBrith.BorderThickness = 1;
             this.dtpDateOfBrith.Checked = true;
             this.dtpDateOfBrith.CustomFormat = "dd/MM/yyyy";
             this.dtpDateOfBrith.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -356,11 +352,11 @@
             this.dtpDateOfBrith.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateOfBrith.ForeColor = System.Drawing.Color.White;
             this.dtpDateOfBrith.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateOfBrith.Location = new System.Drawing.Point(353, 459);
+            this.dtpDateOfBrith.Location = new System.Drawing.Point(418, 363);
             this.dtpDateOfBrith.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
             this.dtpDateOfBrith.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpDateOfBrith.Name = "dtpDateOfBrith";
-            this.dtpDateOfBrith.Size = new System.Drawing.Size(199, 22);
+            this.dtpDateOfBrith.Size = new System.Drawing.Size(197, 22);
             this.dtpDateOfBrith.TabIndex = 3;
             this.dtpDateOfBrith.Value = new System.DateTime(2023, 7, 12, 23, 43, 20, 272);
             this.dtpDateOfBrith.ValueChanged += new System.EventHandler(this.dtpDateOfBrith_ValueChanged);
@@ -373,7 +369,6 @@
             this.cmbStatus.BackColor = System.Drawing.Color.Transparent;
             this.cmbStatus.BorderColor = System.Drawing.Color.DimGray;
             this.cmbStatus.BorderRadius = 10;
-            this.cmbStatus.BorderThickness = 2;
             this.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -385,9 +380,9 @@
             "Select Status",
             "True",
             "False"});
-            this.cmbStatus.Location = new System.Drawing.Point(736, 291);
+            this.cmbStatus.Location = new System.Drawing.Point(801, 195);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(199, 23);
+            this.cmbStatus.Size = new System.Drawing.Size(197, 23);
             this.cmbStatus.TabIndex = 5;
             this.cmbStatus.Enter += new System.EventHandler(this.cmbStatus_Enter);
             this.cmbStatus.Leave += new System.EventHandler(this.cmbStatus_Leave);
@@ -399,7 +394,6 @@
             this.cmbCity.BackColor = System.Drawing.Color.Transparent;
             this.cmbCity.BorderColor = System.Drawing.Color.DimGray;
             this.cmbCity.BorderRadius = 10;
-            this.cmbCity.BorderThickness = 2;
             this.cmbCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -416,9 +410,9 @@
             "Vadodara",
             "Delhi",
             "Junagadh"});
-            this.cmbCity.Location = new System.Drawing.Point(736, 407);
+            this.cmbCity.Location = new System.Drawing.Point(801, 311);
             this.cmbCity.Name = "cmbCity";
-            this.cmbCity.Size = new System.Drawing.Size(199, 23);
+            this.cmbCity.Size = new System.Drawing.Size(197, 23);
             this.cmbCity.TabIndex = 7;
             this.cmbCity.Enter += new System.EventHandler(this.cmbCity_Enter);
             this.cmbCity.Leave += new System.EventHandler(this.cmbCity_Leave);
@@ -428,8 +422,7 @@
             this.txtAddress.Animated = true;
             this.txtAddress.BackColor = System.Drawing.Color.Transparent;
             this.txtAddress.BorderColor = System.Drawing.Color.DimGray;
-            this.txtAddress.BorderRadius = 10;
-            this.txtAddress.BorderThickness = 2;
+            this.txtAddress.BorderRadius = 12;
             this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAddress.DefaultText = "";
             this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -440,7 +433,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(736, 467);
+            this.txtAddress.Location = new System.Drawing.Point(801, 371);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -448,7 +441,7 @@
             this.txtAddress.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtAddress.PlaceholderText = "Enter Address";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(199, 56);
+            this.txtAddress.Size = new System.Drawing.Size(197, 51);
             this.txtAddress.TabIndex = 8;
             this.txtAddress.Leave += new System.EventHandler(this.txtAddress_Leave);
             // 
@@ -457,8 +450,7 @@
             this.txtMobileNo.Animated = true;
             this.txtMobileNo.BackColor = System.Drawing.Color.Transparent;
             this.txtMobileNo.BorderColor = System.Drawing.Color.DimGray;
-            this.txtMobileNo.BorderRadius = 10;
-            this.txtMobileNo.BorderThickness = 2;
+            this.txtMobileNo.BorderRadius = 12;
             this.txtMobileNo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMobileNo.DefaultText = "";
             this.txtMobileNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -469,7 +461,7 @@
             this.txtMobileNo.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMobileNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtMobileNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMobileNo.Location = new System.Drawing.Point(736, 349);
+            this.txtMobileNo.Location = new System.Drawing.Point(801, 253);
             this.txtMobileNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMobileNo.MaxLength = 10;
             this.txtMobileNo.Name = "txtMobileNo";
@@ -477,7 +469,7 @@
             this.txtMobileNo.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMobileNo.PlaceholderText = "Enter Mobile Number";
             this.txtMobileNo.SelectedText = "";
-            this.txtMobileNo.Size = new System.Drawing.Size(199, 22);
+            this.txtMobileNo.Size = new System.Drawing.Size(197, 22);
             this.txtMobileNo.TabIndex = 6;
             this.txtMobileNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobileNo_KeyPress);
             this.txtMobileNo.Leave += new System.EventHandler(this.txtMobileNo_Leave);
@@ -488,7 +480,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label17.Location = new System.Drawing.Point(320, 461);
+            this.label17.Location = new System.Drawing.Point(385, 365);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(15, 16);
             this.label17.TabIndex = 145;
@@ -500,7 +492,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label12.Location = new System.Drawing.Point(320, 405);
+            this.label12.Location = new System.Drawing.Point(385, 309);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(15, 16);
             this.label12.TabIndex = 143;
@@ -512,7 +504,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label9.Location = new System.Drawing.Point(320, 346);
+            this.label9.Location = new System.Drawing.Point(385, 250);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(15, 16);
             this.label9.TabIndex = 142;
@@ -524,7 +516,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label10.Location = new System.Drawing.Point(320, 292);
+            this.label10.Location = new System.Drawing.Point(385, 196);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(15, 16);
             this.label10.TabIndex = 141;
@@ -536,7 +528,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(695, 410);
+            this.label8.Location = new System.Drawing.Point(760, 314);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(15, 16);
             this.label8.TabIndex = 150;
@@ -548,7 +540,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(695, 469);
+            this.label11.Location = new System.Drawing.Point(760, 373);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 16);
             this.label11.TabIndex = 149;
@@ -560,7 +552,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label14.Location = new System.Drawing.Point(695, 353);
+            this.label14.Location = new System.Drawing.Point(760, 257);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(15, 16);
             this.label14.TabIndex = 148;
@@ -572,7 +564,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label15.Location = new System.Drawing.Point(695, 296);
+            this.label15.Location = new System.Drawing.Point(760, 200);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(15, 16);
             this.label15.TabIndex = 147;
@@ -584,7 +576,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label16.Location = new System.Drawing.Point(320, 522);
+            this.label16.Location = new System.Drawing.Point(385, 426);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(15, 16);
             this.label16.TabIndex = 146;
@@ -598,7 +590,7 @@
             this.btnsave.BackColor = System.Drawing.Color.Transparent;
             this.btnsave.BorderColor = System.Drawing.Color.Navy;
             this.btnsave.BorderRadius = 13;
-            this.btnsave.BorderThickness = 2;
+            this.btnsave.BorderThickness = 1;
             this.btnsave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnsave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnsave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -607,7 +599,7 @@
             this.btnsave.FillColor2 = System.Drawing.Color.White;
             this.btnsave.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnsave.ForeColor = System.Drawing.Color.Black;
-            this.btnsave.Location = new System.Drawing.Point(342, 625);
+            this.btnsave.Location = new System.Drawing.Point(332, 522);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(112, 29);
             this.btnsave.TabIndex = 10;
@@ -622,7 +614,7 @@
             this.btnreset.BackColor = System.Drawing.Color.Transparent;
             this.btnreset.BorderColor = System.Drawing.Color.Navy;
             this.btnreset.BorderRadius = 13;
-            this.btnreset.BorderThickness = 2;
+            this.btnreset.BorderThickness = 1;
             this.btnreset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnreset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnreset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -631,7 +623,7 @@
             this.btnreset.FillColor2 = System.Drawing.Color.White;
             this.btnreset.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnreset.ForeColor = System.Drawing.Color.Black;
-            this.btnreset.Location = new System.Drawing.Point(811, 625);
+            this.btnreset.Location = new System.Drawing.Point(801, 522);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(112, 29);
             this.btnreset.TabIndex = 13;
@@ -646,7 +638,7 @@
             this.btndelete.BackColor = System.Drawing.Color.Transparent;
             this.btndelete.BorderColor = System.Drawing.Color.Navy;
             this.btndelete.BorderRadius = 13;
-            this.btndelete.BorderThickness = 2;
+            this.btndelete.BorderThickness = 1;
             this.btndelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btndelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btndelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -655,7 +647,7 @@
             this.btndelete.FillColor2 = System.Drawing.Color.White;
             this.btndelete.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btndelete.ForeColor = System.Drawing.Color.Black;
-            this.btndelete.Location = new System.Drawing.Point(648, 625);
+            this.btndelete.Location = new System.Drawing.Point(638, 522);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(112, 29);
             this.btndelete.TabIndex = 12;
@@ -670,7 +662,7 @@
             this.btnupdate.BackColor = System.Drawing.Color.Transparent;
             this.btnupdate.BorderColor = System.Drawing.Color.Navy;
             this.btnupdate.BorderRadius = 13;
-            this.btnupdate.BorderThickness = 2;
+            this.btnupdate.BorderThickness = 1;
             this.btnupdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnupdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnupdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -679,7 +671,7 @@
             this.btnupdate.FillColor2 = System.Drawing.Color.White;
             this.btnupdate.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnupdate.ForeColor = System.Drawing.Color.Black;
-            this.btnupdate.Location = new System.Drawing.Point(493, 625);
+            this.btnupdate.Location = new System.Drawing.Point(483, 522);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(112, 29);
             this.btnupdate.TabIndex = 11;
@@ -744,16 +736,16 @@
             this.Mobile,
             this.City,
             this.Address});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.StaffDataList.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.StaffDataList.DefaultCellStyle = dataGridViewCellStyle1;
             this.StaffDataList.GridColor = System.Drawing.Color.Linen;
-            this.StaffDataList.Location = new System.Drawing.Point(130, 706);
+            this.StaffDataList.Location = new System.Drawing.Point(148, 638);
             this.StaffDataList.MultiSelect = false;
             this.StaffDataList.Name = "StaffDataList";
             this.StaffDataList.ReadOnly = true;
@@ -921,57 +913,6 @@
             this.ResetDataDailogBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.ResetDataDailogBox.Text = "Are You Sure ! You Want To Reset The Data ?";
             // 
-            // guna2GradientPanel2
-            // 
-            this.guna2GradientPanel2.AutoRoundedCorners = true;
-            this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Black;
-            this.guna2GradientPanel2.BorderRadius = 12;
-            this.guna2GradientPanel2.Controls.Add(this.label6);
-            this.guna2GradientPanel2.Controls.Add(this.btnClose);
-            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.LightCyan;
-            this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(1289, 27);
-            this.guna2GradientPanel2.TabIndex = 156;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Colonna MT", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(54, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 22);
-            this.label6.TabIndex = 62;
-            this.label6.Text = "~ Staff Records";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Animated = true;
-            this.btnClose.AnimatedGIF = true;
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Black;
-            this.btnClose.Font = new System.Drawing.Font("Segoe Fluent Icons", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1075, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(26, 22);
-            this.btnClose.TabIndex = 129;
-            this.btnClose.Text = "X";
-            this.btnClose.UseTransparentBackground = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
-            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.AutoRoundedCorners = true;
@@ -979,50 +920,99 @@
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(90, 90);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(112, 156);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(180, 80);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(121, 80);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 159;
             this.guna2PictureBox2.TabStop = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(77, 191);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(208, 16);
-            this.label13.TabIndex = 158;
-            this.label13.Text = "_________________________";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label19.Location = new System.Drawing.Point(76, 174);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(194, 23);
-            this.label19.TabIndex = 157;
-            this.label19.Text = "*  Staff Information  :";
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
             // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.AutoRoundedCorners = true;
-            this.guna2PictureBox3.BorderRadius = 66;
+            this.guna2PictureBox3.BorderRadius = 31;
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(568, 117);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(905, 570);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(488, 134);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(197, 65);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 161;
             this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.AutoRoundedCorners = true;
+            this.guna2GradientPanel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2GradientPanel1.BorderRadius = 23;
+            this.guna2GradientPanel1.BorderThickness = 1;
+            this.guna2GradientPanel1.Controls.Add(this.btnclose);
+            this.guna2GradientPanel1.Controls.Add(this.label21);
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.LightCyan;
+            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 22);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1289, 49);
+            this.guna2GradientPanel1.TabIndex = 183;
+            // 
+            // btnclose
+            // 
+            this.btnclose.Animated = true;
+            this.btnclose.AnimatedGIF = true;
+            this.btnclose.BackColor = System.Drawing.Color.Transparent;
+            this.btnclose.BorderColor = System.Drawing.Color.Transparent;
+            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclose.FillColor = System.Drawing.Color.Black;
+            this.btnclose.Font = new System.Drawing.Font("Segoe Fluent Icons", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.Location = new System.Drawing.Point(1071, 11);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnclose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnclose.Size = new System.Drawing.Size(31, 28);
+            this.btnclose.TabIndex = 130;
+            this.btnclose.Text = "X";
+            this.btnclose.UseTransparentBackground = true;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click_2);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Colonna MT", 20.25F, System.Drawing.FontStyle.Underline);
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(449, 13);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(165, 28);
+            this.label21.TabIndex = 62;
+            this.label21.Text = "Staff Records";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1289, 22);
+            this.panel1.TabIndex = 182;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(94, 130);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(197, 23);
+            this.label6.TabIndex = 184;
+            this.label6.Text = "*  Personal Information  :";
             // 
             // StaffPage
             // 
@@ -1031,11 +1021,11 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1306, 788);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2PictureBox3);
             this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.StaffDataList);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnreset);
@@ -1085,10 +1075,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StaffDataList)).EndInit();
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1158,12 +1148,12 @@
         private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox2;
         private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox3;
         private Guna.UI2.WinForms.Guna2MessageDialog ResetDataDailogBox;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnclose;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label6;
     }
 }

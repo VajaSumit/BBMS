@@ -478,5 +478,15 @@ namespace BloodBankManagementSystem
         {
             cmbBloodGroup.ForeColor = Color.FromArgb(68, 88, 112);
         }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnclose_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

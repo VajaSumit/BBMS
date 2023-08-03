@@ -32,11 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HospitalRegistrationPage));
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txthospitalID = new Guna.UI2.WinForms.Guna2TextBox();
@@ -118,7 +114,10 @@
             this.MessageBoxForDeleteData1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.MessageBoxForDeleteData2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.MessageBoxForDeleteData3 = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.guna2GradientPanel2.SuspendLayout();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label41 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HospitalList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -133,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2AnimateWindow1
@@ -141,61 +141,15 @@
             this.guna2AnimateWindow1.Interval = 800;
             this.guna2AnimateWindow1.TargetForm = this;
             // 
-            // guna2GradientPanel2
-            // 
-            this.guna2GradientPanel2.AutoRoundedCorners = true;
-            this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Black;
-            this.guna2GradientPanel2.BorderRadius = 12;
-            this.guna2GradientPanel2.Controls.Add(this.label6);
-            this.guna2GradientPanel2.Controls.Add(this.btnClose);
-            resources.ApplyResources(this.guna2GradientPanel2, "guna2GradientPanel2");
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.LightCyan;
-            this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Name = "label6";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Animated = true;
-            this.btnClose.AnimatedGIF = true;
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.btnClose, "btnClose");
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Name = "btnClose";
-            this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.UseTransparentBackground = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.AutoRoundedCorners = true;
-            this.guna2PictureBox2.BorderRadius = 39;
+            this.guna2PictureBox2.BorderRadius = 32;
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.guna2PictureBox2, "guna2PictureBox2");
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.TabStop = false;
-            // 
-            // label18
-            // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label18.Name = "label18";
             // 
             // label17
             // 
@@ -209,8 +163,7 @@
             this.txtName.Animated = true;
             this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.BorderColor = System.Drawing.Color.DimGray;
-            this.txtName.BorderRadius = 10;
-            this.txtName.BorderThickness = 2;
+            this.txtName.BorderRadius = 12;
             this.txtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtName.DefaultText = "";
@@ -235,8 +188,7 @@
             this.txthospitalID.Animated = true;
             this.txthospitalID.BackColor = System.Drawing.Color.Transparent;
             this.txthospitalID.BorderColor = System.Drawing.Color.DimGray;
-            this.txthospitalID.BorderRadius = 10;
-            this.txthospitalID.BorderThickness = 2;
+            this.txthospitalID.BorderRadius = 12;
             this.txthospitalID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txthospitalID.DefaultText = "";
             this.txthospitalID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -287,7 +239,7 @@
             this.ToDayDate.Animated = true;
             this.ToDayDate.AutoRoundedCorners = true;
             this.ToDayDate.BorderRadius = 10;
-            this.ToDayDate.BorderThickness = 2;
+            this.ToDayDate.BorderThickness = 1;
             this.ToDayDate.Checked = true;
             resources.ApplyResources(this.ToDayDate, "ToDayDate");
             this.ToDayDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -318,8 +270,7 @@
             this.txtAddress.Animated = true;
             this.txtAddress.BackColor = System.Drawing.Color.Transparent;
             this.txtAddress.BorderColor = System.Drawing.Color.DimGray;
-            this.txtAddress.BorderRadius = 10;
-            this.txtAddress.BorderThickness = 2;
+            this.txtAddress.BorderRadius = 12;
             this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAddress.DefaultText = "";
             this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -345,7 +296,6 @@
             this.cmbCity.BackColor = System.Drawing.Color.Transparent;
             this.cmbCity.BorderColor = System.Drawing.Color.DimGray;
             this.cmbCity.BorderRadius = 10;
-            this.cmbCity.BorderThickness = 2;
             this.cmbCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -370,8 +320,7 @@
             this.txtEmailID.Animated = true;
             this.txtEmailID.BackColor = System.Drawing.Color.Transparent;
             this.txtEmailID.BorderColor = System.Drawing.Color.DimGray;
-            this.txtEmailID.BorderRadius = 10;
-            this.txtEmailID.BorderThickness = 2;
+            this.txtEmailID.BorderRadius = 12;
             this.txtEmailID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmailID.DefaultText = "";
             this.txtEmailID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -394,8 +343,7 @@
             this.txtMobileNo.Animated = true;
             this.txtMobileNo.BackColor = System.Drawing.Color.Transparent;
             this.txtMobileNo.BorderColor = System.Drawing.Color.DimGray;
-            this.txtMobileNo.BorderRadius = 10;
-            this.txtMobileNo.BorderThickness = 2;
+            this.txtMobileNo.BorderRadius = 12;
             this.txtMobileNo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMobileNo.DefaultText = "";
             this.txtMobileNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -476,8 +424,7 @@
             this.txtOwnerName.Animated = true;
             this.txtOwnerName.BackColor = System.Drawing.Color.Transparent;
             this.txtOwnerName.BorderColor = System.Drawing.Color.DimGray;
-            this.txtOwnerName.BorderRadius = 10;
-            this.txtOwnerName.BorderThickness = 2;
+            this.txtOwnerName.BorderRadius = 12;
             this.txtOwnerName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtOwnerName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtOwnerName.DefaultText = "";
@@ -516,8 +463,7 @@
             this.txtOwnerMobile.Animated = true;
             this.txtOwnerMobile.BackColor = System.Drawing.Color.Transparent;
             this.txtOwnerMobile.BorderColor = System.Drawing.Color.DimGray;
-            this.txtOwnerMobile.BorderRadius = 10;
-            this.txtOwnerMobile.BorderThickness = 2;
+            this.txtOwnerMobile.BorderRadius = 12;
             this.txtOwnerMobile.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtOwnerMobile.DefaultText = "";
             this.txtOwnerMobile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -556,8 +502,7 @@
             this.txtTelephoneNo.Animated = true;
             this.txtTelephoneNo.BackColor = System.Drawing.Color.Transparent;
             this.txtTelephoneNo.BorderColor = System.Drawing.Color.DimGray;
-            this.txtTelephoneNo.BorderRadius = 10;
-            this.txtTelephoneNo.BorderThickness = 2;
+            this.txtTelephoneNo.BorderRadius = 12;
             this.txtTelephoneNo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelephoneNo.DefaultText = "";
             this.txtTelephoneNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -597,7 +542,6 @@
             this.cmbOwnershipType.BackColor = System.Drawing.Color.Transparent;
             this.cmbOwnershipType.BorderColor = System.Drawing.Color.DimGray;
             this.cmbOwnershipType.BorderRadius = 10;
-            this.cmbOwnershipType.BorderThickness = 2;
             this.cmbOwnershipType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbOwnershipType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOwnershipType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -638,7 +582,6 @@
             this.cmbHospitalType.BackColor = System.Drawing.Color.Transparent;
             this.cmbHospitalType.BorderColor = System.Drawing.Color.DimGray;
             this.cmbHospitalType.BorderRadius = 10;
-            this.cmbHospitalType.BorderThickness = 2;
             this.cmbHospitalType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbHospitalType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHospitalType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -676,8 +619,7 @@
             this.txtIfSpecialtyHospital.Animated = true;
             this.txtIfSpecialtyHospital.BackColor = System.Drawing.Color.Transparent;
             this.txtIfSpecialtyHospital.BorderColor = System.Drawing.Color.DimGray;
-            this.txtIfSpecialtyHospital.BorderRadius = 10;
-            this.txtIfSpecialtyHospital.BorderThickness = 2;
+            this.txtIfSpecialtyHospital.BorderRadius = 12;
             this.txtIfSpecialtyHospital.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIfSpecialtyHospital.DefaultText = "";
             this.txtIfSpecialtyHospital.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -718,7 +660,7 @@
             this.btnsave.BackColor = System.Drawing.Color.Transparent;
             this.btnsave.BorderColor = System.Drawing.Color.Navy;
             this.btnsave.BorderRadius = 13;
-            this.btnsave.BorderThickness = 2;
+            this.btnsave.BorderThickness = 1;
             this.btnsave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnsave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnsave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -738,7 +680,7 @@
             this.btnreset.BackColor = System.Drawing.Color.Transparent;
             this.btnreset.BorderColor = System.Drawing.Color.Navy;
             this.btnreset.BorderRadius = 13;
-            this.btnreset.BorderThickness = 2;
+            this.btnreset.BorderThickness = 1;
             this.btnreset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnreset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnreset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -758,7 +700,7 @@
             this.btndelete.BackColor = System.Drawing.Color.Transparent;
             this.btndelete.BorderColor = System.Drawing.Color.Navy;
             this.btndelete.BorderRadius = 13;
-            this.btndelete.BorderThickness = 2;
+            this.btndelete.BorderThickness = 1;
             this.btndelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btndelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btndelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -778,7 +720,7 @@
             this.btnupdate.BackColor = System.Drawing.Color.Transparent;
             this.btnupdate.BorderColor = System.Drawing.Color.Navy;
             this.btnupdate.BorderRadius = 13;
-            this.btnupdate.BorderThickness = 2;
+            this.btnupdate.BorderThickness = 1;
             this.btnupdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnupdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnupdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -1069,11 +1011,58 @@
             this.MessageBoxForDeleteData3.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.MessageBoxForDeleteData3.Text = "Are You Sure ! You Want To Delete The Record ?";
             // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.AutoRoundedCorners = true;
+            this.guna2GradientPanel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2GradientPanel1.BorderRadius = 23;
+            this.guna2GradientPanel1.BorderThickness = 1;
+            this.guna2GradientPanel1.Controls.Add(this.btnclose);
+            this.guna2GradientPanel1.Controls.Add(this.label41);
+            resources.ApplyResources(this.guna2GradientPanel1, "guna2GradientPanel1");
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.LightCyan;
+            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            // 
+            // btnclose
+            // 
+            this.btnclose.Animated = true;
+            this.btnclose.AnimatedGIF = true;
+            this.btnclose.BackColor = System.Drawing.Color.Transparent;
+            this.btnclose.BorderColor = System.Drawing.Color.Transparent;
+            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclose.FillColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.btnclose, "btnclose");
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.Name = "btnclose";
+            this.btnclose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnclose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnclose.UseTransparentBackground = true;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click_1);
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Name = "label41";
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
             // HospitalRegistrationPage
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.HospitalList);
             this.Controls.Add(this.btnsave);
@@ -1120,16 +1109,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.guna2GradientPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "HospitalRegistrationPage";
             this.Load += new System.EventHandler(this.HospitalRegistrationPage_Load);
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HospitalList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -1144,6 +1129,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1152,11 +1139,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2TextBox txthospitalID;
@@ -1238,5 +1221,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn OwnershipType;
         private System.Windows.Forms.DataGridViewTextBoxColumn HospitalType;
         private System.Windows.Forms.DataGridViewTextBoxColumn SpecialtyHospital;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnclose;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Panel panel1;
     }
 }

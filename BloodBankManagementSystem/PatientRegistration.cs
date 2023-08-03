@@ -44,11 +44,15 @@ namespace BloodBankManagementSystem
             cmbCity.ForeColor = Color.Silver;
             cmbBloodGroup.SelectedItem = "Select Blood Group";
             cmbBloodGroup.ForeColor = Color.Silver;
+            DataBindingForDoctorName();
+            DataBindingForHospitalName();
         }
 
 
         public void ClearAllData()
         {
+            DataBindingForDoctorName();
+            DataBindingForHospitalName();
             txtName.Clear();
             dtpDateOfBrith.Value = DateTime.Now;
             cmbGender.SelectedItem = "Select Gender";
@@ -60,6 +64,8 @@ namespace BloodBankManagementSystem
             txtAddress.Clear();
             cmbBloodGroup.SelectedItem = "Select Blood Group";
             cmbBloodGroup.ForeColor = Color.Silver;
+            cmbHospitalName.SelectedItem = null;
+            cmbDoctorName.SelectedItem = null;
         }
 
      
@@ -118,6 +124,16 @@ namespace BloodBankManagementSystem
                 errorProvider8.SetError(this.cmbBloodGroup, "Please Select Blood Group");
                 cmbBloodGroup.Focus();
             }
+            else if(cmbHospitalName.SelectedItem == null)
+            {
+                errorProvider9.SetError(this.cmbHospitalName, "Please Select Hospital Name");
+                cmbHospitalName.Focus();
+            }
+            else if(cmbDoctorName.SelectedItem == null)
+            {
+                errorProvider10.SetError(this.cmbDoctorName, "Please Select Doctor");
+                cmbDoctorName.Focus();
+            }
             else
             {
 
@@ -140,20 +156,24 @@ namespace BloodBankManagementSystem
                     string name = txtName.Text;
                     string gender = cmbGender.SelectedItem.ToString();
                     string mobile = txtMobileNo.Text;
+                    string registrationdate = RegistrationDate.Value.ToString();
                     string email = txtEmailID.Text;
                     string city = cmbCity.SelectedItem.ToString();
                     string address = txtAddress.Text;
                     string bloodgroup = cmbBloodGroup.SelectedItem.ToString();
+                    string hospitalname = cmbHospitalName.SelectedItem.ToString();
+                    string doctorname = cmbDoctorName.SelectedItem.ToString();
 
                     SqlConnection con = new SqlConnection(cs);
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("exec InsertPatientRecordRegistration '" + id + "','" + name + "','" + dtpDateOfBrith.Value + "','" + gender + "','" + mobile + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "'", con);
+                    SqlCommand cmd = new SqlCommand("exec InsertPatientRecordRegistration '" + id + "','" + name + "','" + dtpDateOfBrith.Value + "','" + gender + "','" + mobile + "','" + RegistrationDate.Value + "','" + email + "','" + city + "','" + address + "','" + bloodgroup + "','" + hospitalname + "','" + doctorname + "'", con);
                     int a = cmd.ExecuteNonQuery();
                     if (a > 0)
                     {
                         SaveRecordDialogBox1.Show();
                         ClearAllData();
                         PatientAutoIncrementID();
+                       
 
 
                     }
@@ -362,6 +382,69 @@ namespace BloodBankManagementSystem
         {
             cmbBloodGroup.ForeColor = Color.FromArgb(68, 88, 112);
 
+        }
+
+        private void btnclose_Click_3(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmbHospitalName_Leave(object sender, EventArgs e)
+        {
+            if (cmbHospitalName.SelectedItem == null)
+            {
+                errorProvider9.SetError(this.cmbHospitalName, "Please Select Hospital Name");
+                cmbHospitalName.Focus();
+            }
+            else
+            {
+                errorProvider9.Clear();
+            }
+        }
+
+        private void cmbDoctorName_Leave(object sender, EventArgs e)
+        {
+            if (cmbDoctorName.SelectedItem == null)
+            {
+                errorProvider10.SetError(this.cmbDoctorName, "Please Select Doctor");
+                cmbDoctorName.Focus();
+            }
+            else
+            {
+                errorProvider10.Clear();
+            }
+        }
+
+        public void DataBindingForHospitalName()
+        {
+            cmbHospitalName.Items.Clear();
+            SqlConnection con = new SqlConnection(cs);
+            string query = "select *from HospitalTbl";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                string name = dr.GetString(2);
+                cmbHospitalName.Items.Add(name);
+            }
+            con.Close();
+        }
+      
+        public void DataBindingForDoctorName()
+        {
+            cmbDoctorName.Items.Clear();
+            SqlConnection con = new SqlConnection(cs);
+            string query = "select *from DoctorTbl";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                string name = dr.GetString(2);
+                cmbDoctorName.Items.Add(name);
+            }
+            con.Close();
         }
     }
 }

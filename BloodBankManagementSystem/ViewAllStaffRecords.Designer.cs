@@ -43,14 +43,15 @@
             this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.StaffDataList)).BeginInit();
-            this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ShadowForm1
@@ -85,13 +86,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.StaffDataList.DefaultCellStyle = dataGridViewCellStyle1;
             this.StaffDataList.GridColor = System.Drawing.Color.Linen;
-            this.StaffDataList.Location = new System.Drawing.Point(115, 309);
+            this.StaffDataList.Location = new System.Drawing.Point(89, 242);
             this.StaffDataList.MultiSelect = false;
             this.StaffDataList.Name = "StaffDataList";
             this.StaffDataList.ReadOnly = true;
             this.StaffDataList.RowTemplate.ReadOnly = true;
             this.StaffDataList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.StaffDataList.Size = new System.Drawing.Size(964, 379);
+            this.StaffDataList.Size = new System.Drawing.Size(964, 468);
             this.StaffDataList.TabIndex = 155;
             // 
             // Id
@@ -171,67 +172,16 @@
             this.Address.ReadOnly = true;
             this.Address.Width = 140;
             // 
-            // guna2GradientPanel2
-            // 
-            this.guna2GradientPanel2.AutoRoundedCorners = true;
-            this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Black;
-            this.guna2GradientPanel2.BorderRadius = 12;
-            this.guna2GradientPanel2.Controls.Add(this.label6);
-            this.guna2GradientPanel2.Controls.Add(this.btnClose);
-            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.LightCyan;
-            this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(1306, 27);
-            this.guna2GradientPanel2.TabIndex = 157;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Colonna MT", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(54, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(195, 22);
-            this.label6.TabIndex = 62;
-            this.label6.Text = "~ All Staff Records";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Animated = true;
-            this.btnClose.AnimatedGIF = true;
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Black;
-            this.btnClose.Font = new System.Drawing.Font("Segoe Fluent Icons", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1075, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(26, 22);
-            this.btnClose.TabIndex = 129;
-            this.btnClose.Text = "X";
-            this.btnClose.UseTransparentBackground = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
-            // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.AutoRoundedCorners = true;
-            this.guna2PictureBox3.BorderRadius = 80;
+            this.guna2PictureBox3.BorderRadius = 46;
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(186, 130);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(111, 131);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(515, 162);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(365, 94);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 162;
             this.guna2PictureBox3.TabStop = false;
@@ -242,6 +192,66 @@
             this.guna2AnimateWindow1.Interval = 800;
             this.guna2AnimateWindow1.TargetForm = this;
             // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.AutoRoundedCorners = true;
+            this.guna2GradientPanel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2GradientPanel1.BorderRadius = 23;
+            this.guna2GradientPanel1.BorderThickness = 1;
+            this.guna2GradientPanel1.Controls.Add(this.guna2CircleButton1);
+            this.guna2GradientPanel1.Controls.Add(this.label21);
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.LightCyan;
+            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 22);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1306, 49);
+            this.guna2GradientPanel1.TabIndex = 185;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.Animated = true;
+            this.guna2CircleButton1.AnimatedGIF = true;
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Black;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe Fluent Icons", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(1068, 11);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(31, 28);
+            this.guna2CircleButton1.TabIndex = 130;
+            this.guna2CircleButton1.Text = "X";
+            this.guna2CircleButton1.UseTransparentBackground = true;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Colonna MT", 20.25F, System.Drawing.FontStyle.Underline);
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(449, 13);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(206, 28);
+            this.label21.TabIndex = 62;
+            this.label21.Text = "All Staff Records";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1306, 22);
+            this.panel1.TabIndex = 184;
+            // 
             // ViewAllStaffRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,8 +259,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1306, 788);
+            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2PictureBox3);
-            this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.StaffDataList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewAllStaffRecords";
@@ -258,9 +269,9 @@
             this.Text = "ViewAllStaffRecords";
             this.Load += new System.EventHandler(this.ViewAllStaffRecords_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StaffDataList)).EndInit();
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -278,10 +289,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn City;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -132,16 +132,10 @@ namespace BloodBankManagementSystem
             this.Close();
         }
 
-        private void btnclose_Click_1(object sender, EventArgs e)
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void guna2CirclePictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

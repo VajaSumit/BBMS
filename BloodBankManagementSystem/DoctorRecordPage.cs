@@ -549,7 +549,7 @@ namespace BloodBankManagementSystem
                         DoctorIdAutoGenerate();
                         ClearData();
                         DataBinding();
-                        DataBindingForHospitalName();
+                     
 
                     }
                     else
@@ -577,6 +577,7 @@ namespace BloodBankManagementSystem
 
         public void DataBindingForHospitalName()
         {
+            cmbHospitalName.Items.Clear();
             SqlConnection con = new SqlConnection(cs);
             string query = "select *from HospitalTbl";
             SqlCommand cmd = new SqlCommand(query, con);
@@ -689,7 +690,7 @@ namespace BloodBankManagementSystem
                     DoctorIdAutoGenerate();
                     ClearData();
                     DataBinding();
-                    DataBindingForHospitalName();
+                 
 
                 }
                 else
@@ -802,7 +803,7 @@ namespace BloodBankManagementSystem
                         DoctorIdAutoGenerate();
                         ClearData();
                         DataBinding();
-                        DataBindingForHospitalName();
+                     
 
                     }
                     else
@@ -838,6 +839,11 @@ namespace BloodBankManagementSystem
             txtHospitalAddress.Text = DoctorList.SelectedRows[0].Cells[18].Value.ToString();
 
 
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

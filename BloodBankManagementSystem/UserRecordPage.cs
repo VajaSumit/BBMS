@@ -821,5 +821,10 @@ namespace BloodBankManagementSystem
             cmbStatus.ForeColor = Color.FromArgb(68, 88, 112);
 
         }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

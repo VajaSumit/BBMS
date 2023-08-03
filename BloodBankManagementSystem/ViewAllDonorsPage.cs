@@ -113,10 +113,11 @@ namespace BloodBankManagementSystem
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+  
+
+        private void btnclose_Click_2(object sender, EventArgs e)
         {
             this.Close();
-
         }
     }
 }

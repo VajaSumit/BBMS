@@ -32,11 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorRecordPage));
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.txtMobileNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -71,7 +66,6 @@
             this.cmbState = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.cmbMedicalDegree = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -124,8 +118,6 @@
             this.MessageBoxForDeleteData2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.MessageBoxForDeleteData3 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.DoctorList = new System.Windows.Forms.DataGridView();
-            this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DoctorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DoctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -145,8 +137,12 @@
             this.MedicalLicenseNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HospitalName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HospitalAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2GradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label41 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -166,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DoctorList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2AnimateWindow1
@@ -174,97 +171,16 @@
             this.guna2AnimateWindow1.Interval = 800;
             this.guna2AnimateWindow1.TargetForm = this;
             // 
-            // guna2GradientPanel2
-            // 
-            this.guna2GradientPanel2.AutoRoundedCorners = true;
-            this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Black;
-            this.guna2GradientPanel2.BorderRadius = 12;
-            this.guna2GradientPanel2.Controls.Add(this.label6);
-            this.guna2GradientPanel2.Controls.Add(this.btnClose);
-            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.LightCyan;
-            this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(1306, 27);
-            this.guna2GradientPanel2.TabIndex = 160;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Colonna MT", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(54, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(283, 22);
-            this.label6.TabIndex = 62;
-            this.label6.Text = "~Doctor  Registration Form";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Animated = true;
-            this.btnClose.AnimatedGIF = true;
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Black;
-            this.btnClose.Font = new System.Drawing.Font("Segoe Fluent Icons", 9F, System.Drawing.FontStyle.Bold);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1075, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(26, 22);
-            this.btnClose.TabIndex = 129;
-            this.btnClose.Text = "X";
-            this.btnClose.UseTransparentBackground = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.AutoRoundedCorners = true;
-            this.guna2PictureBox2.BorderRadius = 39;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(73, 84);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(180, 80);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 165;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label18.Location = new System.Drawing.Point(83, 198);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(192, 16);
-            this.label18.TabIndex = 164;
-            this.label18.Text = "_______________________";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(69, 177);
+            this.label17.Location = new System.Drawing.Point(112, 124);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(206, 23);
+            this.label17.Size = new System.Drawing.Size(192, 23);
             this.label17.TabIndex = 163;
             this.label17.Text = "* Personal Information  :";
             // 
@@ -273,8 +189,7 @@
             this.txtMobileNo.Animated = true;
             this.txtMobileNo.BackColor = System.Drawing.Color.Transparent;
             this.txtMobileNo.BorderColor = System.Drawing.Color.DimGray;
-            this.txtMobileNo.BorderRadius = 10;
-            this.txtMobileNo.BorderThickness = 2;
+            this.txtMobileNo.BorderRadius = 12;
             this.txtMobileNo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMobileNo.DefaultText = "";
             this.txtMobileNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -285,7 +200,7 @@
             this.txtMobileNo.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtMobileNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtMobileNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMobileNo.Location = new System.Drawing.Point(575, 258);
+            this.txtMobileNo.Location = new System.Drawing.Point(436, 397);
             this.txtMobileNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMobileNo.MaxLength = 10;
             this.txtMobileNo.Name = "txtMobileNo";
@@ -293,7 +208,7 @@
             this.txtMobileNo.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMobileNo.PlaceholderText = "Enter Mobile Number";
             this.txtMobileNo.SelectedText = "";
-            this.txtMobileNo.Size = new System.Drawing.Size(199, 22);
+            this.txtMobileNo.Size = new System.Drawing.Size(197, 22);
             this.txtMobileNo.TabIndex = 4;
             this.txtMobileNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobileNo_KeyPress);
             this.txtMobileNo.Leave += new System.EventHandler(this.txtMobileNo_Leave);
@@ -305,7 +220,7 @@
             this.label14.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.DarkBlue;
             this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label14.Location = new System.Drawing.Point(536, 263);
+            this.label14.Location = new System.Drawing.Point(397, 402);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(15, 16);
             this.label14.TabIndex = 201;
@@ -315,12 +230,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(454, 262);
+            this.label5.Location = new System.Drawing.Point(308, 401);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 16);
+            this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 200;
             this.label5.Text = "Mobile No";
             // 
@@ -329,8 +244,7 @@
             this.txtDoctorName.Animated = true;
             this.txtDoctorName.BackColor = System.Drawing.Color.Transparent;
             this.txtDoctorName.BorderColor = System.Drawing.Color.DimGray;
-            this.txtDoctorName.BorderRadius = 10;
-            this.txtDoctorName.BorderThickness = 2;
+            this.txtDoctorName.BorderRadius = 12;
             this.txtDoctorName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtDoctorName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDoctorName.DefaultText = "";
@@ -342,14 +256,14 @@
             this.txtDoctorName.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtDoctorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtDoctorName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDoctorName.Location = new System.Drawing.Point(204, 309);
+            this.txtDoctorName.Location = new System.Drawing.Point(436, 245);
             this.txtDoctorName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDoctorName.Name = "txtDoctorName";
             this.txtDoctorName.PasswordChar = '\0';
             this.txtDoctorName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtDoctorName.PlaceholderText = "Enter Doctor Name";
             this.txtDoctorName.SelectedText = "";
-            this.txtDoctorName.Size = new System.Drawing.Size(199, 22);
+            this.txtDoctorName.Size = new System.Drawing.Size(197, 22);
             this.txtDoctorName.TabIndex = 1;
             this.txtDoctorName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDoctorName_KeyPress);
             this.txtDoctorName.Leave += new System.EventHandler(this.txtDoctorName_Leave);
@@ -359,8 +273,7 @@
             this.txtDoctorID.Animated = true;
             this.txtDoctorID.BackColor = System.Drawing.Color.Transparent;
             this.txtDoctorID.BorderColor = System.Drawing.Color.DimGray;
-            this.txtDoctorID.BorderRadius = 10;
-            this.txtDoctorID.BorderThickness = 2;
+            this.txtDoctorID.BorderRadius = 12;
             this.txtDoctorID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDoctorID.DefaultText = "";
             this.txtDoctorID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -371,7 +284,7 @@
             this.txtDoctorID.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtDoctorID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtDoctorID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDoctorID.Location = new System.Drawing.Point(204, 257);
+            this.txtDoctorID.Location = new System.Drawing.Point(436, 193);
             this.txtDoctorID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDoctorID.Name = "txtDoctorID";
             this.txtDoctorID.PasswordChar = '\0';
@@ -379,7 +292,7 @@
             this.txtDoctorID.PlaceholderText = "";
             this.txtDoctorID.ReadOnly = true;
             this.txtDoctorID.SelectedText = "";
-            this.txtDoctorID.Size = new System.Drawing.Size(199, 22);
+            this.txtDoctorID.Size = new System.Drawing.Size(197, 22);
             this.txtDoctorID.TabIndex = 0;
             // 
             // label9
@@ -389,7 +302,7 @@
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.DarkBlue;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(165, 312);
+            this.label9.Location = new System.Drawing.Point(397, 248);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(15, 16);
             this.label9.TabIndex = 199;
@@ -402,7 +315,7 @@
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.DarkBlue;
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(165, 261);
+            this.label10.Location = new System.Drawing.Point(397, 197);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(15, 16);
             this.label10.TabIndex = 198;
@@ -412,12 +325,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(85, 314);
+            this.label2.Location = new System.Drawing.Point(313, 250);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.Size = new System.Drawing.Size(58, 16);
             this.label2.TabIndex = 197;
             this.label2.Text = "Full Name";
             // 
@@ -425,12 +338,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(83, 264);
+            this.label1.Location = new System.Drawing.Point(309, 200);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 16);
+            this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 196;
             this.label1.Text = "Doctor  ID";
             // 
@@ -441,7 +354,6 @@
             this.cmbStatus.BackColor = System.Drawing.Color.Transparent;
             this.cmbStatus.BorderColor = System.Drawing.Color.DimGray;
             this.cmbStatus.BorderRadius = 10;
-            this.cmbStatus.BorderThickness = 2;
             this.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -453,9 +365,9 @@
             "Select Status",
             "True",
             "False"});
-            this.cmbStatus.Location = new System.Drawing.Point(575, 407);
+            this.cmbStatus.Location = new System.Drawing.Point(834, 251);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(199, 23);
+            this.cmbStatus.Size = new System.Drawing.Size(197, 23);
             this.cmbStatus.TabIndex = 7;
             this.cmbStatus.Enter += new System.EventHandler(this.cmbStatus_Enter);
             this.cmbStatus.Leave += new System.EventHandler(this.cmbStatus_Leave);
@@ -466,7 +378,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label21.Location = new System.Drawing.Point(538, 412);
+            this.label21.Location = new System.Drawing.Point(792, 254);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(15, 16);
             this.label21.TabIndex = 204;
@@ -476,11 +388,11 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label22.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label22.Location = new System.Drawing.Point(479, 413);
+            this.label22.Location = new System.Drawing.Point(733, 252);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(40, 16);
+            this.label22.Size = new System.Drawing.Size(37, 16);
             this.label22.TabIndex = 203;
             this.label22.Text = "Status";
             // 
@@ -489,8 +401,7 @@
             this.txtAddress.Animated = true;
             this.txtAddress.BackColor = System.Drawing.Color.Transparent;
             this.txtAddress.BorderColor = System.Drawing.Color.DimGray;
-            this.txtAddress.BorderRadius = 10;
-            this.txtAddress.BorderThickness = 2;
+            this.txtAddress.BorderRadius = 12;
             this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAddress.DefaultText = "";
             this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -501,7 +412,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(881, 358);
+            this.txtAddress.Location = new System.Drawing.Point(834, 413);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -509,7 +420,7 @@
             this.txtAddress.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtAddress.PlaceholderText = "Enter Doctor Address";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(199, 72);
+            this.txtAddress.Size = new System.Drawing.Size(197, 56);
             this.txtAddress.TabIndex = 10;
             this.txtAddress.Leave += new System.EventHandler(this.txtAddress_Leave);
             // 
@@ -520,7 +431,6 @@
             this.cmbCity.BackColor = System.Drawing.Color.Transparent;
             this.cmbCity.BorderColor = System.Drawing.Color.DimGray;
             this.cmbCity.BorderRadius = 10;
-            this.cmbCity.BorderThickness = 2;
             this.cmbCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -537,9 +447,9 @@
             "Vadodara",
             "Delhi",
             "Junagadh"});
-            this.cmbCity.Location = new System.Drawing.Point(881, 308);
+            this.cmbCity.Location = new System.Drawing.Point(834, 360);
             this.cmbCity.Name = "cmbCity";
-            this.cmbCity.Size = new System.Drawing.Size(199, 23);
+            this.cmbCity.Size = new System.Drawing.Size(197, 23);
             this.cmbCity.TabIndex = 9;
             this.cmbCity.Enter += new System.EventHandler(this.cmbCity_Enter);
             this.cmbCity.Leave += new System.EventHandler(this.cmbCity_Leave);
@@ -549,8 +459,7 @@
             this.txtEmailID.Animated = true;
             this.txtEmailID.BackColor = System.Drawing.Color.Transparent;
             this.txtEmailID.BorderColor = System.Drawing.Color.DimGray;
-            this.txtEmailID.BorderRadius = 10;
-            this.txtEmailID.BorderThickness = 2;
+            this.txtEmailID.BorderRadius = 12;
             this.txtEmailID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmailID.DefaultText = "";
             this.txtEmailID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -561,14 +470,14 @@
             this.txtEmailID.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtEmailID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtEmailID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailID.Location = new System.Drawing.Point(575, 308);
+            this.txtEmailID.Location = new System.Drawing.Point(436, 447);
             this.txtEmailID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmailID.Name = "txtEmailID";
             this.txtEmailID.PasswordChar = '\0';
             this.txtEmailID.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtEmailID.PlaceholderText = "Enter Email Address";
             this.txtEmailID.SelectedText = "";
-            this.txtEmailID.Size = new System.Drawing.Size(199, 22);
+            this.txtEmailID.Size = new System.Drawing.Size(197, 22);
             this.txtEmailID.TabIndex = 5;
             this.txtEmailID.Leave += new System.EventHandler(this.txtEmailID_Leave);
             // 
@@ -579,7 +488,7 @@
             this.label15.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.DarkBlue;
             this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label15.Location = new System.Drawing.Point(851, 373);
+            this.label15.Location = new System.Drawing.Point(792, 418);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(15, 16);
             this.label15.TabIndex = 213;
@@ -592,7 +501,7 @@
             this.label16.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.DarkBlue;
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(851, 319);
+            this.label16.Location = new System.Drawing.Point(792, 364);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(15, 16);
             this.label16.TabIndex = 212;
@@ -605,7 +514,7 @@
             this.label13.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.DarkBlue;
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(536, 314);
+            this.label13.Location = new System.Drawing.Point(397, 453);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(15, 16);
             this.label13.TabIndex = 211;
@@ -615,10 +524,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(789, 374);
+            this.label7.Location = new System.Drawing.Point(718, 416);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 16);
             this.label7.TabIndex = 210;
@@ -628,12 +537,12 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(813, 320);
+            this.label8.Location = new System.Drawing.Point(741, 362);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 16);
+            this.label8.Size = new System.Drawing.Size(29, 16);
             this.label8.TabIndex = 209;
             this.label8.Text = "City";
             // 
@@ -641,12 +550,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(463, 312);
+            this.label4.Location = new System.Drawing.Point(321, 451);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.Size = new System.Drawing.Size(50, 16);
             this.label4.TabIndex = 208;
             this.label4.Text = "Email ID";
             // 
@@ -657,7 +566,6 @@
             this.cmbGender.BackColor = System.Drawing.Color.Transparent;
             this.cmbGender.BorderColor = System.Drawing.Color.DimGray;
             this.cmbGender.BorderRadius = 10;
-            this.cmbGender.BorderThickness = 2;
             this.cmbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -669,9 +577,9 @@
             "Select Gender",
             "Male",
             "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(204, 359);
+            this.cmbGender.Location = new System.Drawing.Point(436, 295);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(199, 23);
+            this.cmbGender.Size = new System.Drawing.Size(197, 23);
             this.cmbGender.TabIndex = 2;
             this.cmbGender.Enter += new System.EventHandler(this.cmbGender_Enter);
             this.cmbGender.Leave += new System.EventHandler(this.cmbGender_Leave);
@@ -682,7 +590,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(165, 363);
+            this.label11.Location = new System.Drawing.Point(397, 299);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 16);
             this.label11.TabIndex = 216;
@@ -692,9 +600,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(96, 364);
+            this.label3.Location = new System.Drawing.Point(323, 300);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 215;
@@ -705,7 +613,7 @@
             this.dtpDateOfBrith.Animated = true;
             this.dtpDateOfBrith.AutoRoundedCorners = true;
             this.dtpDateOfBrith.BorderRadius = 10;
-            this.dtpDateOfBrith.BorderThickness = 2;
+            this.dtpDateOfBrith.BorderThickness = 1;
             this.dtpDateOfBrith.Checked = true;
             this.dtpDateOfBrith.CustomFormat = "dd/MM/yyyy";
             this.dtpDateOfBrith.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -713,11 +621,11 @@
             this.dtpDateOfBrith.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.dtpDateOfBrith.ForeColor = System.Drawing.Color.White;
             this.dtpDateOfBrith.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateOfBrith.Location = new System.Drawing.Point(204, 410);
+            this.dtpDateOfBrith.Location = new System.Drawing.Point(436, 346);
             this.dtpDateOfBrith.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
             this.dtpDateOfBrith.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpDateOfBrith.Name = "dtpDateOfBrith";
-            this.dtpDateOfBrith.Size = new System.Drawing.Size(199, 22);
+            this.dtpDateOfBrith.Size = new System.Drawing.Size(197, 22);
             this.dtpDateOfBrith.TabIndex = 3;
             this.dtpDateOfBrith.Value = new System.DateTime(2023, 7, 12, 23, 43, 20, 272);
             this.dtpDateOfBrith.ValueChanged += new System.EventHandler(this.dtpDateOfBrith_ValueChanged);
@@ -729,7 +637,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label12.Location = new System.Drawing.Point(165, 414);
+            this.label12.Location = new System.Drawing.Point(397, 350);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(15, 16);
             this.label12.TabIndex = 219;
@@ -739,11 +647,11 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label19.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label19.Location = new System.Drawing.Point(67, 414);
+            this.label19.Location = new System.Drawing.Point(299, 350);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(77, 16);
+            this.label19.Size = new System.Drawing.Size(72, 16);
             this.label19.TabIndex = 218;
             this.label19.Text = "Date Of Brith";
             // 
@@ -752,7 +660,7 @@
             this.RegistrationDate.Animated = true;
             this.RegistrationDate.AutoRoundedCorners = true;
             this.RegistrationDate.BorderRadius = 10;
-            this.RegistrationDate.BorderThickness = 2;
+            this.RegistrationDate.BorderThickness = 1;
             this.RegistrationDate.Checked = true;
             this.RegistrationDate.CustomFormat = "dd/MM/yyyy";
             this.RegistrationDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -760,11 +668,11 @@
             this.RegistrationDate.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.RegistrationDate.ForeColor = System.Drawing.Color.White;
             this.RegistrationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.RegistrationDate.Location = new System.Drawing.Point(575, 358);
+            this.RegistrationDate.Location = new System.Drawing.Point(834, 195);
             this.RegistrationDate.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
             this.RegistrationDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.RegistrationDate.Name = "RegistrationDate";
-            this.RegistrationDate.Size = new System.Drawing.Size(199, 22);
+            this.RegistrationDate.Size = new System.Drawing.Size(197, 22);
             this.RegistrationDate.TabIndex = 6;
             this.RegistrationDate.Value = new System.DateTime(2023, 7, 12, 23, 43, 20, 272);
             // 
@@ -774,7 +682,7 @@
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label28.Location = new System.Drawing.Point(538, 358);
+            this.label28.Location = new System.Drawing.Point(792, 200);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(15, 16);
             this.label28.TabIndex = 222;
@@ -784,11 +692,11 @@
             // 
             this.lable3.AutoSize = true;
             this.lable3.BackColor = System.Drawing.Color.Transparent;
-            this.lable3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lable3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.lable3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lable3.Location = new System.Drawing.Point(422, 359);
+            this.lable3.Location = new System.Drawing.Point(678, 200);
             this.lable3.Name = "lable3";
-            this.lable3.Size = new System.Drawing.Size(97, 16);
+            this.lable3.Size = new System.Drawing.Size(93, 16);
             this.lable3.TabIndex = 221;
             this.lable3.Text = "Registration Date";
             // 
@@ -799,7 +707,6 @@
             this.cmbState.BackColor = System.Drawing.Color.Transparent;
             this.cmbState.BorderColor = System.Drawing.Color.DimGray;
             this.cmbState.BorderRadius = 10;
-            this.cmbState.BorderThickness = 2;
             this.cmbState.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbState.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -810,9 +717,9 @@
             this.cmbState.Items.AddRange(new object[] {
             "Select State",
             "Gujarat"});
-            this.cmbState.Location = new System.Drawing.Point(881, 258);
+            this.cmbState.Location = new System.Drawing.Point(834, 305);
             this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(199, 23);
+            this.cmbState.Size = new System.Drawing.Size(197, 23);
             this.cmbState.TabIndex = 8;
             this.cmbState.Enter += new System.EventHandler(this.cmbState_Enter);
             this.cmbState.Leave += new System.EventHandler(this.cmbState_Leave);
@@ -824,7 +731,7 @@
             this.label20.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label20.ForeColor = System.Drawing.Color.DarkBlue;
             this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label20.Location = new System.Drawing.Point(851, 265);
+            this.label20.Location = new System.Drawing.Point(792, 310);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(15, 16);
             this.label20.TabIndex = 225;
@@ -834,38 +741,25 @@
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label23.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label23.ForeColor = System.Drawing.Color.DarkBlue;
             this.label23.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label23.Location = new System.Drawing.Point(806, 266);
+            this.label23.Location = new System.Drawing.Point(738, 308);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(35, 16);
+            this.label23.Size = new System.Drawing.Size(32, 16);
             this.label23.TabIndex = 224;
             this.label23.Text = "State";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label24.Location = new System.Drawing.Point(68, 493);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(208, 16);
-            this.label24.TabIndex = 227;
-            this.label24.Text = "_________________________";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.label25.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline);
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label25.Location = new System.Drawing.Point(54, 474);
+            this.label25.Location = new System.Drawing.Point(107, 496);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(234, 23);
+            this.label25.Size = new System.Drawing.Size(220, 23);
             this.label25.TabIndex = 226;
             this.label25.Text = "* Professional Information  :";
             // 
@@ -876,7 +770,6 @@
             this.cmbMedicalDegree.BackColor = System.Drawing.Color.Transparent;
             this.cmbMedicalDegree.BorderColor = System.Drawing.Color.DimGray;
             this.cmbMedicalDegree.BorderRadius = 10;
-            this.cmbMedicalDegree.BorderThickness = 2;
             this.cmbMedicalDegree.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbMedicalDegree.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMedicalDegree.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -895,9 +788,9 @@
             "BPT",
             "B.OPTOM",
             "NURSING"});
-            this.cmbMedicalDegree.Location = new System.Drawing.Point(266, 543);
+            this.cmbMedicalDegree.Location = new System.Drawing.Point(436, 553);
             this.cmbMedicalDegree.Name = "cmbMedicalDegree";
-            this.cmbMedicalDegree.Size = new System.Drawing.Size(199, 23);
+            this.cmbMedicalDegree.Size = new System.Drawing.Size(197, 23);
             this.cmbMedicalDegree.TabIndex = 11;
             this.cmbMedicalDegree.Enter += new System.EventHandler(this.cmbMedicalDegree_Enter);
             this.cmbMedicalDegree.Leave += new System.EventHandler(this.cmbMedicalDegree_Leave);
@@ -909,7 +802,7 @@
             this.label26.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.DarkBlue;
             this.label26.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label26.Location = new System.Drawing.Point(229, 547);
+            this.label26.Location = new System.Drawing.Point(399, 557);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(15, 16);
             this.label26.TabIndex = 230;
@@ -919,12 +812,12 @@
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label27.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label27.ForeColor = System.Drawing.Color.DarkBlue;
             this.label27.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label27.Location = new System.Drawing.Point(69, 548);
+            this.label27.Location = new System.Drawing.Point(238, 560);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(140, 16);
+            this.label27.Size = new System.Drawing.Size(142, 16);
             this.label27.TabIndex = 229;
             this.label27.Text = "Medical Degree/Education";
             // 
@@ -933,8 +826,7 @@
             this.txtYearOfGeaduation.Animated = true;
             this.txtYearOfGeaduation.BackColor = System.Drawing.Color.Transparent;
             this.txtYearOfGeaduation.BorderColor = System.Drawing.Color.DimGray;
-            this.txtYearOfGeaduation.BorderRadius = 10;
-            this.txtYearOfGeaduation.BorderThickness = 2;
+            this.txtYearOfGeaduation.BorderRadius = 12;
             this.txtYearOfGeaduation.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtYearOfGeaduation.DefaultText = "";
             this.txtYearOfGeaduation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -945,7 +837,7 @@
             this.txtYearOfGeaduation.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtYearOfGeaduation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtYearOfGeaduation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtYearOfGeaduation.Location = new System.Drawing.Point(266, 590);
+            this.txtYearOfGeaduation.Location = new System.Drawing.Point(436, 600);
             this.txtYearOfGeaduation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYearOfGeaduation.MaxLength = 1;
             this.txtYearOfGeaduation.Name = "txtYearOfGeaduation";
@@ -953,7 +845,7 @@
             this.txtYearOfGeaduation.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtYearOfGeaduation.PlaceholderText = "Enter Graduation Year";
             this.txtYearOfGeaduation.SelectedText = "";
-            this.txtYearOfGeaduation.Size = new System.Drawing.Size(199, 22);
+            this.txtYearOfGeaduation.Size = new System.Drawing.Size(197, 22);
             this.txtYearOfGeaduation.TabIndex = 12;
             this.txtYearOfGeaduation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYearOfGeaduation_KeyPress);
             this.txtYearOfGeaduation.Leave += new System.EventHandler(this.txtYearOfGeaduation_Leave);
@@ -965,7 +857,7 @@
             this.label29.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label29.ForeColor = System.Drawing.Color.DarkBlue;
             this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label29.Location = new System.Drawing.Point(229, 593);
+            this.label29.Location = new System.Drawing.Point(399, 603);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(15, 16);
             this.label29.TabIndex = 233;
@@ -975,12 +867,12 @@
             // 
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label30.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label30.ForeColor = System.Drawing.Color.DarkBlue;
             this.label30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label30.Location = new System.Drawing.Point(104, 594);
+            this.label30.Location = new System.Drawing.Point(279, 604);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(105, 16);
+            this.label30.Size = new System.Drawing.Size(101, 16);
             this.label30.TabIndex = 232;
             this.label30.Text = "Year Of Graduation";
             // 
@@ -989,8 +881,7 @@
             this.txtYearOfExperience.Animated = true;
             this.txtYearOfExperience.BackColor = System.Drawing.Color.Transparent;
             this.txtYearOfExperience.BorderColor = System.Drawing.Color.DimGray;
-            this.txtYearOfExperience.BorderRadius = 10;
-            this.txtYearOfExperience.BorderThickness = 2;
+            this.txtYearOfExperience.BorderRadius = 12;
             this.txtYearOfExperience.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtYearOfExperience.DefaultText = "";
             this.txtYearOfExperience.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1001,7 +892,7 @@
             this.txtYearOfExperience.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtYearOfExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtYearOfExperience.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtYearOfExperience.Location = new System.Drawing.Point(266, 636);
+            this.txtYearOfExperience.Location = new System.Drawing.Point(436, 646);
             this.txtYearOfExperience.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYearOfExperience.MaxLength = 2;
             this.txtYearOfExperience.Name = "txtYearOfExperience";
@@ -1009,7 +900,7 @@
             this.txtYearOfExperience.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtYearOfExperience.PlaceholderText = "Enter Experience Year";
             this.txtYearOfExperience.SelectedText = "";
-            this.txtYearOfExperience.Size = new System.Drawing.Size(199, 22);
+            this.txtYearOfExperience.Size = new System.Drawing.Size(197, 22);
             this.txtYearOfExperience.TabIndex = 13;
             this.txtYearOfExperience.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYearOfExperience_KeyPress);
             this.txtYearOfExperience.Leave += new System.EventHandler(this.txtYearOfExperience_Leave);
@@ -1021,7 +912,7 @@
             this.label31.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label31.ForeColor = System.Drawing.Color.DarkBlue;
             this.label31.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label31.Location = new System.Drawing.Point(229, 639);
+            this.label31.Location = new System.Drawing.Point(399, 649);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(15, 16);
             this.label31.TabIndex = 236;
@@ -1031,12 +922,12 @@
             // 
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label32.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label32.ForeColor = System.Drawing.Color.DarkBlue;
             this.label32.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label32.Location = new System.Drawing.Point(106, 640);
+            this.label32.Location = new System.Drawing.Point(278, 650);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(103, 16);
+            this.label32.Size = new System.Drawing.Size(102, 16);
             this.label32.TabIndex = 235;
             this.label32.Text = "Year Of Experience";
             // 
@@ -1047,7 +938,7 @@
             this.label33.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label33.ForeColor = System.Drawing.Color.DarkBlue;
             this.label33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label33.Location = new System.Drawing.Point(656, 593);
+            this.label33.Location = new System.Drawing.Point(822, 605);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(15, 16);
             this.label33.TabIndex = 242;
@@ -1057,10 +948,10 @@
             // 
             this.label34.AutoSize = true;
             this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label34.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.DarkBlue;
             this.label34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label34.Location = new System.Drawing.Point(523, 596);
+            this.label34.Location = new System.Drawing.Point(692, 609);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(114, 16);
             this.label34.TabIndex = 241;
@@ -1071,8 +962,7 @@
             this.txtLicenseNumber.Animated = true;
             this.txtLicenseNumber.BackColor = System.Drawing.Color.Transparent;
             this.txtLicenseNumber.BorderColor = System.Drawing.Color.DimGray;
-            this.txtLicenseNumber.BorderRadius = 10;
-            this.txtLicenseNumber.BorderThickness = 2;
+            this.txtLicenseNumber.BorderRadius = 12;
             this.txtLicenseNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLicenseNumber.DefaultText = "";
             this.txtLicenseNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1083,7 +973,7 @@
             this.txtLicenseNumber.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtLicenseNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtLicenseNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLicenseNumber.Location = new System.Drawing.Point(691, 537);
+            this.txtLicenseNumber.Location = new System.Drawing.Point(857, 553);
             this.txtLicenseNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLicenseNumber.MaxLength = 32756;
             this.txtLicenseNumber.Name = "txtLicenseNumber";
@@ -1091,7 +981,7 @@
             this.txtLicenseNumber.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtLicenseNumber.PlaceholderText = "Enter License Number";
             this.txtLicenseNumber.SelectedText = "";
-            this.txtLicenseNumber.Size = new System.Drawing.Size(199, 22);
+            this.txtLicenseNumber.Size = new System.Drawing.Size(197, 22);
             this.txtLicenseNumber.TabIndex = 15;
             this.txtLicenseNumber.Leave += new System.EventHandler(this.txtLicenseNumber_Leave);
             // 
@@ -1102,7 +992,7 @@
             this.label35.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label35.ForeColor = System.Drawing.Color.DarkBlue;
             this.label35.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label35.Location = new System.Drawing.Point(656, 544);
+            this.label35.Location = new System.Drawing.Point(822, 556);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(15, 16);
             this.label35.TabIndex = 239;
@@ -1112,12 +1002,12 @@
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label36.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.DarkBlue;
             this.label36.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label36.Location = new System.Drawing.Point(509, 545);
+            this.label36.Location = new System.Drawing.Point(677, 558);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(128, 16);
+            this.label36.Size = new System.Drawing.Size(129, 16);
             this.label36.TabIndex = 238;
             this.label36.Text = "Medical license Number";
             // 
@@ -1126,8 +1016,7 @@
             this.txtHospitalAddress.Animated = true;
             this.txtHospitalAddress.BackColor = System.Drawing.Color.Transparent;
             this.txtHospitalAddress.BorderColor = System.Drawing.Color.DimGray;
-            this.txtHospitalAddress.BorderRadius = 10;
-            this.txtHospitalAddress.BorderThickness = 2;
+            this.txtHospitalAddress.BorderRadius = 12;
             this.txtHospitalAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHospitalAddress.DefaultText = "";
             this.txtHospitalAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1138,7 +1027,7 @@
             this.txtHospitalAddress.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtHospitalAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtHospitalAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHospitalAddress.Location = new System.Drawing.Point(691, 636);
+            this.txtHospitalAddress.Location = new System.Drawing.Point(857, 652);
             this.txtHospitalAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHospitalAddress.MaxLength = 32756;
             this.txtHospitalAddress.Name = "txtHospitalAddress";
@@ -1146,7 +1035,7 @@
             this.txtHospitalAddress.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtHospitalAddress.PlaceholderText = "Enter Hospital Address";
             this.txtHospitalAddress.SelectedText = "";
-            this.txtHospitalAddress.Size = new System.Drawing.Size(199, 60);
+            this.txtHospitalAddress.Size = new System.Drawing.Size(197, 22);
             this.txtHospitalAddress.TabIndex = 17;
             this.txtHospitalAddress.Leave += new System.EventHandler(this.txtHospitalAddress_Leave);
             // 
@@ -1157,7 +1046,7 @@
             this.label37.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label37.ForeColor = System.Drawing.Color.DarkBlue;
             this.label37.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label37.Location = new System.Drawing.Point(656, 642);
+            this.label37.Location = new System.Drawing.Point(822, 654);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(15, 16);
             this.label37.TabIndex = 245;
@@ -1167,12 +1056,12 @@
             // 
             this.label38.AutoSize = true;
             this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label38.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.DarkBlue;
             this.label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label38.Location = new System.Drawing.Point(509, 642);
+            this.label38.Location = new System.Drawing.Point(680, 655);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(125, 16);
+            this.label38.Size = new System.Drawing.Size(126, 16);
             this.label38.TabIndex = 244;
             this.label38.Text = "Hospital/Clinic Address";
             // 
@@ -1183,7 +1072,6 @@
             this.cmbSpecialist.BackColor = System.Drawing.Color.Transparent;
             this.cmbSpecialist.BorderColor = System.Drawing.Color.DimGray;
             this.cmbSpecialist.BorderRadius = 10;
-            this.cmbSpecialist.BorderThickness = 2;
             this.cmbSpecialist.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbSpecialist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSpecialist.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -1230,9 +1118,9 @@
             "Somnologist",
             "Surgeon",
             "Urologist"});
-            this.cmbSpecialist.Location = new System.Drawing.Point(266, 682);
+            this.cmbSpecialist.Location = new System.Drawing.Point(436, 697);
             this.cmbSpecialist.Name = "cmbSpecialist";
-            this.cmbSpecialist.Size = new System.Drawing.Size(199, 23);
+            this.cmbSpecialist.Size = new System.Drawing.Size(197, 23);
             this.cmbSpecialist.TabIndex = 14;
             this.cmbSpecialist.Enter += new System.EventHandler(this.cmbSpecialist_Enter);
             this.cmbSpecialist.Leave += new System.EventHandler(this.cmbSpecialist_Leave);
@@ -1244,7 +1132,7 @@
             this.label39.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label39.ForeColor = System.Drawing.Color.DarkBlue;
             this.label39.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label39.Location = new System.Drawing.Point(229, 685);
+            this.label39.Location = new System.Drawing.Point(398, 698);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(15, 16);
             this.label39.TabIndex = 248;
@@ -1254,12 +1142,12 @@
             // 
             this.label40.AutoSize = true;
             this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label40.Font = new System.Drawing.Font("Palatino Linotype", 8.25F);
             this.label40.ForeColor = System.Drawing.Color.DarkBlue;
             this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label40.Location = new System.Drawing.Point(140, 686);
+            this.label40.Location = new System.Drawing.Point(313, 697);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(69, 16);
+            this.label40.Size = new System.Drawing.Size(67, 16);
             this.label40.TabIndex = 247;
             this.label40.Text = "Specialist In";
             // 
@@ -1270,7 +1158,6 @@
             this.cmbHospitalName.BackColor = System.Drawing.Color.Transparent;
             this.cmbHospitalName.BorderColor = System.Drawing.Color.DimGray;
             this.cmbHospitalName.BorderRadius = 10;
-            this.cmbHospitalName.BorderThickness = 2;
             this.cmbHospitalName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbHospitalName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHospitalName.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -1278,9 +1165,9 @@
             this.cmbHospitalName.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.cmbHospitalName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbHospitalName.ItemHeight = 17;
-            this.cmbHospitalName.Location = new System.Drawing.Point(691, 586);
+            this.cmbHospitalName.Location = new System.Drawing.Point(857, 602);
             this.cmbHospitalName.Name = "cmbHospitalName";
-            this.cmbHospitalName.Size = new System.Drawing.Size(199, 23);
+            this.cmbHospitalName.Size = new System.Drawing.Size(197, 23);
             this.cmbHospitalName.TabIndex = 16;
             this.cmbHospitalName.Enter += new System.EventHandler(this.cmbHospitalName_Enter);
             this.cmbHospitalName.Leave += new System.EventHandler(this.cmbHospitalName_Leave);
@@ -1293,7 +1180,7 @@
             this.btnsave.BackColor = System.Drawing.Color.Transparent;
             this.btnsave.BorderColor = System.Drawing.Color.Navy;
             this.btnsave.BorderRadius = 13;
-            this.btnsave.BorderThickness = 2;
+            this.btnsave.BorderThickness = 1;
             this.btnsave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnsave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnsave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -1302,7 +1189,7 @@
             this.btnsave.FillColor2 = System.Drawing.Color.White;
             this.btnsave.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnsave.ForeColor = System.Drawing.Color.Black;
-            this.btnsave.Location = new System.Drawing.Point(344, 757);
+            this.btnsave.Location = new System.Drawing.Point(304, 783);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(112, 29);
             this.btnsave.TabIndex = 252;
@@ -1317,7 +1204,7 @@
             this.btnreset.BackColor = System.Drawing.Color.Transparent;
             this.btnreset.BorderColor = System.Drawing.Color.Navy;
             this.btnreset.BorderRadius = 13;
-            this.btnreset.BorderThickness = 2;
+            this.btnreset.BorderThickness = 1;
             this.btnreset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnreset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnreset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -1326,7 +1213,7 @@
             this.btnreset.FillColor2 = System.Drawing.Color.White;
             this.btnreset.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnreset.ForeColor = System.Drawing.Color.Black;
-            this.btnreset.Location = new System.Drawing.Point(874, 757);
+            this.btnreset.Location = new System.Drawing.Point(834, 783);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(112, 29);
             this.btnreset.TabIndex = 251;
@@ -1341,7 +1228,7 @@
             this.btndelete.BackColor = System.Drawing.Color.Transparent;
             this.btndelete.BorderColor = System.Drawing.Color.Navy;
             this.btndelete.BorderRadius = 13;
-            this.btndelete.BorderThickness = 2;
+            this.btndelete.BorderThickness = 1;
             this.btndelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btndelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btndelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -1350,7 +1237,7 @@
             this.btndelete.FillColor2 = System.Drawing.Color.White;
             this.btndelete.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btndelete.ForeColor = System.Drawing.Color.Black;
-            this.btndelete.Location = new System.Drawing.Point(705, 757);
+            this.btndelete.Location = new System.Drawing.Point(665, 783);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(112, 29);
             this.btndelete.TabIndex = 250;
@@ -1365,7 +1252,7 @@
             this.btnupdate.BackColor = System.Drawing.Color.Transparent;
             this.btnupdate.BorderColor = System.Drawing.Color.Navy;
             this.btnupdate.BorderRadius = 13;
-            this.btnupdate.BorderThickness = 2;
+            this.btnupdate.BorderThickness = 1;
             this.btnupdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnupdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnupdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -1374,7 +1261,7 @@
             this.btnupdate.FillColor2 = System.Drawing.Color.White;
             this.btnupdate.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnupdate.ForeColor = System.Drawing.Color.Black;
-            this.btnupdate.Location = new System.Drawing.Point(521, 757);
+            this.btnupdate.Location = new System.Drawing.Point(481, 783);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(112, 29);
             this.btnupdate.TabIndex = 249;
@@ -1562,42 +1449,15 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DoctorList.DefaultCellStyle = dataGridViewCellStyle1;
             this.DoctorList.GridColor = System.Drawing.Color.Linen;
-            this.DoctorList.Location = new System.Drawing.Point(30, 847);
+            this.DoctorList.Location = new System.Drawing.Point(72, 851);
             this.DoctorList.MultiSelect = false;
             this.DoctorList.Name = "DoctorList";
             this.DoctorList.ReadOnly = true;
             this.DoctorList.RowTemplate.ReadOnly = true;
             this.DoctorList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DoctorList.Size = new System.Drawing.Size(1071, 294);
+            this.DoctorList.Size = new System.Drawing.Size(1071, 291);
             this.DoctorList.TabIndex = 253;
             this.DoctorList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DoctorList_MouseDoubleClick);
-            // 
-            // guna2CirclePictureBox4
-            // 
-            this.guna2CirclePictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox4.Image")));
-            this.guna2CirclePictureBox4.ImageRotate = 0F;
-            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(913, 484);
-            this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
-            this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(145, 212);
-            this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox4.TabIndex = 254;
-            this.guna2CirclePictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.AutoRoundedCorners = true;
-            this.guna2PictureBox1.BorderRadius = 73;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(736, 84);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(322, 149);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 255;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // Id
             // 
@@ -1743,14 +1603,102 @@
             this.HospitalAddress.Name = "HospitalAddress";
             this.HospitalAddress.ReadOnly = true;
             // 
+            // guna2CirclePictureBox4
+            // 
+            this.guna2CirclePictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox4.Image")));
+            this.guna2CirclePictureBox4.ImageRotate = 0F;
+            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(135, 151);
+            this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
+            this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(129, 66);
+            this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox4.TabIndex = 254;
+            this.guna2CirclePictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.AutoRoundedCorners = true;
+            this.guna2PictureBox1.BorderRadius = 33;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(952, 783);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(191, 69);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 255;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.AutoRoundedCorners = true;
+            this.guna2GradientPanel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2GradientPanel1.BorderRadius = 23;
+            this.guna2GradientPanel1.BorderThickness = 1;
+            this.guna2GradientPanel1.Controls.Add(this.btnclose);
+            this.guna2GradientPanel1.Controls.Add(this.label41);
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.LightCyan;
+            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 22);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1306, 49);
+            this.guna2GradientPanel1.TabIndex = 257;
+            // 
+            // btnclose
+            // 
+            this.btnclose.Animated = true;
+            this.btnclose.AnimatedGIF = true;
+            this.btnclose.BackColor = System.Drawing.Color.Transparent;
+            this.btnclose.BorderColor = System.Drawing.Color.Transparent;
+            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclose.FillColor = System.Drawing.Color.Black;
+            this.btnclose.Font = new System.Drawing.Font("Segoe Fluent Icons", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.Location = new System.Drawing.Point(1080, 12);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnclose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnclose.Size = new System.Drawing.Size(31, 28);
+            this.btnclose.TabIndex = 130;
+            this.btnclose.Text = "X";
+            this.btnclose.UseTransparentBackground = true;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.Font = new System.Drawing.Font("Colonna MT", 20.25F, System.Drawing.FontStyle.Underline);
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Location = new System.Drawing.Point(406, 15);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(317, 28);
+            this.label41.TabIndex = 62;
+            this.label41.Text = "Doctor  Registration Form";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1306, 22);
+            this.panel1.TabIndex = 256;
+            // 
             // DoctorRecordPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1323, 788);
+            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2CirclePictureBox4);
             this.Controls.Add(this.DoctorList);
@@ -1779,7 +1727,6 @@
             this.Controls.Add(this.cmbMedicalDegree);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.cmbState);
             this.Controls.Add(this.label20);
@@ -1814,10 +1761,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.guna2GradientPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1825,9 +1769,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "DoctorRecordPage";
             this.Load += new System.EventHandler(this.DoctorRecordPage_Load);
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
@@ -1847,6 +1788,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DoctorList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1854,11 +1797,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2TextBox txtMobileNo;
         private System.Windows.Forms.Label label14;
@@ -1908,7 +1846,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbMedicalDegree;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private Guna.UI2.WinForms.Guna2ComboBox cmbState;
         private System.Windows.Forms.Label label20;
@@ -1967,5 +1904,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MedicalLicenseNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn HospitalName;
         private System.Windows.Forms.DataGridViewTextBoxColumn HospitalAddress;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnclose;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Panel panel1;
     }
 }

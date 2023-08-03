@@ -628,5 +628,10 @@ namespace BloodBankManagementSystem
             txtIfSpecialtyHospital.Text = HospitalList.SelectedRows[0].Cells[13].Value.ToString();
 
         }
+
+        private void btnclose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
