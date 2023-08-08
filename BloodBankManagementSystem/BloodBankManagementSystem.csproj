@@ -229,6 +229,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloodDiscardPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodDiscardPage.Designer.cs">
+      <DependentUpon>BloodDiscardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodDonationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodDonationPage.Designer.cs">
+      <DependentUpon>BloodDonationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodStockPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodStockPage.Designer.cs">
+      <DependentUpon>BloodStockPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="HospitalRegistrationPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +341,12 @@
     <Compile Include="UserRecordPage.Designer.cs">
       <DependentUpon>UserRecordPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllBloodDonation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllBloodDonation.Designer.cs">
+      <DependentUpon>ViewAllBloodDonation.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewAllDoctorsRecordcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -359,6 +383,15 @@
     <Compile Include="ViewAllUser.Designer.cs">
       <DependentUpon>ViewAllUser.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BloodDiscardPage.resx">
+      <DependentUpon>BloodDiscardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodDonationPage.resx">
+      <DependentUpon>BloodDonationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodStockPage.resx">
+      <DependentUpon>BloodStockPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HospitalRegistrationPage.aa-DJ.resx">
       <DependentUpon>HospitalRegistrationPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -410,6 +443,9 @@
     <EmbeddedResource Include="UserRecordPage.resx">
       <DependentUpon>UserRecordPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllBloodDonation.resx">
+      <DependentUpon>ViewAllBloodDonation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewAllDoctorsRecordcs.resx">
       <DependentUpon>ViewAllDoctorsRecordcs.cs</DependentUpon>
     </EmbeddedResource>
@@ -446,6 +482,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\1.jpg" />
+    <Content Include="Images\BloodDonationImage.jpeg" />
     <Content Include="Images\BloodTypeChartImage.png" />
     <Content Include="Images\BloodTypeChartImage2.png" />
     <Content Include="Images\calendar-with-a-clock-time-tools_icon-icons.com_56831.ico" />
@@ -476,7 +513,7 @@
     <Content Include="Images\5.jpg" />
     <Content Include="Images\8medical-report_102070.ico" />
     <Content Include="Images\about_3697.ico" />
-    <Content Include="Images\AdminLoginPageBackgroundImage.jpeg" />
+    <Content Include="Images\BloodStockImage.jpeg" />
     <Content Include="Images\AdminUserAddBackgroundimg.jpeg" />
     <Content Include="Images\Background.jpeg" />
     <Content Include="Images\BackgroundImageForAllPages.jpeg" />

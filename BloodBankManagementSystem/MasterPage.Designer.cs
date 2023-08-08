@@ -53,7 +53,7 @@
             this.btnViewAllStaffMenu = new System.Windows.Forms.Button();
             this.btnAddStaffMenu = new System.Windows.Forms.Button();
             this.btnStaffMenu = new System.Windows.Forms.Button();
-            this.btnBloodTypeMenu = new System.Windows.Forms.Button();
+            this.btnBloodDiscardMenu = new System.Windows.Forms.Button();
             this.btnBloodStockMenu = new System.Windows.Forms.Button();
             this.btnBloodTransferMenu = new System.Windows.Forms.Button();
             this.panelPatientMenu = new System.Windows.Forms.Panel();
@@ -147,7 +147,7 @@
             this.panelMenu.Controls.Add(this.btnDoctorMenu);
             this.panelMenu.Controls.Add(this.panelStaffMenu);
             this.panelMenu.Controls.Add(this.btnStaffMenu);
-            this.panelMenu.Controls.Add(this.btnBloodTypeMenu);
+            this.panelMenu.Controls.Add(this.btnBloodDiscardMenu);
             this.panelMenu.Controls.Add(this.btnBloodStockMenu);
             this.panelMenu.Controls.Add(this.btnBloodTransferMenu);
             this.panelMenu.Controls.Add(this.panelPatientMenu);
@@ -496,28 +496,28 @@
             this.btnStaffMenu.MouseEnter += new System.EventHandler(this.btnStaffMenu_MouseEnter);
             this.btnStaffMenu.MouseLeave += new System.EventHandler(this.btnStaffMenu_MouseLeave);
             // 
-            // btnBloodTypeMenu
+            // btnBloodDiscardMenu
             // 
-            this.btnBloodTypeMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnBloodTypeMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBloodTypeMenu.FlatAppearance.BorderSize = 0;
-            this.btnBloodTypeMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnBloodTypeMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnBloodTypeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBloodTypeMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBloodTypeMenu.ForeColor = System.Drawing.Color.DimGray;
-            this.btnBloodTypeMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnBloodTypeMenu.Image")));
-            this.btnBloodTypeMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBloodTypeMenu.Location = new System.Drawing.Point(0, 408);
-            this.btnBloodTypeMenu.Name = "btnBloodTypeMenu";
-            this.btnBloodTypeMenu.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
-            this.btnBloodTypeMenu.Size = new System.Drawing.Size(195, 37);
-            this.btnBloodTypeMenu.TabIndex = 31;
-            this.btnBloodTypeMenu.Text = "       Blood Type";
-            this.btnBloodTypeMenu.UseVisualStyleBackColor = false;
-            this.btnBloodTypeMenu.Click += new System.EventHandler(this.btnBloodTypeMenu_Click);
-            this.btnBloodTypeMenu.MouseEnter += new System.EventHandler(this.btnBloodTypeMenu_MouseEnter);
-            this.btnBloodTypeMenu.MouseLeave += new System.EventHandler(this.btnBloodTypeMenu_MouseLeave);
+            this.btnBloodDiscardMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnBloodDiscardMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBloodDiscardMenu.FlatAppearance.BorderSize = 0;
+            this.btnBloodDiscardMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnBloodDiscardMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnBloodDiscardMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBloodDiscardMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBloodDiscardMenu.ForeColor = System.Drawing.Color.DimGray;
+            this.btnBloodDiscardMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnBloodDiscardMenu.Image")));
+            this.btnBloodDiscardMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBloodDiscardMenu.Location = new System.Drawing.Point(0, 408);
+            this.btnBloodDiscardMenu.Name = "btnBloodDiscardMenu";
+            this.btnBloodDiscardMenu.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
+            this.btnBloodDiscardMenu.Size = new System.Drawing.Size(195, 37);
+            this.btnBloodDiscardMenu.TabIndex = 31;
+            this.btnBloodDiscardMenu.Text = "        Blood Discard";
+            this.btnBloodDiscardMenu.UseVisualStyleBackColor = false;
+            this.btnBloodDiscardMenu.Click += new System.EventHandler(this.btnBloodTypeMenu_Click);
+            this.btnBloodDiscardMenu.MouseEnter += new System.EventHandler(this.btnBloodTypeMenu_MouseEnter);
+            this.btnBloodDiscardMenu.MouseLeave += new System.EventHandler(this.btnBloodTypeMenu_MouseLeave);
             // 
             // btnBloodStockMenu
             // 
@@ -1071,7 +1071,7 @@
         private System.Windows.Forms.Button btnUserMenu;
         private System.Windows.Forms.Button btnDoctorMenu;
         private System.Windows.Forms.Button btnStaffMenu;
-        private System.Windows.Forms.Button btnBloodTypeMenu;
+        private System.Windows.Forms.Button btnBloodDiscardMenu;
         private System.Windows.Forms.Button btnBloodStockMenu;
         private System.Windows.Forms.Button btnBloodTransferMenu;
         private System.Windows.Forms.Panel panelPatientMenu;

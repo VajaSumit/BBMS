@@ -38,6 +38,13 @@ namespace BloodBankManagementSystem
         HospitalRegistrationPage hospitalregistrationpage;
         ViewAllHospitals viewallhospitals;
 
+        BloodDonationPage blooddonationpage;
+
+        BloodStockPage bloodstock;
+
+        BloodDiscardPage blooddiscardpage;
+
+         
         public MasterPage()
         {
             InitializeComponent();
@@ -379,7 +386,25 @@ namespace BloodBankManagementSystem
             hideSubMenu();
             Movepanel(btnBloodDonationMenu);
 
+            if (blooddonationpage == null)
+            {
+                blooddonationpage = new BloodDonationPage();
+                blooddonationpage.FormClosed += Blooddonationpage_FormClosed;
+                blooddonationpage.MdiParent = this;
+                blooddonationpage.Show();
+            }
+            else
+            {
+                blooddonationpage.Activate();
+            }
 
+
+
+        }
+
+        private void Blooddonationpage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            blooddonationpage = null;
         }
 
         private void btnBloodTransferMenu_Click(object sender, EventArgs e)
@@ -394,6 +419,17 @@ namespace BloodBankManagementSystem
         {
             hideSubMenu();
             Movepanel(btnBloodStockMenu);
+            if (bloodstock == null)
+            {
+                bloodstock = new BloodStockPage();
+                bloodstock.FormClosed += Bloodstock_FormClosed;
+                bloodstock.MdiParent = this;
+                bloodstock.Show();
+            }
+            else
+            {
+                bloodstock.Activate();
+            }
 
 
         }
@@ -401,9 +437,32 @@ namespace BloodBankManagementSystem
         private void btnBloodTypeMenu_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            Movepanel(btnBloodTypeMenu);
+            Movepanel(btnBloodDiscardMenu);
+            if (blooddiscardpage == null)
+            {
+                blooddiscardpage = new BloodDiscardPage();
+                blooddiscardpage.FormClosed += Blooddiscardpage_FormClosed;
+                blooddiscardpage.MdiParent = this;
+                blooddiscardpage.Show();
+            }
+            else
+            {
+                blooddiscardpage.Activate();
+            }
 
 
+
+
+        }
+
+        private void Blooddiscardpage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            blooddiscardpage = null;
+        }
+
+        private void Bloodstock_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            bloodstock = null;
         }
 
         private void btnStaffMenu_Click(object sender, EventArgs e)
@@ -422,7 +481,6 @@ namespace BloodBankManagementSystem
         }
 
  
-
         private void btnAboutusMenu_Click(object sender, EventArgs e)
         {
             Movepanel(btnAboutusMenu);
@@ -840,13 +898,13 @@ namespace BloodBankManagementSystem
 
         private void btnBloodTypeMenu_MouseEnter(object sender, EventArgs e)
         {
-            btnBloodTypeMenu.ForeColor = Color.White;
-            Movepanel(btnBloodTypeMenu);
+            btnBloodDiscardMenu.ForeColor = Color.White;
+            Movepanel(btnBloodDiscardMenu);
         }
 
         private void btnBloodTypeMenu_MouseLeave(object sender, EventArgs e)
         {
-            btnBloodTypeMenu.ForeColor = Color.DimGray;
+            btnBloodDiscardMenu.ForeColor = Color.DimGray;
         }
 
         private void btnStaffMenu_MouseEnter(object sender, EventArgs e)

@@ -29,22 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllDonorsPage));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DDob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Registrationdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DHeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
@@ -58,147 +44,25 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DHeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DBloodGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Registrationdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DDob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.DId,
-            this.DName,
-            this.DDob,
-            this.DGender,
-            this.Registrationdate,
-            this.DMobile,
-            this.DEmail,
-            this.DCity,
-            this.DAddress,
-            this.DBloodGroup,
-            this.DHeight,
-            this.DWeight});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.GridColor = System.Drawing.Color.Linen;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 346);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 45;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1100, 411);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 30;
-            // 
-            // DId
-            // 
-            this.DId.DataPropertyName = "DId";
-            this.DId.HeaderText = "Donor ID";
-            this.DId.Name = "DId";
-            this.DId.ReadOnly = true;
-            this.DId.Width = 80;
-            // 
-            // DName
-            // 
-            this.DName.DataPropertyName = "DName";
-            this.DName.HeaderText = "Name";
-            this.DName.Name = "DName";
-            this.DName.ReadOnly = true;
-            // 
-            // DDob
-            // 
-            this.DDob.DataPropertyName = "DDob";
-            this.DDob.HeaderText = "DateOfBrith";
-            this.DDob.Name = "DDob";
-            this.DDob.ReadOnly = true;
-            // 
-            // DGender
-            // 
-            this.DGender.DataPropertyName = "DGender";
-            this.DGender.HeaderText = "Gender";
-            this.DGender.Name = "DGender";
-            this.DGender.ReadOnly = true;
-            this.DGender.Width = 90;
-            // 
-            // Registrationdate
-            // 
-            this.Registrationdate.DataPropertyName = "DDate";
-            this.Registrationdate.HeaderText = "Registration Date";
-            this.Registrationdate.Name = "Registrationdate";
-            this.Registrationdate.ReadOnly = true;
-            // 
-            // DMobile
-            // 
-            this.DMobile.DataPropertyName = "DMobile";
-            this.DMobile.HeaderText = "Mobile";
-            this.DMobile.Name = "DMobile";
-            this.DMobile.ReadOnly = true;
-            // 
-            // DEmail
-            // 
-            this.DEmail.DataPropertyName = "DEmail";
-            this.DEmail.HeaderText = "Email";
-            this.DEmail.Name = "DEmail";
-            this.DEmail.ReadOnly = true;
-            // 
-            // DCity
-            // 
-            this.DCity.DataPropertyName = "DCity";
-            this.DCity.HeaderText = "City";
-            this.DCity.Name = "DCity";
-            this.DCity.ReadOnly = true;
-            // 
-            // DAddress
-            // 
-            this.DAddress.DataPropertyName = "DAddress";
-            this.DAddress.HeaderText = "Address";
-            this.DAddress.Name = "DAddress";
-            this.DAddress.ReadOnly = true;
-            // 
-            // DBloodGroup
-            // 
-            this.DBloodGroup.DataPropertyName = "DBloodGroup";
-            this.DBloodGroup.HeaderText = "BloodGroup";
-            this.DBloodGroup.Name = "DBloodGroup";
-            this.DBloodGroup.ReadOnly = true;
-            this.DBloodGroup.Width = 50;
-            // 
-            // DHeight
-            // 
-            this.DHeight.DataPropertyName = "DHeight";
-            this.DHeight.HeaderText = "Height";
-            this.DHeight.Name = "DHeight";
-            this.DHeight.ReadOnly = true;
-            this.DHeight.Width = 50;
-            // 
-            // DWeight
-            // 
-            this.DWeight.DataPropertyName = "DWeight";
-            this.DWeight.HeaderText = "Weight";
-            this.DWeight.Name = "DWeight";
-            this.DWeight.ReadOnly = true;
-            this.DWeight.Width = 50;
             // 
             // label2
             // 
@@ -388,6 +252,142 @@
             this.label1.TabIndex = 62;
             this.label1.Text = "All Donor Records";
             // 
+            // DWeight
+            // 
+            this.DWeight.DataPropertyName = "DWeight";
+            this.DWeight.HeaderText = "Weight";
+            this.DWeight.Name = "DWeight";
+            this.DWeight.ReadOnly = true;
+            this.DWeight.Width = 50;
+            // 
+            // DHeight
+            // 
+            this.DHeight.DataPropertyName = "DHeight";
+            this.DHeight.HeaderText = "Height";
+            this.DHeight.Name = "DHeight";
+            this.DHeight.ReadOnly = true;
+            this.DHeight.Width = 50;
+            // 
+            // DBloodGroup
+            // 
+            this.DBloodGroup.DataPropertyName = "DBloodGroup";
+            this.DBloodGroup.HeaderText = "BloodGroup";
+            this.DBloodGroup.Name = "DBloodGroup";
+            this.DBloodGroup.ReadOnly = true;
+            this.DBloodGroup.Width = 50;
+            // 
+            // DAddress
+            // 
+            this.DAddress.DataPropertyName = "DAddress";
+            this.DAddress.HeaderText = "Address";
+            this.DAddress.Name = "DAddress";
+            this.DAddress.ReadOnly = true;
+            // 
+            // DCity
+            // 
+            this.DCity.DataPropertyName = "DCity";
+            this.DCity.HeaderText = "City";
+            this.DCity.Name = "DCity";
+            this.DCity.ReadOnly = true;
+            // 
+            // DEmail
+            // 
+            this.DEmail.DataPropertyName = "DEmail";
+            this.DEmail.HeaderText = "Email";
+            this.DEmail.Name = "DEmail";
+            this.DEmail.ReadOnly = true;
+            // 
+            // DMobile
+            // 
+            this.DMobile.DataPropertyName = "DMobile";
+            this.DMobile.HeaderText = "Mobile";
+            this.DMobile.Name = "DMobile";
+            this.DMobile.ReadOnly = true;
+            // 
+            // Registrationdate
+            // 
+            this.Registrationdate.DataPropertyName = "DDate";
+            this.Registrationdate.HeaderText = "Registration Date";
+            this.Registrationdate.Name = "Registrationdate";
+            this.Registrationdate.ReadOnly = true;
+            // 
+            // DGender
+            // 
+            this.DGender.DataPropertyName = "DGender";
+            this.DGender.HeaderText = "Gender";
+            this.DGender.Name = "DGender";
+            this.DGender.ReadOnly = true;
+            this.DGender.Width = 90;
+            // 
+            // DDob
+            // 
+            this.DDob.DataPropertyName = "DDob";
+            this.DDob.HeaderText = "DateOfBrith";
+            this.DDob.Name = "DDob";
+            this.DDob.ReadOnly = true;
+            // 
+            // DName
+            // 
+            this.DName.DataPropertyName = "DName";
+            this.DName.HeaderText = "Name";
+            this.DName.Name = "DName";
+            this.DName.ReadOnly = true;
+            // 
+            // DId
+            // 
+            this.DId.DataPropertyName = "DId";
+            this.DId.HeaderText = "Donor ID";
+            this.DId.Name = "DId";
+            this.DId.ReadOnly = true;
+            this.DId.Width = 80;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 30;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.DId,
+            this.DName,
+            this.DDob,
+            this.DGender,
+            this.Registrationdate,
+            this.DMobile,
+            this.DEmail,
+            this.DCity,
+            this.DAddress,
+            this.DBloodGroup,
+            this.DHeight,
+            this.DWeight});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.GridColor = System.Drawing.Color.Linen;
+            this.dataGridView1.Location = new System.Drawing.Point(40, 333);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 45;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1100, 411);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // ViewAllDonorsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,19 +410,17 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "View All DonorsPage";
             this.Load += new System.EventHandler(this.ViewAllDonorsPage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
@@ -432,6 +430,11 @@
         private Guna.UI2.WinForms.Guna2MessageDialog SearchDataDialogBox;
         private Guna.UI2.WinForms.Guna2MessageDialog SearchDailogBox2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnclose;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn DId;
         private System.Windows.Forms.DataGridViewTextBoxColumn DName;
@@ -445,9 +448,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DBloodGroup;
         private System.Windows.Forms.DataGridViewTextBoxColumn DHeight;
         private System.Windows.Forms.DataGridViewTextBoxColumn DWeight;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2CircleButton btnclose;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
     }
 }

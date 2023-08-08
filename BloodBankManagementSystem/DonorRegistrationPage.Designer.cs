@@ -685,7 +685,7 @@
             this.txtAddress.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtAddress.PlaceholderText = "Enter Donor Address";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(197, 22);
+            this.txtAddress.Size = new System.Drawing.Size(197, 55);
             this.txtAddress.TabIndex = 7;
             this.txtAddress.Leave += new System.EventHandler(this.txtAddress_Leave_1);
             // 
@@ -925,7 +925,7 @@
             // 
             this.guna2GradientPanel2.AutoRoundedCorners = true;
             this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Black;
-            this.guna2GradientPanel2.BorderRadius = 25;
+            this.guna2GradientPanel2.BorderRadius = 23;
             this.guna2GradientPanel2.BorderThickness = 1;
             this.guna2GradientPanel2.Controls.Add(this.label27);
             this.guna2GradientPanel2.Controls.Add(this.btnclose);
