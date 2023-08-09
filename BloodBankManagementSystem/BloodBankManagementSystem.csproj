@@ -247,6 +247,12 @@
     <Compile Include="BloodStockPage.Designer.cs">
       <DependentUpon>BloodStockPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="BloodTransferPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodTransferPage.Designer.cs">
+      <DependentUpon>BloodTransferPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="HospitalRegistrationPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,6 +353,12 @@
     <Compile Include="ViewAllBloodDonation.Designer.cs">
       <DependentUpon>ViewAllBloodDonation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllBloodTransferRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllBloodTransferRecords.Designer.cs">
+      <DependentUpon>ViewAllBloodTransferRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewAllDoctorsRecordcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BloodStockPage.resx">
       <DependentUpon>BloodStockPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodTransferPage.resx">
+      <DependentUpon>BloodTransferPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HospitalRegistrationPage.aa-DJ.resx">
       <DependentUpon>HospitalRegistrationPage.cs</DependentUpon>
@@ -445,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllBloodDonation.resx">
       <DependentUpon>ViewAllBloodDonation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllBloodTransferRecords.resx">
+      <DependentUpon>ViewAllBloodTransferRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAllDoctorsRecordcs.resx">
       <DependentUpon>ViewAllDoctorsRecordcs.cs</DependentUpon>

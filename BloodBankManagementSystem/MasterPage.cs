@@ -44,6 +44,7 @@ namespace BloodBankManagementSystem
 
         BloodDiscardPage blooddiscardpage;
 
+        BloodTransferPage bloodtransfer;
          
         public MasterPage()
         {
@@ -412,7 +413,24 @@ namespace BloodBankManagementSystem
             hideSubMenu();
             Movepanel(btnBloodTransferMenu);
 
+            if (bloodtransfer == null)
+            {
+                bloodtransfer = new BloodTransferPage();
+                bloodtransfer.FormClosed += Bloodtransfer_FormClosed;
+                bloodtransfer.MdiParent = this;
+                bloodtransfer.Show();
+            }
+            else
+            {
+                bloodtransfer.Activate();
+            }
 
+
+        }
+
+        private void Bloodtransfer_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            bloodtransfer = null;
         }
 
         private void btnBloodStockMenu_Click(object sender, EventArgs e)
