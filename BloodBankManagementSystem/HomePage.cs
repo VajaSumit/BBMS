@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
+
 
 namespace BloodBankManagementSystem
 {
@@ -19,6 +22,7 @@ namespace BloodBankManagementSystem
             
         }
 
+        string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
 
         int imgnumber = 1;
 
@@ -115,6 +119,12 @@ namespace BloodBankManagementSystem
         {
             timer1.Enabled = true;
             timer1.Start();
+
+            HospitalCount();
+            StaffCount();
+            DoctorCount();
+            BloodDonationCount();
+            BloodTransferCount();
         }
 
         private void btnclose_Click(object sender, EventArgs e)
@@ -137,5 +147,104 @@ namespace BloodBankManagementSystem
         {
             this.Close();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MasterPage page = new MasterPage();
+             BloodStockPage bloodstock = new BloodStockPage();
+            //bloodstock.MdiParent = page;
+            bloodstock.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MasterPage page = new MasterPage();
+            ViewAllBloodTransferRecords v = new ViewAllBloodTransferRecords();
+            v.Show();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MasterPage page = new MasterPage();
+            ViewAllBloodDonation v = new ViewAllBloodDonation();
+            v.Show();
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MasterPage page = new MasterPage();
+            ViewAllDoctorsRecordcs v = new ViewAllDoctorsRecordcs();
+            v.Show();
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MasterPage page = new MasterPage();
+            ViewAllStaffRecords s = new ViewAllStaffRecords();
+            s.Show();
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MasterPage page = new MasterPage();
+            ViewAllHospitals v = new ViewAllHospitals();
+            v.Show();
+        }
+
+
+        public void HospitalCount()
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "select count(Id) from HospitalTbl";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            int a =Convert.ToInt32(cmd.ExecuteScalar());
+            lblHospital.Text = a.ToString();
+            con.Close();
+        }
+
+        public void StaffCount()
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "select count(Id) from StaffTbl";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            int a = Convert.ToInt32(cmd.ExecuteScalar());
+            lblStaff.Text = a.ToString();
+            con.Close();
+        }
+
+        public void DoctorCount()
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "select count(Id) from DoctorTbl";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            int a = Convert.ToInt32(cmd.ExecuteScalar());
+            lblDoctor.Text = a.ToString();
+            con.Close();
+        }
+
+        public void BloodDonationCount()
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "select count(Id) from BloodDonationTbl";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            int a = Convert.ToInt32(cmd.ExecuteScalar());
+            lblBloodDonation.Text = a.ToString();
+            con.Close();
+        }
+        public void BloodTransferCount()
+        {
+            SqlConnection con = new SqlConnection(cs);
+            string query = "select count(Id) from BloodTransferTbl";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            int a = Convert.ToInt32(cmd.ExecuteScalar());
+            lblBloodTransfer.Text = a.ToString();
+            con.Close();
+        }
+
     }
 }

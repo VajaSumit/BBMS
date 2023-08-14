@@ -43,5 +43,41 @@ namespace BloodBankManagementSystem
 
 
         }
+
+        private void btnclose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            DataBinding();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(cs);
+            con.Open();
+            string query = "select *from BloodDonationTbl where BloodDonationDate=@BDate";
+            SqlDataAdapter sda = new SqlDataAdapter(query,con);
+            sda.SelectCommand.Parameters.AddWithValue("@BDate", BloodDonationDate.Value);
+            DataTable data = new DataTable();
+            sda.Fill(data);
+
+            if (data.Rows.Count > 0)
+            {
+                MessageBoxForSearchData1.Show();
+                BloodDonationList.DataSource = data;
+               
+            }
+            else
+            {
+                MessageBoxForSearchData2.Show();
+                DataBinding();
+            }
+
+
+            con.Close();
+        }
     }
 }

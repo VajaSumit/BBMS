@@ -43,10 +43,12 @@
             this.UpdatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BloodDonationList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +58,6 @@
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.Black;
             this.guna2GradientPanel1.BorderRadius = 23;
             this.guna2GradientPanel1.BorderThickness = 1;
-            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2GradientPanel1.Controls.Add(this.btnclose);
             this.guna2GradientPanel1.Controls.Add(this.label41);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -139,13 +140,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.BloodDonationList.DefaultCellStyle = dataGridViewCellStyle1;
             this.BloodDonationList.GridColor = System.Drawing.Color.Linen;
-            this.BloodDonationList.Location = new System.Drawing.Point(218, 311);
+            this.BloodDonationList.Location = new System.Drawing.Point(3, -1);
             this.BloodDonationList.MultiSelect = false;
             this.BloodDonationList.Name = "BloodDonationList";
             this.BloodDonationList.ReadOnly = true;
             this.BloodDonationList.RowHeadersWidth = 45;
             this.BloodDonationList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BloodDonationList.Size = new System.Drawing.Size(546, 369);
+            this.BloodDonationList.Size = new System.Drawing.Size(546, 240);
             this.BloodDonationList.TabIndex = 332;
             // 
             // Id
@@ -181,15 +182,13 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.AutoRoundedCorners = true;
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 37;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(142, 199);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(103, 268);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(365, 77);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(310, 330);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 335;
             this.guna2PictureBox1.TabStop = false;
@@ -198,28 +197,35 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Firebrick;
-            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(274, 234);
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(269, 179);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(140, 18);
+            this.label17.Size = new System.Drawing.Size(154, 19);
             this.label17.TabIndex = 336;
             this.label17.Text = "Blood Stock Details :-";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.BloodDonationList);
+            this.panel2.Location = new System.Drawing.Point(264, 228);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(553, 246);
+            this.panel2.TabIndex = 337;
+            // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.AutoRoundedCorners = true;
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.BorderRadius = 20;
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(666, 4);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(473, 531);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(135, 43);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(511, 196);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 337;
+            this.guna2PictureBox2.TabIndex = 357;
             this.guna2PictureBox2.TabStop = false;
             this.guna2PictureBox2.UseTransparentBackground = true;
             // 
@@ -231,9 +237,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnclose;
             this.ClientSize = new System.Drawing.Size(1306, 788);
+            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.BloodDonationList);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -247,6 +254,7 @@
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BloodDonationList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -265,8 +273,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BloodGroup;
         private System.Windows.Forms.DataGridViewTextBoxColumn BloodStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn UpdatedDate;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

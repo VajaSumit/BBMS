@@ -334,6 +334,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ReportForBloodDonationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForBloodDonationPage.Designer.cs">
+      <DependentUpon>ReportForBloodDonationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForBloodTransferPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForBloodTransferPage.Designer.cs">
+      <DependentUpon>ReportForBloodTransferPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForDoctorPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForDoctorPage.Designer.cs">
+      <DependentUpon>ReportForDoctorPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingPage.Designer.cs">
+      <DependentUpon>SettingPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -452,6 +476,18 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportForBloodDonationPage.resx">
+      <DependentUpon>ReportForBloodDonationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForBloodTransferPage.resx">
+      <DependentUpon>ReportForBloodTransferPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForDoctorPage.resx">
+      <DependentUpon>ReportForDoctorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingPage.resx">
+      <DependentUpon>SettingPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaffPage.resx">
       <DependentUpon>StaffPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -500,7 +536,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\1.jpg" />
+    <Content Include="Images\BeHeroImage.png" />
+    <Content Include="Images\BloodBottleImage.jpeg" />
     <Content Include="Images\BloodDonationImage.jpeg" />
+    <Content Include="Images\BloodDonationImage.png" />
+    <Content Include="Images\BloodDonationImage1.jpeg" />
+    <Content Include="Images\BloodDonationImage2.jpeg" />
+    <Content Include="Images\BloodDonationImage3.png" />
+    <Content Include="Images\BloodTransferImage.jpeg" />
     <Content Include="Images\BloodTypeChartImage.png" />
     <Content Include="Images\BloodTypeChartImage2.png" />
     <Content Include="Images\calendar-with-a-clock-time-tools_icon-icons.com_56831.ico" />
@@ -512,8 +555,14 @@
     <Content Include="Images\DoctorImage2.jpeg" />
     <Content Include="Images\DoctorImage3.jpeg" />
     <Content Include="Images\DonorRegistrationImage1.jpg" />
+    <Content Include="Images\folder.png" />
+    <Content Include="Images\folder2.ico" />
+    <Content Include="Images\GaveaLifeGiveBloodImage.png" />
+    <Content Include="Images\HeartImage.jpeg" />
     <Content Include="Images\HeartImage1.jpeg" />
     <Content Include="Images\HospitalImage1.jpeg" />
+    <Content Include="Images\menu_round_button_icon_124215.ico" />
+    <Content Include="Images\PatientImages.jpeg" />
     <Content Include="Images\PatientRegistrationImage1.jpeg" />
     <Content Include="Images\PatientRegistrationimage2.jpeg" />
     <Content Include="Images\PatientRegistrationImage3.jpeg" />
@@ -559,9 +608,13 @@
     <Content Include="Images\patient_disease_icon_140580.ico" />
     <Content Include="Images\profile_circle_icon_244573.ico" />
     <Content Include="Images\HomePageImageForPersone.png" />
+    <Content Include="Images\reportimage1.jpeg" />
+    <Content Include="Images\reportimage2.png" />
+    <Content Include="Images\search_47686.ico" />
     <Content Include="Images\StaffMemberImage1.jpeg" />
     <Content Include="Images\StaffMemberImage2.jpeg" />
     <Content Include="Images\UserImage.jpeg" />
+    <Content Include="Images\userSettingImage.jpeg" />
     <Content Include="Images\Users_40957.ico" />
   </ItemGroup>
   <ItemGroup>

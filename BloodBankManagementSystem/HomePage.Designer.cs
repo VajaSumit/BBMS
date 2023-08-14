@@ -44,13 +44,13 @@
             this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblBloodTransfer = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuCards4 = new Bunifu.Framework.UI.BunifuCards();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblBloodDonation = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,13 +59,13 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDoctor = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblStaff = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -75,7 +75,7 @@
             this.label41 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuCards7 = new Bunifu.Framework.UI.BunifuCards();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblHospital = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -264,7 +264,7 @@
             this.bunifuCards3.BottomSahddow = false;
             this.bunifuCards3.color = System.Drawing.Color.MediumBlue;
             this.bunifuCards3.Controls.Add(this.linkLabel2);
-            this.bunifuCards3.Controls.Add(this.label6);
+            this.bunifuCards3.Controls.Add(this.lblBloodTransfer);
             this.bunifuCards3.Controls.Add(this.label7);
             this.bunifuCards3.Controls.Add(this.guna2CirclePictureBox2);
             this.bunifuCards3.Controls.Add(this.label8);
@@ -288,18 +288,19 @@
             this.linkLabel2.TabIndex = 135;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "View";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // label6
+            // lblBloodTransfer
             // 
-            this.label6.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(34, 90);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 15);
-            this.label6.TabIndex = 138;
-            this.label6.Text = "72";
+            this.lblBloodTransfer.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblBloodTransfer, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblBloodTransfer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBloodTransfer.ForeColor = System.Drawing.Color.Black;
+            this.lblBloodTransfer.Location = new System.Drawing.Point(34, 90);
+            this.lblBloodTransfer.Name = "lblBloodTransfer";
+            this.lblBloodTransfer.Size = new System.Drawing.Size(14, 15);
+            this.lblBloodTransfer.TabIndex = 138;
+            this.lblBloodTransfer.Text = "0";
             // 
             // label7
             // 
@@ -332,11 +333,11 @@
             this.bunifuTransition1.SetDecoration(this.label8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(9, 16);
+            this.label8.Location = new System.Drawing.Point(9, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 20);
+            this.label8.Size = new System.Drawing.Size(71, 40);
             this.label8.TabIndex = 136;
-            this.label8.Text = "Received";
+            this.label8.Text = "  Blood\r\n Transfer";
             // 
             // bunifuCards4
             // 
@@ -346,7 +347,7 @@
             this.bunifuCards4.BottomSahddow = false;
             this.bunifuCards4.color = System.Drawing.Color.MediumBlue;
             this.bunifuCards4.Controls.Add(this.linkLabel3);
-            this.bunifuCards4.Controls.Add(this.label9);
+            this.bunifuCards4.Controls.Add(this.lblBloodDonation);
             this.bunifuCards4.Controls.Add(this.guna2CirclePictureBox3);
             this.bunifuCards4.Controls.Add(this.label11);
             this.bunifuCards4.Controls.Add(this.label10);
@@ -370,18 +371,19 @@
             this.linkLabel3.TabIndex = 135;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "View";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // label9
+            // lblBloodDonation
             // 
-            this.label9.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(29, 88);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 15);
-            this.label9.TabIndex = 138;
-            this.label9.Text = "125";
+            this.lblBloodDonation.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblBloodDonation, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblBloodDonation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBloodDonation.ForeColor = System.Drawing.Color.Black;
+            this.lblBloodDonation.Location = new System.Drawing.Point(35, 88);
+            this.lblBloodDonation.Name = "lblBloodDonation";
+            this.lblBloodDonation.Size = new System.Drawing.Size(14, 15);
+            this.lblBloodDonation.TabIndex = 138;
+            this.lblBloodDonation.Text = "0";
             // 
             // guna2CirclePictureBox3
             // 
@@ -402,11 +404,11 @@
             this.bunifuTransition1.SetDecoration(this.label11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label11.Location = new System.Drawing.Point(8, 18);
+            this.label11.Location = new System.Drawing.Point(8, 13);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 20);
+            this.label11.Size = new System.Drawing.Size(74, 40);
             this.label11.TabIndex = 136;
-            this.label11.Text = "Donation";
+            this.label11.Text = "  Blood\r\nDonation";
             // 
             // label10
             // 
@@ -450,6 +452,7 @@
             this.linkLabel1.TabIndex = 135;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "View";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // guna2CirclePictureBox1
             // 
@@ -470,11 +473,11 @@
             this.bunifuTransition1.SetDecoration(this.label2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(12, 19);
+            this.label2.Location = new System.Drawing.Point(11, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 20);
+            this.label2.Size = new System.Drawing.Size(50, 40);
             this.label2.TabIndex = 136;
-            this.label2.Text = "Stock";
+            this.label2.Text = "Blood\r\nStock";
             // 
             // bunifuCards1
             // 
@@ -483,7 +486,7 @@
             this.bunifuCards1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bunifuCards1.BottomSahddow = false;
             this.bunifuCards1.color = System.Drawing.Color.MediumBlue;
-            this.bunifuCards1.Controls.Add(this.label3);
+            this.bunifuCards1.Controls.Add(this.lblDoctor);
             this.bunifuCards1.Controls.Add(this.label4);
             this.bunifuCards1.Controls.Add(this.linkLabel4);
             this.bunifuCards1.Controls.Add(this.guna2CirclePictureBox4);
@@ -497,17 +500,17 @@
             this.bunifuCards1.Size = new System.Drawing.Size(230, 130);
             this.bunifuCards1.TabIndex = 142;
             // 
-            // label3
+            // lblDoctor
             // 
-            this.label3.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(36, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(14, 15);
-            this.label3.TabIndex = 140;
-            this.label3.Text = "5";
+            this.lblDoctor.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblDoctor, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblDoctor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoctor.ForeColor = System.Drawing.Color.Black;
+            this.lblDoctor.Location = new System.Drawing.Point(36, 80);
+            this.lblDoctor.Name = "lblDoctor";
+            this.lblDoctor.Size = new System.Drawing.Size(14, 15);
+            this.lblDoctor.TabIndex = 140;
+            this.lblDoctor.Text = "0";
             // 
             // label4
             // 
@@ -532,6 +535,7 @@
             this.linkLabel4.TabIndex = 135;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "View";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // guna2CirclePictureBox4
             // 
@@ -565,7 +569,7 @@
             this.bunifuCards6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bunifuCards6.BottomSahddow = false;
             this.bunifuCards6.color = System.Drawing.Color.MediumBlue;
-            this.bunifuCards6.Controls.Add(this.label13);
+            this.bunifuCards6.Controls.Add(this.lblStaff);
             this.bunifuCards6.Controls.Add(this.label14);
             this.bunifuCards6.Controls.Add(this.linkLabel5);
             this.bunifuCards6.Controls.Add(this.guna2CirclePictureBox5);
@@ -579,17 +583,17 @@
             this.bunifuCards6.Size = new System.Drawing.Size(230, 130);
             this.bunifuCards6.TabIndex = 143;
             // 
-            // label13
+            // lblStaff
             // 
-            this.label13.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(33, 81);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(14, 15);
-            this.label13.TabIndex = 140;
-            this.label13.Text = "8";
+            this.lblStaff.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblStaff, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaff.ForeColor = System.Drawing.Color.Black;
+            this.lblStaff.Location = new System.Drawing.Point(33, 92);
+            this.lblStaff.Name = "lblStaff";
+            this.lblStaff.Size = new System.Drawing.Size(14, 15);
+            this.lblStaff.TabIndex = 140;
+            this.lblStaff.Text = "0";
             // 
             // label14
             // 
@@ -597,7 +601,7 @@
             this.bunifuTransition1.SetDecoration(this.label14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(23, 63);
+            this.label14.Location = new System.Drawing.Point(23, 72);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(40, 15);
             this.label14.TabIndex = 139;
@@ -614,6 +618,7 @@
             this.linkLabel5.TabIndex = 135;
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "View";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // guna2CirclePictureBox5
             // 
@@ -634,11 +639,11 @@
             this.bunifuTransition1.SetDecoration(this.label15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label15.Location = new System.Drawing.Point(22, 21);
+            this.label15.Location = new System.Drawing.Point(9, 18);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(47, 20);
+            this.label15.Size = new System.Drawing.Size(75, 40);
             this.label15.TabIndex = 136;
-            this.label15.Text = "Staff ";
+            this.label15.Text = "  Staff \r\nMembers";
             // 
             // guna2GradientPanel1
             // 
@@ -712,7 +717,7 @@
             this.bunifuCards7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bunifuCards7.BottomSahddow = false;
             this.bunifuCards7.color = System.Drawing.Color.MediumBlue;
-            this.bunifuCards7.Controls.Add(this.label5);
+            this.bunifuCards7.Controls.Add(this.lblHospital);
             this.bunifuCards7.Controls.Add(this.label16);
             this.bunifuCards7.Controls.Add(this.linkLabel6);
             this.bunifuCards7.Controls.Add(this.guna2CirclePictureBox6);
@@ -726,17 +731,17 @@
             this.bunifuCards7.Size = new System.Drawing.Size(230, 130);
             this.bunifuCards7.TabIndex = 274;
             // 
-            // label5
+            // lblHospital
             // 
-            this.label5.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(33, 81);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 15);
-            this.label5.TabIndex = 140;
-            this.label5.Text = "3";
+            this.lblHospital.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblHospital, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblHospital.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHospital.ForeColor = System.Drawing.Color.Black;
+            this.lblHospital.Location = new System.Drawing.Point(33, 81);
+            this.lblHospital.Name = "lblHospital";
+            this.lblHospital.Size = new System.Drawing.Size(14, 15);
+            this.lblHospital.TabIndex = 140;
+            this.lblHospital.Text = "0";
             // 
             // label16
             // 
@@ -761,6 +766,7 @@
             this.linkLabel6.TabIndex = 135;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "View";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // guna2CirclePictureBox6
             // 
@@ -827,7 +833,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Red;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(413, 40);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(280, 30);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(282, 32);
             this.guna2HtmlLabel2.TabIndex = 5;
             this.guna2HtmlLabel2.Text = "Be A Hero  - It\'s  Your Blood !";
             this.guna2HtmlLabel2.UseGdiPlusTextRendering = true;
@@ -926,17 +932,17 @@
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuCards bunifuCards4;
         private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblBloodDonation;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuCards bunifuCards3;
         private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblBloodTransfer;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuCards bunifuCards6;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblStaff;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.LinkLabel linkLabel5;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
@@ -946,14 +952,14 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDoctor;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards7;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblHospital;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.LinkLabel linkLabel6;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox6;

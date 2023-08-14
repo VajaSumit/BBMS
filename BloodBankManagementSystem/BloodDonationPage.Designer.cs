@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BloodDonationPage));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BloodDonationPage));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label41 = new System.Windows.Forms.Label();
@@ -113,8 +113,6 @@
             this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
             this.MessageBoxForResetData = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnViewAllBloodDonation = new Guna.UI2.WinForms.Guna2GradientButton();
             this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider11 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider12 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -148,6 +146,8 @@
             this.Donation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InegularAntibodies = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hemoglobin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -158,12 +158,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BloodDonationList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -372,7 +373,7 @@
             this.txtEmailID.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtEmailID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtEmailID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailID.Location = new System.Drawing.Point(737, 181);
+            this.txtEmailID.Location = new System.Drawing.Point(737, 190);
             this.txtEmailID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmailID.Name = "txtEmailID";
             this.txtEmailID.PasswordChar = '\0';
@@ -505,7 +506,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label13.Location = new System.Drawing.Point(694, 184);
+            this.label13.Location = new System.Drawing.Point(694, 195);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(15, 16);
             this.label13.TabIndex = 281;
@@ -601,7 +602,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(623, 190);
+            this.label4.Location = new System.Drawing.Point(623, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 16);
             this.label4.TabIndex = 273;
@@ -1421,47 +1422,6 @@
             this.MessageBoxForResetData.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.MessageBoxForResetData.Text = "Are You Sure You Want To Reset The Data ?";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.AutoRoundedCorners = true;
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 45;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(760, 73);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(339, 93);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 329;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
-            // btnViewAllBloodDonation
-            // 
-            this.btnViewAllBloodDonation.Animated = true;
-            this.btnViewAllBloodDonation.AnimatedGIF = true;
-            this.btnViewAllBloodDonation.AutoRoundedCorners = true;
-            this.btnViewAllBloodDonation.BackColor = System.Drawing.Color.Transparent;
-            this.btnViewAllBloodDonation.BorderColor = System.Drawing.Color.Navy;
-            this.btnViewAllBloodDonation.BorderRadius = 10;
-            this.btnViewAllBloodDonation.BorderThickness = 1;
-            this.btnViewAllBloodDonation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewAllBloodDonation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewAllBloodDonation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnViewAllBloodDonation.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnViewAllBloodDonation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnViewAllBloodDonation.FillColor2 = System.Drawing.Color.White;
-            this.btnViewAllBloodDonation.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAllBloodDonation.ForeColor = System.Drawing.Color.Black;
-            this.btnViewAllBloodDonation.Location = new System.Drawing.Point(760, 137);
-            this.btnViewAllBloodDonation.Name = "btnViewAllBloodDonation";
-            this.btnViewAllBloodDonation.Size = new System.Drawing.Size(179, 22);
-            this.btnViewAllBloodDonation.TabIndex = 330;
-            this.btnViewAllBloodDonation.Text = "   View All Blood Donation";
-            this.btnViewAllBloodDonation.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnViewAllBloodDonation.Click += new System.EventHandler(this.btnViewAllBloodDonation_Click_1);
-            // 
             // errorProvider10
             // 
             this.errorProvider10.ContainerControl = this;
@@ -1747,6 +1707,36 @@
             this.Hemoglobin.ReadOnly = true;
             this.Hemoglobin.Width = 50;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(837, 74);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(238, 114);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 332;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.AutoRoundedCorners = true;
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BorderRadius = 37;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(50, 141);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(150, 77);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 329;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
             // BloodDonationPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1755,8 +1745,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnclose;
             this.ClientSize = new System.Drawing.Size(1238, 788);
+            this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.BloodDonationList);
-            this.Controls.Add(this.btnViewAllBloodDonation);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnreset);
@@ -1845,12 +1835,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BloodDonationList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1940,8 +1931,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider8;
         private System.Windows.Forms.ErrorProvider errorProvider9;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageBoxForResetData;
-        private Guna.UI2.WinForms.Guna2GradientButton btnViewAllBloodDonation;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.ErrorProvider errorProvider10;
         private System.Windows.Forms.ErrorProvider errorProvider11;
         private System.Windows.Forms.ErrorProvider errorProvider12;
@@ -1975,5 +1964,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Donation;
         private System.Windows.Forms.DataGridViewTextBoxColumn InegularAntibodies;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hemoglobin;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

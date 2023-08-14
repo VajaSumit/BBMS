@@ -522,11 +522,8 @@ namespace BloodBankManagementSystem
                     cmd1.Parameters.AddWithValue("@upDate", BloodDonationDate.Value);
                     //con.Close();
                     con1.Open();
-                    int a = cmd1.ExecuteNonQuery();
-                    if (a > 0)
-                    {
-                        MessageBox.Show("Blood Add in Blood Stock");
-                    }
+                    cmd1.ExecuteNonQuery();
+                   
                     con1.Close();
 
                 }

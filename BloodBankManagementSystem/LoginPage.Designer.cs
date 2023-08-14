@@ -289,7 +289,7 @@
             this.txtpassword.AutoRoundedCorners = true;
             this.txtpassword.BackColor = System.Drawing.Color.Transparent;
             this.txtpassword.BorderColor = System.Drawing.Color.DimGray;
-            this.txtpassword.BorderRadius = 10;
+            this.txtpassword.BorderRadius = 11;
             this.txtpassword.BorderThickness = 2;
             this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtpassword.DefaultText = "";
@@ -301,7 +301,7 @@
             this.txtpassword.Font = new System.Drawing.Font("Palatino Linotype", 9.75F);
             this.txtpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(32, 275);
+            this.txtpassword.Location = new System.Drawing.Point(31, 275);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtpassword.MaxLength = 32756;
             this.txtpassword.Name = "txtpassword";
@@ -309,7 +309,7 @@
             this.txtpassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtpassword.PlaceholderText = "Enter Password";
             this.txtpassword.SelectedText = "";
-            this.txtpassword.Size = new System.Drawing.Size(199, 22);
+            this.txtpassword.Size = new System.Drawing.Size(199, 24);
             this.txtpassword.TabIndex = 3;
             this.txtpassword.UseSystemPasswordChar = true;
             this.txtpassword.Leave += new System.EventHandler(this.txtpassword_Leave);
@@ -339,7 +339,7 @@
             this.txtusername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtusername.PlaceholderText = "Enter User Name";
             this.txtusername.SelectedText = "";
-            this.txtusername.Size = new System.Drawing.Size(199, 22);
+            this.txtusername.Size = new System.Drawing.Size(199, 24);
             this.txtusername.TabIndex = 2;
             this.txtusername.Leave += new System.EventHandler(this.txtusername_Leave);
             // 
@@ -522,14 +522,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.LinkLabel exitlink;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2ComboBox cmdUserRole;
-        private Guna.UI2.WinForms.Guna2TextBox txtusername;
-        private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private MaterialSkin.Controls.MaterialCheckBox chkshowpassword;
         private Guna.UI2.WinForms.Guna2MessageDialog LoginDialogbox1;
         private Guna.UI2.WinForms.Guna2MessageDialog LoginDialog2;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2GradientButton btnlogin;
         private System.Windows.Forms.Button btnClose;
+        public Guna.UI2.WinForms.Guna2TextBox txtusername;
+        public Guna.UI2.WinForms.Guna2TextBox txtpassword;
+        public Guna.UI2.WinForms.Guna2ComboBox cmdUserRole;
     }
 }

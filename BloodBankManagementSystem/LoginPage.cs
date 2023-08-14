@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using System.Threading;
 using BloodBankManagementSystem.ClassFiles;
 using System.Security.Cryptography;
+using System.IO;
 
 namespace BloodBankManagementSystem
 {
@@ -26,13 +27,22 @@ namespace BloodBankManagementSystem
         string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
         //HashCode hc = new HashCode();
         string hash = "f0xle@rn";
+        public static string username;
+        public static string password;
+        public static DateTime dateofbrith;
+        public static string emailId;
+        public static string userrole;
+        public static Image userImage;
+        public static string mobileno;
+        public static string address;
+
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
             //timer1.Enabled = true;
             cmdUserRole.SelectedItem = "Select UserRole";
             cmdUserRole.ForeColor = Color.Silver;
-
+            
         }
 
 
@@ -54,7 +64,6 @@ namespace BloodBankManagementSystem
         {
             //string title = lblMarquee.Text;
             // r:    // goto statment lable 
-
             //for (int i = 0; i <= 20; i++)
             //{
             //    lblMarquee.Text = title.PadLeft(i);
@@ -188,9 +197,11 @@ namespace BloodBankManagementSystem
         {
           
         }
+        
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+
             if (cmdUserRole.SelectedItem.ToString() == "Select UserRole")
             {
                 cmdUserRole.Focus();
@@ -245,45 +256,76 @@ namespace BloodBankManagementSystem
 
 
 
-                byte[] data = UTF8Encoding.UTF8.GetBytes(txtpassword.Text);
-                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+                //    byte[] data = UTF8Encoding.UTF8.GetBytes(txtpassword.Text);
+                //    using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+                //    {
+                //        byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                //        using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                //        {
+                //            ICryptoTransform transform = tripDes.CreateEncryptor();
+                //            byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                //            string UserPassword = Convert.ToBase64String(results, 0, results.Length);
+
+                //            string name = txtusername.Text;
+                //            //string password = txtpassword.Text;
+
+                //            SqlConnection con = new SqlConnection(cs);
+                //            con.Open();
+                //            //SqlCommand cmd = new SqlCommand("exec LoginPageUserSelect '"+name+"','"+ hc.PassHash(password)+"'", con);
+                //            SqlCommand cmd = new SqlCommand("exec LoginPageUserSelect '" + name + "','" + UserPassword + "'", con);
+                //            SqlDataReader dr = cmd.ExecuteReader();
+
+                //            if (dr.HasRows)
+                //            {
+                //                LoginDialogbox1.Show();
+                //                txtusername.Clear();
+                //                txtpassword.Clear();
+                //                cmdUserRole.SelectedItem = null;
+
+                //                while (dr.Read())
+                //                {
+                //                    int x = dr.GetInt32(6);
+                //                    MessageBox.Show(" " + x);
+                //                }
+
+                //                MasterPage m = new MasterPage();
+                //                m.Show();
+                //                this.Hide();
+
+
+                //            }
+                //            else
+                //            {
+                //                LoginDialog2.Show();
+                //            }
+
+                //            con.Close();
+                //        }
+                //    }
+
+
+
+               
+                userrole = cmdUserRole.SelectedItem.ToString();
+               
+                if (cmdUserRole.SelectedItem.ToString() == "Admin")
                 {
-                    byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
-                    using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
-                    {
-                        ICryptoTransform transform = tripDes.CreateEncryptor();
-                        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
-                        string UserPassword = Convert.ToBase64String(results, 0, results.Length);
-
-                        string name = txtusername.Text;
-                        //string password = txtpassword.Text;
-
-                        SqlConnection con = new SqlConnection(cs);
-                        con.Open();
-                        //SqlCommand cmd = new SqlCommand("exec LoginPageUserSelect '"+name+"','"+ hc.PassHash(password)+"'", con);
-                        SqlCommand cmd = new SqlCommand("exec LoginPageUserSelect '" + name + "','" + UserPassword + "'", con);
-                        SqlDataReader dr = cmd.ExecuteReader();
-                        if (dr.HasRows == true)
-                        {
-                            LoginDialogbox1.Show();
-                            txtusername.Clear();
-                            txtpassword.Clear();
-                            cmdUserRole.SelectedItem = null;
-
-                            MasterPage m = new MasterPage();
-                            m.Show();
-                            this.Hide();
-
-
-                        }
-                        else
-                        {
-                            LoginDialog2.Show();
-                        }
-
-                        con.Close();
-                    }
+                    IfAdminHasLogin();
                 }
+                else if (cmdUserRole.SelectedItem.ToString() == "Manager")
+                {
+                    IfManagerHasLogin();
+                }
+                else if (cmdUserRole.SelectedItem.ToString() == "Doctor")
+                {
+                    IfDoctorHasLogin();
+                }
+                else if (cmdUserRole.SelectedItem.ToString() == "Staff")
+                {
+                    IfStaffHasLogin();
+                }
+
+               
 
             }
         }
@@ -297,5 +339,297 @@ namespace BloodBankManagementSystem
         private void cmdUserRole_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
+      
+
+        public void IfAdminHasLogin()
+        {
+            
+                byte[] data = UTF8Encoding.UTF8.GetBytes(txtpassword.Text);
+                using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+                {
+                    byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                    using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                    {
+                        ICryptoTransform transform = tripDes.CreateEncryptor();
+                        byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                        string UserPassword = Convert.ToBase64String(results, 0, results.Length);
+
+                        int role = 0;
+
+                        SqlConnection con = new SqlConnection(cs);
+                        string query = "select *from Login_Master where UserName=@user and Password=@pass and UserRole=@role";
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        con.Open();
+                        cmd.Parameters.AddWithValue("@user", txtusername.Text);
+                        cmd.Parameters.AddWithValue("@pass", UserPassword);
+                        cmd.Parameters.AddWithValue("@role", role);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        if (dr.HasRows)
+                        {
+                            LoginDialogbox1.Show();
+
+
+
+                        while (dr.Read())
+                        {
+                            username = dr.GetString(2);
+                            password = dr.GetString(3);
+                            dateofbrith = dr.GetDateTime(4);
+                            emailId = dr.GetString(5);
+
+                            MemoryStream ms = new MemoryStream((byte[])dr.GetValue(8));
+                            userImage = Image.FromStream(ms);
+
+                            mobileno = dr.GetString(9);
+                            address = dr.GetString(10);
+                           
+                        }
+
+                        MasterPage m = new MasterPage();
+                            m.Show();
+                            this.Hide();
+
+                        }
+                        else
+                        {
+                            LoginDialog2.Show();
+                        }
+
+                        con.Close();
+
+                    }
+                }
+            
+        }
+
+
+        public void IfManagerHasLogin()
+        {
+
+            byte[] data = UTF8Encoding.UTF8.GetBytes(txtpassword.Text);
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                {
+                    ICryptoTransform transform = tripDes.CreateEncryptor();
+                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                    string UserPassword = Convert.ToBase64String(results, 0, results.Length);
+
+                    int role = 1;
+
+                    SqlConnection con = new SqlConnection(cs);
+                    string query = "select *from Login_Master where UserName=@user and Password=@pass and UserRole=@role";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    con.Open();
+                    cmd.Parameters.AddWithValue("@user", txtusername.Text);
+                    cmd.Parameters.AddWithValue("@pass", UserPassword);
+                    cmd.Parameters.AddWithValue("@role", role);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        LoginDialogbox1.Show();
+
+
+
+                        while (dr.Read())
+                        {
+                            username = dr.GetString(2);
+                            password = dr.GetString(3);
+                            dateofbrith = dr.GetDateTime(4);
+                            emailId = dr.GetString(5);
+
+                            MemoryStream ms = new MemoryStream((byte[])dr.GetValue(8));
+                            userImage = Image.FromStream(ms);
+
+                            mobileno = dr.GetString(9);
+                            address = dr.GetString(10);
+
+                        }
+
+                        MasterPage m = new MasterPage();
+                        m.Show();
+                        this.Hide();
+
+                        m.btnUserMenu.Enabled = false;
+                        m.btnStaffMenu.Enabled = false;
+                        
+
+
+
+                    }
+                    else
+                    {
+                        LoginDialog2.Show();
+                    }
+
+                    con.Close();
+
+                }
+            }
+
+        }
+
+
+        public void IfDoctorHasLogin()
+        {
+
+            byte[] data = UTF8Encoding.UTF8.GetBytes(txtpassword.Text);
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                {
+                    ICryptoTransform transform = tripDes.CreateEncryptor();
+                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                    string UserPassword = Convert.ToBase64String(results, 0, results.Length);
+
+                    int role = 2;
+
+                    SqlConnection con = new SqlConnection(cs);
+                    string query = "select *from Login_Master where UserName=@user and Password=@pass and UserRole=@role";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    con.Open();
+                    cmd.Parameters.AddWithValue("@user", txtusername.Text);
+                    cmd.Parameters.AddWithValue("@pass", UserPassword);
+                    cmd.Parameters.AddWithValue("@role", role);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        LoginDialogbox1.Show();
+
+
+
+                        while (dr.Read())
+                        {
+                            username = dr.GetString(2);
+                            password = dr.GetString(3);
+                            dateofbrith = dr.GetDateTime(4);
+                            emailId = dr.GetString(5);
+
+                            MemoryStream ms = new MemoryStream((byte[])dr.GetValue(8));
+                            userImage = Image.FromStream(ms);
+
+                            mobileno = dr.GetString(9);
+                            address = dr.GetString(10);
+
+                        }
+
+                        MasterPage m = new MasterPage();
+                        m.Show();
+                        this.Hide();
+
+                        m.btnDonorsRegistration.Enabled = false;
+                        m.btnEditDonors.Enabled = false;
+                       
+                        m.btnAddBloodDonation.Enabled = false;
+
+                        m.btnPatientsRegistration.Enabled = false;
+                        m.btnEditPatients.Enabled = false;
+
+                        m.btnAddBloodTransfer.Enabled = false;
+
+                        m.btnBloodDiscardMenu.Enabled = false;
+
+                        m.btnHospitalRegistration.Enabled = false;
+
+                        m.btnAddDoctorMenu.Enabled = false;
+
+                        m.btnUserMenu.Enabled = false;
+
+                        m.btnAddStaffMenu.Enabled = false;
+
+                        m.btnReportsMenu.Enabled = false;
+
+
+                    }
+                    else
+                    {
+                        LoginDialog2.Show();
+                    }
+
+                    con.Close();
+
+                }
+            }
+
+        }
+
+
+        public void IfStaffHasLogin()
+        {
+
+            byte[] data = UTF8Encoding.UTF8.GetBytes(txtpassword.Text);
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                {
+                    ICryptoTransform transform = tripDes.CreateEncryptor();
+                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                    string UserPassword = Convert.ToBase64String(results, 0, results.Length);
+
+                    int role = 3;
+
+                    SqlConnection con = new SqlConnection(cs);
+                    string query = "select *from Login_Master where UserName=@user and Password=@pass and UserRole=@role";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    con.Open();
+                    cmd.Parameters.AddWithValue("@user", txtusername.Text);
+                    cmd.Parameters.AddWithValue("@pass", UserPassword);
+                    cmd.Parameters.AddWithValue("@role", role);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        LoginDialogbox1.Show();
+
+
+
+                        while (dr.Read())
+                        {
+                            username = dr.GetString(2);
+                            password = dr.GetString(3);
+                            dateofbrith = dr.GetDateTime(4);
+                            emailId = dr.GetString(5);
+
+                            MemoryStream ms = new MemoryStream((byte[])dr.GetValue(8));
+                            userImage = Image.FromStream(ms);
+
+                            mobileno = dr.GetString(9);
+                            address = dr.GetString(10);
+
+                        }
+
+                        MasterPage m = new MasterPage();
+                        m.Show();
+                        this.Hide();
+
+                        m.btnHomeMenu.Enabled = false;
+                        m.btnDonorMenu.Enabled = false;
+                        m.btnBloodDonationMenu.Enabled = false;
+                        m.btnPatientMenu.Enabled = false;
+                        m.btnBloodTransferMenu.Enabled = false;
+                        m.btnBloodDiscardMenu.Enabled = false;
+                        m.btnHospitalMenu.Enabled = false;
+                        m.btnDoctorMenu.Enabled = false;
+                        m.btnUserMenu.Enabled = false;
+                        m.btnAddStaffMenu.Enabled = false;
+                        m.btnReportsMenu.Enabled = false;
+
+                    }
+                    else
+                    {
+                        LoginDialog2.Show();
+                    }
+
+                    con.Close();
+
+                }
+            }
+
+        }
+
+
     }
 }

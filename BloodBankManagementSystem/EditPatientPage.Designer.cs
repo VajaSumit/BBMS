@@ -90,7 +90,6 @@
             this.DeleteRecordDialogBox2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.DeleteRecordDialogBox3 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.ResetDataDialogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label19 = new System.Windows.Forms.Label();
@@ -109,6 +108,7 @@
             this.label34 = new System.Windows.Forms.Label();
             this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -118,11 +118,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label15
@@ -890,21 +890,6 @@
             this.ResetDataDialogBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.ResetDataDialogBox.Text = "Are You Sure ! You Want To Reset Records ?";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.AutoRoundedCorners = true;
-            this.guna2PictureBox1.BorderRadius = 51;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(801, 471);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(238, 105);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 152;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.AutoRoundedCorners = true;
@@ -1151,6 +1136,20 @@
             // 
             this.errorProvider10.ContainerControl = this;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.AutoRoundedCorners = true;
+            this.guna2PictureBox1.BorderRadius = 80;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(719, 480);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(355, 162);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 255;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // EditPatientPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1159,6 +1158,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1238, 788);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.cmbDoctorName);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label3);
@@ -1173,7 +1173,6 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.dtpDateOfBrith);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label24);
@@ -1222,12 +1221,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1280,7 +1279,6 @@
         private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox2;
         private Guna.UI2.WinForms.Guna2MessageDialog DeleteRecordDialogBox3;
         private Guna.UI2.WinForms.Guna2MessageDialog ResetDataDialogBox;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2CircleButton btnclose;
         private System.Windows.Forms.Label label19;
@@ -1312,5 +1310,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PBloodGroup;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hospitalname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Doctorname;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

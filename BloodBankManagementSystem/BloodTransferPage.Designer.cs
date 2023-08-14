@@ -87,7 +87,6 @@
             this.btnreset = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btndelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnBloodTransfer = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnViewAllBloodTransfer = new Guna.UI2.WinForms.Guna2GradientButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -121,6 +120,7 @@
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.MessageBoxForBloodStockChecking1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.MessageBoxForBloodStockChecking2 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -132,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BloodTransferList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -346,15 +347,13 @@
             // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.AutoRoundedCorners = true;
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.BorderRadius = 45;
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(141, 139);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(41, 155);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(117, 93);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(225, 171);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 294;
             this.guna2PictureBox2.TabStop = false;
@@ -1070,31 +1069,6 @@
             this.btnBloodTransfer.Text = "Blood Transfer";
             this.btnBloodTransfer.Click += new System.EventHandler(this.btnBloodTransfer_Click);
             // 
-            // btnViewAllBloodTransfer
-            // 
-            this.btnViewAllBloodTransfer.Animated = true;
-            this.btnViewAllBloodTransfer.AnimatedGIF = true;
-            this.btnViewAllBloodTransfer.AutoRoundedCorners = true;
-            this.btnViewAllBloodTransfer.BackColor = System.Drawing.Color.Transparent;
-            this.btnViewAllBloodTransfer.BorderColor = System.Drawing.Color.Navy;
-            this.btnViewAllBloodTransfer.BorderRadius = 10;
-            this.btnViewAllBloodTransfer.BorderThickness = 1;
-            this.btnViewAllBloodTransfer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewAllBloodTransfer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewAllBloodTransfer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnViewAllBloodTransfer.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnViewAllBloodTransfer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnViewAllBloodTransfer.FillColor2 = System.Drawing.Color.White;
-            this.btnViewAllBloodTransfer.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAllBloodTransfer.ForeColor = System.Drawing.Color.Black;
-            this.btnViewAllBloodTransfer.Location = new System.Drawing.Point(892, 114);
-            this.btnViewAllBloodTransfer.Name = "btnViewAllBloodTransfer";
-            this.btnViewAllBloodTransfer.Size = new System.Drawing.Size(179, 22);
-            this.btnViewAllBloodTransfer.TabIndex = 332;
-            this.btnViewAllBloodTransfer.Text = "   View All Blood Transfer";
-            this.btnViewAllBloodTransfer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnViewAllBloodTransfer.Click += new System.EventHandler(this.btnViewAllBloodTransfer_Click);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -1357,6 +1331,22 @@
             this.MessageBoxForBloodStockChecking2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.MessageBoxForBloodStockChecking2.Text = "Blood Available In Blood Stock..";
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.AutoRoundedCorners = true;
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BorderRadius = 34;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1008, 648);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(145, 70);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 334;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
             // BloodTransferPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1364,8 +1354,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1238, 788);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.BloodTransferList);
-            this.Controls.Add(this.btnViewAllBloodTransfer);
             this.Controls.Add(this.btnAvailable);
             this.Controls.Add(this.btnreset);
             this.Controls.Add(this.btndelete);
@@ -1437,6 +1427,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BloodTransferList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1500,7 +1491,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnreset;
         private Guna.UI2.WinForms.Guna2GradientButton btndelete;
         private Guna.UI2.WinForms.Guna2GradientButton btnBloodTransfer;
-        private Guna.UI2.WinForms.Guna2GradientButton btnViewAllBloodTransfer;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
@@ -1534,5 +1524,6 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageBoxForBloodStockChecking1;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageBoxForBloodStockChecking2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

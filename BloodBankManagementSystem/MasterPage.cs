@@ -39,13 +39,22 @@ namespace BloodBankManagementSystem
         ViewAllHospitals viewallhospitals;
 
         BloodDonationPage blooddonationpage;
+        ViewAllBloodDonation viewallblooddonation;
 
         BloodStockPage bloodstock;
 
         BloodDiscardPage blooddiscardpage;
 
         BloodTransferPage bloodtransfer;
-         
+        ViewAllBloodTransferRecords viewallbloodtransfer;
+
+        SettingPage settingpage;
+
+        ReportForBloodDonationPage reportforblooddonation;
+        ReportForBloodTransferPage reportforbloodtransfer;
+        ReportForDoctorPage reportfordoctor;
+
+
         public MasterPage()
         {
             InitializeComponent();
@@ -61,15 +70,18 @@ namespace BloodBankManagementSystem
             panelStaffMenu.Visible = false;
             panelDoctorMenu.Visible = false;
             panelHospitalMenu.Visible = false;
+            panelBloodDonationMenu.Visible = false;
+            panelBloodTransferMenu.Visible = false;
+            panelReportMenu.Visible = false;
         }
 
         private void hideSubMenu()
         {
-            if (panelDonorMenu.Visible==true)
+            if (panelDonorMenu.Visible == true)
             {
                 panelDonorMenu.Visible = false;
             }
-            if (panelPatientMenu.Visible==true)
+            if (panelPatientMenu.Visible == true)
             {
                 panelPatientMenu.Visible = false;
             }
@@ -77,7 +89,7 @@ namespace BloodBankManagementSystem
             {
                 panelStaffMenu.Visible = false;
             }
-            if (panelUserMenu.Visible==true)
+            if (panelUserMenu.Visible == true)
             {
                 panelUserMenu.Visible = false;
             }
@@ -89,7 +101,18 @@ namespace BloodBankManagementSystem
             {
                 panelHospitalMenu.Visible = false;
             }
-
+            if (panelBloodDonationMenu.Visible == true)
+            {
+                panelBloodDonationMenu.Visible = false;
+            }
+            if (panelBloodTransferMenu.Visible == true)
+            {
+                panelBloodTransferMenu.Visible = false;
+            }
+            if (panelReportMenu.Visible == true)
+            {
+                panelReportMenu.Visible = false;
+            }
 
         }
 
@@ -121,7 +144,7 @@ namespace BloodBankManagementSystem
                 homepage = new HomePage();
                 homepage.FormClosed += Homepage_FormClosed;
                 homepage.MdiParent = this;
-                homepage.Show();
+               homepage.Show();
             }
             else
             {
@@ -238,299 +261,23 @@ namespace BloodBankManagementSystem
             viewalldonor = null;
         }
 
-        private void btnPatientMenu_Click_1(object sender, EventArgs e)
-        {
-            showSubMenu(panelPatientMenu);
-            Movepanel(btnPatientMenu);
-
-        }
-
-        private void btnPatientsRegistration_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-
-            //PatientRegistration p = new PatientRegistration();
-            //p.MdiParent = this;
-            //p.Show();
-
-            if (patientregistration == null)
-            {
-                patientregistration = new PatientRegistration();
-                patientregistration.FormClosed += Patientregistration_FormClosed;
-                patientregistration.MdiParent = this;
-                patientregistration.Show();
-            }
-            else
-            {
-                patientregistration.Activate();
-            }
-
-
-        }
-
-        private void Patientregistration_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            patientregistration = null;
-        }
-
-        private void btnEditPatients_Click(object sender, EventArgs e)
-        {
-            //EditPatientPage p = new EditPatientPage();
-            //p.MdiParent = this;
-            //p.Show();
-            hideSubMenu();
-
-            if (editpatient == null)
-            {
-                editpatient = new EditPatientPage();
-                editpatient.FormClosed += Editpatient_FormClosed;
-                editpatient.MdiParent = this;
-                editpatient.Show();
-            }
-            else
-            {
-                editpatient.Activate();
-            }
-
-        }
-
-        private void Editpatient_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            editpatient = null;
-        }
-
-        private void btnViewAllPatients_Click(object sender, EventArgs e)
-        {
-            //ViewAllPatientPage p = new ViewAllPatientPage();
-            //p.MdiParent = this;
-            //p.Show();
-            hideSubMenu();
-
-            if (viewallpatient == null)
-            {
-                viewallpatient = new ViewAllPatientPage();
-                viewallpatient.FormClosed += Viewallpatient_FormClosed;
-                viewallpatient.MdiParent = this;
-                viewallpatient.Show();
-            }
-            else
-            {
-                viewallpatient.Activate();
-            }
-
-        }
-
-        private void Viewallpatient_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            viewallpatient = null;
-        }
-
-        private void btnUserMenu_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelUserMenu);
-            Movepanel(btnUserMenu);
-        }
-
-        private void btnAddUserMenu_Click(object sender, EventArgs e)
-        {
-            //UserRecordPage p = new UserRecordPage();
-            //p.MdiParent = this;
-            //p.Show();
-            hideSubMenu();
-
-            if (userrecord == null)
-            {
-                userrecord = new UserRecordPage();
-                userrecord.FormClosed += Userrecord_FormClosed;
-                userrecord.MdiParent = this;
-                userrecord.Show();
-            }
-            else
-            {
-                userrecord.Activate();
-            }
-        }
-
-        private void Userrecord_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            userrecord = null;
-        }
-
-        private void btnViewAllUserMenu_Click(object sender, EventArgs e)
-        {
-            //ViewAllUser v = new ViewAllUser();
-            //v.MdiParent = this;
-            //v.Show();
-            hideSubMenu();
-
-            if (viewalluser == null)
-            {
-                viewalluser = new ViewAllUser();
-                viewalluser.FormClosed += Viewalluser_FormClosed;
-                viewalluser.MdiParent = this;
-                viewalluser.Show();
-            }
-            else
-            {
-                viewalluser.Activate();
-            }
-        }
-
-        private void Viewalluser_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            viewalluser = null;
-        }
 
         private void btnBloodDonationMenu_Click(object sender, EventArgs e)
         {
-
-            hideSubMenu();
+            showSubMenu(panelBloodDonationMenu);
             Movepanel(btnBloodDonationMenu);
-
-            if (blooddonationpage == null)
-            {
-                blooddonationpage = new BloodDonationPage();
-                blooddonationpage.FormClosed += Blooddonationpage_FormClosed;
-                blooddonationpage.MdiParent = this;
-                blooddonationpage.Show();
-            }
-            else
-            {
-                blooddonationpage.Activate();
-            }
-
-
-
         }
 
-        private void Blooddonationpage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            blooddonationpage = null;
-        }
-
-        private void btnBloodTransferMenu_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-            Movepanel(btnBloodTransferMenu);
-
-            if (bloodtransfer == null)
-            {
-                bloodtransfer = new BloodTransferPage();
-                bloodtransfer.FormClosed += Bloodtransfer_FormClosed;
-                bloodtransfer.MdiParent = this;
-                bloodtransfer.Show();
-            }
-            else
-            {
-                bloodtransfer.Activate();
-            }
 
 
-        }
-
-        private void Bloodtransfer_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            bloodtransfer = null;
-        }
-
-        private void btnBloodStockMenu_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-            Movepanel(btnBloodStockMenu);
-            if (bloodstock == null)
-            {
-                bloodstock = new BloodStockPage();
-                bloodstock.FormClosed += Bloodstock_FormClosed;
-                bloodstock.MdiParent = this;
-                bloodstock.Show();
-            }
-            else
-            {
-                bloodstock.Activate();
-            }
-
-
-        }
-
-        private void btnBloodTypeMenu_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-            Movepanel(btnBloodDiscardMenu);
-            if (blooddiscardpage == null)
-            {
-                blooddiscardpage = new BloodDiscardPage();
-                blooddiscardpage.FormClosed += Blooddiscardpage_FormClosed;
-                blooddiscardpage.MdiParent = this;
-                blooddiscardpage.Show();
-            }
-            else
-            {
-                blooddiscardpage.Activate();
-            }
-
-
-
-
-        }
-
-        private void Blooddiscardpage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            blooddiscardpage = null;
-        }
-
-        private void Bloodstock_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            bloodstock = null;
-        }
-
-        private void btnStaffMenu_Click(object sender, EventArgs e)
-        {
-            Movepanel(btnStaffMenu);
-            showSubMenu(panelStaffMenu);
-
-        }
-
-        private void btnDoctorMenu_Click(object sender, EventArgs e)
-        {
-            Movepanel(btnDoctorMenu);
-            showSubMenu(panelDoctorMenu);
-
-
-        }
-
- 
-        private void btnAboutusMenu_Click(object sender, EventArgs e)
-        {
-            Movepanel(btnAboutusMenu);
-            hideSubMenu();
-
-            if (aboutus == null)
-            {
-                aboutus = new AboutUs();
-                aboutus.FormClosed += Aboutus_FormClosed;
-                aboutus.MdiParent = this;
-                aboutus.Show();
-            }
-            else
-            {
-                aboutus.Activate();
-            }
-
-
-        }
-
-        private void Aboutus_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            aboutus = null;
-        }
 
         private void Movepanel(Control btn)
         {
             //panelslide.Width = btn.Width;
             //panelslide.Left = btn.Left;
-            panelMove.Height = btn.Height;
-            panelMove.Top = btn.Top;
-            panelMove.Left = btn.Left;
+            //panelMove.Height = btn.Height;
+            //panelMove.Top = btn.Top;
+            //panelMove.Left = btn.Left;
           
         }
 
@@ -547,6 +294,17 @@ namespace BloodBankManagementSystem
 
         private void MasterPage_Load(object sender, EventArgs e)
         {
+
+            LoginPage l = new LoginPage();
+            lblProfilename.Text = LoginPage.username;
+            lblProfilename2.Text = LoginPage.userrole;
+            userPictureBox.Image = LoginPage.userImage;
+
+            lblProfilename3.Text = LoginPage.username;
+            lblProfilename4.Text = LoginPage.userrole;
+            userPictureBox2.Image = LoginPage.userImage;
+
+
             Movepanel(btnHomeMenu);
 
             hideSubMenu();
@@ -656,30 +414,10 @@ namespace BloodBankManagementSystem
      
         private void btnAddStaffMenu_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
-
-            //staffpage p = new staffpage();
-            //p.MdiParent = this;
-            //p.Show();
-
-            if (staffpage == null)
-            {
-                staffpage = new StaffPage();
-                staffpage.FormClosed += Staffpage_FormClosed1;
-                staffpage.MdiParent = this;
-                staffpage.Show();
-            }
-            else
-            {
-                doctorrecordpage.Activate();
-            }
+            
         }
 
-        private void Staffpage_FormClosed1(object sender, FormClosedEventArgs e)
-        {
-            staffpage = null;
-        }
-
+  
         private void Doctorrecordpage_FormClosed(object sender, FormClosedEventArgs e)
         {
             doctorrecordpage = null;
@@ -690,130 +428,11 @@ namespace BloodBankManagementSystem
             staffpage = null;
         }
 
-        private void btnViewAllStaffMenu_Click(object sender, EventArgs e)
-        {
-            //ViewAllStaffRecords v = new ViewAllStaffRecords();
-            //v.MdiParent = this;
-            //v.Show();
-
-            hideSubMenu();
-            if (viewallstaffrecords == null)
-            {
-                viewallstaffrecords = new ViewAllStaffRecords();
-                viewallstaffrecords.FormClosed += Viewallstaffrecords_FormClosed;
-                viewallstaffrecords.MdiParent = this;
-                viewallstaffrecords.Show();
-            }
-            else
-            {
-                viewallstaffrecords.Activate();
-            }
-        }
-
-        private void Viewallstaffrecords_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            viewallstaffrecords = null;
-        }
-
-        private void btnAddDoctorMenu_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-            if (doctorrecordpage == null)
-            {
-                doctorrecordpage = new DoctorRecordPage();
-                doctorrecordpage.FormClosed += Doctorrecordpage_FormClosed1;
-                doctorrecordpage.MdiParent = this;
-                doctorrecordpage.Show();
-            }
-            else
-            {
-                doctorrecordpage.Activate();
-            }
-        }
-
-        private void Doctorrecordpage_FormClosed1(object sender, FormClosedEventArgs e)
-        {
-            doctorrecordpage = null;
-        }
-
-        private void btnHospitalMenu_Click_1(object sender, EventArgs e)
-        {
-            showSubMenu(panelHospitalMenu);
-            Movepanel(btnHospitalMenu);
-        }
 
         private void btnReportsMenu_Click_1(object sender, EventArgs e)
         {
-            hideSubMenu();
-            Movepanel(btnReportsMenu);
+           
 
-        }
-
-        private void btnViewAllDoctor_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-
-            if (viewalldoctor == null)
-            {
-                viewalldoctor = new ViewAllDoctorsRecordcs();
-                viewalldoctor.FormClosed += Viewalldoctor_FormClosed;
-                viewalldoctor.MdiParent = this;
-                viewalldoctor.Show();
-            }
-            else
-            {
-                viewalldoctor.Activate();
-            }
-        }
-
-        private void Viewalldoctor_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            viewalldoctor = null;
-        }
-
-        private void btnHospitalRegistration_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-
-            if (hospitalregistrationpage == null)
-            {
-                hospitalregistrationpage = new HospitalRegistrationPage();
-                hospitalregistrationpage.FormClosed += Hospitalregistrationpage_FormClosed;
-                hospitalregistrationpage.MdiParent = this;
-                hospitalregistrationpage.Show();
-            }
-            else
-            {
-                hospitalregistrationpage.Activate();
-            }
-
-        }
-
-        private void Hospitalregistrationpage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            hospitalregistrationpage = null;
-        }
-
-        private void btnViewAllHospital_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-
-            if (viewallhospitals == null)
-            {
-                viewallhospitals = new ViewAllHospitals();
-                viewallhospitals.FormClosed += Viewallhospitals_FormClosed;
-                viewallhospitals.MdiParent = this;
-                viewallhospitals.Show();
-            }
-            else
-            {
-                viewallhospitals.Activate();
-            }
-        }
-
-        private void Viewallhospitals_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            viewallhospitals = null;
         }
 
         private void btnDateTime_Click(object sender, EventArgs e)
@@ -992,9 +611,11 @@ namespace BloodBankManagementSystem
         }
 
 
-
-
-
+        private void btnPatientMenu_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelPatientMenu);
+            Movepanel(btnPatientMenu);
+        }
 
 
         //private Form activeForm = null;
@@ -1013,6 +634,595 @@ namespace BloodBankManagementSystem
         //        childform.Show();
         //    }
         //}
+
+      
+
+    private void btnPatientsRegistration_Click_1(object sender, EventArgs e)
+    {
+            hideSubMenu();
+
+            //PatientRegistration p = new PatientRegistration();
+            //p.MdiParent = this;
+            //p.Show();
+
+            if (patientregistration == null)
+            {
+                patientregistration = new PatientRegistration();
+                patientregistration.FormClosed += Patientregistration_FormClosed1;
+                patientregistration.MdiParent = this;
+                patientregistration.Show();
+            }
+            else
+            {
+                patientregistration.Activate();
+            }
+            
+     }
+
+        private void Patientregistration_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            patientregistration = null;
+        }
+
+        private void btnEditPatients_Click_1(object sender, EventArgs e)
+        {
+            //EditPatientPage p = new EditPatientPage();
+            //p.MdiParent = this;
+            //p.Show();
+            hideSubMenu();
+
+            if (editpatient == null)
+            {
+                editpatient = new EditPatientPage();
+                editpatient.FormClosed += Editpatient_FormClosed1;
+                editpatient.MdiParent = this;
+                editpatient.Show();
+            }
+            else
+            {
+                editpatient.Activate();
+            }
+
+        }
+
+        private void Editpatient_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            editpatient = null;
+        }
+
+        private void btnAddBloodTransfer_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            if (bloodtransfer == null)
+            {
+                bloodtransfer = new BloodTransferPage();
+                bloodtransfer.FormClosed += Bloodtransfer_FormClosed1;
+                bloodtransfer.MdiParent = this;
+                bloodtransfer.Show();
+            }
+            else
+            {
+                bloodtransfer.Activate();
+            }
+        }
+
+        private void Bloodtransfer_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            bloodtransfer = null;
+        }
+
+        private void btnBloodStockMenu_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            Movepanel(btnBloodStockMenu);
+            if (bloodstock == null)
+            {
+                bloodstock = new BloodStockPage();
+                bloodstock.FormClosed += Bloodstock_FormClosed1;
+                bloodstock.MdiParent = this;
+                bloodstock.Show();
+
+            }
+            else
+            {
+                bloodstock.Activate();
+            }
+        }
+
+        private void Bloodstock_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            bloodstock = null;
+        }
+
+        private void btnBloodDiscardMenu_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            Movepanel(btnBloodDiscardMenu);
+            if (blooddiscardpage == null)
+            {
+                blooddiscardpage = new BloodDiscardPage();
+                blooddiscardpage.FormClosed += Blooddiscardpage_FormClosed1;
+                blooddiscardpage.MdiParent = this;
+                blooddiscardpage.Show();
+            }
+            else
+            {
+                blooddiscardpage.Activate();
+            }
+        }
+
+        private void Blooddiscardpage_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            blooddiscardpage = null;
+        }
+
+        private void btnAddBloodDonation_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        
+
+            if (blooddonationpage == null)
+            {
+                blooddonationpage = new BloodDonationPage();
+                blooddonationpage.FormClosed += Blooddonationpage_FormClosed2;
+                blooddonationpage.MdiParent = this;
+                blooddonationpage.Show();
+            }
+            else
+            {
+                blooddonationpage.Activate();
+            }
+        }
+
+        private void Blooddonationpage_FormClosed2(object sender, FormClosedEventArgs e)
+        {
+            blooddonationpage = null;
+        }
+
+        private void btnViewAllBloodDonation_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            if (viewallblooddonation == null)
+            {
+                viewallblooddonation = new ViewAllBloodDonation();
+                viewallblooddonation.FormClosed += Viewallblooddonation_FormClosed;
+                viewallblooddonation.MdiParent = this;
+                viewallblooddonation.Show();
+            }
+            else
+            {
+                viewallblooddonation.Activate();
+            }
+        }
+
+        private void Viewallblooddonation_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            viewallblooddonation = null;
+        }
+
+        private void btnBloodTransferMenu_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(panelBloodTransferMenu);
+            Movepanel(btnBloodTransferMenu);
+        }
+
+        private void btnViewAllBloodTransferRecords_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            if (viewallbloodtransfer == null)
+            {
+                viewallbloodtransfer = new ViewAllBloodTransferRecords();
+                viewallbloodtransfer.FormClosed += Viewallbloodtransfer_FormClosed;
+                viewallbloodtransfer.MdiParent = this;
+                viewallbloodtransfer.Show();
+            }
+            else
+            {
+                viewallbloodtransfer.Activate();
+            }
+        }
+
+        private void Viewallbloodtransfer_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            viewallbloodtransfer = null;
+        }
+
+        private void btnViewAllPatients_Click_1(object sender, EventArgs e)
+        {
+            //ViewAllPatientPage p = new ViewAllPatientPage();
+            //p.MdiParent = this;
+            //p.Show();
+            hideSubMenu();
+
+            if (viewallpatient == null)
+            {
+                viewallpatient = new ViewAllPatientPage();
+                viewallpatient.FormClosed += Viewallpatient_FormClosed;
+                viewallpatient.MdiParent = this;
+                viewallpatient.Show();
+            }
+            else
+            {
+                viewallpatient.Activate();
+            }
+        }
+
+        private void Viewallpatient_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            viewallpatient = null;
+        }
+
+        private void btnHospitalMenu_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelHospitalMenu);
+            Movepanel(btnHospitalMenu);
+        }
+
+     
+
+        private void btnHospitalRegistration_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            if (hospitalregistrationpage == null)
+            {
+                hospitalregistrationpage = new HospitalRegistrationPage();
+                hospitalregistrationpage.FormClosed += Hospitalregistrationpage_FormClosed;
+                hospitalregistrationpage.MdiParent = this;
+                hospitalregistrationpage.Show();
+            }
+            else
+            {
+                hospitalregistrationpage.Activate();
+            }
+
+        }
+
+        private void Hospitalregistrationpage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            hospitalregistrationpage = null;
+        }
+
+        private void btnViewAllHospital_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            if (viewallhospitals == null)
+            {
+                viewallhospitals = new ViewAllHospitals();
+                viewallhospitals.FormClosed += Viewallhospitals_FormClosed;
+                viewallhospitals.MdiParent = this;
+                viewallhospitals.Show();
+            }
+            else
+            {
+                viewallhospitals.Activate();
+            }
+        }
+
+        private void Viewallhospitals_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            viewallhospitals = null;
+        }
+
+        private void btnDoctorMenu_Click_1(object sender, EventArgs e)
+        {
+            Movepanel(btnDoctorMenu);
+            showSubMenu(panelDoctorMenu);
+        }
+
+        private void btnAddDoctorMenu_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            if (doctorrecordpage == null)
+            {
+                doctorrecordpage = new DoctorRecordPage();
+                doctorrecordpage.FormClosed += Doctorrecordpage_FormClosed1;
+                doctorrecordpage.MdiParent = this;
+                doctorrecordpage.Show();
+            }
+            else
+            {
+                doctorrecordpage.Activate();
+            }
+        }
+        private void Doctorrecordpage_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            doctorrecordpage = null;
+        }
+        private void btnViewAllDoctor_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            if (viewalldoctor == null)
+            {
+                viewalldoctor = new ViewAllDoctorsRecordcs();
+                viewalldoctor.FormClosed += Viewalldoctor_FormClosed;
+                viewalldoctor.MdiParent = this;
+                viewalldoctor.Show();
+            }
+            else
+            {
+                viewalldoctor.Activate();
+            }
+        }
+        private void Viewalldoctor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            viewalldoctor = null;
+        }
+
+        private void btnStaffMenu_Click_1(object sender, EventArgs e)
+        {
+            Movepanel(btnStaffMenu);
+            showSubMenu(panelStaffMenu);
+        }
+
+        private void btnAddStaffMenu_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            //staffpage p = new staffpage();
+            //p.MdiParent = this;
+            //p.Show();
+
+            if (staffpage == null)
+            {
+                staffpage = new StaffPage();
+                staffpage.FormClosed += Staffpage_FormClosed1;
+                staffpage.MdiParent = this;
+                staffpage.Show();
+            }
+            else
+            {
+                doctorrecordpage.Activate();
+            }
+
+        }
+        private void Staffpage_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            staffpage = null;
+        }
+
+        private void btnViewAllStaffMenu_Click_1(object sender, EventArgs e)
+        {
+            //ViewAllStaffRecords v = new ViewAllStaffRecords();
+            //v.MdiParent = this;
+            //v.Show();
+
+            hideSubMenu();
+            if (viewallstaffrecords == null)
+            {
+                viewallstaffrecords = new ViewAllStaffRecords();
+                viewallstaffrecords.FormClosed += Viewallstaffrecords_FormClosed;
+                viewallstaffrecords.MdiParent = this;
+                viewallstaffrecords.Show();
+            }
+            else
+            {
+                viewallstaffrecords.Activate();
+            }
+        }
+
+        private void Viewallstaffrecords_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            viewallstaffrecords = null;
+        }
+
+        private void btnUserMenu_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(panelUserMenu);
+            Movepanel(btnUserMenu);
+        }
+
+        private void btnAddUserMenu_Click_1(object sender, EventArgs e)
+        {
+            //UserRecordPage p = new UserRecordPage();
+            //p.MdiParent = this;
+            //p.Show();
+            hideSubMenu();
+
+            if (userrecord == null)
+            {
+                userrecord = new UserRecordPage();
+                userrecord.FormClosed += Userrecord_FormClosed;
+                userrecord.MdiParent = this;
+                userrecord.Show();
+            }
+            else
+            {
+                userrecord.Activate();
+            }
+
+        }
+
+        private void Userrecord_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            userrecord = null;
+        }
+
+        private void btnViewAllUserMenu_Click_1(object sender, EventArgs e)
+        {
+            //ViewAllUser v = new ViewAllUser();
+            //v.MdiParent = this;
+            //v.Show();
+            hideSubMenu();
+
+            if (viewalluser == null)
+            {
+                viewalluser = new ViewAllUser();
+                viewalluser.FormClosed += Viewalluser_FormClosed;
+                viewalluser.MdiParent = this;
+                viewalluser.Show();
+            }
+            else
+            {
+                viewalluser.Activate();
+            }
+        }
+
+        private void Viewalluser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            viewalluser = null;
+        }
+
+        private void btnReportsMenu_Click(object sender, EventArgs e)
+        {
+            Movepanel(btnReportsMenu);
+            showSubMenu(panelReportMenu);
+        }
+
+        private void btnAboutusMenu_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Aboutus_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            aboutus = null;
+        }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            if (settingpage == null)
+            {
+                settingpage = new SettingPage();
+                settingpage.FormClosed += Settingpage_FormClosed;
+                settingpage.MdiParent = this;
+                settingpage.Show();
+            }
+            else
+            {
+                settingpage.Activate();
+            }
+        }
+
+        private void Settingpage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            settingpage = null;
+        }
+
+        private void userPictureBox2_Click(object sender, EventArgs e)
+        {
+            if (settingpage == null)
+            {
+                settingpage = new SettingPage();
+                settingpage.FormClosed += Settingpage_FormClosed;
+                settingpage.MdiParent = this;
+                settingpage.Show();
+            }
+            else
+            {
+                settingpage.Activate();
+            }
+        }
+
+        private void userPictureBox_Click(object sender, EventArgs e)
+        {
+            if (settingpage == null)
+            {
+                settingpage = new SettingPage();
+                settingpage.FormClosed += Settingpage_FormClosed;
+                settingpage.MdiParent = this;
+                settingpage.Show();
+            }
+            else
+            {
+                settingpage.Activate();
+            }
+        }
+
+        private void btnAboutusMenu_Click(object sender, EventArgs e)
+        {
+            Movepanel(btnAboutusMenu);
+            hideSubMenu();
+
+            if (aboutus == null)
+            {
+                aboutus = new AboutUs();
+                aboutus.FormClosed += Aboutus_FormClosed;
+                aboutus.MdiParent = this;
+                aboutus.Show();
+            }
+            else
+            {
+                aboutus.Activate();
+            }
+        }
+
+        private void btnReportForBloodDonation_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            if (reportforblooddonation == null)
+            {
+                reportforblooddonation = new ReportForBloodDonationPage();
+                reportforblooddonation.FormClosed += Reportforblooddonation_FormClosed;
+                reportforblooddonation.MdiParent = this;
+                reportforblooddonation.Show();
+            }
+            else
+            {
+                reportforblooddonation.Activate();
+            }
+        }
+
+        private void Reportforblooddonation_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            reportforblooddonation = null;
+        }
+
+        private void btnReportForBloodTransfer_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            if (reportforbloodtransfer == null)
+            {
+                reportforbloodtransfer = new ReportForBloodTransferPage();
+                reportforbloodtransfer.FormClosed += Reportforbloodtransfer_FormClosed;
+                reportforbloodtransfer.MdiParent = this;
+                reportforbloodtransfer.Show();
+            }
+            else
+            {
+                reportforbloodtransfer.Activate();
+            }
+        }
+
+        private void Reportforbloodtransfer_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            reportforbloodtransfer = null;
+        }
+
+        private void btnReportForDoctors_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+            if (reportfordoctor == null)
+            {
+                reportfordoctor = new ReportForDoctorPage();
+                reportfordoctor.FormClosed += Reportfordoctor_FormClosed;
+                reportfordoctor.MdiParent = this;
+                reportfordoctor.Show();
+            }
+            else
+            {
+                reportfordoctor.Activate();
+            }
+        }
+
+        private void Reportfordoctor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            reportfordoctor = null;
+        }
     }
 }
+
+
+
+
+
+
+
+
 

@@ -147,7 +147,7 @@ namespace BloodBankManagementSystem
         public void ClearData()
         {
             BindingThePatientNo();
-       
+
             DataBindingForDoctorName();
             DataBindingForHospitalName();
 
@@ -177,7 +177,7 @@ namespace BloodBankManagementSystem
         public void BindingThePatientNo()
         {
             cmbPatientNo.Items.Clear();
-          
+
 
             SqlConnection con = new SqlConnection(cs);
             string query = "select *from Patient_RegistrationTbl";
@@ -249,7 +249,7 @@ namespace BloodBankManagementSystem
                 {
                     SqlConnection con = new SqlConnection(cs);
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("exec DeleteBloodTransferRecord '"+ cmbPatientNo.SelectedItem +"'", con);
+                    SqlCommand cmd = new SqlCommand("exec DeleteBloodTransferRecord '" + cmbPatientNo.SelectedItem + "'", con);
                     int a = cmd.ExecuteNonQuery();
                     if (a > 0)
                     {
@@ -267,7 +267,7 @@ namespace BloodBankManagementSystem
             int id = Convert.ToInt32(BloodTransferList.SelectedRows[0].Cells[0].Value.ToString());
             cmbPatientNo.SelectedItem = BloodTransferList.SelectedRows[0].Cells[1].Value.ToString();
             txtName.Text = BloodTransferList.SelectedRows[0].Cells[2].Value.ToString();
-             dtpDateOfBrith.Value = Convert.ToDateTime(BloodTransferList.SelectedRows[0].Cells[3].Value.ToString());
+            dtpDateOfBrith.Value = Convert.ToDateTime(BloodTransferList.SelectedRows[0].Cells[3].Value.ToString());
             cmbGender.SelectedItem = BloodTransferList.SelectedRows[0].Cells[4].Value.ToString();
             txtMobileNo.Text = BloodTransferList.SelectedRows[0].Cells[5].Value.ToString();
             RegistrationDate.Value = Convert.ToDateTime(BloodTransferList.SelectedRows[0].Cells[6].Value.ToString());
@@ -303,17 +303,17 @@ namespace BloodBankManagementSystem
                 errorProvider1.SetError(this.cmbPatientNo, "Please Select The Patient ID ..");
                 cmbPatientNo.Focus();
             }
-            else if(cmbGender.SelectedItem.ToString() == "Select Gender")
+            else if (cmbGender.SelectedItem.ToString() == "Select Gender")
             {
                 errorProvider2.SetError(this.cmbGender, "please select gender...");
                 cmbGender.Focus();
             }
-            else if(cmbCity.SelectedItem.ToString() == "Select City")
+            else if (cmbCity.SelectedItem.ToString() == "Select City")
             {
                 errorProvider3.SetError(this.cmbCity, "please select city...");
                 cmbCity.Focus();
             }
-            else if(cmbBloodGroup.SelectedItem.ToString() == "Select Blood Group")
+            else if (cmbBloodGroup.SelectedItem.ToString() == "Select Blood Group")
             {
                 errorProvider4.SetError(this.cmbBloodGroup, "please select blood group...");
                 cmbBloodGroup.Focus();
@@ -323,17 +323,17 @@ namespace BloodBankManagementSystem
                 errorProvider5.SetError(this.cmbHospitalName, "Please Select The Hspital Name ..");
                 cmbHospitalName.Focus();
             }
-            else if(cmbDoctorName.SelectedItem == null)
+            else if (cmbDoctorName.SelectedItem == null)
             {
                 errorProvider6.SetError(this.cmbDoctorName, "Please Select The Doctor Name ..");
                 cmbDoctorName.Focus();
             }
-            else if(cmbBloodBottle.SelectedItem == null)
+            else if (cmbBloodBottle.SelectedItem == null)
             {
                 errorProvider7.SetError(this.cmbBloodBottle, "Please Select The Bottle-unit's ..");
                 cmbBloodBottle.Focus();
             }
-            else if(string.IsNullOrEmpty(txtBottleUsed.Text))
+            else if (string.IsNullOrEmpty(txtBottleUsed.Text))
             {
                 errorProvider8.SetError(this.txtBottleUsed, "Please Enter Bottle used details ..");
                 txtBottleUsed.Focus();
@@ -350,7 +350,7 @@ namespace BloodBankManagementSystem
                     MessageBoxForInsertData1.Show();
                     ClearData();
                     DataBinding();
-                    
+
                 }
                 else
                 {
@@ -389,16 +389,16 @@ namespace BloodBankManagementSystem
                         cmd1.ExecuteNonQuery();
                         con1.Close();
                     }
-                  
+
 
                 }
             }
             con.Close();
         }
 
-    
 
-    private void btnAvailable_Click(object sender, EventArgs e)
+
+        private void btnAvailable_Click(object sender, EventArgs e)
         {
             if (cmbPatientNo.SelectedItem == null)
             {
@@ -450,7 +450,7 @@ namespace BloodBankManagementSystem
                 cmd.Parameters.AddWithValue("@bloodgroup", cmbBloodGroup.SelectedItem);
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
-                while(dr.Read())
+                while (dr.Read())
                 {
                     int stock = dr.GetInt32(2);
                     if (stock == 0)
@@ -473,7 +473,7 @@ namespace BloodBankManagementSystem
                     }
                 }
 
-                
+
 
             }
         }
@@ -490,18 +490,18 @@ namespace BloodBankManagementSystem
                 SqlConnection con = new SqlConnection(cs);
                 string query = "select *from Patient_RegistrationTbl where PId=@PId";
                 SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@PId",cmbPatientNo.SelectedItem);
+                cmd.Parameters.AddWithValue("@PId", cmbPatientNo.SelectedItem);
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     txtName.Text = dr.GetString(2).ToString();
-                     dtpDateOfBrith.Value = dr.GetDateTime(3);
+                    dtpDateOfBrith.Value = dr.GetDateTime(3);
                     cmbGender.SelectedItem = dr.GetString(4);
                     txtMobileNo.Text = dr.GetString(5);
                     RegistrationDate.Value = dr.GetDateTime(6);
                     txtEmailID.Text = dr.GetString(7).ToString();
-                     cmbCity.SelectedItem = dr.GetString(8).ToString();
+                    cmbCity.SelectedItem = dr.GetString(8).ToString();
                     txtAddress.Text = dr.GetString(9).ToString();
                     cmbBloodGroup.SelectedItem = dr.GetString(10).ToString();
                     cmbHospitalName.SelectedItem = dr.GetString(11).ToString();
@@ -532,5 +532,6 @@ namespace BloodBankManagementSystem
         {
             viewallbloodtransfer = null;
         }
+
     }
 }

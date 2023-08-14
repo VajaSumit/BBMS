@@ -47,5 +47,56 @@ namespace BloodBankManagementSystem
         {
             this.Close();
         }
+
+        private void btnviewall_Click(object sender, EventArgs e)
+        {
+            DataBinding();
+        }
+
+        private void txtSearchName_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearchName.Text))
+            {
+                errorProvider1.SetError(this.txtSearchName,"Please Enter The Doctor Name ..");
+                txtSearchName.Focus();
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearchName.Text))
+            {
+                errorProvider1.SetError(this.txtSearchName, "Please Enter The Doctor Name ..");
+                txtSearchName.Focus();
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                string query = "select *from DoctorTbl where Name=@nm";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                sda.SelectCommand.Parameters.AddWithValue("@nm", txtSearchName.Text);
+                DataTable data = new DataTable();
+                sda.Fill(data);
+
+                if (data.Rows.Count > 0)
+                {
+                    guna2MessageDialog1.Show();
+                    DoctorList.DataSource = data;
+                    txtSearchName.Clear();
+
+                }
+                else
+                {
+                    guna2MessageDialog2.Show();
+                    DataBinding();
+                    txtSearchName.Clear();
+                }
+            }
+        }
     }
 }

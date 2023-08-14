@@ -409,7 +409,7 @@ namespace BloodBankManagementSystem
                         cmd.Parameters.AddWithValue("@id", txtUserid.Text);
                         cmd.Parameters.AddWithValue("@name", txtName.Text);
                         cmd.Parameters.AddWithValue("@password", UserPassword);
-                        cmd.Parameters.AddWithValue("@dob", dtpDateOfBrith.Value.ToString("dd/MM/yyyy"));
+                        cmd.Parameters.AddWithValue("@dob", dtpDateOfBrith.Value);
                         cmd.Parameters.AddWithValue("@email", txtEmailID.Text);
                         cmd.Parameters.AddWithValue("@userrole", cmbUserRole.SelectedItem);
                         cmd.Parameters.AddWithValue("@status", cmbStatus.SelectedItem);
@@ -564,7 +564,7 @@ namespace BloodBankManagementSystem
 
                             cmd.Parameters.AddWithValue("@password", UserPassword);
 
-                            cmd.Parameters.AddWithValue("@dob", dtpDateOfBrith.Value.ToString("dd/MM/yyyy"));
+                            cmd.Parameters.AddWithValue("@dob", dtpDateOfBrith.Value);
                             cmd.Parameters.AddWithValue("@email", txtEmailID.Text);
                             cmd.Parameters.AddWithValue("@userrole", cmbUserRole.SelectedItem);
                             cmd.Parameters.AddWithValue("@status", cmbStatus.SelectedItem);
