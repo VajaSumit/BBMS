@@ -344,7 +344,7 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label23.Location = new System.Drawing.Point(387, 634);
+            this.label23.Location = new System.Drawing.Point(788, 527);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(15, 16);
             this.label23.TabIndex = 58;
@@ -368,7 +368,7 @@
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label25.Location = new System.Drawing.Point(284, 635);
+            this.label25.Location = new System.Drawing.Point(685, 528);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(73, 16);
             this.label25.TabIndex = 56;
@@ -453,7 +453,7 @@
             this.btnsave.FillColor2 = System.Drawing.Color.White;
             this.btnsave.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnsave.ForeColor = System.Drawing.Color.Black;
-            this.btnsave.Location = new System.Drawing.Point(707, 678);
+            this.btnsave.Location = new System.Drawing.Point(620, 624);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(112, 29);
             this.btnsave.TabIndex = 130;
@@ -477,7 +477,7 @@
             this.btnreset.FillColor2 = System.Drawing.Color.White;
             this.btnreset.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnreset.ForeColor = System.Drawing.Color.Black;
-            this.btnreset.Location = new System.Drawing.Point(876, 678);
+            this.btnreset.Location = new System.Drawing.Point(764, 624);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(112, 29);
             this.btnreset.TabIndex = 131;
@@ -755,7 +755,7 @@
             this.txtWeight.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtWeight.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtWeight.Location = new System.Drawing.Point(430, 629);
+            this.txtWeight.Location = new System.Drawing.Point(831, 522);
             this.txtWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWeight.MaxLength = 3;
             this.txtWeight.Name = "txtWeight";
@@ -850,9 +850,9 @@
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(84, 507);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(101, 507);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(189, 87);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(163, 87);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 166;
             this.guna2PictureBox3.TabStop = false;
@@ -969,9 +969,9 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(723, 484);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(882, 551);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(314, 134);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(168, 81);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 337;
             this.guna2PictureBox1.TabStop = false;

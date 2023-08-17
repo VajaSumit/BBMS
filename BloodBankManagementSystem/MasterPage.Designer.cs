@@ -34,6 +34,11 @@
             this.labtime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelMove = new System.Windows.Forms.Panel();
+            this.panelReportMenu = new System.Windows.Forms.Panel();
+            this.btnReportForDoctors = new System.Windows.Forms.Button();
+            this.btnReportForBloodTransfer = new System.Windows.Forms.Button();
+            this.btnReportForBloodDonation = new System.Windows.Forms.Button();
             this.btnReportsMenu = new System.Windows.Forms.Button();
             this.panelUserMenu = new System.Windows.Forms.Panel();
             this.btnViewAllUserMenu = new System.Windows.Forms.Button();
@@ -72,7 +77,7 @@
             this.btnDonorsRegistration = new System.Windows.Forms.Button();
             this.btnDonorMenu = new System.Windows.Forms.Button();
             this.btnHomeMenu = new System.Windows.Forms.Button();
-            this.panelMove = new System.Windows.Forms.Panel();
+            this.btnAboutusMenu = new System.Windows.Forms.Button();
             this.btnSetting = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnDateTime = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -93,12 +98,8 @@
             this.LogoutDialogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.panelReportMenu = new System.Windows.Forms.Panel();
-            this.btnReportForBloodTransfer = new System.Windows.Forms.Button();
-            this.btnReportForBloodDonation = new System.Windows.Forms.Button();
-            this.btnReportForDoctors = new System.Windows.Forms.Button();
-            this.btnAboutusMenu = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.panelReportMenu.SuspendLayout();
             this.panelUserMenu.SuspendLayout();
             this.panelStaffMenu.SuspendLayout();
             this.panelDoctorMenu.SuspendLayout();
@@ -114,7 +115,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox2)).BeginInit();
             this.panelSliderMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
-            this.panelReportMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // lable
@@ -136,11 +136,11 @@
             // 
             this.labtime.AutoSize = true;
             this.labtime.BackColor = System.Drawing.Color.Transparent;
-            this.labtime.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labtime.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labtime.ForeColor = System.Drawing.Color.DimGray;
-            this.labtime.Location = new System.Drawing.Point(36, 16);
+            this.labtime.Location = new System.Drawing.Point(14, 37);
             this.labtime.Name = "labtime";
-            this.labtime.Size = new System.Drawing.Size(14, 14);
+            this.labtime.Size = new System.Drawing.Size(21, 21);
             this.labtime.TabIndex = 19;
             this.labtime.Text = "*";
             // 
@@ -153,7 +153,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Transparent;
-            this.panelMenu.Controls.Add(this.btnAboutusMenu);
+            this.panelMenu.Controls.Add(this.panelMove);
             this.panelMenu.Controls.Add(this.panelReportMenu);
             this.panelMenu.Controls.Add(this.btnReportsMenu);
             this.panelMenu.Controls.Add(this.panelUserMenu);
@@ -175,10 +175,82 @@
             this.panelMenu.Controls.Add(this.panelDonorMenu);
             this.panelMenu.Controls.Add(this.btnDonorMenu);
             this.panelMenu.Controls.Add(this.btnHomeMenu);
-            this.panelMenu.Location = new System.Drawing.Point(0, 139);
+            this.panelMenu.Location = new System.Drawing.Point(0, 184);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(195, 1238);
+            this.panelMenu.Size = new System.Drawing.Size(195, 1164);
             this.panelMenu.TabIndex = 25;
+            // 
+            // panelMove
+            // 
+            this.panelMove.BackColor = System.Drawing.Color.Red;
+            this.panelMove.Location = new System.Drawing.Point(1, 0);
+            this.panelMove.Name = "panelMove";
+            this.panelMove.Size = new System.Drawing.Size(6, 39);
+            this.panelMove.TabIndex = 92;
+            // 
+            // panelReportMenu
+            // 
+            this.panelReportMenu.BackColor = System.Drawing.Color.Transparent;
+            this.panelReportMenu.Controls.Add(this.btnReportForDoctors);
+            this.panelReportMenu.Controls.Add(this.btnReportForBloodTransfer);
+            this.panelReportMenu.Controls.Add(this.btnReportForBloodDonation);
+            this.panelReportMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelReportMenu.Location = new System.Drawing.Point(0, 1031);
+            this.panelReportMenu.Name = "panelReportMenu";
+            this.panelReportMenu.Size = new System.Drawing.Size(195, 99);
+            this.panelReportMenu.TabIndex = 93;
+            this.panelReportMenu.Visible = false;
+            // 
+            // btnReportForDoctors
+            // 
+            this.btnReportForDoctors.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportForDoctors.FlatAppearance.BorderSize = 0;
+            this.btnReportForDoctors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportForDoctors.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportForDoctors.ForeColor = System.Drawing.Color.Black;
+            this.btnReportForDoctors.Location = new System.Drawing.Point(0, 66);
+            this.btnReportForDoctors.Name = "btnReportForDoctors";
+            this.btnReportForDoctors.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnReportForDoctors.Size = new System.Drawing.Size(195, 33);
+            this.btnReportForDoctors.TabIndex = 106;
+            this.btnReportForDoctors.Text = "Doctor\'s  Report";
+            this.btnReportForDoctors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportForDoctors.UseVisualStyleBackColor = true;
+            this.btnReportForDoctors.Click += new System.EventHandler(this.btnReportForDoctors_Click);
+            // 
+            // btnReportForBloodTransfer
+            // 
+            this.btnReportForBloodTransfer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportForBloodTransfer.FlatAppearance.BorderSize = 0;
+            this.btnReportForBloodTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportForBloodTransfer.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportForBloodTransfer.ForeColor = System.Drawing.Color.Black;
+            this.btnReportForBloodTransfer.Location = new System.Drawing.Point(0, 33);
+            this.btnReportForBloodTransfer.Name = "btnReportForBloodTransfer";
+            this.btnReportForBloodTransfer.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnReportForBloodTransfer.Size = new System.Drawing.Size(195, 33);
+            this.btnReportForBloodTransfer.TabIndex = 2;
+            this.btnReportForBloodTransfer.Text = "Blood Transfer Report";
+            this.btnReportForBloodTransfer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportForBloodTransfer.UseVisualStyleBackColor = true;
+            this.btnReportForBloodTransfer.Click += new System.EventHandler(this.btnReportForBloodTransfer_Click);
+            // 
+            // btnReportForBloodDonation
+            // 
+            this.btnReportForBloodDonation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportForBloodDonation.FlatAppearance.BorderSize = 0;
+            this.btnReportForBloodDonation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportForBloodDonation.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportForBloodDonation.ForeColor = System.Drawing.Color.Black;
+            this.btnReportForBloodDonation.Location = new System.Drawing.Point(0, 0);
+            this.btnReportForBloodDonation.Name = "btnReportForBloodDonation";
+            this.btnReportForBloodDonation.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnReportForBloodDonation.Size = new System.Drawing.Size(195, 33);
+            this.btnReportForBloodDonation.TabIndex = 3;
+            this.btnReportForBloodDonation.Text = "Blood Donation Report";
+            this.btnReportForBloodDonation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportForBloodDonation.UseVisualStyleBackColor = true;
+            this.btnReportForBloodDonation.Click += new System.EventHandler(this.btnReportForBloodDonation_Click);
             // 
             // btnReportsMenu
             // 
@@ -201,6 +273,8 @@
             this.btnReportsMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReportsMenu.UseVisualStyleBackColor = false;
             this.btnReportsMenu.Click += new System.EventHandler(this.btnReportsMenu_Click);
+            this.btnReportsMenu.MouseEnter += new System.EventHandler(this.btnReportsMenu_MouseEnter);
+            this.btnReportsMenu.MouseLeave += new System.EventHandler(this.btnReportsMenu_MouseLeave);
             // 
             // panelUserMenu
             // 
@@ -269,6 +343,8 @@
             this.btnUserMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUserMenu.UseVisualStyleBackColor = false;
             this.btnUserMenu.Click += new System.EventHandler(this.btnUserMenu_Click_1);
+            this.btnUserMenu.MouseEnter += new System.EventHandler(this.btnUserMenu_MouseEnter);
+            this.btnUserMenu.MouseLeave += new System.EventHandler(this.btnUserMenu_MouseLeave);
             // 
             // panelStaffMenu
             // 
@@ -334,9 +410,11 @@
             this.btnStaffMenu.Padding = new System.Windows.Forms.Padding(17, 0, 16, 0);
             this.btnStaffMenu.Size = new System.Drawing.Size(195, 37);
             this.btnStaffMenu.TabIndex = 103;
-            this.btnStaffMenu.Text = "               Staff Members";
+            this.btnStaffMenu.Text = "                 Staff Members";
             this.btnStaffMenu.UseVisualStyleBackColor = false;
             this.btnStaffMenu.Click += new System.EventHandler(this.btnStaffMenu_Click_1);
+            this.btnStaffMenu.MouseEnter += new System.EventHandler(this.btnStaffMenu_MouseEnter);
+            this.btnStaffMenu.MouseLeave += new System.EventHandler(this.btnStaffMenu_MouseLeave);
             // 
             // panelDoctorMenu
             // 
@@ -402,9 +480,11 @@
             this.btnDoctorMenu.Padding = new System.Windows.Forms.Padding(17, 0, 56, 0);
             this.btnDoctorMenu.Size = new System.Drawing.Size(195, 37);
             this.btnDoctorMenu.TabIndex = 92;
-            this.btnDoctorMenu.Text = "               Doctors";
+            this.btnDoctorMenu.Text = "                 Doctors";
             this.btnDoctorMenu.UseVisualStyleBackColor = false;
             this.btnDoctorMenu.Click += new System.EventHandler(this.btnDoctorMenu_Click_1);
+            this.btnDoctorMenu.MouseEnter += new System.EventHandler(this.btnDoctorMenu_MouseEnter);
+            this.btnDoctorMenu.MouseLeave += new System.EventHandler(this.btnDoctorMenu_MouseLeave);
             // 
             // panelHospitalMenu
             // 
@@ -470,9 +550,11 @@
             this.btnHospitalMenu.Padding = new System.Windows.Forms.Padding(17, 0, 50, 0);
             this.btnHospitalMenu.Size = new System.Drawing.Size(195, 37);
             this.btnHospitalMenu.TabIndex = 92;
-            this.btnHospitalMenu.Text = "              Hospitals";
+            this.btnHospitalMenu.Text = "                  Hospitals";
             this.btnHospitalMenu.UseVisualStyleBackColor = false;
             this.btnHospitalMenu.Click += new System.EventHandler(this.btnHospitalMenu_Click);
+            this.btnHospitalMenu.MouseEnter += new System.EventHandler(this.btnHospitalMenu_MouseEnter);
+            this.btnHospitalMenu.MouseLeave += new System.EventHandler(this.btnHospitalMenu_MouseLeave);
             // 
             // btnBloodDiscardMenu
             // 
@@ -491,9 +573,11 @@
             this.btnBloodDiscardMenu.Padding = new System.Windows.Forms.Padding(17, 0, 17, 0);
             this.btnBloodDiscardMenu.Size = new System.Drawing.Size(195, 37);
             this.btnBloodDiscardMenu.TabIndex = 102;
-            this.btnBloodDiscardMenu.Text = "        Blood Discard";
+            this.btnBloodDiscardMenu.Text = "             Blood Discard";
             this.btnBloodDiscardMenu.UseVisualStyleBackColor = false;
             this.btnBloodDiscardMenu.Click += new System.EventHandler(this.btnBloodDiscardMenu_Click);
+            this.btnBloodDiscardMenu.MouseEnter += new System.EventHandler(this.btnBloodDiscardMenu_MouseEnter);
+            this.btnBloodDiscardMenu.MouseLeave += new System.EventHandler(this.btnBloodDiscardMenu_MouseLeave);
             // 
             // btnBloodStockMenu
             // 
@@ -515,6 +599,8 @@
             this.btnBloodStockMenu.Text = "         Blood Stock";
             this.btnBloodStockMenu.UseVisualStyleBackColor = false;
             this.btnBloodStockMenu.Click += new System.EventHandler(this.btnBloodStockMenu_Click_1);
+            this.btnBloodStockMenu.MouseEnter += new System.EventHandler(this.btnBloodStockMenu_MouseEnter);
+            this.btnBloodStockMenu.MouseLeave += new System.EventHandler(this.btnBloodStockMenu_MouseLeave);
             // 
             // panelBloodTransferMenu
             // 
@@ -582,6 +668,8 @@
             this.btnBloodTransferMenu.Text = "              Blood Transfer";
             this.btnBloodTransferMenu.UseVisualStyleBackColor = false;
             this.btnBloodTransferMenu.Click += new System.EventHandler(this.btnBloodTransferMenu_Click_1);
+            this.btnBloodTransferMenu.MouseEnter += new System.EventHandler(this.btnBloodTransferMenu_MouseEnter);
+            this.btnBloodTransferMenu.MouseLeave += new System.EventHandler(this.btnBloodTransferMenu_MouseLeave);
             // 
             // panelPatientMenu
             // 
@@ -668,6 +756,8 @@
             this.btnPatientMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPatientMenu.UseVisualStyleBackColor = false;
             this.btnPatientMenu.Click += new System.EventHandler(this.btnPatientMenu_Click);
+            this.btnPatientMenu.MouseEnter += new System.EventHandler(this.btnPatientMenu_MouseEnter_1);
+            this.btnPatientMenu.MouseLeave += new System.EventHandler(this.btnPatientMenu_MouseLeave_1);
             // 
             // panelBloodDonationMenu
             // 
@@ -852,13 +942,28 @@
             this.btnHomeMenu.MouseEnter += new System.EventHandler(this.btnHomeMenu_MouseEnter);
             this.btnHomeMenu.MouseLeave += new System.EventHandler(this.btnHomeMenu_MouseLeave);
             // 
-            // panelMove
+            // btnAboutusMenu
             // 
-            this.panelMove.BackColor = System.Drawing.Color.Red;
-            this.panelMove.Location = new System.Drawing.Point(0, 8);
-            this.panelMove.Name = "panelMove";
-            this.panelMove.Size = new System.Drawing.Size(6, 33);
-            this.panelMove.TabIndex = 27;
+            this.btnAboutusMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnAboutusMenu.FlatAppearance.BorderSize = 0;
+            this.btnAboutusMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnAboutusMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnAboutusMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAboutusMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAboutusMenu.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAboutusMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnAboutusMenu.Image")));
+            this.btnAboutusMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAboutusMenu.Location = new System.Drawing.Point(830, 83);
+            this.btnAboutusMenu.Name = "btnAboutusMenu";
+            this.btnAboutusMenu.Padding = new System.Windows.Forms.Padding(17, 0, 20, 0);
+            this.btnAboutusMenu.Size = new System.Drawing.Size(195, 37);
+            this.btnAboutusMenu.TabIndex = 93;
+            this.btnAboutusMenu.Text = "  AboutUs";
+            this.btnAboutusMenu.UseVisualStyleBackColor = false;
+            this.btnAboutusMenu.Visible = false;
+            this.btnAboutusMenu.Click += new System.EventHandler(this.btnAboutusMenu_Click);
+            this.btnAboutusMenu.MouseEnter += new System.EventHandler(this.btnAboutusMenu_MouseEnter);
+            this.btnAboutusMenu.MouseLeave += new System.EventHandler(this.btnAboutusMenu_MouseLeave);
             // 
             // btnSetting
             // 
@@ -940,9 +1045,9 @@
             this.panelDataTime.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.panelDataTime.FillColor2 = System.Drawing.Color.DodgerBlue;
             this.panelDataTime.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.panelDataTime.Location = new System.Drawing.Point(1086, 46);
+            this.panelDataTime.Location = new System.Drawing.Point(1096, 46);
             this.panelDataTime.Name = "panelDataTime";
-            this.panelDataTime.Size = new System.Drawing.Size(272, 211);
+            this.panelDataTime.Size = new System.Drawing.Size(272, 255);
             this.panelDataTime.TabIndex = 81;
             this.panelDataTime.UseTransparentBackground = true;
             this.panelDataTime.Visible = false;
@@ -952,7 +1057,7 @@
             this.monthCalendar1.BackColor = System.Drawing.Color.AliceBlue;
             this.monthCalendar1.FirstDayOfWeek = System.Windows.Forms.Day.Sunday;
             this.monthCalendar1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.monthCalendar1.Location = new System.Drawing.Point(21, 35);
+            this.monthCalendar1.Location = new System.Drawing.Point(22, 78);
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(5);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 97;
@@ -990,7 +1095,6 @@
             this.guna2GradientPanel1.Controls.Add(this.btnLogout);
             this.guna2GradientPanel1.Controls.Add(this.btnSetting);
             this.guna2GradientPanel1.Controls.Add(this.btnDateTime);
-            this.guna2GradientPanel1.Controls.Add(this.panelMove);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.DodgerBlue;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.DeepSkyBlue;
@@ -1069,7 +1173,7 @@
             this.lblProfilename.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfilename.ForeColor = System.Drawing.Color.White;
             this.lblProfilename.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblProfilename.Location = new System.Drawing.Point(84, 98);
+            this.lblProfilename.Location = new System.Drawing.Point(58, 154);
             this.lblProfilename.Name = "lblProfilename";
             this.lblProfilename.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
             this.lblProfilename.Size = new System.Drawing.Size(35, 16);
@@ -1084,7 +1188,7 @@
             this.lblProfilename2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfilename2.ForeColor = System.Drawing.Color.White;
             this.lblProfilename2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblProfilename2.Location = new System.Drawing.Point(36, 98);
+            this.lblProfilename2.Location = new System.Drawing.Point(69, 138);
             this.lblProfilename2.Name = "lblProfilename2";
             this.lblProfilename2.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
             this.lblProfilename2.Size = new System.Drawing.Size(35, 16);
@@ -1097,8 +1201,8 @@
             this.panelSliderMenu.BorderColor = System.Drawing.Color.Black;
             this.panelSliderMenu.Controls.Add(this.lblProfilename2);
             this.panelSliderMenu.Controls.Add(this.lblProfilename);
-            this.panelSliderMenu.Controls.Add(this.panelMenu);
             this.panelSliderMenu.Controls.Add(this.userPictureBox);
+            this.panelSliderMenu.Controls.Add(this.panelMenu);
             this.panelSliderMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSliderMenu.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.panelSliderMenu.FillColor2 = System.Drawing.Color.DodgerBlue;
@@ -1114,10 +1218,10 @@
             this.userPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("userPictureBox.Image")));
             this.userPictureBox.ImageRotate = 0F;
-            this.userPictureBox.Location = new System.Drawing.Point(38, 20);
+            this.userPictureBox.Location = new System.Drawing.Point(30, 19);
             this.userPictureBox.Name = "userPictureBox";
             this.userPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.userPictureBox.Size = new System.Drawing.Size(105, 76);
+            this.userPictureBox.Size = new System.Drawing.Size(126, 116);
             this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.userPictureBox.TabIndex = 252;
             this.userPictureBox.TabStop = false;
@@ -1143,91 +1247,6 @@
             this.guna2AnimateWindow1.Interval = 700;
             this.guna2AnimateWindow1.TargetForm = this;
             // 
-            // panelReportMenu
-            // 
-            this.panelReportMenu.BackColor = System.Drawing.Color.Transparent;
-            this.panelReportMenu.Controls.Add(this.btnReportForDoctors);
-            this.panelReportMenu.Controls.Add(this.btnReportForBloodTransfer);
-            this.panelReportMenu.Controls.Add(this.btnReportForBloodDonation);
-            this.panelReportMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReportMenu.Location = new System.Drawing.Point(0, 1031);
-            this.panelReportMenu.Name = "panelReportMenu";
-            this.panelReportMenu.Size = new System.Drawing.Size(195, 99);
-            this.panelReportMenu.TabIndex = 93;
-            this.panelReportMenu.Visible = false;
-            // 
-            // btnReportForBloodTransfer
-            // 
-            this.btnReportForBloodTransfer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportForBloodTransfer.FlatAppearance.BorderSize = 0;
-            this.btnReportForBloodTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportForBloodTransfer.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportForBloodTransfer.ForeColor = System.Drawing.Color.Black;
-            this.btnReportForBloodTransfer.Location = new System.Drawing.Point(0, 33);
-            this.btnReportForBloodTransfer.Name = "btnReportForBloodTransfer";
-            this.btnReportForBloodTransfer.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnReportForBloodTransfer.Size = new System.Drawing.Size(195, 33);
-            this.btnReportForBloodTransfer.TabIndex = 2;
-            this.btnReportForBloodTransfer.Text = "Blood Transfer Report";
-            this.btnReportForBloodTransfer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportForBloodTransfer.UseVisualStyleBackColor = true;
-            this.btnReportForBloodTransfer.Click += new System.EventHandler(this.btnReportForBloodTransfer_Click);
-            // 
-            // btnReportForBloodDonation
-            // 
-            this.btnReportForBloodDonation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportForBloodDonation.FlatAppearance.BorderSize = 0;
-            this.btnReportForBloodDonation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportForBloodDonation.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportForBloodDonation.ForeColor = System.Drawing.Color.Black;
-            this.btnReportForBloodDonation.Location = new System.Drawing.Point(0, 0);
-            this.btnReportForBloodDonation.Name = "btnReportForBloodDonation";
-            this.btnReportForBloodDonation.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnReportForBloodDonation.Size = new System.Drawing.Size(195, 33);
-            this.btnReportForBloodDonation.TabIndex = 3;
-            this.btnReportForBloodDonation.Text = "Blood Donation Report";
-            this.btnReportForBloodDonation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportForBloodDonation.UseVisualStyleBackColor = true;
-            this.btnReportForBloodDonation.Click += new System.EventHandler(this.btnReportForBloodDonation_Click);
-            // 
-            // btnReportForDoctors
-            // 
-            this.btnReportForDoctors.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportForDoctors.FlatAppearance.BorderSize = 0;
-            this.btnReportForDoctors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportForDoctors.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportForDoctors.ForeColor = System.Drawing.Color.Black;
-            this.btnReportForDoctors.Location = new System.Drawing.Point(0, 66);
-            this.btnReportForDoctors.Name = "btnReportForDoctors";
-            this.btnReportForDoctors.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnReportForDoctors.Size = new System.Drawing.Size(195, 33);
-            this.btnReportForDoctors.TabIndex = 106;
-            this.btnReportForDoctors.Text = "Doctor\'s  Report";
-            this.btnReportForDoctors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportForDoctors.UseVisualStyleBackColor = true;
-            this.btnReportForDoctors.Click += new System.EventHandler(this.btnReportForDoctors_Click);
-            // 
-            // btnAboutusMenu
-            // 
-            this.btnAboutusMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnAboutusMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAboutusMenu.FlatAppearance.BorderSize = 0;
-            this.btnAboutusMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnAboutusMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnAboutusMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAboutusMenu.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAboutusMenu.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAboutusMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnAboutusMenu.Image")));
-            this.btnAboutusMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAboutusMenu.Location = new System.Drawing.Point(0, 1130);
-            this.btnAboutusMenu.Name = "btnAboutusMenu";
-            this.btnAboutusMenu.Padding = new System.Windows.Forms.Padding(17, 0, 20, 0);
-            this.btnAboutusMenu.Size = new System.Drawing.Size(195, 37);
-            this.btnAboutusMenu.TabIndex = 93;
-            this.btnAboutusMenu.Text = "  AboutUs";
-            this.btnAboutusMenu.UseVisualStyleBackColor = false;
-            this.btnAboutusMenu.Click += new System.EventHandler(this.btnAboutusMenu_Click);
-            // 
             // MasterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1236,6 +1255,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panelDataTime);
+            this.Controls.Add(this.btnAboutusMenu);
             this.Controls.Add(this.panelSliderMenu);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1247,6 +1267,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MasterPage_Load);
             this.panelMenu.ResumeLayout(false);
+            this.panelReportMenu.ResumeLayout(false);
             this.panelUserMenu.ResumeLayout(false);
             this.panelStaffMenu.ResumeLayout(false);
             this.panelDoctorMenu.ResumeLayout(false);
@@ -1266,7 +1287,6 @@
             this.panelSliderMenu.ResumeLayout(false);
             this.panelSliderMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();
-            this.panelReportMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1275,7 +1295,6 @@
         private System.Windows.Forms.Label labtime;
         private System.Windows.Forms.Label lable;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel panelMove;
         private System.Windows.Forms.Panel panelDonorMenu;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.Timer silderTransition;
@@ -1339,6 +1358,7 @@
         public System.Windows.Forms.Button btnReportForBloodTransfer;
         public System.Windows.Forms.Button btnReportForBloodDonation;
         public System.Windows.Forms.Button btnAboutusMenu;
+        private System.Windows.Forms.Panel panelMove;
     }
 }
 

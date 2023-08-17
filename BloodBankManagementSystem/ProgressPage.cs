@@ -61,10 +61,7 @@ namespace BloodBankManagementSystem
             timer1.Start();
         }
 
-
-      
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

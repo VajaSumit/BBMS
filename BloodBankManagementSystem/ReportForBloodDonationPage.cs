@@ -28,13 +28,26 @@ namespace BloodBankManagementSystem
 
         public void DataBinding()
         {
+            //SqlConnection con = new SqlConnection(cs);
+            //con.Open();
+            //SqlCommand cmd = new SqlCommand("exec ListBloodDonationRecord", con);
+            //SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            //DataTable data = new DataTable();
+            //sda.Fill(data);
+            //BloodDonationList.DataSource = data;
+
+
             SqlConnection con = new SqlConnection(cs);
             con.Open();
             SqlCommand cmd = new SqlCommand("exec ListBloodDonationRecord", con);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable data = new DataTable();
             sda.Fill(data);
-            BloodDonationList.DataSource = data;
+
+            CrystalReport1 myreport = new CrystalReport1();
+            myreport.SetDataSource(data);
+            crystalReportViewer1.ReportSource = myreport;
+
         }
 
         private void ReportForBloodDonationPage_Load(object sender, EventArgs e)
@@ -60,7 +73,10 @@ namespace BloodBankManagementSystem
             if (data.Rows.Count > 0)
             {
                 MessageBoxForSearchData1.Show();
-                BloodDonationList.DataSource = data;
+                //BloodDonationList.DataSource = data;
+                CrystalReport1 myreport = new CrystalReport1();
+                myreport.SetDataSource(data);
+                crystalReportViewer1.ReportSource = myreport;
 
             }
             else
@@ -75,28 +91,39 @@ namespace BloodBankManagementSystem
 
         private void btnSearch2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(cs);
-            con.Open();
-            string query = "select *from BloodDonationTbl where Name=@name";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            sda.SelectCommand.Parameters.AddWithValue("@Name", txtSearchName.Text);
-            DataTable data = new DataTable();
-            sda.Fill(data);
-
-            if (data.Rows.Count > 0)
+            if (string.IsNullOrEmpty(txtSearchName.Text))
             {
-                MessageBoxForSearchData1.Show();
-                BloodDonationList.DataSource = data;
-
+                errorProvider1.SetError(this.txtSearchName, "Please Enter The Name ... !");
+                txtSearchName.Focus();
             }
             else
             {
-                MessageBoxForSearchData2.Show();
-                DataBinding();
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                string query = "select *from BloodDonationTbl where Name=@name";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                sda.SelectCommand.Parameters.AddWithValue("@Name", txtSearchName.Text);
+                DataTable data = new DataTable();
+                sda.Fill(data);
+
+                if (data.Rows.Count > 0)
+                {
+                    MessageBoxForSearchData1.Show();
+                    //BloodDonationList.DataSource = data;
+                    CrystalReport1 myreport = new CrystalReport1();
+                    myreport.SetDataSource(data);
+                    crystalReportViewer1.ReportSource = myreport;
+
+                }
+                else
+                {
+                    MessageBoxForSearchData2.Show();
+                    DataBinding();
+                }
+
+
+                con.Close();
             }
-
-
-            con.Close();
         }
 
         private void btnSwitch1_CheckedChanged(object sender, EventArgs e)
@@ -125,6 +152,24 @@ namespace BloodBankManagementSystem
                 txtSearchName.Enabled = false ;
                 btnSearch2.Enabled = false;
             }
+        }
+
+        private void txtSearchName_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearchName.Text))
+            {
+                errorProvider1.SetError(this.txtSearchName, "Please Enter The Name ... !");
+                txtSearchName.Focus();
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

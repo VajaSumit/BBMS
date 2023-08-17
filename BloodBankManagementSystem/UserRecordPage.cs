@@ -795,14 +795,7 @@ namespace BloodBankManagementSystem
 
         private void chkshowpassword_CheckedChanged_2(object sender, EventArgs e)
         {
-            if (chkshowpassword.Checked == true)
-            {
-                txtPassword.UseSystemPasswordChar = false;
-            }
-            else if (chkshowpassword.Checked == false)
-            {
-                txtPassword.UseSystemPasswordChar = true;
-            }
+           
         }
 
         private void cmbUserRole_Enter(object sender, EventArgs e)
@@ -825,6 +818,19 @@ namespace BloodBankManagementSystem
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void chkshowpassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkshowpassword.Checked == true)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                txtPassword.PasswordChar = '\0';
+            }
+            else if (chkshowpassword.Checked == false)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }

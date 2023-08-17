@@ -1189,7 +1189,7 @@
             this.btnsave.FillColor2 = System.Drawing.Color.White;
             this.btnsave.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnsave.ForeColor = System.Drawing.Color.Black;
-            this.btnsave.Location = new System.Drawing.Point(304, 783);
+            this.btnsave.Location = new System.Drawing.Point(259, 771);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(112, 29);
             this.btnsave.TabIndex = 252;
@@ -1213,7 +1213,7 @@
             this.btnreset.FillColor2 = System.Drawing.Color.White;
             this.btnreset.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnreset.ForeColor = System.Drawing.Color.Black;
-            this.btnreset.Location = new System.Drawing.Point(834, 783);
+            this.btnreset.Location = new System.Drawing.Point(789, 771);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(112, 29);
             this.btnreset.TabIndex = 251;
@@ -1237,7 +1237,7 @@
             this.btndelete.FillColor2 = System.Drawing.Color.White;
             this.btndelete.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btndelete.ForeColor = System.Drawing.Color.Black;
-            this.btndelete.Location = new System.Drawing.Point(665, 783);
+            this.btndelete.Location = new System.Drawing.Point(620, 771);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(112, 29);
             this.btndelete.TabIndex = 250;
@@ -1261,7 +1261,7 @@
             this.btnupdate.FillColor2 = System.Drawing.Color.White;
             this.btnupdate.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnupdate.ForeColor = System.Drawing.Color.Black;
-            this.btnupdate.Location = new System.Drawing.Point(481, 783);
+            this.btnupdate.Location = new System.Drawing.Point(436, 771);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(112, 29);
             this.btnupdate.TabIndex = 249;
@@ -1449,7 +1449,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DoctorList.DefaultCellStyle = dataGridViewCellStyle1;
             this.DoctorList.GridColor = System.Drawing.Color.Linen;
-            this.DoctorList.Location = new System.Drawing.Point(72, 851);
+            this.DoctorList.Location = new System.Drawing.Point(79, 827);
             this.DoctorList.MultiSelect = false;
             this.DoctorList.Name = "DoctorList";
             this.DoctorList.ReadOnly = true;
@@ -1607,10 +1607,10 @@
             // 
             this.guna2CirclePictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox4.Image")));
             this.guna2CirclePictureBox4.ImageRotate = 0F;
-            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(135, 151);
+            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(111, 150);
             this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
             this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(129, 66);
+            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(173, 139);
             this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox4.TabIndex = 254;
             this.guna2CirclePictureBox4.TabStop = false;
@@ -1618,14 +1618,14 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.AutoRoundedCorners = true;
-            this.guna2PictureBox1.BorderRadius = 33;
+            this.guna2PictureBox1.BorderRadius = 69;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(952, 783);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(906, 681);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(191, 69);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(269, 140);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 255;
             this.guna2PictureBox1.TabStop = false;

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserRecordPage));
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -99,13 +99,14 @@
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.chkshowpassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label41 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.chkshowpassword = new MaterialSkin.Controls.MaterialCheckBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -121,6 +122,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label15
@@ -418,14 +420,14 @@
             this.Picture,
             this.Mobile,
             this.Address});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.UserDataList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.UserDataList.DefaultCellStyle = dataGridViewCellStyle1;
             this.UserDataList.GridColor = System.Drawing.Color.Linen;
             this.UserDataList.Location = new System.Drawing.Point(87, 717);
             this.UserDataList.MultiSelect = false;
@@ -541,7 +543,7 @@
             this.btnreset.FillColor2 = System.Drawing.Color.White;
             this.btnreset.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnreset.ForeColor = System.Drawing.Color.Black;
-            this.btnreset.Location = new System.Drawing.Point(725, 647);
+            this.btnreset.Location = new System.Drawing.Point(835, 640);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(112, 29);
             this.btnreset.TabIndex = 141;
@@ -565,7 +567,7 @@
             this.btndelete.FillColor2 = System.Drawing.Color.White;
             this.btndelete.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btndelete.ForeColor = System.Drawing.Color.Black;
-            this.btndelete.Location = new System.Drawing.Point(561, 647);
+            this.btndelete.Location = new System.Drawing.Point(671, 640);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(112, 29);
             this.btndelete.TabIndex = 140;
@@ -589,7 +591,7 @@
             this.btnupdate.FillColor2 = System.Drawing.Color.White;
             this.btnupdate.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnupdate.ForeColor = System.Drawing.Color.Black;
-            this.btnupdate.Location = new System.Drawing.Point(399, 647);
+            this.btnupdate.Location = new System.Drawing.Point(509, 640);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(112, 29);
             this.btnupdate.TabIndex = 139;
@@ -613,7 +615,7 @@
             this.btnsave.FillColor2 = System.Drawing.Color.White;
             this.btnsave.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnsave.ForeColor = System.Drawing.Color.Black;
-            this.btnsave.Location = new System.Drawing.Point(242, 647);
+            this.btnsave.Location = new System.Drawing.Point(352, 640);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(112, 29);
             this.btnsave.TabIndex = 142;
@@ -1009,31 +1011,12 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(663, 127);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(783, 138);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(379, 128);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(323, 128);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 163;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // chkshowpassword
-            // 
-            this.chkshowpassword.AutoSize = true;
-            this.chkshowpassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkshowpassword.CheckedState.BorderRadius = 0;
-            this.chkshowpassword.CheckedState.BorderThickness = 0;
-            this.chkshowpassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkshowpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkshowpassword.Location = new System.Drawing.Point(567, 322);
-            this.chkshowpassword.Name = "chkshowpassword";
-            this.chkshowpassword.Size = new System.Drawing.Size(51, 17);
-            this.chkshowpassword.TabIndex = 164;
-            this.chkshowpassword.Text = "show";
-            this.chkshowpassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chkshowpassword.UncheckedState.BorderRadius = 0;
-            this.chkshowpassword.UncheckedState.BorderThickness = 0;
-            this.chkshowpassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chkshowpassword.CheckedChanged += new System.EventHandler(this.chkshowpassword_CheckedChanged_2);
             // 
             // guna2GradientPanel1
             // 
@@ -1124,6 +1107,38 @@
             this.label6.TabIndex = 268;
             this.label6.Text = "*  Personal Information  :";
             // 
+            // chkshowpassword
+            // 
+            this.chkshowpassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkshowpassword.BackgroundImage")));
+            this.chkshowpassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.chkshowpassword.Depth = 0;
+            this.chkshowpassword.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkshowpassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.chkshowpassword.Location = new System.Drawing.Point(564, 318);
+            this.chkshowpassword.Margin = new System.Windows.Forms.Padding(0);
+            this.chkshowpassword.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkshowpassword.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkshowpassword.Name = "chkshowpassword";
+            this.chkshowpassword.Ripple = true;
+            this.chkshowpassword.Size = new System.Drawing.Size(18, 18);
+            this.chkshowpassword.TabIndex = 270;
+            this.chkshowpassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkshowpassword.UseVisualStyleBackColor = true;
+            this.chkshowpassword.CheckedChanged += new System.EventHandler(this.chkshowpassword_CheckedChanged);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(584, 318);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 271;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.UseTransparentBackground = true;
+            // 
             // UserRecordPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1132,11 +1147,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1306, 788);
+            this.Controls.Add(this.guna2PictureBox3);
+            this.Controls.Add(this.chkshowpassword);
             this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.chkshowpassword);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.dtpDateOfBrith);
@@ -1199,6 +1215,7 @@
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1273,12 +1290,13 @@
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2CheckBox chkshowpassword;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2CircleButton btnclose;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label6;
+        private MaterialSkin.Controls.MaterialCheckBox chkshowpassword;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
     }
 }

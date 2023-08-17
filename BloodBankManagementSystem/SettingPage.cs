@@ -233,7 +233,9 @@ namespace BloodBankManagementSystem
                         if (a > 0)
                         {
                             MessageBoxForUpdateProfile.Show();
-                            DataBinding();
+                            //DataBinding();
+                            DataBindForManagerName();
+                            DataBindForAdminName();
                         }
 
                         con.Close();
@@ -245,6 +247,8 @@ namespace BloodBankManagementSystem
         private void SettingPage_Load(object sender, EventArgs e)
         {
             DataBinding();
+            DataBindForManagerName();
+            DataBindForAdminName();
         }
 
         public void DataBinding()
@@ -290,6 +294,38 @@ namespace BloodBankManagementSystem
                     MessageBoxforBrowseImage.Show();
                 }
             }
+        }
+      
+         public void DataBindForAdminName()
+        {
+            int role = 0;
+            SqlConnection con = new SqlConnection(cs);
+            string query = "select *from Login_Master where UserRole=@role";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@role",role);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lblAdminName.Text = dr.GetString(2);
+            }
+            con.Close();
+        }
+
+        public void DataBindForManagerName()
+        {
+            int role = 1;
+            SqlConnection con = new SqlConnection(cs);
+            string query = "select *from Login_Master where UserRole=@role";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@role", role);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lblManagerName.Text = dr.GetString(2);
+            }
+            con.Close();
         }
     }
 

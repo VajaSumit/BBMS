@@ -86,7 +86,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.StaffDataList.DefaultCellStyle = dataGridViewCellStyle1;
             this.StaffDataList.GridColor = System.Drawing.Color.Linen;
-            this.StaffDataList.Location = new System.Drawing.Point(89, 242);
+            this.StaffDataList.Location = new System.Drawing.Point(71, 242);
             this.StaffDataList.MultiSelect = false;
             this.StaffDataList.Name = "StaffDataList";
             this.StaffDataList.ReadOnly = true;
@@ -175,13 +175,13 @@
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.AutoRoundedCorners = true;
-            this.guna2PictureBox3.BorderRadius = 46;
+            this.guna2PictureBox3.BorderRadius = 68;
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(111, 131);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(70, 101);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(365, 94);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(388, 138);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 162;
             this.guna2PictureBox3.TabStop = false;

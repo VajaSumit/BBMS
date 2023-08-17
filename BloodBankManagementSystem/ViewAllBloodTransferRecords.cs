@@ -19,6 +19,7 @@ namespace BloodBankManagementSystem
             InitializeComponent();
         }
 
+
         string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
 
         private void btnclose_Click(object sender, EventArgs e)

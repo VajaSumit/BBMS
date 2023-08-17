@@ -55,10 +55,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.exitlink = new System.Windows.Forms.LinkLabel();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.LoginDialogbox1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.LoginDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.panelReadTermsAndConditions = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -66,6 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panelReadTermsAndConditions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -165,6 +170,7 @@
             this.linkLabel1.TabIndex = 69;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Read T/C";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // CheckBox1
             // 
@@ -202,7 +208,7 @@
             this.label8.BackColor = System.Drawing.Color.DodgerBlue;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(2, 5);
+            this.label8.Location = new System.Drawing.Point(14, 2);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(447, 27);
             this.label8.TabIndex = 76;
@@ -223,6 +229,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Controls.Add(this.guna2PictureBox1);
             this.panel6.Controls.Add(this.btnlogin);
             this.panel6.Controls.Add(this.chkshowpassword);
             this.panel6.Controls.Add(this.txtpassword);
@@ -235,7 +242,7 @@
             this.panel6.Controls.Add(this.label2);
             this.panel6.Location = new System.Drawing.Point(436, 175);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(265, 371);
+            this.panel6.Size = new System.Drawing.Size(275, 371);
             this.panel6.TabIndex = 78;
             // 
             // btnlogin
@@ -265,21 +272,19 @@
             // 
             // chkshowpassword
             // 
-            this.chkshowpassword.AutoSize = true;
-            this.chkshowpassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkshowpassword.BackgroundImage")));
-            this.chkshowpassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.chkshowpassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.chkshowpassword.Depth = 0;
             this.chkshowpassword.Font = new System.Drawing.Font("Roboto", 10F);
-            this.chkshowpassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chkshowpassword.Location = new System.Drawing.Point(232, 271);
+            this.chkshowpassword.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkshowpassword.Location = new System.Drawing.Point(232, 275);
             this.chkshowpassword.Margin = new System.Windows.Forms.Padding(0);
             this.chkshowpassword.MouseLocation = new System.Drawing.Point(-1, -1);
             this.chkshowpassword.MouseState = MaterialSkin.MouseState.HOVER;
             this.chkshowpassword.Name = "chkshowpassword";
+            this.chkshowpassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.chkshowpassword.Ripple = true;
-            this.chkshowpassword.Size = new System.Drawing.Size(26, 30);
+            this.chkshowpassword.Size = new System.Drawing.Size(22, 20);
             this.chkshowpassword.TabIndex = 147;
-            this.chkshowpassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkshowpassword.UseVisualStyleBackColor = true;
             this.chkshowpassword.CheckedChanged += new System.EventHandler(this.chkshowpassword_CheckedChanged);
             // 
@@ -420,14 +425,6 @@
             this.exitlink.Text = "Exit";
             this.exitlink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.exitlink_LinkClicked_2);
             // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.AnimationInterval = 0;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.5D;
-            this.guna2BorderlessForm1.DragStartTransparencyValue = 0.8D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
             // LoginDialogbox1
             // 
             this.LoginDialogbox1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
@@ -446,22 +443,97 @@
             this.LoginDialog2.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.LoginDialog2.Text = "Login Faild !";
             // 
-            // btnClose
+            // guna2BorderlessForm2
             // 
-            this.btnClose.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(786, 6);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 25);
-            this.btnClose.TabIndex = 82;
-            this.btnClose.Text = "x";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_3);
+            this.guna2BorderlessForm2.AnimationInterval = 900;
+            this.guna2BorderlessForm2.BorderRadius = 65;
+            this.guna2BorderlessForm2.ContainerControl = this;
+            this.guna2BorderlessForm2.DockIndicatorColor = System.Drawing.SystemColors.Window;
+            this.guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm2.TransparentWhileDrag = true;
+            // 
+            // btnclose
+            // 
+            this.btnclose.Animated = true;
+            this.btnclose.AnimatedGIF = true;
+            this.btnclose.BackColor = System.Drawing.Color.Transparent;
+            this.btnclose.BorderColor = System.Drawing.Color.White;
+            this.btnclose.BorderThickness = 2;
+            this.btnclose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnclose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclose.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnclose.Font = new System.Drawing.Font("Segoe Fluent Icons", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.White;
+            this.btnclose.IndicateFocus = true;
+            this.btnclose.Location = new System.Drawing.Point(773, 12);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnclose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnclose.Size = new System.Drawing.Size(31, 28);
+            this.btnclose.TabIndex = 131;
+            this.btnclose.Text = "X";
+            this.btnclose.UseTransparentBackground = true;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click_4);
+            // 
+            // panelReadTermsAndConditions
+            // 
+            this.panelReadTermsAndConditions.AutoScroll = true;
+            this.panelReadTermsAndConditions.BackColor = System.Drawing.Color.Transparent;
+            this.panelReadTermsAndConditions.BorderColor = System.Drawing.Color.SteelBlue;
+            this.panelReadTermsAndConditions.BorderRadius = 25;
+            this.panelReadTermsAndConditions.BorderThickness = 4;
+            this.panelReadTermsAndConditions.Controls.Add(this.guna2CircleButton1);
+            this.panelReadTermsAndConditions.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.panelReadTermsAndConditions.FillColor2 = System.Drawing.Color.DodgerBlue;
+            this.panelReadTermsAndConditions.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.panelReadTermsAndConditions.Location = new System.Drawing.Point(158, 428);
+            this.panelReadTermsAndConditions.Name = "panelReadTermsAndConditions";
+            this.panelReadTermsAndConditions.Size = new System.Drawing.Size(272, 255);
+            this.panelReadTermsAndConditions.TabIndex = 132;
+            this.panelReadTermsAndConditions.UseTransparentBackground = true;
+            this.panelReadTermsAndConditions.Visible = false;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.Animated = true;
+            this.guna2CircleButton1.AnimatedGIF = true;
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.BorderColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.BorderThickness = 2;
+            this.guna2CircleButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.DodgerBlue;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe Fluent Icons", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.IndicateFocus = true;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(226, 14);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(31, 28);
+            this.guna2CircleButton1.TabIndex = 132;
+            this.guna2CircleButton1.Text = "X";
+            this.guna2CircleButton1.UseTransparentBackground = true;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(253, 276);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 149;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // LoginPage
             // 
@@ -470,7 +542,8 @@
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(821, 695);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.panelReadTermsAndConditions);
+            this.Controls.Add(this.btnclose);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.exitlink);
             this.Controls.Add(this.panel5);
@@ -480,6 +553,7 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginPage";
@@ -496,6 +570,8 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panelReadTermsAndConditions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,15 +597,18 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.LinkLabel exitlink;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private MaterialSkin.Controls.MaterialCheckBox chkshowpassword;
         private Guna.UI2.WinForms.Guna2MessageDialog LoginDialogbox1;
         private Guna.UI2.WinForms.Guna2MessageDialog LoginDialog2;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2GradientButton btnlogin;
-        private System.Windows.Forms.Button btnClose;
         public Guna.UI2.WinForms.Guna2TextBox txtusername;
         public Guna.UI2.WinForms.Guna2TextBox txtpassword;
         public Guna.UI2.WinForms.Guna2ComboBox cmdUserRole;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
+        private Guna.UI2.WinForms.Guna2CircleButton btnclose;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelReadTermsAndConditions;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

@@ -60,17 +60,24 @@
             this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label41 = new System.Windows.Forms.Label();
             this.btnViewAll = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label19 = new System.Windows.Forms.Label();
-            this.BloodDonationDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
             this.MessageBoxForSearchData1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.MessageBoxForSearchData2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnSwitch2 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.btnSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.btnSearch2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtSearchName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSearch1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.BloodDonationDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.BloodDonationList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // BloodDonationList
@@ -288,13 +295,13 @@
             // 
             this.guna2PictureBox2.AutoRoundedCorners = true;
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.BorderRadius = 72;
+            this.guna2PictureBox2.BorderRadius = 81;
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(699, 129);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(729, 81);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(376, 146);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(315, 164);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 335;
             this.guna2PictureBox2.TabStop = false;
@@ -376,72 +383,14 @@
             this.btnViewAll.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnViewAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnViewAll.FillColor2 = System.Drawing.Color.White;
-            this.btnViewAll.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnViewAll.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewAll.ForeColor = System.Drawing.Color.Black;
-            this.btnViewAll.Location = new System.Drawing.Point(463, 245);
+            this.btnViewAll.Location = new System.Drawing.Point(816, 251);
             this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(112, 29);
+            this.btnViewAll.Size = new System.Drawing.Size(79, 29);
             this.btnViewAll.TabIndex = 134;
             this.btnViewAll.Text = "View All";
             this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Animated = true;
-            this.btnSearch.AnimatedGIF = true;
-            this.btnSearch.AutoRoundedCorners = true;
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BorderColor = System.Drawing.Color.Navy;
-            this.btnSearch.BorderRadius = 13;
-            this.btnSearch.BorderThickness = 1;
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.FillColor2 = System.Drawing.Color.White;
-            this.btnSearch.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(314, 246);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(112, 29);
-            this.btnSearch.TabIndex = 135;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label19.Location = new System.Drawing.Point(288, 189);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(104, 32);
-            this.label19.TabIndex = 343;
-            this.label19.Text = "Search By Blood  :-\r\n  Donation Date  ";
-            // 
-            // BloodDonationDate
-            // 
-            this.BloodDonationDate.Animated = true;
-            this.BloodDonationDate.AutoRoundedCorners = true;
-            this.BloodDonationDate.BorderRadius = 10;
-            this.BloodDonationDate.BorderThickness = 1;
-            this.BloodDonationDate.Checked = true;
-            this.BloodDonationDate.CustomFormat = "dd/MM/yyyy";
-            this.BloodDonationDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.BloodDonationDate.FocusedColor = System.Drawing.Color.White;
-            this.BloodDonationDate.Font = new System.Drawing.Font("Palatino Linotype", 9F);
-            this.BloodDonationDate.ForeColor = System.Drawing.Color.White;
-            this.BloodDonationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.BloodDonationDate.Location = new System.Drawing.Point(411, 191);
-            this.BloodDonationDate.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
-            this.BloodDonationDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.BloodDonationDate.Name = "BloodDonationDate";
-            this.BloodDonationDate.Size = new System.Drawing.Size(197, 22);
-            this.BloodDonationDate.TabIndex = 344;
-            this.BloodDonationDate.Value = new System.DateTime(2023, 8, 10, 0, 0, 0, 0);
             // 
             // label17
             // 
@@ -479,13 +428,184 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(78, 182);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(72, 164);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(140, 81);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 346;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
+            // btnSwitch2
+            // 
+            this.btnSwitch2.Animated = true;
+            this.btnSwitch2.AutoRoundedCorners = true;
+            this.btnSwitch2.BackColor = System.Drawing.Color.Transparent;
+            this.btnSwitch2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSwitch2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSwitch2.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.btnSwitch2.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.btnSwitch2.Location = new System.Drawing.Point(288, 251);
+            this.btnSwitch2.Name = "btnSwitch2";
+            this.btnSwitch2.Size = new System.Drawing.Size(35, 20);
+            this.btnSwitch2.TabIndex = 377;
+            this.btnSwitch2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.btnSwitch2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.btnSwitch2.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.btnSwitch2.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.btnSwitch2.UseTransparentBackground = true;
+            this.btnSwitch2.CheckedChanged += new System.EventHandler(this.btnSwitch2_CheckedChanged);
+            // 
+            // btnSwitch1
+            // 
+            this.btnSwitch1.Animated = true;
+            this.btnSwitch1.AutoRoundedCorners = true;
+            this.btnSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.btnSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.btnSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.btnSwitch1.Location = new System.Drawing.Point(288, 191);
+            this.btnSwitch1.Name = "btnSwitch1";
+            this.btnSwitch1.Size = new System.Drawing.Size(35, 20);
+            this.btnSwitch1.TabIndex = 376;
+            this.btnSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.btnSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.btnSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.btnSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.btnSwitch1.UseTransparentBackground = true;
+            this.btnSwitch1.CheckedChanged += new System.EventHandler(this.btnSwitch1_CheckedChanged);
+            // 
+            // btnSearch2
+            // 
+            this.btnSearch2.Animated = true;
+            this.btnSearch2.AnimatedGIF = true;
+            this.btnSearch2.AutoRoundedCorners = true;
+            this.btnSearch2.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch2.BorderColor = System.Drawing.Color.Navy;
+            this.btnSearch2.BorderRadius = 11;
+            this.btnSearch2.BorderThickness = 1;
+            this.btnSearch2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch2.Enabled = false;
+            this.btnSearch2.FillColor = System.Drawing.Color.White;
+            this.btnSearch2.FillColor2 = System.Drawing.Color.White;
+            this.btnSearch2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSearch2.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch2.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch2.Image")));
+            this.btnSearch2.Location = new System.Drawing.Point(653, 239);
+            this.btnSearch2.Name = "btnSearch2";
+            this.btnSearch2.Size = new System.Drawing.Size(30, 24);
+            this.btnSearch2.TabIndex = 375;
+            this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
+            // 
+            // txtSearchName
+            // 
+            this.txtSearchName.Animated = true;
+            this.txtSearchName.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearchName.BorderColor = System.Drawing.Color.DimGray;
+            this.txtSearchName.BorderRadius = 12;
+            this.txtSearchName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtSearchName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchName.DefaultText = "";
+            this.txtSearchName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchName.Enabled = false;
+            this.txtSearchName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchName.Font = new System.Drawing.Font("Palatino Linotype", 9F);
+            this.txtSearchName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtSearchName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchName.Location = new System.Drawing.Point(450, 241);
+            this.txtSearchName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchName.Name = "txtSearchName";
+            this.txtSearchName.PasswordChar = '\0';
+            this.txtSearchName.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtSearchName.PlaceholderText = "Enter The Donor Name";
+            this.txtSearchName.SelectedText = "";
+            this.txtSearchName.Size = new System.Drawing.Size(197, 22);
+            this.txtSearchName.TabIndex = 373;
+            this.txtSearchName.Leave += new System.EventHandler(this.txtSearchName_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label2.Location = new System.Drawing.Point(356, 239);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 32);
+            this.label2.TabIndex = 374;
+            this.label2.Text = " Search By  :-\r\nDonor Name";
+            // 
+            // btnSearch1
+            // 
+            this.btnSearch1.Animated = true;
+            this.btnSearch1.AnimatedGIF = true;
+            this.btnSearch1.AutoRoundedCorners = true;
+            this.btnSearch1.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch1.BorderColor = System.Drawing.Color.Navy;
+            this.btnSearch1.BorderRadius = 11;
+            this.btnSearch1.BorderThickness = 1;
+            this.btnSearch1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch1.Enabled = false;
+            this.btnSearch1.FillColor = System.Drawing.Color.White;
+            this.btnSearch1.FillColor2 = System.Drawing.Color.White;
+            this.btnSearch1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSearch1.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch1.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch1.Image")));
+            this.btnSearch1.Location = new System.Drawing.Point(653, 184);
+            this.btnSearch1.Name = "btnSearch1";
+            this.btnSearch1.Size = new System.Drawing.Size(30, 24);
+            this.btnSearch1.TabIndex = 370;
+            this.btnSearch1.Click += new System.EventHandler(this.btnSearch1_Click);
+            // 
+            // BloodDonationDate
+            // 
+            this.BloodDonationDate.Animated = true;
+            this.BloodDonationDate.AutoRoundedCorners = true;
+            this.BloodDonationDate.BorderRadius = 10;
+            this.BloodDonationDate.BorderThickness = 1;
+            this.BloodDonationDate.Checked = true;
+            this.BloodDonationDate.CustomFormat = "dd/MM/yyyy";
+            this.BloodDonationDate.Enabled = false;
+            this.BloodDonationDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.BloodDonationDate.FocusedColor = System.Drawing.Color.White;
+            this.BloodDonationDate.Font = new System.Drawing.Font("Palatino Linotype", 9F);
+            this.BloodDonationDate.ForeColor = System.Drawing.Color.White;
+            this.BloodDonationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.BloodDonationDate.Location = new System.Drawing.Point(450, 186);
+            this.BloodDonationDate.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
+            this.BloodDonationDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.BloodDonationDate.Name = "BloodDonationDate";
+            this.BloodDonationDate.Size = new System.Drawing.Size(197, 22);
+            this.BloodDonationDate.TabIndex = 372;
+            this.BloodDonationDate.Value = new System.DateTime(2023, 8, 10, 0, 0, 0, 0);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.Location = new System.Drawing.Point(334, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 32);
+            this.label1.TabIndex = 371;
+            this.label1.Text = "Search By Blood  :-\r\n  Donation Date  ";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ViewAllBloodDonation
             // 
@@ -494,12 +614,17 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1238, 788);
+            this.Controls.Add(this.btnSwitch2);
+            this.Controls.Add(this.btnSwitch1);
+            this.Controls.Add(this.btnSearch2);
+            this.Controls.Add(this.txtSearchName);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnSearch1);
+            this.Controls.Add(this.BloodDonationDate);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnViewAll);
-            this.Controls.Add(this.BloodDonationDate);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2PictureBox2);
@@ -516,6 +641,7 @@
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,13 +676,19 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnclose;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSearch;
         private Guna.UI2.WinForms.Guna2GradientButton btnViewAll;
-        private Guna.UI2.WinForms.Guna2DateTimePicker BloodDonationDate;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageBoxForSearchData1;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageBoxForSearchData2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch btnSwitch2;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch btnSwitch1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSearch2;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchName;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSearch1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker BloodDonationDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

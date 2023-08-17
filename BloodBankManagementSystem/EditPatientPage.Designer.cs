@@ -131,7 +131,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label15.Location = new System.Drawing.Point(798, 361);
+            this.label15.Location = new System.Drawing.Point(789, 304);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(15, 16);
             this.label15.TabIndex = 123;
@@ -143,7 +143,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label16.Location = new System.Drawing.Point(798, 311);
+            this.label16.Location = new System.Drawing.Point(789, 254);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(15, 16);
             this.label16.TabIndex = 122;
@@ -155,7 +155,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label13.Location = new System.Drawing.Point(798, 259);
+            this.label13.Location = new System.Drawing.Point(789, 202);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(15, 16);
             this.label13.TabIndex = 121;
@@ -167,7 +167,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label14.Location = new System.Drawing.Point(394, 424);
+            this.label14.Location = new System.Drawing.Point(385, 367);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(15, 16);
             this.label14.TabIndex = 120;
@@ -179,7 +179,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(392, 369);
+            this.label11.Location = new System.Drawing.Point(383, 312);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 16);
             this.label11.TabIndex = 119;
@@ -191,7 +191,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label9.Location = new System.Drawing.Point(392, 260);
+            this.label9.Location = new System.Drawing.Point(383, 203);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(15, 16);
             this.label9.TabIndex = 117;
@@ -203,7 +203,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label10.Location = new System.Drawing.Point(392, 210);
+            this.label10.Location = new System.Drawing.Point(383, 153);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(15, 16);
             this.label10.TabIndex = 116;
@@ -215,7 +215,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(716, 366);
+            this.label7.Location = new System.Drawing.Point(707, 309);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 16);
             this.label7.TabIndex = 115;
@@ -227,7 +227,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(737, 312);
+            this.label8.Location = new System.Drawing.Point(728, 255);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 16);
             this.label8.TabIndex = 114;
@@ -239,7 +239,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(713, 264);
+            this.label4.Location = new System.Drawing.Point(704, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 16);
             this.label4.TabIndex = 113;
@@ -251,7 +251,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(300, 425);
+            this.label5.Location = new System.Drawing.Point(291, 368);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 112;
@@ -263,7 +263,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(308, 367);
+            this.label6.Location = new System.Drawing.Point(299, 310);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 16);
             this.label6.TabIndex = 111;
@@ -275,7 +275,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(318, 258);
+            this.label2.Location = new System.Drawing.Point(309, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 16);
             this.label2.TabIndex = 109;
@@ -287,7 +287,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(293, 208);
+            this.label1.Location = new System.Drawing.Point(284, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 108;
@@ -299,7 +299,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label21.Location = new System.Drawing.Point(390, 509);
+            this.label21.Location = new System.Drawing.Point(397, 462);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(15, 16);
             this.label21.TabIndex = 130;
@@ -311,7 +311,7 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label22.Location = new System.Drawing.Point(292, 508);
+            this.label22.Location = new System.Drawing.Point(299, 461);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(73, 16);
             this.label22.TabIndex = 129;
@@ -508,7 +508,7 @@
             this.btnreset.FillColor2 = System.Drawing.Color.White;
             this.btnreset.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnreset.ForeColor = System.Drawing.Color.Black;
-            this.btnreset.Location = new System.Drawing.Point(740, 644);
+            this.btnreset.Location = new System.Drawing.Point(790, 618);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(112, 29);
             this.btnreset.TabIndex = 138;
@@ -532,7 +532,7 @@
             this.btndelete.FillColor2 = System.Drawing.Color.White;
             this.btndelete.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btndelete.ForeColor = System.Drawing.Color.Black;
-            this.btndelete.Location = new System.Drawing.Point(572, 644);
+            this.btndelete.Location = new System.Drawing.Point(622, 618);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(112, 29);
             this.btndelete.TabIndex = 137;
@@ -556,7 +556,7 @@
             this.btnupdate.FillColor2 = System.Drawing.Color.White;
             this.btnupdate.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnupdate.ForeColor = System.Drawing.Color.Black;
-            this.btnupdate.Location = new System.Drawing.Point(404, 644);
+            this.btnupdate.Location = new System.Drawing.Point(454, 618);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(112, 29);
             this.btnupdate.TabIndex = 136;
@@ -581,7 +581,7 @@
             "Select Gender",
             "Male",
             "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(438, 367);
+            this.cmbGender.Location = new System.Drawing.Point(429, 310);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(197, 23);
             this.cmbGender.TabIndex = 2;
@@ -605,7 +605,7 @@
             this.txtName.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(438, 254);
+            this.txtName.Location = new System.Drawing.Point(429, 197);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -633,7 +633,7 @@
             this.txtPatientNo.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtPatientNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtPatientNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPatientNo.Location = new System.Drawing.Point(438, 203);
+            this.txtPatientNo.Location = new System.Drawing.Point(429, 146);
             this.txtPatientNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPatientNo.Name = "txtPatientNo";
             this.txtPatientNo.PasswordChar = '\0';
@@ -660,7 +660,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(842, 367);
+            this.txtAddress.Location = new System.Drawing.Point(833, 310);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -695,7 +695,7 @@
             "Vadodara",
             "Delhi",
             "Junagadh"});
-            this.cmbCity.Location = new System.Drawing.Point(842, 310);
+            this.cmbCity.Location = new System.Drawing.Point(833, 253);
             this.cmbCity.Name = "cmbCity";
             this.cmbCity.Size = new System.Drawing.Size(197, 23);
             this.cmbCity.TabIndex = 6;
@@ -718,7 +718,7 @@
             this.txtEmailID.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtEmailID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtEmailID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailID.Location = new System.Drawing.Point(842, 254);
+            this.txtEmailID.Location = new System.Drawing.Point(833, 197);
             this.txtEmailID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmailID.Name = "txtEmailID";
             this.txtEmailID.PasswordChar = '\0';
@@ -745,7 +745,7 @@
             this.txtMobileNo.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.txtMobileNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtMobileNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMobileNo.Location = new System.Drawing.Point(438, 417);
+            this.txtMobileNo.Location = new System.Drawing.Point(429, 360);
             this.txtMobileNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMobileNo.MaxLength = 10;
             this.txtMobileNo.Name = "txtMobileNo";
@@ -782,7 +782,7 @@
             "A-",
             "B-",
             "AB-"});
-            this.cmbBloodGroup.Location = new System.Drawing.Point(422, 508);
+            this.cmbBloodGroup.Location = new System.Drawing.Point(429, 461);
             this.cmbBloodGroup.Name = "cmbBloodGroup";
             this.cmbBloodGroup.Size = new System.Drawing.Size(197, 23);
             this.cmbBloodGroup.TabIndex = 8;
@@ -802,7 +802,7 @@
             this.dtpDateOfBrith.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.dtpDateOfBrith.ForeColor = System.Drawing.Color.White;
             this.dtpDateOfBrith.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateOfBrith.Location = new System.Drawing.Point(438, 308);
+            this.dtpDateOfBrith.Location = new System.Drawing.Point(429, 251);
             this.dtpDateOfBrith.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
             this.dtpDateOfBrith.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpDateOfBrith.Name = "dtpDateOfBrith";
@@ -818,7 +818,7 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label23.Location = new System.Drawing.Point(392, 312);
+            this.label23.Location = new System.Drawing.Point(383, 255);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(15, 16);
             this.label23.TabIndex = 145;
@@ -830,7 +830,7 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label24.Location = new System.Drawing.Point(279, 311);
+            this.label24.Location = new System.Drawing.Point(270, 254);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(72, 16);
             this.label24.TabIndex = 144;
@@ -958,7 +958,7 @@
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(148, 149);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(95, 141);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(117, 93);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -972,7 +972,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label17.Location = new System.Drawing.Point(128, 123);
+            this.label17.Location = new System.Drawing.Point(82, 106);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(197, 23);
             this.label17.TabIndex = 183;
@@ -984,7 +984,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label20.Location = new System.Drawing.Point(128, 465);
+            this.label20.Location = new System.Drawing.Point(135, 418);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(195, 23);
             this.label20.TabIndex = 185;
@@ -1003,7 +1003,7 @@
             this.RegistrationDate.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.RegistrationDate.ForeColor = System.Drawing.Color.White;
             this.RegistrationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.RegistrationDate.Location = new System.Drawing.Point(842, 199);
+            this.RegistrationDate.Location = new System.Drawing.Point(833, 142);
             this.RegistrationDate.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
             this.RegistrationDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.RegistrationDate.Name = "RegistrationDate";
@@ -1017,7 +1017,7 @@
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label28.Location = new System.Drawing.Point(798, 202);
+            this.label28.Location = new System.Drawing.Point(805, 156);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(15, 16);
             this.label28.TabIndex = 188;
@@ -1029,7 +1029,7 @@
             this.lable3.BackColor = System.Drawing.Color.Transparent;
             this.lable3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lable3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lable3.Location = new System.Drawing.Point(686, 204);
+            this.lable3.Location = new System.Drawing.Point(693, 158);
             this.lable3.Name = "lable3";
             this.lable3.Size = new System.Drawing.Size(93, 16);
             this.lable3.TabIndex = 187;
@@ -1049,7 +1049,7 @@
             this.cmbDoctorName.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.cmbDoctorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbDoctorName.ItemHeight = 17;
-            this.cmbDoctorName.Location = new System.Drawing.Point(422, 593);
+            this.cmbDoctorName.Location = new System.Drawing.Point(429, 546);
             this.cmbDoctorName.Name = "cmbDoctorName";
             this.cmbDoctorName.Size = new System.Drawing.Size(197, 23);
             this.cmbDoctorName.TabIndex = 10;
@@ -1062,7 +1062,7 @@
             this.label12.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.DarkBlue;
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(388, 600);
+            this.label12.Location = new System.Drawing.Point(395, 548);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(15, 16);
             this.label12.TabIndex = 254;
@@ -1075,7 +1075,7 @@
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(289, 598);
+            this.label3.Location = new System.Drawing.Point(296, 546);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 253;
@@ -1095,7 +1095,7 @@
             this.cmbHospitalName.Font = new System.Drawing.Font("Palatino Linotype", 9F);
             this.cmbHospitalName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbHospitalName.ItemHeight = 17;
-            this.cmbHospitalName.Location = new System.Drawing.Point(422, 550);
+            this.cmbHospitalName.Location = new System.Drawing.Point(429, 503);
             this.cmbHospitalName.Name = "cmbHospitalName";
             this.cmbHospitalName.Size = new System.Drawing.Size(197, 23);
             this.cmbHospitalName.TabIndex = 9;
@@ -1109,7 +1109,7 @@
             this.label33.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold);
             this.label33.ForeColor = System.Drawing.Color.DarkBlue;
             this.label33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label33.Location = new System.Drawing.Point(389, 554);
+            this.label33.Location = new System.Drawing.Point(396, 507);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(15, 16);
             this.label33.TabIndex = 252;
@@ -1122,7 +1122,7 @@
             this.label34.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.DarkBlue;
             this.label34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label34.Location = new System.Drawing.Point(284, 552);
+            this.label34.Location = new System.Drawing.Point(291, 505);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(81, 16);
             this.label34.TabIndex = 251;
@@ -1139,13 +1139,13 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.AutoRoundedCorners = true;
-            this.guna2PictureBox1.BorderRadius = 80;
+            this.guna2PictureBox1.BorderRadius = 97;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(719, 480);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(696, 398);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(355, 162);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(362, 196);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 255;
             this.guna2PictureBox1.TabStop = false;

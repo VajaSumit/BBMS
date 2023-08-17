@@ -186,7 +186,7 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(103, 268);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(140, 215);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(310, 330);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,7 +200,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(269, 179);
+            this.label17.Location = new System.Drawing.Point(306, 126);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(154, 19);
             this.label17.TabIndex = 336;
@@ -210,7 +210,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.BloodDonationList);
-            this.panel2.Location = new System.Drawing.Point(264, 228);
+            this.panel2.Location = new System.Drawing.Point(301, 175);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(553, 246);
             this.panel2.TabIndex = 337;
@@ -221,7 +221,7 @@
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(473, 531);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(510, 478);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(511, 196);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -56,10 +56,15 @@ namespace BloodBankManagementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void btnSearch1_Click(object sender, EventArgs e)
+        {
             SqlConnection con = new SqlConnection(cs);
             con.Open();
             string query = "select *from BloodDonationTbl where BloodDonationDate=@BDate";
-            SqlDataAdapter sda = new SqlDataAdapter(query,con);
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
             sda.SelectCommand.Parameters.AddWithValue("@BDate", BloodDonationDate.Value);
             DataTable data = new DataTable();
             sda.Fill(data);
@@ -68,7 +73,7 @@ namespace BloodBankManagementSystem
             {
                 MessageBoxForSearchData1.Show();
                 BloodDonationList.DataSource = data;
-               
+
             }
             else
             {
@@ -78,6 +83,81 @@ namespace BloodBankManagementSystem
 
 
             con.Close();
+        }
+
+        private void btnSearch2_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearchName.Text))
+            {
+                errorProvider1.SetError(this.txtSearchName, "Please Enter The Name ... !");
+                txtSearchName.Focus();
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                string query = "select *from BloodDonationTbl where Name=@name";
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                sda.SelectCommand.Parameters.AddWithValue("@Name", txtSearchName.Text);
+                DataTable data = new DataTable();
+                sda.Fill(data);
+
+                if (data.Rows.Count > 0)
+                {
+                    MessageBoxForSearchData1.Show();
+                    BloodDonationList.DataSource = data;
+
+                }
+                else
+                {
+                    MessageBoxForSearchData2.Show();
+                    DataBinding();
+                }
+
+
+                con.Close();
+            }
+        }
+
+        private void txtSearchName_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearchName.Text))
+            {
+                errorProvider1.SetError(this.txtSearchName, "Please Enter The Name ... !");
+                txtSearchName.Focus();
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void btnSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnSwitch1.Checked==true)
+            {
+                BloodDonationDate.Enabled = true;
+                btnSearch1.Enabled = true;
+            }
+            else if (btnSwitch1.Checked==false)
+            {
+                BloodDonationDate.Enabled = false;
+                btnSearch1.Enabled = false;
+            }
+        }
+
+        private void btnSwitch2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnSwitch2.Checked==true)
+            {
+                txtSearchName.Enabled = true;
+                btnSearch2.Enabled = true;
+            }
+            else if(btnSwitch2.Checked == false)
+            {
+                txtSearchName.Enabled = false;
+                btnSearch2.Enabled = false;
+            }
         }
     }
 }

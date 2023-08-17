@@ -69,6 +69,10 @@
             this.lblProfilename = new System.Windows.Forms.Label();
             this.MessageBoxforBrowseImage = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblAdminName = new System.Windows.Forms.Label();
+            this.lblManagerName = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -466,7 +470,7 @@
             this.btnEditSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnEditSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.btnEditSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.btnEditSwitch.Location = new System.Drawing.Point(208, 214);
+            this.btnEditSwitch.Location = new System.Drawing.Point(265, 214);
             this.btnEditSwitch.Name = "btnEditSwitch";
             this.btnEditSwitch.Size = new System.Drawing.Size(35, 20);
             this.btnEditSwitch.TabIndex = 295;
@@ -485,9 +489,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(147, 212);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 22);
+            this.label1.Size = new System.Drawing.Size(112, 22);
             this.label1.TabIndex = 296;
-            this.label1.Text = "Edit  :";
+            this.label1.Text = "Edit Profile  :";
             // 
             // btnupdate
             // 
@@ -642,13 +646,61 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(806, 144);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(780, 212);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(331, 521);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.guna2PictureBox1.TabIndex = 347;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(821, 216);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 18);
+            this.label8.TabIndex = 348;
+            this.label8.Text = "Admin Name  :-";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(818, 259);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(116, 17);
+            this.label10.TabIndex = 349;
+            this.label10.Text = "Manager Name  :-";
+            // 
+            // lblAdminName
+            // 
+            this.lblAdminName.AutoSize = true;
+            this.lblAdminName.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdminName.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminName.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblAdminName.Location = new System.Drawing.Point(941, 219);
+            this.lblAdminName.Name = "lblAdminName";
+            this.lblAdminName.Size = new System.Drawing.Size(113, 18);
+            this.lblAdminName.TabIndex = 350;
+            this.lblAdminName.Text = "===============";
+            // 
+            // lblManagerName
+            // 
+            this.lblManagerName.AutoSize = true;
+            this.lblManagerName.BackColor = System.Drawing.Color.Transparent;
+            this.lblManagerName.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManagerName.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblManagerName.Location = new System.Drawing.Point(940, 259);
+            this.lblManagerName.Name = "lblManagerName";
+            this.lblManagerName.Size = new System.Drawing.Size(98, 18);
+            this.lblManagerName.TabIndex = 351;
+            this.lblManagerName.Text = "------------------";
             // 
             // SettingPage
             // 
@@ -657,6 +709,10 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1290, 749);
+            this.Controls.Add(this.lblManagerName);
+            this.Controls.Add(this.lblAdminName);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.lblProfilename);
             this.Controls.Add(this.btnupdate);
@@ -745,5 +801,9 @@
         private Guna.UI2.WinForms.Guna2MessageDialog MessageBoxForUpdateProfile;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageBoxforBrowseImage;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label lblManagerName;
+        private System.Windows.Forms.Label lblAdminName;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
     }
 }

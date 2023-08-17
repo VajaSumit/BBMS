@@ -211,7 +211,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(223, 152);
+            this.label2.Location = new System.Drawing.Point(243, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 17);
             this.label2.TabIndex = 85;
@@ -293,7 +293,7 @@
             this.txtSearchName.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtSearchName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchName.Location = new System.Drawing.Point(353, 147);
+            this.txtSearchName.Location = new System.Drawing.Point(373, 138);
             this.txtSearchName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.PasswordChar = '\0';
@@ -327,9 +327,9 @@
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(688, 175);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(717, 137);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(352, 126);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(363, 186);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 148;
             this.guna2PictureBox3.TabStop = false;
@@ -400,7 +400,7 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(57, 191);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(77, 182);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(417, 162);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -412,7 +412,7 @@
             // 
             this.panel2.Controls.Add(this.btnupdate);
             this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Location = new System.Drawing.Point(226, 203);
+            this.panel2.Location = new System.Drawing.Point(246, 194);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(277, 58);
             this.panel2.TabIndex = 340;

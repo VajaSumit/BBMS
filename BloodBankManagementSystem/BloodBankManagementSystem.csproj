@@ -180,6 +180,10 @@
       <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
@@ -207,11 +211,14 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -253,6 +260,24 @@
     <Compile Include="BloodTransferPage.Designer.cs">
       <DependentUpon>BloodTransferPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport31.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="HospitalRegistrationPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,7 +285,6 @@
       <DependentUpon>HospitalRegistrationPage.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassFiles\HashCode.cs" />
-    <Compile Include="CustomeScrollBar\CustomScrollBarHandle.cs" />
     <Compile Include="DoctorRecordPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,12 +314,6 @@
     </Compile>
     <Compile Include="EditPatientPage.Designer.cs">
       <DependentUpon>EditPatientPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomeScrollBar\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomeScrollBar\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
@@ -364,7 +382,6 @@
     <Compile Include="StaffPage.Designer.cs">
       <DependentUpon>StaffPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomeScrollBar\TouchScroll.cs" />
     <Compile Include="UserRecordPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,6 +448,18 @@
     <EmbeddedResource Include="BloodTransferPage.resx">
       <DependentUpon>BloodTransferPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport31.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="HospitalRegistrationPage.aa-DJ.resx">
       <DependentUpon>HospitalRegistrationPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -451,9 +480,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditPatientPage.resx">
       <DependentUpon>EditPatientPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomeScrollBar\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
@@ -618,14 +644,9 @@
     <Content Include="Images\Users_40957.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AdminForms\" />
     <Folder Include="Apps\" />
     <Folder Include="Backup\" />
-    <Folder Include="DLLFiles\" />
-    <Folder Include="DoctorForms\" />
-    <Folder Include="ManagerForms\" />
     <Folder Include="Others\" />
-    <Folder Include="StaffForms\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -638,6 +659,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -42,7 +42,11 @@ namespace BloodBankManagementSystem
             //timer1.Enabled = true;
             cmdUserRole.SelectedItem = "Select UserRole";
             cmdUserRole.ForeColor = Color.Silver;
+          
             
+
+
+
         }
 
 
@@ -173,11 +177,12 @@ namespace BloodBankManagementSystem
 
         private void chkshowpassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkshowpassword.CheckState == CheckState.Checked)
+            if (chkshowpassword.Checked==true)
             {
                 txtpassword.UseSystemPasswordChar = false;
+                txtpassword.PasswordChar = '\0';
             }
-            else if (chkshowpassword.CheckState == CheckState.Unchecked)
+            else if (chkshowpassword.Checked==false)
             {
                 txtpassword.UseSystemPasswordChar = true;
             }
@@ -630,6 +635,21 @@ namespace BloodBankManagementSystem
 
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panelReadTermsAndConditions.Visible = true;
+        }
 
+        private void btnclose_Click_4(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            panelReadTermsAndConditions.Visible = false;
+        }
+
+    
     }
 }
