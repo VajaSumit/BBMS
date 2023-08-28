@@ -587,6 +587,7 @@
     <Content Include="Images\HeartImage.jpeg" />
     <Content Include="Images\HeartImage1.jpeg" />
     <Content Include="Images\HospitalImage1.jpeg" />
+    <Content Include="Images\logo.jpeg" />
     <Content Include="Images\menu_round_button_icon_124215.ico" />
     <Content Include="Images\PatientImages.jpeg" />
     <Content Include="Images\PatientRegistrationImage1.jpeg" />

@@ -98,6 +98,8 @@
             this.LogoutDialogBox = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panelMenu.SuspendLayout();
             this.panelReportMenu.SuspendLayout();
             this.panelUserMenu.SuspendLayout();
@@ -115,6 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox2)).BeginInit();
             this.panelSliderMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lable
@@ -124,7 +127,7 @@
             this.lable.Font = new System.Drawing.Font("Colonna MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lable.ForeColor = System.Drawing.Color.White;
             this.lable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lable.Location = new System.Drawing.Point(85, 11);
+            this.lable.Location = new System.Drawing.Point(56, 10);
             this.lable.Name = "lable";
             this.lable.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
             this.lable.Size = new System.Drawing.Size(427, 28);
@@ -953,7 +956,7 @@
             this.btnAboutusMenu.ForeColor = System.Drawing.Color.DimGray;
             this.btnAboutusMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnAboutusMenu.Image")));
             this.btnAboutusMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAboutusMenu.Location = new System.Drawing.Point(830, 83);
+            this.btnAboutusMenu.Location = new System.Drawing.Point(1130, 307);
             this.btnAboutusMenu.Name = "btnAboutusMenu";
             this.btnAboutusMenu.Padding = new System.Windows.Forms.Padding(17, 0, 20, 0);
             this.btnAboutusMenu.Size = new System.Drawing.Size(195, 37);
@@ -980,7 +983,7 @@
             this.btnSetting.FillColor = System.Drawing.Color.Transparent;
             this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSetting.ForeColor = System.Drawing.Color.Black;
-            this.btnSetting.Location = new System.Drawing.Point(1267, 8);
+            this.btnSetting.Location = new System.Drawing.Point(1272, 8);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnSetting.Size = new System.Drawing.Size(30, 30);
@@ -993,12 +996,13 @@
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(21, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(1172, 350);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(35, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 77;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnDateTime
@@ -1017,7 +1021,7 @@
             this.btnDateTime.FillColor = System.Drawing.Color.Transparent;
             this.btnDateTime.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDateTime.ForeColor = System.Drawing.Color.Black;
-            this.btnDateTime.Location = new System.Drawing.Point(1216, 9);
+            this.btnDateTime.Location = new System.Drawing.Point(1223, 9);
             this.btnDateTime.Name = "btnDateTime";
             this.btnDateTime.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnDateTime.Size = new System.Drawing.Size(30, 30);
@@ -1079,7 +1083,7 @@
             this.btnLogout.FillColor = System.Drawing.Color.Transparent;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Location = new System.Drawing.Point(1319, 7);
+            this.btnLogout.Location = new System.Drawing.Point(1328, 8);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnLogout.Size = new System.Drawing.Size(30, 30);
@@ -1089,8 +1093,8 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel3);
-            this.guna2GradientPanel1.Controls.Add(this.pictureBox2);
             this.guna2GradientPanel1.Controls.Add(this.lable);
             this.guna2GradientPanel1.Controls.Add(this.btnLogout);
             this.guna2GradientPanel1.Controls.Add(this.btnSetting);
@@ -1114,7 +1118,7 @@
             this.guna2GradientPanel3.Controls.Add(this.userPictureBox2);
             this.guna2GradientPanel3.Controls.Add(this.lblProfilename3);
             this.guna2GradientPanel3.Controls.Add(this.lblProfilename4);
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(1037, 5);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(1027, 5);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(166, 38);
             this.guna2GradientPanel3.TabIndex = 98;
@@ -1173,7 +1177,7 @@
             this.lblProfilename.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfilename.ForeColor = System.Drawing.Color.White;
             this.lblProfilename.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblProfilename.Location = new System.Drawing.Point(58, 154);
+            this.lblProfilename.Location = new System.Drawing.Point(60, 156);
             this.lblProfilename.Name = "lblProfilename";
             this.lblProfilename.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
             this.lblProfilename.Size = new System.Drawing.Size(35, 16);
@@ -1188,7 +1192,7 @@
             this.lblProfilename2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfilename2.ForeColor = System.Drawing.Color.White;
             this.lblProfilename2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblProfilename2.Location = new System.Drawing.Point(69, 138);
+            this.lblProfilename2.Location = new System.Drawing.Point(71, 140);
             this.lblProfilename2.Name = "lblProfilename2";
             this.lblProfilename2.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
             this.lblProfilename2.Size = new System.Drawing.Size(35, 16);
@@ -1199,6 +1203,7 @@
             // panelSliderMenu
             // 
             this.panelSliderMenu.BorderColor = System.Drawing.Color.Black;
+            this.panelSliderMenu.Controls.Add(this.guna2CircleButton1);
             this.panelSliderMenu.Controls.Add(this.lblProfilename2);
             this.panelSliderMenu.Controls.Add(this.lblProfilename);
             this.panelSliderMenu.Controls.Add(this.userPictureBox);
@@ -1218,10 +1223,10 @@
             this.userPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("userPictureBox.Image")));
             this.userPictureBox.ImageRotate = 0F;
-            this.userPictureBox.Location = new System.Drawing.Point(30, 19);
+            this.userPictureBox.Location = new System.Drawing.Point(48, 45);
             this.userPictureBox.Name = "userPictureBox";
             this.userPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.userPictureBox.Size = new System.Drawing.Size(126, 116);
+            this.userPictureBox.Size = new System.Drawing.Size(99, 94);
             this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.userPictureBox.TabIndex = 252;
             this.userPictureBox.TabStop = false;
@@ -1247,6 +1252,46 @@
             this.guna2AnimateWindow1.Interval = 700;
             this.guna2AnimateWindow1.TargetForm = this;
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(15, 5);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(40, 37);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 254;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.Animated = true;
+            this.guna2CircleButton1.AnimatedGIF = true;
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.BackgroundImage")));
+            this.guna2CircleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2CircleButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2CircleButton1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.guna2CircleButton1.BorderThickness = 1;
+            this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.Black;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(17, 18);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(37, 28);
+            this.guna2CircleButton1.TabIndex = 95;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            // 
             // MasterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1257,6 +1302,7 @@
             this.Controls.Add(this.panelDataTime);
             this.Controls.Add(this.btnAboutusMenu);
             this.Controls.Add(this.panelSliderMenu);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1287,6 +1333,7 @@
             this.panelSliderMenu.ResumeLayout(false);
             this.panelSliderMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1359,6 +1406,8 @@
         public System.Windows.Forms.Button btnReportForBloodDonation;
         public System.Windows.Forms.Button btnAboutusMenu;
         private System.Windows.Forms.Panel panelMove;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
     }
 }
 

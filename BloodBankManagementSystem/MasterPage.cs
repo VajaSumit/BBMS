@@ -1177,6 +1177,11 @@ namespace BloodBankManagementSystem
             btnAboutusMenu.ForeColor = Color.DimGray;
 
         }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            silderTransition.Start();
+        }
     }
 }
 
