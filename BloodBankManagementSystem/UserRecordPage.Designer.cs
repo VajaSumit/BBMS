@@ -429,7 +429,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.UserDataList.DefaultCellStyle = dataGridViewCellStyle1;
             this.UserDataList.GridColor = System.Drawing.Color.Linen;
-            this.UserDataList.Location = new System.Drawing.Point(87, 717);
+            this.UserDataList.Location = new System.Drawing.Point(12, 704);
             this.UserDataList.MultiSelect = false;
             this.UserDataList.Name = "UserDataList";
             this.UserDataList.ReadOnly = true;

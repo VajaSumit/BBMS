@@ -638,6 +638,7 @@ namespace BloodBankManagementSystem
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             panelReadTermsAndConditions.Visible = true;
+            lblTermsAndConcition.Visible = true;
         }
 
         private void btnclose_Click_4(object sender, EventArgs e)

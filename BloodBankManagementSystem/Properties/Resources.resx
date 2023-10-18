@@ -118,19 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <!--<data name="3643769 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3643769 (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>--><!--
-  --><!--<data name="3643769-building-home-house-main-menu-start_113416" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3643769-building-home-house-main-menu-start_113416.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BackgroundImageForAllPages2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackgroundImageForAllPages2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="drive_charity_collection_donation_blood_icon_251199" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\drive_charity_collection_donation_blood_icon_251199.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blood_donation_icon_133833" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blood_donation_icon_133833.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="patient_disease_icon_140580" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\patient_disease_icon_140580.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>-->
 </root>

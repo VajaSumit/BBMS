@@ -46,6 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnlogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.chkshowpassword = new MaterialSkin.Controls.MaterialCheckBox();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -60,17 +61,17 @@
             this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnclose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panelReadTermsAndConditions = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblTermsAndConcition = new System.Windows.Forms.Label();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panelReadTermsAndConditions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -152,7 +153,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(79, 21);
+            this.label5.Location = new System.Drawing.Point(92, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 29);
             this.label5.TabIndex = 63;
@@ -244,6 +245,19 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(275, 371);
             this.panel6.TabIndex = 78;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(253, 276);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 149;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // btnlogin
             // 
@@ -382,7 +396,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(81, 44);
+            this.label7.Location = new System.Drawing.Point(94, 40);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 14);
             this.label7.TabIndex = 64;
@@ -417,7 +431,7 @@
             this.exitlink.BackColor = System.Drawing.Color.White;
             this.exitlink.Font = new System.Drawing.Font("Perpetua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitlink.ForeColor = System.Drawing.Color.White;
-            this.exitlink.Location = new System.Drawing.Point(776, 665);
+            this.exitlink.Location = new System.Drawing.Point(770, 662);
             this.exitlink.Name = "exitlink";
             this.exitlink.Size = new System.Drawing.Size(28, 14);
             this.exitlink.TabIndex = 81;
@@ -485,16 +499,29 @@
             this.panelReadTermsAndConditions.BorderColor = System.Drawing.Color.SteelBlue;
             this.panelReadTermsAndConditions.BorderRadius = 25;
             this.panelReadTermsAndConditions.BorderThickness = 4;
+            this.panelReadTermsAndConditions.Controls.Add(this.lblTermsAndConcition);
             this.panelReadTermsAndConditions.Controls.Add(this.guna2CircleButton1);
             this.panelReadTermsAndConditions.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.panelReadTermsAndConditions.FillColor2 = System.Drawing.Color.DodgerBlue;
             this.panelReadTermsAndConditions.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.panelReadTermsAndConditions.Location = new System.Drawing.Point(158, 428);
+            this.panelReadTermsAndConditions.Location = new System.Drawing.Point(247, 492);
             this.panelReadTermsAndConditions.Name = "panelReadTermsAndConditions";
-            this.panelReadTermsAndConditions.Size = new System.Drawing.Size(272, 255);
+            this.panelReadTermsAndConditions.Size = new System.Drawing.Size(248, 184);
             this.panelReadTermsAndConditions.TabIndex = 132;
             this.panelReadTermsAndConditions.UseTransparentBackground = true;
             this.panelReadTermsAndConditions.Visible = false;
+            // 
+            // lblTermsAndConcition
+            // 
+            this.lblTermsAndConcition.AutoSize = true;
+            this.lblTermsAndConcition.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTermsAndConcition.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTermsAndConcition.Location = new System.Drawing.Point(12, 20);
+            this.lblTermsAndConcition.Name = "lblTermsAndConcition";
+            this.lblTermsAndConcition.Size = new System.Drawing.Size(199, 150);
+            this.lblTermsAndConcition.TabIndex = 133;
+            this.lblTermsAndConcition.Text = resources.GetString("lblTermsAndConcition.Text");
+            this.lblTermsAndConcition.Visible = false;
             // 
             // guna2CircleButton1
             // 
@@ -509,31 +536,18 @@
             this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2CircleButton1.FillColor = System.Drawing.Color.DodgerBlue;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe Fluent Icons", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe Fluent Icons", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton1.IndicateFocus = true;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(226, 14);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(210, 19);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(31, 28);
+            this.guna2CircleButton1.Size = new System.Drawing.Size(27, 21);
             this.guna2CircleButton1.TabIndex = 132;
             this.guna2CircleButton1.Text = "X";
             this.guna2CircleButton1.UseTransparentBackground = true;
             this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(253, 276);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 149;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // LoginPage
             // 
@@ -568,10 +582,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panelReadTermsAndConditions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.panelReadTermsAndConditions.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -610,5 +625,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel panelReadTermsAndConditions;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label lblTermsAndConcition;
     }
 }

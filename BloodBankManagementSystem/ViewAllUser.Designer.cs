@@ -82,13 +82,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.Linen;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 250);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 258);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1077, 489);
+            this.dataGridView1.Size = new System.Drawing.Size(1071, 489);
             this.dataGridView1.TabIndex = 125;
             // 
             // Id

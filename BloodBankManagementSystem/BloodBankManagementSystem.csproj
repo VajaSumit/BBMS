@@ -643,6 +643,7 @@
     <Content Include="Images\UserImage.jpeg" />
     <Content Include="Images\userSettingImage.jpeg" />
     <Content Include="Images\Users_40957.ico" />
+    <None Include="Resources\BackgroundImageForAllPages2.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Apps\" />

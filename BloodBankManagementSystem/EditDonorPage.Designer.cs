@@ -157,7 +157,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.Linen;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 720);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 715);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;

@@ -312,8 +312,8 @@ namespace BloodBankManagementSystem
         {
             if (menuExpand == false)
             {
-                panelMenu.Height += 15;
-                if (panelMenu.Height>=195)
+                panelMenu.Height += 12;
+                if (panelMenu.Height>=180)
                 {
                     menuTransition.Stop();
                     menuExpand = true;
@@ -321,8 +321,8 @@ namespace BloodBankManagementSystem
             }
             else
             {
-                panelMenu.Height -= 15;
-                if (panelMenu.Height <= 73)
+                panelMenu.Height -= 12;
+                if (panelMenu.Height <= 50)
                 {
                     menuTransition.Stop();
                     menuExpand = false;
@@ -341,8 +341,8 @@ namespace BloodBankManagementSystem
         {
             if (sidebarExpand)
             {
-                panelSliderMenu.Width -= 5;
-                if (panelSliderMenu.Width <= 73)
+                panelSliderMenu.Width -= 12;
+                if (panelSliderMenu.Width <= 50)
                 {
                     sidebarExpand = false;
                     silderTransition.Stop();
@@ -363,8 +363,8 @@ namespace BloodBankManagementSystem
             }
             else
             {
-                panelSliderMenu.Width += 5;
-                if (panelSliderMenu.Width >= 195)
+                panelSliderMenu.Width += 12;
+                if (panelSliderMenu.Width >= 180)
                 {
                     sidebarExpand = true;
                     silderTransition.Stop();
@@ -979,20 +979,7 @@ namespace BloodBankManagementSystem
 
         private void btnAboutusMenu_Click(object sender, EventArgs e)
         {
-            Movepanel(btnAboutusMenu);
-            hideSubMenu();
-
-            if (aboutus == null)
-            {
-                aboutus = new AboutUs();
-                aboutus.FormClosed += Aboutus_FormClosed;
-                aboutus.MdiParent = this;
-                aboutus.Show();
-            }
-            else
-            {
-                aboutus.Activate();
-            }
+           
         }
 
         private void btnReportForBloodDonation_Click(object sender, EventArgs e)
@@ -1166,17 +1153,7 @@ namespace BloodBankManagementSystem
             btnReportsMenu.ForeColor = Color.DimGray;
         }
 
-        private void btnAboutusMenu_MouseEnter(object sender, EventArgs e)
-        {
-            btnAboutusMenu.ForeColor = Color.White;
-            Movepanel(btnAboutusMenu);
-        }
-
-        private void btnAboutusMenu_MouseLeave(object sender, EventArgs e)
-        {
-            btnAboutusMenu.ForeColor = Color.DimGray;
-
-        }
+   
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
